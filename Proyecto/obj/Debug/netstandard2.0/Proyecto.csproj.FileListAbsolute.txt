@@ -1,0 +1,13 @@
+D:\Universidad\Finanzapp-Modulapp\Proyecto\Proyecto\bin\Debug\netstandard2.0\Proyecto.deps.json
+D:\Universidad\Finanzapp-Modulapp\Proyecto\Proyecto\bin\Debug\netstandard2.0\Proyecto.dll
+D:\Universidad\Finanzapp-Modulapp\Proyecto\Proyecto\bin\Debug\netstandard2.0\ref\Proyecto.dll
+D:\Universidad\Finanzapp-Modulapp\Proyecto\Proyecto\bin\Debug\netstandard2.0\Proyecto.pdb
+D:\Universidad\Finanzapp-Modulapp\Proyecto\Proyecto\obj\Debug\netstandard2.0\Proyecto.csprojAssemblyReference.cache
+D:\Universidad\Finanzapp-Modulapp\Proyecto\Proyecto\obj\Debug\netstandard2.0\App.xaml.g.cs
+D:\Universidad\Finanzapp-Modulapp\Proyecto\Proyecto\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+D:\Universidad\Finanzapp-Modulapp\Proyecto\Proyecto\obj\Debug\netstandard2.0\Proyecto.AssemblyInfoInputs.cache
+D:\Universidad\Finanzapp-Modulapp\Proyecto\Proyecto\obj\Debug\netstandard2.0\Proyecto.AssemblyInfo.cs
+D:\Universidad\Finanzapp-Modulapp\Proyecto\Proyecto\obj\Debug\netstandard2.0\Proyecto.dll
+D:\Universidad\Finanzapp-Modulapp\Proyecto\Proyecto\obj\Debug\netstandard2.0\ref\Proyecto.dll
+D:\Universidad\Finanzapp-Modulapp\Proyecto\Proyecto\obj\Debug\netstandard2.0\Proyecto.pdb
+D:\Universidad\Finanzapp-Modulapp\Proyecto\Proyecto\obj\Debug\netstandard2.0\XamlC.stamp
