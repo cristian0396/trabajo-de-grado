@@ -1,4 +1,5 @@
 ﻿using Proyecto.Servicios.Navegacion;
+using Proyecto.Vistas;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -28,8 +29,9 @@ namespace Proyecto
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new MainPage());
+            //MainPage = new NavigationPage(new Aterrizaje());
             //MainPage = new MainPage();
+            MainPage = new MainPage();
         }
 
         protected override void OnStart()
