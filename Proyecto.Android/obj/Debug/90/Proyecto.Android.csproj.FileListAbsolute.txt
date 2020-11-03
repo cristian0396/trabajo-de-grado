@@ -471,3 +471,8 @@ D:\Universidad\Finanzapp-Modulapp\Proyecto\Proyecto.Android\obj\Debug\90\stamp\_
 D:\Universidad\Finanzapp-Modulapp\Proyecto\Proyecto.Android\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 D:\Universidad\Finanzapp-Modulapp\Proyecto\Proyecto.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
 D:\Universidad\Finanzapp-Modulapp\Proyecto\Proyecto.Android\obj\Debug\90\android\assets\Newtonsoft.Json.dll
+D:\Universidad\Finanzapp-Modulapp\Proyecto\Proyecto.Android\obj\Debug\90\res\drawable\menu.png
+D:\Universidad\Finanzapp-Modulapp\Proyecto\Proyecto.Android\obj\Debug\90\res\drawable\hombre.png
+D:\Universidad\Finanzapp-Modulapp\Proyecto\Proyecto.Android\obj\Debug\90\res\drawable\administracion.png
+D:\Universidad\Finanzapp-Modulapp\Proyecto\Proyecto.Android\obj\Debug\90\res\drawable\evaluacion.png
+D:\Universidad\Finanzapp-Modulapp\Proyecto\Proyecto.Android\obj\Debug\90\res\drawable\pregunta.png

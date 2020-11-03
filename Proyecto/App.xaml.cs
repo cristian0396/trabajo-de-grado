@@ -31,7 +31,7 @@ namespace Proyecto
 
             //MainPage = new NavigationPage(new Aterrizaje());
             //MainPage = new MainPage();
-            MainPage = new MainPage();
+            MainPage = new Aterrizaje();
         }
 
         protected override void OnStart()

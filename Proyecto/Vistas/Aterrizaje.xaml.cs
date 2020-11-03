@@ -23,10 +23,10 @@ namespace Proyecto.Vistas
             Detail = new NavigationPage(new MainPage());
             List<Menu> menu = new List<Menu>
             {
-                new Menu{ Page= new MainPage(),MenuTitle="My Profile",  MenuDetail="Mi perfil",icon="hombre.png"},
-                new Menu{ Page= new MainPage(),MenuTitle="Messages",  MenuDetail="Mensajes",icon="message.png"},
-                new Menu{ Page= new MainPage(),MenuTitle="Contacts",  MenuDetail="Contactos",icon="contacts.png"},
-                new Menu{ Page= new MainPage(),MenuTitle="Settings",  MenuDetail="Configuración",icon="administracion.png"}
+                new Menu{ Page= new MainPage(),MenuTitle="Mi Perfil",  MenuDetail="Mi perfil",icon="hombre.png"},
+                new Menu{ Page= new MainPage(),MenuTitle="Evaluaciones",  MenuDetail="Evaluaciones",icon="evaluacion.png"},
+                new Menu{ Page= new MainPage(),MenuTitle="Configuración",  MenuDetail="Configuración",icon="administracion.png"},
+                new Menu{ Page= new MainPage(),MenuTitle="Ayuda",  MenuDetail="Ayuda",icon="pregunta.png"}
             };
             ListMenu.ItemsSource = menu;
         }

@@ -11,7 +11,7 @@
         <Label Text="Welcome to Xamarin.Forms!" 
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand" />
-        <Image Source="hombre.png"/>
+        <Image Source="hombre.png" WidthRequest="50" HeightRequest="50"></Image>
     </StackLayout>
 
 </ContentPage>

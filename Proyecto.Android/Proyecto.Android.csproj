@@ -94,13 +94,19 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\drawable\menu.png" />
+    <AndroidResource Include="Resources\drawable\menu.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\drawable\hombre.png" />
+    <AndroidResource Include="Resources\drawable\hombre.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\drawable\administracion.png" />
+    <AndroidResource Include="Resources\drawable\administracion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\evaluacion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\pregunta.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
