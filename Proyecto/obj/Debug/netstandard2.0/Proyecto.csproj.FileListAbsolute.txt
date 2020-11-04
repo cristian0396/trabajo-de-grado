@@ -12,3 +12,4 @@ D:\Universidad\Finanzapp-Modulapp\Proyecto\Proyecto\obj\Debug\netstandard2.0\ref
 D:\Universidad\Finanzapp-Modulapp\Proyecto\Proyecto\obj\Debug\netstandard2.0\Proyecto.pdb
 D:\Universidad\Finanzapp-Modulapp\Proyecto\Proyecto\obj\Debug\netstandard2.0\XamlC.stamp
 D:\Universidad\Finanzapp-Modulapp\Proyecto\Proyecto\obj\Debug\netstandard2.0\Vistas\Aterrizaje.xaml.g.cs
+D:\Universidad\Finanzapp-Modulapp\Proyecto\Proyecto\obj\Debug\netstandard2.0\Vistas\Inicio.xaml.g.cs

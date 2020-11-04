@@ -20,7 +20,7 @@ namespace Proyecto.Vistas
 
         public void MyMenu()
         {
-            Detail = new NavigationPage(new MainPage());
+            Detail = new NavigationPage(new Inicio());
             List<Menu> menu = new List<Menu>
             {
                 new Menu{ Page= new MainPage(),MenuTitle="Mi Perfil",  MenuDetail="Mi perfil",icon="hombre.png"},

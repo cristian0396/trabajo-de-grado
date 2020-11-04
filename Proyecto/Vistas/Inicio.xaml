@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Proyecto.Vistas.Inicio">
+    <ScrollView>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" Grid.Column="0" BackgroundColor="White">
+                    <StackLayout>
+                        <Label Text="Presupuesto:" FontSize="20"/>
+                        <ProgressBar Progress="0.6" ScaleY="4" ProgressColor="Green" />
+                        
+                    </StackLayout>
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="0" BackgroundColor="#White">
+                    <StackLayout>
+                        <Label Text="Gastos: " FontSize="20"/>
+                        <ProgressBar Progress="0.3" ScaleY="4" ProgressColor="Orange"/>
+                    </StackLayout>
+                </Grid>
+                <Grid Grid.Row="2" Grid.Column="0" BackgroundColor="#White">
+                    <StackLayout>
+                        <Label Text="Ahorro: " FontSize="20"/>
+                        <ProgressBar Progress="0.1" ScaleY="4" ProgressColor="Red" />
+                    </StackLayout>
+                </Grid>
+            </Grid>
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="215"/>
+                    <RowDefinition Height="215"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" Grid.Column="0" BackgroundColor="White">
+                    <StackLayout>
+                        <!--<Label Text="Facebook"/>-->
+                        <Image Source="ingreGastos.png"/>
+                        <ProgressBar Progress="1" ScaleY="3" />
+                    </StackLayout>
+                </Grid>
+                <Grid Grid.Row="0" Grid.Column="1" BackgroundColor="#White">
+                    <StackLayout>
+                        <!--<Label Text="Xamarin"/>-->
+                        <Image Source="imagen.png" HeightRequest="203"/>
+                        <ProgressBar Progress="1" ScaleY="3"/>
+                    </StackLayout>
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="0" BackgroundColor="#White">
+                    <StackLayout>
+                        <!--<Label Text="Mensajes"/>-->
+                        <Image Source="Ahorro.png"/>
+                        <ProgressBar Progress="0.5" ScaleY="3" />
+                    </StackLayout>
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="1" BackgroundColor="#White">
+                    <StackLayout>
+                        <!--<Label Text="Mensajes"/>-->
+                        <Image Source="meta.png"/>
+                        <ProgressBar Progress="0" ScaleY="3" />
+                    </StackLayout>
+                </Grid>
+            </Grid>
+
+        </Grid>
+    </ScrollView>
+</ContentPage>
