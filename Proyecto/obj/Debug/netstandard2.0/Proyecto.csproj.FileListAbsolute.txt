@@ -11,5 +11,6 @@ D:\Universidad\Finanzapp-Modulapp\Proyecto\Proyecto\obj\Debug\netstandard2.0\Pro
 D:\Universidad\Finanzapp-Modulapp\Proyecto\Proyecto\obj\Debug\netstandard2.0\ref\Proyecto.dll
 D:\Universidad\Finanzapp-Modulapp\Proyecto\Proyecto\obj\Debug\netstandard2.0\Proyecto.pdb
 D:\Universidad\Finanzapp-Modulapp\Proyecto\Proyecto\obj\Debug\netstandard2.0\XamlC.stamp
-D:\Universidad\Finanzapp-Modulapp\Proyecto\Proyecto\obj\Debug\netstandard2.0\Vistas\Aterrizaje.xaml.g.cs
 D:\Universidad\Finanzapp-Modulapp\Proyecto\Proyecto\obj\Debug\netstandard2.0\Vistas\Inicio.xaml.g.cs
+D:\Universidad\Finanzapp-Modulapp\Proyecto\Proyecto\obj\Debug\netstandard2.0\Vistas\MenuHeader.xaml.g.cs
+D:\Universidad\Finanzapp-Modulapp\Proyecto\Proyecto\obj\Debug\netstandard2.0\Vistas\Presupuesto.xaml.g.cs

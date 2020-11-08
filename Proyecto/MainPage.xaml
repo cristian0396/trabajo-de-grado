@@ -1,17 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+             xmlns:local="clr-namespace:Proyecto.Vistas"
              x:Class="Proyecto.MainPage">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-        <Image Source="hombre.png" WidthRequest="50" HeightRequest="50"></Image>
-    </StackLayout>
+    <Shell.FlyoutHeader>
+        <local:MenuHeader/>
+    </Shell.FlyoutHeader>
 
-</ContentPage>
+    <FlyoutItem Title="MyTabApp" 
+                FlyoutDisplayOptions="AsMultipleItems">
+        <ShellContent Title="Mi Perfil" Icon="hombre.png" IsTabStop="True" ContentTemplate="{DataTemplate local:Inicio}"/>
+        <ShellContent Title="Evaluaciones " Icon="evaluacion.png" IsTabStop="True" ContentTemplate="{DataTemplate local:Inicio}"/>
+        <ShellContent Title="Configuración " Icon="administracion.png" IsTabStop="True" ContentTemplate="{DataTemplate local:Inicio}"/>
+        <ShellContent Title="Ayuda " Icon="pregunta.png" IsTabStop="True" ContentTemplate="{DataTemplate local:Inicio}"/>
+    </FlyoutItem>
+    
+
+    <ShellContent Title="Cerrar Sesión " Icon="leave.png" IsTabStop="True" ContentTemplate="{DataTemplate local:Inicio}"/>
+
+</Shell>

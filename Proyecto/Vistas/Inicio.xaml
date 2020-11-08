@@ -4,35 +4,43 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+             Title="Inicio"
              x:Class="Proyecto.Vistas.Inicio">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Opción" IconImageSource=""/>
+    </ContentPage.ToolbarItems>
     <ScrollView>
-        <Grid>
+        <Grid RowSpacing="30">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <Grid Grid.Row="0">
+            <Grid Grid.Row="0" BackgroundColor="#E1E2E4">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="60"/>
-                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="90" />
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
                 </Grid.RowDefinitions>
-                <Grid Grid.Row="0" Grid.Column="0" BackgroundColor="White">
-                    <StackLayout>
-                        <Label Text="Presupuesto:" FontSize="20"/>
-                        <ProgressBar Progress="0.6" ScaleY="4" ProgressColor="Green" />
-                        
+                <Grid Grid.Row="0" Grid.Column="0">
+                    <StackLayout >
+                        <Label Text="Esta semana:" FontSize="28" Margin="10,0,0,15"/>
+                        <StackLayout  Orientation="Horizontal" Spacing="50">
+                            <ProgressBar Progress="0.6" ScaleY="4" ProgressColor="Green" WidthRequest="200" Margin="15,0,0,0" />
+                            <Label Text="Presupuesto" FontSize="20"/>
+                        </StackLayout>
+
                     </StackLayout>
                 </Grid>
-                <Grid Grid.Row="1" Grid.Column="0" BackgroundColor="#White">
-                    <StackLayout>
-                        <Label Text="Gastos: " FontSize="20"/>
-                        <ProgressBar Progress="0.3" ScaleY="4" ProgressColor="Orange"/>
+                <Grid Grid.Row="1" Grid.Column="0">
+                    <StackLayout Orientation="Horizontal" Spacing="50" >
+                        <ProgressBar Progress="0.3" ScaleY="4" ProgressColor="Orange" WidthRequest="200" Margin="15,0,0,0"/>
+                        <Label Text="Gastos" FontSize="20"/>
                     </StackLayout>
                 </Grid>
-                <Grid Grid.Row="2" Grid.Column="0" BackgroundColor="#White">
-                    <StackLayout>
-                        <Label Text="Ahorro: " FontSize="20"/>
-                        <ProgressBar Progress="0.1" ScaleY="4" ProgressColor="Red" />
+                <Grid Grid.Row="2" Grid.Column="0">
+                    <StackLayout Orientation="Horizontal" Spacing="50" >
+                        <ProgressBar Progress="0.1" ScaleY="4" ProgressColor="Red" WidthRequest="200" Margin="15,0,0,0" />
+                        <Label Text="Ahorro" FontSize="20"/>                        
                     </StackLayout>
                 </Grid>
             </Grid>
@@ -44,7 +52,12 @@
                 <Grid Grid.Row="0" Grid.Column="0" BackgroundColor="White">
                     <StackLayout>
                         <!--<Label Text="Facebook"/>-->
-                        <Image Source="ingreGastos.png"/>
+                        <Image Source="ingreGastos.png">
+                            <Image.GestureRecognizers >
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"/>                                
+                            </Image.GestureRecognizers>    
+                        </Image>
+                        
                         <ProgressBar Progress="1" ScaleY="3" />
                     </StackLayout>
                 </Grid>
