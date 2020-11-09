@@ -10,79 +10,67 @@
         <ToolbarItem Text="Opción" IconImageSource=""/>
     </ContentPage.ToolbarItems>
     <ScrollView>
-        <Grid RowSpacing="30">
+        <Grid RowSpacing="0"> 
             <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="180"/>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
             <Grid Grid.Row="0" BackgroundColor="#E1E2E4">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="90" />
-                    <RowDefinition Height="40"/>
-                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
-                <Grid Grid.Row="0" Grid.Column="0">
-                    <StackLayout >
-                        <Label Text="Esta semana:" FontSize="28" Margin="10,0,0,15"/>
-                        <StackLayout  Orientation="Horizontal" Spacing="50">
-                            <ProgressBar Progress="0.6" ScaleY="4" ProgressColor="#77D371" WidthRequest="200" Margin="15,0,0,0" />
-                            <Label Text="Presupuesto" FontSize="20"/>
-                        </StackLayout>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                
+                <Label Grid.Row="0" Grid.Column="0" Text="Esta semana:" FontSize="22" Margin="10,10,0,15"/>
+                <ProgressBar Grid.Row="1" Grid.Column="0" Progress="0.6" ScaleY="4" ProgressColor="#77D371" Margin="15,0,0,0" />
+                <Label Grid.Row="1" Grid.Column="1" Text="Presupuesto" FontSize="16" Margin="40,5,0,0" />
 
-                    </StackLayout>
-                </Grid>
-                <Grid Grid.Row="1" Grid.Column="0">
-                    <StackLayout Orientation="Horizontal" Spacing="50" >
-                        <ProgressBar Progress="0.3" ScaleY="4" ProgressColor="#FFC45C" WidthRequest="200" Margin="15,0,0,0"/>
-                        <Label Text="Gastos" FontSize="20"/>
-                    </StackLayout>
-                </Grid>
-                <Grid Grid.Row="2" Grid.Column="0">
-                    <StackLayout Orientation="Horizontal" Spacing="50" >
-                        <ProgressBar Progress="0.1" ScaleY="4" ProgressColor="Red" WidthRequest="200" Margin="15,0,0,0" />
-                        <Label Text="Ahorro" FontSize="20"/>                        
-                    </StackLayout>
-                </Grid>
+                <ProgressBar Grid.Row="2" Grid.Column="0" Progress="0.3" ScaleY="4" ProgressColor="#FFC45C" Margin="15,0,0,0"/>
+                <Label Grid.Row="2" Grid.Column="1" Text="Gastos" FontSize="16" Margin="40,5,0,0"/>
+
+                <ProgressBar Grid.Row="3" Grid.Column="0" Progress="0.1" ScaleY="4" ProgressColor="Red" Margin="15,0,0,0" />
+                <Label Grid.Row="3" Grid.Column="1" Text="Ahorro" FontSize="16" Margin="40,5,0,0"/>
+
             </Grid>
-            <Grid Grid.Row="1">
+            <Grid Grid.Row="1" RowSpacing="0" Padding="14">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="215"/>
-                    <RowDefinition Height="215"/>
+                    <RowDefinition Height="180"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="180"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>                    
                 </Grid.RowDefinitions>
-                <Grid Grid.Row="0" Grid.Column="0" BackgroundColor="White">
-                    <StackLayout Margin="20,0,10,0">                        
-                        <Image Source="ingreGastos.png">
-                            <Image.GestureRecognizers >
-                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"/>                                
-                            </Image.GestureRecognizers>    
-                        </Image>
-                        <Label Text="Modulo 1: Presupuesto"/>
-                        <ProgressBar Progress="1" ScaleY="2"  ProgressColor="#77D371" />
-                    </StackLayout>
-                </Grid>
-                <Grid Grid.Row="0" Grid.Column="1" BackgroundColor="#White" RowSpacing="0">
-                    <StackLayout>
-                        <Image Source="imagen.png" HeightRequest="203" Scale="0.7"/>                        
-                    </StackLayout>
-                    <StackLayout Margin="15,180,15,0">
-                        <Label Text="Modulo 2: Plan de gastos"/>
-                        <ProgressBar Progress="1" ScaleY="2"  ProgressColor="#77D371"/>
-                    </StackLayout>
-                </Grid>
-                <Grid Grid.Row="1" Grid.Column="0" BackgroundColor="#White">
-                    <StackLayout Spacing="0" Margin="20,5,10,0">
-                        <Image Source="Ahorro.png"/>
-                        <Label Text="Modulo 3: Ahorro" />
-                        <ProgressBar Progress="0.5" ScaleY="2"  ProgressColor="#77D371" />
-                    </StackLayout>
-                </Grid>
-                <Grid Grid.Row="1" Grid.Column="1" BackgroundColor="#White">
-                    <StackLayout Spacing="0" >
-                        <Image Source="meta.png" Margin="15,20,30,0"/>
-                        <Label Text="Modulo 4:"/>
-                        <ProgressBar Progress="0" ScaleY="2"  ProgressColor="#77D371" Margin="0,0,20,0"/>
-                    </StackLayout>
-                </Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Image Grid.Row="0" Grid.Column="0" Source="ingreGastos.png">
+                    <Image.GestureRecognizers >
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"/>
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Label Grid.Row="1" Grid.Column="0" Text="Modulo 1: Presupuesto"/>
+                <ProgressBar Grid.Row="2" Grid.Column="0" Progress="1" ScaleY="2"  ProgressColor="#77D371" />
+
+                <Image Grid.Row="0" Grid.Column="1" Source="imagen.png" HeightRequest="203" Scale="0.7"/>
+                <Label Grid.Row="1" Grid.Column="1" Text="Modulo 2: Plan de gastos"/>
+                <ProgressBar Grid.Row="2" Grid.Column="1" Progress="1" ScaleY="2"  ProgressColor="#77D371"/>
+
+                <Image Grid.Row="3" Grid.Column="0" Source="Ahorro.png"/>
+                <Label Grid.Row="4" Grid.Column="0" Text="Modulo 3: Ahorro" />
+                <ProgressBar Grid.Row="5" Grid.Column="0" Progress="0.5" ScaleY="2"  ProgressColor="#77D371" />
+
+                <Image Grid.Row="3" Grid.Column="1" Source="meta.png" Margin="15,20,30,0"/>
+                <Label Grid.Row="4" Grid.Column="1" Text="Modulo 4:"/>
+                <ProgressBar Grid.Row="5" Grid.Column="1" Progress="0" ScaleY="2"  ProgressColor="#77D371" />
             </Grid>
         </Grid>
     </ScrollView>
