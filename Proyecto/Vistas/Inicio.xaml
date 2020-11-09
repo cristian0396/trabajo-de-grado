@@ -25,7 +25,7 @@
                     <StackLayout >
                         <Label Text="Esta semana:" FontSize="28" Margin="10,0,0,15"/>
                         <StackLayout  Orientation="Horizontal" Spacing="50">
-                            <ProgressBar Progress="0.6" ScaleY="4" ProgressColor="Green" WidthRequest="200" Margin="15,0,0,0" />
+                            <ProgressBar Progress="0.6" ScaleY="4" ProgressColor="#77D371" WidthRequest="200" Margin="15,0,0,0" />
                             <Label Text="Presupuesto" FontSize="20"/>
                         </StackLayout>
 
@@ -33,7 +33,7 @@
                 </Grid>
                 <Grid Grid.Row="1" Grid.Column="0">
                     <StackLayout Orientation="Horizontal" Spacing="50" >
-                        <ProgressBar Progress="0.3" ScaleY="4" ProgressColor="Orange" WidthRequest="200" Margin="15,0,0,0"/>
+                        <ProgressBar Progress="0.3" ScaleY="4" ProgressColor="#FFC45C" WidthRequest="200" Margin="15,0,0,0"/>
                         <Label Text="Gastos" FontSize="20"/>
                     </StackLayout>
                 </Grid>
@@ -50,40 +50,40 @@
                     <RowDefinition Height="215"/>
                 </Grid.RowDefinitions>
                 <Grid Grid.Row="0" Grid.Column="0" BackgroundColor="White">
-                    <StackLayout>
-                        <!--<Label Text="Facebook"/>-->
+                    <StackLayout Margin="20,0,10,0">                        
                         <Image Source="ingreGastos.png">
                             <Image.GestureRecognizers >
                                 <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"/>                                
                             </Image.GestureRecognizers>    
                         </Image>
-                        
-                        <ProgressBar Progress="1" ScaleY="3" />
+                        <Label Text="Modulo 1: Presupuesto"/>
+                        <ProgressBar Progress="1" ScaleY="2"  ProgressColor="#77D371" />
                     </StackLayout>
                 </Grid>
-                <Grid Grid.Row="0" Grid.Column="1" BackgroundColor="#White">
+                <Grid Grid.Row="0" Grid.Column="1" BackgroundColor="#White" RowSpacing="0">
                     <StackLayout>
-                        <!--<Label Text="Xamarin"/>-->
-                        <Image Source="imagen.png" HeightRequest="203"/>
-                        <ProgressBar Progress="1" ScaleY="3"/>
+                        <Image Source="imagen.png" HeightRequest="203" Scale="0.7"/>                        
+                    </StackLayout>
+                    <StackLayout Margin="15,180,15,0">
+                        <Label Text="Modulo 2: Plan de gastos"/>
+                        <ProgressBar Progress="1" ScaleY="2"  ProgressColor="#77D371"/>
                     </StackLayout>
                 </Grid>
                 <Grid Grid.Row="1" Grid.Column="0" BackgroundColor="#White">
-                    <StackLayout>
-                        <!--<Label Text="Mensajes"/>-->
+                    <StackLayout Spacing="0" Margin="20,5,10,0">
                         <Image Source="Ahorro.png"/>
-                        <ProgressBar Progress="0.5" ScaleY="3" />
+                        <Label Text="Modulo 3: Ahorro" />
+                        <ProgressBar Progress="0.5" ScaleY="2"  ProgressColor="#77D371" />
                     </StackLayout>
                 </Grid>
                 <Grid Grid.Row="1" Grid.Column="1" BackgroundColor="#White">
-                    <StackLayout>
-                        <!--<Label Text="Mensajes"/>-->
-                        <Image Source="meta.png"/>
-                        <ProgressBar Progress="0" ScaleY="3" />
+                    <StackLayout Spacing="0" >
+                        <Image Source="meta.png" Margin="15,20,30,0"/>
+                        <Label Text="Modulo 4:"/>
+                        <ProgressBar Progress="0" ScaleY="2"  ProgressColor="#77D371" Margin="0,0,20,0"/>
                     </StackLayout>
                 </Grid>
             </Grid>
-
         </Grid>
     </ScrollView>
 </ContentPage>
