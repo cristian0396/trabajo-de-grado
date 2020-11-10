@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Title="Plan de Gastos"
+             x:Class="Proyecto.Vistas.PlanGastos">
+    
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" ColumnSpacing="20" Padding="20" RowSpacing="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40" />
+                        <RowDefinition Height="100"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Grid.Row="0" Grid.Column="0" Text="Lección 1" FontSize="18"/>
+                    <Image Grid.Row="1" Grid.Column="0" Source="imagen.png"/>
+                    <Label Grid.Row="2" Grid.Column="0" Text="Descripción: " FontSize="16" Margin="10,20,0,0"/>
+                    <Entry Grid.Row="3" Grid.Column="0"/>
+
+                    <ProgressBar Grid.Row="1" Grid.Column="1" Progress="0.4" ScaleY="1" ProgressColor="#77D371" Margin="15,0,0,0" />
+                    <Label Grid.Row="2" Grid.Column="1" Text="Gastos: " FontSize="16" Margin="10,20,0,0"/>
+                    <Entry Grid.Row="3" Grid.Column="1" Text="$"/>
+
+                </Grid>
+                <Grid Grid.Row="1" RowSpacing="0" Padding="14">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <Frame Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Padding="0" BackgroundColor="Aqua" BorderColor="DarkSlateGray">
+                        <Grid Padding="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50"/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition Width="70"/>
+                                <ColumnDefinition Width="70"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" Text="#" FontSize="18" VerticalOptions="Center" HorizontalOptions="Center"/>
+                            <Label Grid.Column="1" Text="Descripción" FontSize="18" VerticalOptions="Center" HorizontalOptions="Center" />
+                            <Label Grid.Column="2" Text="Fecha" FontSize="18" VerticalOptions="Center" HorizontalOptions="Center" />
+                            <Label Grid.Column="3" Text="Valor" FontSize="18" VerticalOptions="Center" HorizontalOptions="Center"/>
+
+                            <BoxView BackgroundColor="DarkSlateGray" WidthRequest="1" Grid.Column="0" HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand"/>
+                            <BoxView BackgroundColor="DarkSlateGray" WidthRequest="1" Grid.Column="1" HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand"/>
+                            <BoxView BackgroundColor="DarkSlateGray" WidthRequest="1" Grid.Column="2" HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand"/>
+                            <BoxView BackgroundColor="DarkSlateGray" WidthRequest="1" Grid.Column="3" HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand"/>
+                        </Grid>
+                    </Frame>
+                    <!--
+                    <ListView Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" SeparatorVisibility="None" SelectionMode="None" HasUnevenRows="False">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Frame Padding="0" BorderColor="DarkSlateGray">
+                                        <Grid Padding="0" RowSpacing="0">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition />
+                                                <ColumnDefinition/>
+                                                <ColumnDefinition />
+                                                <ColumnDefinition />
+                                            </Grid.ColumnDefinitions>
+
+                                            <Label Grid.Column="0" Text="#" FontSize="15" VerticalOptions="Center" HorizontalOptions="Center"/>
+                                            <Label Grid.Column="1" Text="Descripción" FontSize="15" VerticalOptions="Center" HorizontalOptions="Center" />
+                                            <Label Grid.Column="2" Text="Fecha" FontSize="15" VerticalOptions="Center" HorizontalOptions="Center" />
+                                            <Label Grid.Column="3" Text="Valor" FontSize="15" VerticalOptions="Center" HorizontalOptions="Center"/>
+
+                                            <BoxView BackgroundColor="DarkSlateGray" WidthRequest="1" Grid.Column="0" HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand"/>
+                                            <BoxView BackgroundColor="DarkSlateGray" WidthRequest="1" Grid.Column="1" HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand"/>
+                                            <BoxView BackgroundColor="DarkSlateGray" WidthRequest="1" Grid.Column="2" HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand"/>
+                                            <BoxView BackgroundColor="DarkSlateGray" WidthRequest="1" Grid.Column="3" HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand"/>
+                                        </Grid>
+                                    </Frame>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                    -->
+                    <Label Grid.Row="2" Grid.Column="0" Text="Nombre: " FontSize="16" Margin="10,30,0,15"/>
+                    <Entry Grid.Row="3" Grid.Column="0"/>
+                    <Label Grid.Row="2" Grid.Column="1" Text="Prioridad: " FontSize="16" Margin="10,30,0,15"/>
+                    <Entry Grid.Row="3" Grid.Column="1"/>
+
+
+                    <Frame Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Padding="0" BackgroundColor="Aqua" BorderColor="DarkSlateGray" Margin="0,30,0,0">
+                        <Grid Padding="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50"/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition Width="70"/>
+                                <ColumnDefinition Width="70"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" Text="#" FontSize="18" VerticalOptions="Center" HorizontalOptions="Center"/>
+                            <Label Grid.Column="1" Text="Descripción" FontSize="18" VerticalOptions="Center" HorizontalOptions="Center" />
+                            <Label Grid.Column="2" Text="Fecha" FontSize="18" VerticalOptions="Center" HorizontalOptions="Center" />
+                            <Label Grid.Column="3" Text="Valor" FontSize="18" VerticalOptions="Center" HorizontalOptions="Center"/>
+
+                            <BoxView BackgroundColor="DarkSlateGray" WidthRequest="1" Grid.Column="0" HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand"/>
+                            <BoxView BackgroundColor="DarkSlateGray" WidthRequest="1" Grid.Column="1" HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand"/>
+                            <BoxView BackgroundColor="DarkSlateGray" WidthRequest="1" Grid.Column="2" HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand"/>
+                            <BoxView BackgroundColor="DarkSlateGray" WidthRequest="1" Grid.Column="3" HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand"/>
+                        </Grid>
+                    </Frame>
+                    <!--
+                    <ListView Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" SeparatorVisibility="None" SelectionMode="None" HasUnevenRows="False">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Frame Padding="0" BorderColor="DarkSlateGray">
+                                        <Grid Padding="0" RowSpacing="0">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition />
+                                                <ColumnDefinition/>
+                                                <ColumnDefinition />
+                                                <ColumnDefinition />
+                                            </Grid.ColumnDefinitions>
+
+                                            <Label Grid.Column="0" Text="#" FontSize="15" VerticalOptions="Center" HorizontalOptions="Center"/>
+                                            <Label Grid.Column="1" Text="Descripción" FontSize="15" VerticalOptions="Center" HorizontalOptions="Center" />
+                                            <Label Grid.Column="2" Text="Fecha" FontSize="15" VerticalOptions="Center" HorizontalOptions="Center" />
+                                            <Label Grid.Column="3" Text="Valor" FontSize="15" VerticalOptions="Center" HorizontalOptions="Center"/>
+
+                                            <BoxView BackgroundColor="DarkSlateGray" WidthRequest="1" Grid.Column="0" HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand"/>
+                                            <BoxView BackgroundColor="DarkSlateGray" WidthRequest="1" Grid.Column="1" HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand"/>
+                                            <BoxView BackgroundColor="DarkSlateGray" WidthRequest="1" Grid.Column="2" HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand"/>
+                                            <BoxView BackgroundColor="DarkSlateGray" WidthRequest="1" Grid.Column="3" HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand"/>
+                                        </Grid>
+                                    </Frame>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                    -->
+
+                    <Button Grid.Row="6" Grid.Column="0" Text="Generar reporte" Margin="0,30,0,0"/>
+                    <Button Grid.Row="6" Grid.Column="1" Text="Siguiente nivel" Margin="0,30,0,0"/>
+
+                </Grid>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

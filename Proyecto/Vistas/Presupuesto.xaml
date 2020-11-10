@@ -4,12 +4,66 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+             Title="Presupuesto"
              x:Class="Proyecto.Vistas.Presupuesto">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <ScrollView>
+            <Grid RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" ColumnSpacing="20" Padding="20" RowSpacing="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40" />
+                        <RowDefinition Height="120"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Grid.Row="0" Grid.Column="0" Text="Lección 1" FontSize="18" Margin="25,0,0,0"/>
+                    <Image Grid.Row="1" Grid.Column="0" Source="ingreGastos.png"/>
+                    <Label Grid.Row="2" Grid.Column="0" Text="Ingresos: " FontSize="16" Margin="10,10,0,15"/>
+                    <Entry Grid.Row="3" Grid.Column="0" Text="$"/>
+
+                    <ProgressBar Grid.Row="1" Grid.Column="1" Progress="0.6" ScaleY="1" ProgressColor="#77D371" Margin="15,0,0,0" />
+                    <Label Grid.Row="2" Grid.Column="1" Text="Gastos: " FontSize="16" Margin="10,10,0,15"/>
+                    <Entry Grid.Row="3" Grid.Column="1" Text="$"/>
+
+                </Grid>
+                <Grid Grid.Row="1" RowSpacing="0" Padding="14">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40" />
+                        <RowDefinition Height="120"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="70"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="120"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Grid.Row="0" Grid.Column="0" Text="Lección 2" FontSize="18" Margin="25,0,0,0"/>
+                    <Image Grid.Row="1" Grid.Column="0" Source="FlujoCaja.jpeg"/>
+
+                    <ProgressBar Grid.Row="1" Grid.Column="1" Progress="0" ScaleY="1" ProgressColor="#566573" Margin="15,0,0,0" />
+                    <Button Grid.Row="2" Grid.Column="1" Text="Ir al simulador"/>
+
+                    <Label Grid.Row="3" Grid.Column="0" Text="Esto es de tu interes!" FontSize="16" Margin="0,40,0,0"/>
+                    <Label Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2"
+                           Text="Actualmente tu estado financiero es aceptable, aunque puedes generar más ingresos invirtiendo o comprando activos! Sigue asi!" FontSize="16" />
+
+                    <Image Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Source="smiling.png" Scale="0.5" />
+                    
+
+                </Grid>
+            </Grid>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

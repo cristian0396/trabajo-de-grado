@@ -16,9 +16,27 @@ namespace Proyecto.Vistas
         {
             InitializeComponent();
         }
-        private async void TapGestureRecognizer_Tapped_1(object sender, EventArgs e)
+        private async void TapGestureRecognizer_Tapped_Presupuesto(object sender, EventArgs e)
         {
+            var img = sender as Image;
+            await img.ScaleTo(1.3, 300);
+            await img.ScaleTo(1, 300, Easing.BounceOut);
             await Navigation.PushAsync(new Presupuesto());
+        }
+        private async void TapGestureRecognizer_Tapped_Plan_Gastos(object sender, EventArgs e)
+        {
+            var img = sender as Image;
+            await img.ScaleTo(1.3, 300);
+            await img.ScaleTo(1, 300, Easing.BounceOut);
+            await Navigation.PushAsync(new PlanGastos());
+        }
+
+        private async void TapGestureRecognizer_Tapped_Ahorro(object sender, EventArgs e)
+        {
+            var img = sender as Image;
+            await img.ScaleTo(1.3, 300);
+            await img.ScaleTo(1, 300, Easing.BounceOut);
+            await Navigation.PushAsync(new Ahorro());
         }
     }    
 }

@@ -483,3 +483,5 @@ D:\Universidad\Finanzapp-Modulapp\Proyecto\Proyecto.Android\obj\Debug\90\res\dra
 D:\Universidad\Finanzapp-Modulapp\Proyecto\Proyecto.Android\obj\Debug\90\res\drawable\gradient.jpg
 D:\Universidad\Finanzapp-Modulapp\Proyecto\Proyecto.Android\obj\Debug\90\res\drawable\user.png
 D:\Universidad\Finanzapp-Modulapp\Proyecto\Proyecto.Android\obj\Debug\90\res\drawable\leave.png
+D:\Universidad\Finanzapp-Modulapp\Proyecto\Proyecto.Android\obj\Debug\90\res\drawable\flujocaja.jpeg
+D:\Universidad\Finanzapp-Modulapp\Proyecto\Proyecto.Android\obj\Debug\90\res\drawable\smiling.png

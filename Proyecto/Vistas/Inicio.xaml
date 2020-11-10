@@ -53,18 +53,26 @@
                 </Grid.ColumnDefinitions>
                 <Image Grid.Row="0" Grid.Column="0" Source="ingreGastos.png">
                     <Image.GestureRecognizers >
-                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"/>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_Presupuesto"/>
                     </Image.GestureRecognizers>
                 </Image>
-
                 <Label Grid.Row="1" Grid.Column="0" Text="Modulo 1: Presupuesto"/>
                 <ProgressBar Grid.Row="2" Grid.Column="0" Progress="1" ScaleY="2"  ProgressColor="#77D371" />
+                
 
-                <Image Grid.Row="0" Grid.Column="1" Source="imagen.png" HeightRequest="203" Scale="0.7"/>
+                <Image Grid.Row="0" Grid.Column="1" Source="imagen.png" HeightRequest="203" Scale="0.7">
+                    <Image.GestureRecognizers >
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_Plan_Gastos"/>
+                    </Image.GestureRecognizers>
+                </Image>
                 <Label Grid.Row="1" Grid.Column="1" Text="Modulo 2: Plan de gastos"/>
                 <ProgressBar Grid.Row="2" Grid.Column="1" Progress="1" ScaleY="2"  ProgressColor="#77D371"/>
 
-                <Image Grid.Row="3" Grid.Column="0" Source="Ahorro.png"/>
+                <Image Grid.Row="3" Grid.Column="0" Source="Ahorro.png">
+                    <Image.GestureRecognizers >
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_Ahorro"/>
+                    </Image.GestureRecognizers>
+                </Image>
                 <Label Grid.Row="4" Grid.Column="0" Text="Modulo 3: Ahorro" />
                 <ProgressBar Grid.Row="5" Grid.Column="0" Progress="0.5" ScaleY="2"  ProgressColor="#77D371" />
 

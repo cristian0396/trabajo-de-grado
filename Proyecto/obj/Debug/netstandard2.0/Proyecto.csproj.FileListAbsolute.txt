@@ -14,3 +14,5 @@ D:\Universidad\Finanzapp-Modulapp\Proyecto\Proyecto\obj\Debug\netstandard2.0\Xam
 D:\Universidad\Finanzapp-Modulapp\Proyecto\Proyecto\obj\Debug\netstandard2.0\Vistas\Inicio.xaml.g.cs
 D:\Universidad\Finanzapp-Modulapp\Proyecto\Proyecto\obj\Debug\netstandard2.0\Vistas\MenuHeader.xaml.g.cs
 D:\Universidad\Finanzapp-Modulapp\Proyecto\Proyecto\obj\Debug\netstandard2.0\Vistas\Presupuesto.xaml.g.cs
+D:\Universidad\Finanzapp-Modulapp\Proyecto\Proyecto\obj\Debug\netstandard2.0\Vistas\Ahorro.xaml.g.cs
+D:\Universidad\Finanzapp-Modulapp\Proyecto\Proyecto\obj\Debug\netstandard2.0\Vistas\PlanGastos.xaml.g.cs
