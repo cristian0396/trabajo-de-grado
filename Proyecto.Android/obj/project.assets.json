@@ -1980,11 +1980,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Universidad\\Finanzapp-Modulapp\\Proyecto\\Proyecto.Android\\Proyecto.Android.csproj",
+      "projectUniqueName": "D:\\Universidad\\EduFinanzas\\Proyecto\\Proyecto.Android\\Proyecto.Android.csproj",
       "projectName": "Proyecto.Android",
-      "projectPath": "D:\\Universidad\\Finanzapp-Modulapp\\Proyecto\\Proyecto.Android\\Proyecto.Android.csproj",
+      "projectPath": "D:\\Universidad\\EduFinanzas\\Proyecto\\Proyecto.Android\\Proyecto.Android.csproj",
       "packagesPath": "C:\\Users\\pc01a\\.nuget\\packages\\",
-      "outputPath": "D:\\Universidad\\Finanzapp-Modulapp\\Proyecto\\Proyecto.Android\\obj\\",
+      "outputPath": "D:\\Universidad\\EduFinanzas\\Proyecto\\Proyecto.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -2005,8 +2005,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "D:\\Universidad\\Finanzapp-Modulapp\\Proyecto\\Proyecto\\Proyecto.csproj": {
-              "projectPath": "D:\\Universidad\\Finanzapp-Modulapp\\Proyecto\\Proyecto\\Proyecto.csproj"
+            "D:\\Universidad\\EduFinanzas\\Proyecto\\Proyecto\\Proyecto.csproj": {
+              "projectPath": "D:\\Universidad\\EduFinanzas\\Proyecto\\Proyecto\\Proyecto.csproj"
             }
           }
         }

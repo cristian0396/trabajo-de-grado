@@ -1094,11 +1094,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Universidad\\Finanzapp-Modulapp\\Proyecto\\Proyecto.iOS\\Proyecto.iOS.csproj",
+      "projectUniqueName": "D:\\Universidad\\EduFinanzas\\Proyecto\\Proyecto.iOS\\Proyecto.iOS.csproj",
       "projectName": "Proyecto.iOS",
-      "projectPath": "D:\\Universidad\\Finanzapp-Modulapp\\Proyecto\\Proyecto.iOS\\Proyecto.iOS.csproj",
+      "projectPath": "D:\\Universidad\\EduFinanzas\\Proyecto\\Proyecto.iOS\\Proyecto.iOS.csproj",
       "packagesPath": "C:\\Users\\pc01a\\.nuget\\packages\\",
-      "outputPath": "D:\\Universidad\\Finanzapp-Modulapp\\Proyecto\\Proyecto.iOS\\obj\\",
+      "outputPath": "D:\\Universidad\\EduFinanzas\\Proyecto\\Proyecto.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -1119,8 +1119,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "D:\\Universidad\\Finanzapp-Modulapp\\Proyecto\\Proyecto\\Proyecto.csproj": {
-              "projectPath": "D:\\Universidad\\Finanzapp-Modulapp\\Proyecto\\Proyecto\\Proyecto.csproj"
+            "D:\\Universidad\\EduFinanzas\\Proyecto\\Proyecto\\Proyecto.csproj": {
+              "projectPath": "D:\\Universidad\\EduFinanzas\\Proyecto\\Proyecto\\Proyecto.csproj"
             }
           }
         }
