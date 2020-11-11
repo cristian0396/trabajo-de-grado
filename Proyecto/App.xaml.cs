@@ -33,7 +33,7 @@ namespace Proyecto
 
             //MainPage = new NavigationPage(new Aterrizaje());
             //MainPage = new MainPage();
-            MainPage = new MainPage();
+            MainPage = new Registro();
         }
 
         protected override void OnStart()

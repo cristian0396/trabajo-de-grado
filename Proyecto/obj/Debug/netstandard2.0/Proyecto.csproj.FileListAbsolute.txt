@@ -34,3 +34,5 @@ D:\Universidad\EduFinanzas\Proyecto\Proyecto\obj\Debug\netstandard2.0\XamlC.stam
 D:\Universidad\EduFinanzas\Proyecto\Proyecto\obj\Debug\netstandard2.0\Proyecto.dll
 D:\Universidad\EduFinanzas\Proyecto\Proyecto\obj\Debug\netstandard2.0\ref\Proyecto.dll
 D:\Universidad\EduFinanzas\Proyecto\Proyecto\obj\Debug\netstandard2.0\Proyecto.pdb
+D:\Universidad\EduFinanzas\Proyecto\Proyecto\obj\Debug\netstandard2.0\Vistas\Login.xaml.g.cs
+D:\Universidad\EduFinanzas\Proyecto\Proyecto\obj\Debug\netstandard2.0\Vistas\Registro.xaml.g.cs
