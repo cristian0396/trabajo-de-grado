@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             xmlns:viewmodel="clr-namespace:Proyecto.ViewModels"
+             mc:Ignorable="d"
+             x:Class="Proyecto.Vistas.introPresupuesto">
+    <ContentPage.BindingContext>
+        <viewmodel:IntroPresupuestoViewModel/> 
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <yummy:PancakeView Grid.RowSpan="3"  BackgroundGradientStartPoint="0,0" BackgroundGradientEndPoint="1,0">
+                <yummy:PancakeView.BackgroundGradientStops>
+                    <yummy:GradientStopCollection>
+                        <yummy:GradientStop Color="#FA8072" Offset="0" />
+                        <yummy:GradientStop Color="#F08080" Offset="0.5" />
+                        <yummy:GradientStop Color="#CD5C5C" Offset="1" />
+                    </yummy:GradientStopCollection>
+                </yummy:PancakeView.BackgroundGradientStops>
+            </yummy:PancakeView>
+            <Button Grid.Row="0" Command="{Binding ComandoOmitir}" BackgroundColor="Transparent" Margin="0,10,10,0" HorizontalOptions="End" Text="Omitir" TextColor="White"/>
+            
+            <CarouselView Grid.Row="1" ItemsSource="{Binding Introduccion}" Position="{Binding PosicionIndice, Mode=TwoWay}">
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <ContentView Content = "{Binding CarouselItem}"/>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
+            <Button Grid.Row="2" BackgroundColor="White" CornerRadius="20" HeightRequest="40" Margin="0,10,0,24" HorizontalOptions="CenterAndExpand" Command="{Binding ComandoSiguiente}" Text="{Binding TextoBotonSiguiente}" WidthRequest="245"/>
+
+        </Grid>        
+    </ContentPage.Content>
+</ContentPage>

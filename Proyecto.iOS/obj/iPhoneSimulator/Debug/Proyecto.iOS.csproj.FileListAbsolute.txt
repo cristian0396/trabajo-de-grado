@@ -60,13 +60,16 @@ D:\Universidad\Finanzapp-Modulapp\Proyecto\Proyecto.iOS\obj\iPhoneSimulator\Debu
 D:\Universidad\EduFinanzas\Proyecto\Proyecto.iOS\bin\iPhoneSimulator\Debug\Proyecto.iOS.exe
 D:\Universidad\EduFinanzas\Proyecto\Proyecto.iOS\bin\iPhoneSimulator\Debug\Proyecto.iOS.pdb
 D:\Universidad\EduFinanzas\Proyecto\Proyecto.iOS\bin\iPhoneSimulator\Debug\Newtonsoft.Json.dll
+D:\Universidad\EduFinanzas\Proyecto\Proyecto.iOS\bin\iPhoneSimulator\Debug\PropertyChanged.dll
+D:\Universidad\EduFinanzas\Proyecto\Proyecto.iOS\bin\iPhoneSimulator\Debug\SkiaSharp.dll
+D:\Universidad\EduFinanzas\Proyecto\Proyecto.iOS\bin\iPhoneSimulator\Debug\SkiaSharp.Extended.dll
+D:\Universidad\EduFinanzas\Proyecto\Proyecto.iOS\bin\iPhoneSimulator\Debug\SkiaSharp.Views.iOS.dll
+D:\Universidad\EduFinanzas\Proyecto\Proyecto.iOS\bin\iPhoneSimulator\Debug\SkiaSharp.Views.Forms.dll
 D:\Universidad\EduFinanzas\Proyecto\Proyecto.iOS\bin\iPhoneSimulator\Debug\Xamarin.Essentials.dll
 D:\Universidad\EduFinanzas\Proyecto\Proyecto.iOS\bin\iPhoneSimulator\Debug\Xamarin.Essentials.pdb
 D:\Universidad\EduFinanzas\Proyecto\Proyecto.iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Core.dll
 D:\Universidad\EduFinanzas\Proyecto\Proyecto.iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Core.pdb
 D:\Universidad\EduFinanzas\Proyecto\Proyecto.iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Platform.dll
-D:\Universidad\EduFinanzas\Proyecto\Proyecto.iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Platform.iOS.dll
-D:\Universidad\EduFinanzas\Proyecto\Proyecto.iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Platform.iOS.pdb
 D:\Universidad\EduFinanzas\Proyecto\Proyecto.iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Xaml.dll
 D:\Universidad\EduFinanzas\Proyecto\Proyecto.iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Xaml.pdb
 D:\Universidad\EduFinanzas\Proyecto\Proyecto.iOS\bin\iPhoneSimulator\Debug\ar\Xamarin.Forms.Platform.iOS.resources.dll
@@ -90,7 +93,7 @@ D:\Universidad\EduFinanzas\Proyecto\Proyecto.iOS\bin\iPhoneSimulator\Debug\ms\Xa
 D:\Universidad\EduFinanzas\Proyecto\Proyecto.iOS\bin\iPhoneSimulator\Debug\nb\Xamarin.Forms.Platform.iOS.resources.dll
 D:\Universidad\EduFinanzas\Proyecto\Proyecto.iOS\bin\iPhoneSimulator\Debug\nl\Xamarin.Forms.Platform.iOS.resources.dll
 D:\Universidad\EduFinanzas\Proyecto\Proyecto.iOS\bin\iPhoneSimulator\Debug\pl\Xamarin.Forms.Platform.iOS.resources.dll
-D:\Universidad\EduFinanzas\Proyecto\Proyecto.iOS\bin\iPhoneSimulator\Debug\pt-br\Xamarin.Forms.Platform.iOS.resources.dll
+D:\Universidad\EduFinanzas\Proyecto\Proyecto.iOS\bin\iPhoneSimulator\Debug\pt-BR\Xamarin.Forms.Platform.iOS.resources.dll
 D:\Universidad\EduFinanzas\Proyecto\Proyecto.iOS\bin\iPhoneSimulator\Debug\pt\Xamarin.Forms.Platform.iOS.resources.dll
 D:\Universidad\EduFinanzas\Proyecto\Proyecto.iOS\bin\iPhoneSimulator\Debug\ro\Xamarin.Forms.Platform.iOS.resources.dll
 D:\Universidad\EduFinanzas\Proyecto\Proyecto.iOS\bin\iPhoneSimulator\Debug\ru\Xamarin.Forms.Platform.iOS.resources.dll
@@ -103,8 +106,11 @@ D:\Universidad\EduFinanzas\Proyecto\Proyecto.iOS\bin\iPhoneSimulator\Debug\vi\Xa
 D:\Universidad\EduFinanzas\Proyecto\Proyecto.iOS\bin\iPhoneSimulator\Debug\zh-HK\Xamarin.Forms.Platform.iOS.resources.dll
 D:\Universidad\EduFinanzas\Proyecto\Proyecto.iOS\bin\iPhoneSimulator\Debug\zh-Hans\Xamarin.Forms.Platform.iOS.resources.dll
 D:\Universidad\EduFinanzas\Proyecto\Proyecto.iOS\bin\iPhoneSimulator\Debug\zh-Hant\Xamarin.Forms.Platform.iOS.resources.dll
+D:\Universidad\EduFinanzas\Proyecto\Proyecto.iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.PancakeView.dll
 D:\Universidad\EduFinanzas\Proyecto\Proyecto.iOS\bin\iPhoneSimulator\Debug\Proyecto.dll
+D:\Universidad\EduFinanzas\Proyecto\Proyecto.iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Platform.iOS.dll
 D:\Universidad\EduFinanzas\Proyecto\Proyecto.iOS\bin\iPhoneSimulator\Debug\Proyecto.pdb
+D:\Universidad\EduFinanzas\Proyecto\Proyecto.iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Platform.iOS.pdb
 D:\Universidad\EduFinanzas\Proyecto\Proyecto.iOS\obj\iPhoneSimulator\Debug\ibtool\_BundleResourceWithLogicalName.items
 D:\Universidad\EduFinanzas\Proyecto\Proyecto.iOS\obj\iPhoneSimulator\Debug\actool\_PartialAppManifest.items
 D:\Universidad\EduFinanzas\Proyecto\Proyecto.iOS\obj\iPhoneSimulator\Debug\actool\_BundleResourceWithLogicalName.items
@@ -112,7 +118,6 @@ D:\Universidad\EduFinanzas\Proyecto\Proyecto.iOS\obj\iPhoneSimulator\Debug\corem
 D:\Universidad\EduFinanzas\Proyecto\Proyecto.iOS\obj\iPhoneSimulator\Debug\coremlc\_BundleResourceWithLogicalName.items
 D:\Universidad\EduFinanzas\Proyecto\Proyecto.iOS\obj\iPhoneSimulator\Debug\optimized\
 D:\Universidad\EduFinanzas\Proyecto\Proyecto.iOS\obj\iPhoneSimulator\Debug\Proyecto.iOS.csprojAssemblyReference.cache
-D:\Universidad\EduFinanzas\Proyecto\Proyecto.iOS\obj\iPhoneSimulator\Debug\XamlC.stamp
 D:\Universidad\EduFinanzas\Proyecto\Proyecto.iOS\obj\iPhoneSimulator\Debug\Proyecto.iOS.csproj.CopyComplete
 D:\Universidad\EduFinanzas\Proyecto\Proyecto.iOS\obj\iPhoneSimulator\Debug\Proyecto.iOS.exe
 D:\Universidad\EduFinanzas\Proyecto\Proyecto.iOS\obj\iPhoneSimulator\Debug\Proyecto.iOS.pdb
