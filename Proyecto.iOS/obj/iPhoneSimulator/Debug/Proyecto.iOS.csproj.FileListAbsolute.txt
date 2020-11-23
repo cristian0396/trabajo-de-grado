@@ -61,10 +61,6 @@ D:\Universidad\EduFinanzas\Proyecto\Proyecto.iOS\bin\iPhoneSimulator\Debug\Proye
 D:\Universidad\EduFinanzas\Proyecto\Proyecto.iOS\bin\iPhoneSimulator\Debug\Proyecto.iOS.pdb
 D:\Universidad\EduFinanzas\Proyecto\Proyecto.iOS\bin\iPhoneSimulator\Debug\Newtonsoft.Json.dll
 D:\Universidad\EduFinanzas\Proyecto\Proyecto.iOS\bin\iPhoneSimulator\Debug\PropertyChanged.dll
-D:\Universidad\EduFinanzas\Proyecto\Proyecto.iOS\bin\iPhoneSimulator\Debug\SkiaSharp.dll
-D:\Universidad\EduFinanzas\Proyecto\Proyecto.iOS\bin\iPhoneSimulator\Debug\SkiaSharp.Extended.dll
-D:\Universidad\EduFinanzas\Proyecto\Proyecto.iOS\bin\iPhoneSimulator\Debug\SkiaSharp.Views.iOS.dll
-D:\Universidad\EduFinanzas\Proyecto\Proyecto.iOS\bin\iPhoneSimulator\Debug\SkiaSharp.Views.Forms.dll
 D:\Universidad\EduFinanzas\Proyecto\Proyecto.iOS\bin\iPhoneSimulator\Debug\Xamarin.Essentials.dll
 D:\Universidad\EduFinanzas\Proyecto\Proyecto.iOS\bin\iPhoneSimulator\Debug\Xamarin.Essentials.pdb
 D:\Universidad\EduFinanzas\Proyecto\Proyecto.iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Core.dll
@@ -121,3 +117,9 @@ D:\Universidad\EduFinanzas\Proyecto\Proyecto.iOS\obj\iPhoneSimulator\Debug\Proye
 D:\Universidad\EduFinanzas\Proyecto\Proyecto.iOS\obj\iPhoneSimulator\Debug\Proyecto.iOS.csproj.CopyComplete
 D:\Universidad\EduFinanzas\Proyecto\Proyecto.iOS\obj\iPhoneSimulator\Debug\Proyecto.iOS.exe
 D:\Universidad\EduFinanzas\Proyecto\Proyecto.iOS\obj\iPhoneSimulator\Debug\Proyecto.iOS.pdb
+D:\Universidad\EduFinanzas\Proyecto\Proyecto.iOS\bin\iPhoneSimulator\Debug\CocosSharp.dll
+D:\Universidad\EduFinanzas\Proyecto\Proyecto.iOS\bin\iPhoneSimulator\Debug\Lidgren.Network.dll
+D:\Universidad\EduFinanzas\Proyecto\Proyecto.iOS\bin\iPhoneSimulator\Debug\MonoGame.Framework.Net.dll
+D:\Universidad\EduFinanzas\Proyecto\Proyecto.iOS\bin\iPhoneSimulator\Debug\MonoGame.Framework.dll
+D:\Universidad\EduFinanzas\Proyecto\Proyecto.iOS\bin\iPhoneSimulator\Debug\box2d.dll
+D:\Universidad\EduFinanzas\Proyecto\Proyecto.iOS\bin\iPhoneSimulator\Debug\CocosSharp.Forms.dll

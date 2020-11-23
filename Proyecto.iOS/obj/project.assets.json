@@ -2,6 +2,36 @@
   "version": 3,
   "targets": {
     "Xamarin.iOS,Version=v1.0": {
+      "CocosSharp/1.7.1": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/CocosSharp.dll": {},
+          "lib/Xamarin.iOS10/Lidgren.Network.dll": {},
+          "lib/Xamarin.iOS10/MonoGame.Framework.Net.dll": {},
+          "lib/Xamarin.iOS10/MonoGame.Framework.dll": {},
+          "lib/Xamarin.iOS10/box2d.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/CocosSharp.dll": {},
+          "lib/Xamarin.iOS10/Lidgren.Network.dll": {},
+          "lib/Xamarin.iOS10/MonoGame.Framework.Net.dll": {},
+          "lib/Xamarin.iOS10/MonoGame.Framework.dll": {},
+          "lib/Xamarin.iOS10/box2d.dll": {}
+        }
+      },
+      "CocosSharp.Forms/1.7.1": {
+        "type": "package",
+        "dependencies": {
+          "CocosSharp": "(, )",
+          "Xamarin.Forms": "(, )"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/CocosSharp.Forms.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/CocosSharp.Forms.dll": {}
+        }
+      },
       "Fody/6.3.0": {
         "type": "package",
         "build": {
@@ -192,6 +222,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "CocosSharp.Forms": "1.7.1",
           "Newtonsoft.Json": "12.0.3",
           "PropertyChanged.Fody": "3.3.1",
           "Xamarin.Essentials": "1.5.3.2",
@@ -207,6 +238,36 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win": {
+      "CocosSharp/1.7.1": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/CocosSharp.dll": {},
+          "lib/Xamarin.iOS10/Lidgren.Network.dll": {},
+          "lib/Xamarin.iOS10/MonoGame.Framework.Net.dll": {},
+          "lib/Xamarin.iOS10/MonoGame.Framework.dll": {},
+          "lib/Xamarin.iOS10/box2d.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/CocosSharp.dll": {},
+          "lib/Xamarin.iOS10/Lidgren.Network.dll": {},
+          "lib/Xamarin.iOS10/MonoGame.Framework.Net.dll": {},
+          "lib/Xamarin.iOS10/MonoGame.Framework.dll": {},
+          "lib/Xamarin.iOS10/box2d.dll": {}
+        }
+      },
+      "CocosSharp.Forms/1.7.1": {
+        "type": "package",
+        "dependencies": {
+          "CocosSharp": "(, )",
+          "Xamarin.Forms": "(, )"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/CocosSharp.Forms.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/CocosSharp.Forms.dll": {}
+        }
+      },
       "Fody/6.3.0": {
         "type": "package",
         "build": {
@@ -397,6 +458,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "CocosSharp.Forms": "1.7.1",
           "Newtonsoft.Json": "12.0.3",
           "PropertyChanged.Fody": "3.3.1",
           "Xamarin.Essentials": "1.5.3.2",
@@ -412,6 +474,36 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win-x64": {
+      "CocosSharp/1.7.1": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/CocosSharp.dll": {},
+          "lib/Xamarin.iOS10/Lidgren.Network.dll": {},
+          "lib/Xamarin.iOS10/MonoGame.Framework.Net.dll": {},
+          "lib/Xamarin.iOS10/MonoGame.Framework.dll": {},
+          "lib/Xamarin.iOS10/box2d.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/CocosSharp.dll": {},
+          "lib/Xamarin.iOS10/Lidgren.Network.dll": {},
+          "lib/Xamarin.iOS10/MonoGame.Framework.Net.dll": {},
+          "lib/Xamarin.iOS10/MonoGame.Framework.dll": {},
+          "lib/Xamarin.iOS10/box2d.dll": {}
+        }
+      },
+      "CocosSharp.Forms/1.7.1": {
+        "type": "package",
+        "dependencies": {
+          "CocosSharp": "(, )",
+          "Xamarin.Forms": "(, )"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/CocosSharp.Forms.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/CocosSharp.Forms.dll": {}
+        }
+      },
       "Fody/6.3.0": {
         "type": "package",
         "build": {
@@ -602,6 +694,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "CocosSharp.Forms": "1.7.1",
           "Newtonsoft.Json": "12.0.3",
           "PropertyChanged.Fody": "3.3.1",
           "Xamarin.Essentials": "1.5.3.2",
@@ -617,6 +710,36 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win-x86": {
+      "CocosSharp/1.7.1": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/CocosSharp.dll": {},
+          "lib/Xamarin.iOS10/Lidgren.Network.dll": {},
+          "lib/Xamarin.iOS10/MonoGame.Framework.Net.dll": {},
+          "lib/Xamarin.iOS10/MonoGame.Framework.dll": {},
+          "lib/Xamarin.iOS10/box2d.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/CocosSharp.dll": {},
+          "lib/Xamarin.iOS10/Lidgren.Network.dll": {},
+          "lib/Xamarin.iOS10/MonoGame.Framework.Net.dll": {},
+          "lib/Xamarin.iOS10/MonoGame.Framework.dll": {},
+          "lib/Xamarin.iOS10/box2d.dll": {}
+        }
+      },
+      "CocosSharp.Forms/1.7.1": {
+        "type": "package",
+        "dependencies": {
+          "CocosSharp": "(, )",
+          "Xamarin.Forms": "(, )"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/CocosSharp.Forms.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/CocosSharp.Forms.dll": {}
+        }
+      },
       "Fody/6.3.0": {
         "type": "package",
         "build": {
@@ -807,6 +930,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "CocosSharp.Forms": "1.7.1",
           "Newtonsoft.Json": "12.0.3",
           "PropertyChanged.Fody": "3.3.1",
           "Xamarin.Essentials": "1.5.3.2",
@@ -823,6 +947,70 @@
     }
   },
   "libraries": {
+    "CocosSharp/1.7.1": {
+      "sha512": "ld9x++vo1xqAVb7jy6QZ5VBJ+D5FZhFwjMiMH7OLc+ss0U71hCWRaT/lVKRj2KELI9HoZpf9H0e8mYOYAYZayA==",
+      "type": "package",
+      "path": "cocossharp/1.7.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "cocossharp.1.7.1.nupkg.sha512",
+        "cocossharp.nuspec",
+        "lib/MonoAndroid10/CocosSharp.XML",
+        "lib/MonoAndroid10/CocosSharp.dll",
+        "lib/MonoAndroid10/Lidgren.Network.dll",
+        "lib/MonoAndroid10/Lidgren.Network.xml",
+        "lib/MonoAndroid10/MonoGame.Framework.dll",
+        "lib/MonoAndroid10/MonoGame.Framework.xml",
+        "lib/Xamarin.iOS10/CocosSharp.XML",
+        "lib/Xamarin.iOS10/CocosSharp.dll",
+        "lib/Xamarin.iOS10/Lidgren.Network.dll",
+        "lib/Xamarin.iOS10/Lidgren.Network.xml",
+        "lib/Xamarin.iOS10/MonoGame.Framework.Net.dll",
+        "lib/Xamarin.iOS10/MonoGame.Framework.Net.xml",
+        "lib/Xamarin.iOS10/MonoGame.Framework.dll",
+        "lib/Xamarin.iOS10/MonoGame.Framework.xml",
+        "lib/Xamarin.iOS10/box2d.dll",
+        "lib/portable-net45+win+wpa81+wp81/CocosSharp.dll",
+        "lib/portable-net45+win+wpa81+wp81/MonoGame.Framework.dll",
+        "lib/portable-net45+win+wpa81+wp81/box2d.dll",
+        "lib/wpa81/CocosSharp.XML",
+        "lib/wpa81/CocosSharp.dll",
+        "lib/wpa81/MonoGame.Framework.Net.dll",
+        "lib/wpa81/MonoGame.Framework.Net.xml",
+        "lib/wpa81/MonoGame.Framework.dll",
+        "lib/wpa81/MonoGame.Framework.xml",
+        "lib/wpa81/SharpDX.DXGI.dll",
+        "lib/wpa81/SharpDX.DXGI.xml",
+        "lib/wpa81/SharpDX.Direct2D1.dll",
+        "lib/wpa81/SharpDX.Direct2D1.xml",
+        "lib/wpa81/SharpDX.Direct3D11.dll",
+        "lib/wpa81/SharpDX.Direct3D11.xml",
+        "lib/wpa81/SharpDX.MediaFoundation.dll",
+        "lib/wpa81/SharpDX.MediaFoundation.xml",
+        "lib/wpa81/SharpDX.XAudio2.dll",
+        "lib/wpa81/SharpDX.XAudio2.xml",
+        "lib/wpa81/SharpDX.dll",
+        "lib/wpa81/SharpDX.xml",
+        "lib/wpa81/box2d.dll"
+      ]
+    },
+    "CocosSharp.Forms/1.7.1": {
+      "sha512": "414fNufDIj1h42AaNIFvUWvdb8qgggKlt/Hq6ql9Zk7j0EF8ZUet1yyDL2om2weWf4rx0iwUQk11MuBry3xmUA==",
+      "type": "package",
+      "path": "cocossharp.forms/1.7.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "cocossharp.forms.1.7.1.nupkg.sha512",
+        "cocossharp.forms.nuspec",
+        "lib/MonoAndroid10/CocosSharp.Forms.dll",
+        "lib/MonoAndroid10/box2d.dll",
+        "lib/Xamarin.iOS10/CocosSharp.Forms.dll",
+        "lib/portable-net45+win+wpa81+wp81/CocosSharp.Forms.dll",
+        "lib/wpa81/CocosSharp.Forms.dll"
+      ]
+    },
     "Fody/6.3.0": {
       "sha512": "kBGlW/vBUvBSyCvFI3YICNl77gjUr0KMROlBTeBPN/+J3JMU57w1dpXPwjmU4ahdBTYLomzgxKLaJ3jVNuXuQg==",
       "type": "package",
@@ -1374,6 +1562,7 @@
   },
   "projectFileDependencyGroups": {
     "Xamarin.iOS,Version=v1.0": [
+      "CocosSharp.Forms >= 1.7.1",
       "Newtonsoft.Json >= 12.0.3",
       "Proyecto >= 1.0.0",
       "Xamarin.Essentials >= 1.5.3.2",
@@ -1423,6 +1612,10 @@
     "frameworks": {
       "xamarinios10": {
         "dependencies": {
+          "CocosSharp.Forms": {
+            "target": "Package",
+            "version": "[1.7.1, )"
+          },
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[12.0.3, )"
@@ -1453,5 +1646,20 @@
         "#import": []
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1602",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "CocosSharp.Forms 1.7.1 no proporciona un límite inferior inclusivo para la dependencia CocosSharp. Se resolvió una mejor coincidencia aproximada de CocosSharp 1.7.1.",
+      "libraryId": "CocosSharp",
+      "targetGraphs": [
+        "Xamarin.iOS,Version=v1.0",
+        "Xamarin.iOS,Version=v1.0/win",
+        "Xamarin.iOS,Version=v1.0/win-x64",
+        "Xamarin.iOS,Version=v1.0/win-x86"
+      ]
+    }
+  ]
 }

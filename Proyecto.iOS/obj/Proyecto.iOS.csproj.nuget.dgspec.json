@@ -42,6 +42,10 @@
       "frameworks": {
         "xamarinios10": {
           "dependencies": {
+            "CocosSharp.Forms": {
+              "target": "Package",
+              "version": "[1.7.1, )"
+            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[12.0.3, )"
@@ -112,6 +116,10 @@
       "frameworks": {
         "netstandard2.0": {
           "dependencies": {
+            "CocosSharp.Forms": {
+              "target": "Package",
+              "version": "[1.7.1, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",

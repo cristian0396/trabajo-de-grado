@@ -10,8 +10,11 @@ namespace Proyecto
     {
         #region Properties
         static NavegationService navigationService;
-
         public static MasterDetailPage MasterD { get; set; }
+
+        public static int Width { get; set; }
+        public static int Height { get; set; }
+        public static int Density { get; set; }
         #endregion
 
         #region Getters & Setters
@@ -33,7 +36,7 @@ namespace Proyecto
 
             //MainPage = new NavigationPage(new Aterrizaje());
             //MainPage = new MainPage();
-            MainPage = new introPresupuesto();
+            MainPage = new ActividadP1();
         }
 
         protected override void OnStart()

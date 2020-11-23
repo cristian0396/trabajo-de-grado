@@ -1,7 +1,9 @@
+box2d
+CocosSharp
+CocosSharp.Forms
 FormsViewGroup
-SkiaSharp
-SkiaSharp.Views.Android
-SkiaSharp.Views.Forms
+Lidgren.Network
+MonoGame.Framework
 Xamarin.Android.Arch.Core.Common
 Xamarin.Android.Arch.Core.Runtime
 Xamarin.Android.Arch.Lifecycle.Common
@@ -43,3 +45,4 @@ Xamarin.Essentials
 Xamarin.Forms.PancakeView
 Xamarin.Forms.Platform.Android
 Xamarin.Forms.Platform
+OpenTK-1.0

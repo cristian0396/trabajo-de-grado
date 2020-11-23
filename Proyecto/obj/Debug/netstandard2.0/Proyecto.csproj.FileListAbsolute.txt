@@ -33,9 +33,10 @@ D:\Universidad\EduFinanzas\Proyecto\Proyecto\obj\Debug\netstandard2.0\Vistas\Rec
 D:\Universidad\EduFinanzas\Proyecto\Proyecto\obj\Debug\netstandard2.0\Vistas\Registro.xaml.g.cs
 D:\Universidad\EduFinanzas\Proyecto\Proyecto\obj\Debug\netstandard2.0\Proyecto.AssemblyInfoInputs.cache
 D:\Universidad\EduFinanzas\Proyecto\Proyecto\obj\Debug\netstandard2.0\Proyecto.AssemblyInfo.cs
-D:\Universidad\EduFinanzas\Proyecto\Proyecto\obj\Debug\netstandard2.0\Proyecto.csproj.Fody.CopyLocal.cache
-D:\Universidad\EduFinanzas\Proyecto\Proyecto\obj\Debug\netstandard2.0\XamlC.stamp
 D:\Universidad\EduFinanzas\Proyecto\Proyecto\obj\Debug\netstandard2.0\Proyecto.dll
 D:\Universidad\EduFinanzas\Proyecto\Proyecto\obj\Debug\netstandard2.0\ref\Proyecto.dll
 D:\Universidad\EduFinanzas\Proyecto\Proyecto\obj\Debug\netstandard2.0\Proyecto.pdb
 D:\Universidad\EduFinanzas\Proyecto\Proyecto\obj\Debug\netstandard2.0\Proyecto.csprojAssemblyReference.cache
+D:\Universidad\EduFinanzas\Proyecto\Proyecto\obj\Debug\netstandard2.0\Proyecto.csproj.Fody.CopyLocal.cache
+D:\Universidad\EduFinanzas\Proyecto\Proyecto\obj\Debug\netstandard2.0\XamlC.stamp
+D:\Universidad\EduFinanzas\Proyecto\Proyecto\obj\Debug\netstandard2.0\Vistas\ActividadP1.xaml.g.cs
