@@ -122,6 +122,18 @@
           "ref/netstandard1.5/System.Runtime.dll": {}
         }
       },
+      "Xamanimation/1.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "4.1.0.581479"
+        },
+        "compile": {
+          "lib/netstandard2.0/Xamanimation.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Xamanimation.dll": {}
+        }
+      },
       "Xamarin.Essentials/1.5.3.2": {
         "type": "package",
         "dependencies": {
@@ -265,7 +277,7 @@
       ]
     },
     "Microsoft.NETCore.Platforms/1.1.0": {
-      "sha512": "bLpT1f/SFlO1CzqXG12KnJzpZs6lv24uX2Rzi4Fmm0noJpNlnWRVryuO3yK18Ca04t/YHcO1e1Z0WDfjseqNzw==",
+      "sha512": "kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
       "type": "package",
       "path": "microsoft.netcore.platforms/1.1.0",
       "files": [
@@ -668,6 +680,18 @@
         "ref/xamarinwatchos10/_._",
         "system.runtime.4.3.0.nupkg.sha512",
         "system.runtime.nuspec"
+      ]
+    },
+    "Xamanimation/1.3.0": {
+      "sha512": "CXYLcQulqAL9qxRMecm5P5YXbOWiBGK0mgtV2buyHehLjbj6Hf+EdHs8cqVztrD47/zAiTAz2yDCURRXC8d33Q==",
+      "type": "package",
+      "path": "xamanimation/1.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Xamanimation.dll",
+        "xamanimation.1.3.0.nupkg.sha512",
+        "xamanimation.nuspec"
       ]
     },
     "Xamarin.Essentials/1.5.3.2": {
@@ -1077,31 +1101,30 @@
       "NETStandard.Library >= 2.0.3",
       "Newtonsoft.Json >= 12.0.3",
       "PropertyChanged.Fody >= 3.3.1",
+      "Xamanimation >= 1.3.0",
       "Xamarin.Essentials >= 1.5.3.2",
       "Xamarin.Forms >= 4.8.0.1687",
       "Xamarin.Forms.PancakeView >= 2.3.0.759"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\pc01a\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\alejo\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Universidad\\EduFinanzas\\Proyecto\\Proyecto\\Proyecto.csproj",
+      "projectUniqueName": "G:\\EduFinanzas\\trabajo-de-grado\\Proyecto\\Proyecto.csproj",
       "projectName": "Proyecto",
-      "projectPath": "D:\\Universidad\\EduFinanzas\\Proyecto\\Proyecto\\Proyecto.csproj",
-      "packagesPath": "C:\\Users\\pc01a\\.nuget\\packages\\",
-      "outputPath": "D:\\Universidad\\EduFinanzas\\Proyecto\\Proyecto\\obj\\",
+      "projectPath": "G:\\EduFinanzas\\trabajo-de-grado\\Proyecto\\Proyecto.csproj",
+      "packagesPath": "C:\\Users\\alejo\\.nuget\\packages\\",
+      "outputPath": "G:\\EduFinanzas\\trabajo-de-grado\\Proyecto\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\pc01a\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\alejo\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -1143,6 +1166,10 @@
           "PropertyChanged.Fody": {
             "target": "Package",
             "version": "[3.3.1, )"
+          },
+          "Xamanimation": {
+            "target": "Package",
+            "version": "[1.3.0, )"
           },
           "Xamarin.Essentials": {
             "target": "Package",

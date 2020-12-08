@@ -7,14 +7,16 @@ using System.Text;
 using System.Windows.Input;
 using Xamarin.Forms;
 using PropertyChanged;
+using System.Threading.Tasks;
 
 namespace Proyecto.ViewModels
 {
     [AddINotifyPropertyChangedInterface]
-    public class IntroPresupuestoViewModel 
+    
+    public class IntroPresupuestoViewModel : ViewModelBase
     {
         public ObservableCollection<IntroduccionModel> Introduccion { get; set; }
-
+        private int modulo;
         public int PosicionIndice { get; set; }
         public string TextoBotonSiguiente
         {
@@ -27,7 +29,17 @@ namespace Proyecto.ViewModels
         }
         public ICommand ComandoSiguiente { get; set; }
         public ICommand ComandoOmitir { get; set; }
-        public IntroPresupuestoViewModel()
+
+        public int Modulo
+        {
+            get { return modulo; }
+            set
+            {
+                modulo = value;
+                OnPropertyChanged();
+            }
+        }
+        public IntroPresupuestoViewModel(string modulo)
         {
             Introduccion = new ObservableCollection<IntroduccionModel>
             {
@@ -40,7 +52,7 @@ namespace Proyecto.ViewModels
                 },
                 new IntroduccionModel()
                 {
-                    DirImagen = "diccionario.png",
+                    DirImagen = "books.png",
                     Titulo = "Importancia",
                     Contenido = "Esta es la corta descripcion de la importancia del presupuesto",
                     CarouselItem = new RecorridoItemPage()
@@ -61,9 +73,9 @@ namespace Proyecto.ViewModels
             }
 
             ComandoSiguiente = new Command(Siguiente);
-            ComandoOmitir = new Command(Omitir);
+            ComandoOmitir = new Command(async () => await Omitir(), () => true);
         }
-        
+
         private void Siguiente(object obj)
         {
             if (PosicionIndice < Introduccion.Count - 1)
@@ -76,8 +88,8 @@ namespace Proyecto.ViewModels
             }
         }
 
-        private void Omitir(){
-            Application.Current.MainPage = new Presupuesto();
+        private async Task  Omitir(){
+            await Shell.Current.GoToAsync("Presupuesto");
         }
     }
 }

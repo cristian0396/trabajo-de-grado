@@ -5,7 +5,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              Title="Presupuesto"
-             x:Class="Proyecto.Vistas.Presupuesto">
+             x:Class="Proyecto.Vistas.Presupuesto"
+             NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
         <ScrollView>
             <Grid RowSpacing="0">
@@ -26,7 +27,11 @@
                     </Grid.ColumnDefinitions>
 
                     <Label Grid.Row="0" Grid.Column="0" Text="Lección 1" FontSize="18" Margin="25,0,0,0"/>
-                    <Image Grid.Row="1" Grid.Column="0" Source="ingreGastos.png"/>
+                    <Image Grid.Row="1" Grid.Column="0" Source="ingreGastos.png">
+                        <Image.GestureRecognizers >
+                            <TapGestureRecognizer Command="{Binding Actividad1Command}" />
+                        </Image.GestureRecognizers>
+                    </Image>
                     <Label Grid.Row="2" Grid.Column="0" Text="Ingresos: " FontSize="16" Margin="10,10,0,15"/>
                     <Entry Grid.Row="3" Grid.Column="0" Text="$"/>
 

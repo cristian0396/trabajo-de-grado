@@ -11,14 +11,15 @@
         <local:MenuHeader/>
     </Shell.FlyoutHeader>
 
-    <FlyoutItem Title="MyTabApp" 
-                FlyoutDisplayOptions="AsMultipleItems">
-        <ShellContent Title="Mi Perfil" Icon="hombre.png" IsTabStop="True" ContentTemplate="{DataTemplate local:Inicio}"/>
+    <FlyoutItem Title="MyTabApp" FlyoutDisplayOptions="AsMultipleItems">
+        <ShellContent Title="Inicio" Route="inicio" Icon="home.png"
+                      IsTabStop="True" ContentTemplate="{DataTemplate local:Inicio}"/>
+        <ShellContent Title="Mi Perfil" Route="moduloPresupuesto" Icon="hombre.png"
+                      IsTabStop="True" ContentTemplate="{DataTemplate local:Presupuesto}"/>
         <ShellContent Title="Evaluaciones " Icon="evaluacion.png" IsTabStop="True" ContentTemplate="{DataTemplate local:Inicio}"/>
         <ShellContent Title="Configuración " Icon="administracion.png" IsTabStop="True" ContentTemplate="{DataTemplate local:Inicio}"/>
         <ShellContent Title="Ayuda " Icon="pregunta.png" IsTabStop="True" ContentTemplate="{DataTemplate local:Inicio}"/>
-    </FlyoutItem>
-    
+    </FlyoutItem>    
 
     <ShellContent Title="Cerrar Sesión " Icon="leave.png" IsTabStop="True" ContentTemplate="{DataTemplate local:Inicio}"/>
 

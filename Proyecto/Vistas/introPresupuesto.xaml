@@ -6,10 +6,9 @@
              xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
              xmlns:viewmodel="clr-namespace:Proyecto.ViewModels"
              mc:Ignorable="d"
-             x:Class="Proyecto.Vistas.introPresupuesto">
-    <ContentPage.BindingContext>
-        <viewmodel:IntroPresupuestoViewModel/> 
-    </ContentPage.BindingContext>
+             x:Class="Proyecto.Vistas.introPresupuesto"
+             Shell.NavBarIsVisible="False"
+             Shell.TabBarIsVisible="False">
     <ContentPage.Content>
         <Grid>
             <Grid.RowDefinitions>
@@ -20,9 +19,9 @@
             <yummy:PancakeView Grid.RowSpan="3"  BackgroundGradientStartPoint="0,0" BackgroundGradientEndPoint="1,0">
                 <yummy:PancakeView.BackgroundGradientStops>
                     <yummy:GradientStopCollection>
-                        <yummy:GradientStop Color="#FA8072" Offset="0" />
-                        <yummy:GradientStop Color="#F08080" Offset="0.5" />
-                        <yummy:GradientStop Color="#CD5C5C" Offset="1" />
+                        <yummy:GradientStop Color="#06349F" Offset="0" />
+                        <yummy:GradientStop Color="#3370FC" Offset="0.5" />
+                        <yummy:GradientStop Color="#6795FD" Offset="1" />
                     </yummy:GradientStopCollection>
                 </yummy:PancakeView.BackgroundGradientStops>
             </yummy:PancakeView>

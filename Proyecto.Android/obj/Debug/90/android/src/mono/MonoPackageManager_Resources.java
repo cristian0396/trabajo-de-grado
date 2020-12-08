@@ -12,6 +12,7 @@ public class MonoPackageManager_Resources {
 		"Newtonsoft.Json.dll",
 		"PropertyChanged.dll",
 		"Proyecto.dll",
+		"Xamanimation.dll",
 		"Xamarin.Android.Arch.Core.Common.dll",
 		"Xamarin.Android.Arch.Core.Runtime.dll",
 		"Xamarin.Android.Arch.Lifecycle.Common.dll",

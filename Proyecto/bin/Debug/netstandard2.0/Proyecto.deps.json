@@ -13,6 +13,7 @@
           "NETStandard.Library": "2.0.3",
           "Newtonsoft.Json": "12.0.3",
           "PropertyChanged.Fody": "3.3.1",
+          "Xamanimation": "1.3.0",
           "Xamarin.Essentials": "1.5.3.2",
           "Xamarin.Forms": "4.8.0.1687",
           "Xamarin.Forms.PancakeView": "2.3.0.759"
@@ -101,6 +102,17 @@
           "Microsoft.NETCore.Targets": "1.1.0"
         }
       },
+      "Xamanimation/1.3.0": {
+        "dependencies": {
+          "Xamarin.Forms": "4.8.0.1687"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Xamanimation.dll": {
+            "assemblyVersion": "1.3.0.0",
+            "fileVersion": "1.3.0.0"
+          }
+        }
+      },
       "Xamarin.Essentials/1.5.3.2": {
         "dependencies": {
           "System.Numerics.Vectors": "4.5.0"
@@ -172,7 +184,7 @@
     "Microsoft.NETCore.Platforms/1.1.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-bLpT1f/SFlO1CzqXG12KnJzpZs6lv24uX2Rzi4Fmm0noJpNlnWRVryuO3yK18Ca04t/YHcO1e1Z0WDfjseqNzw==",
+      "sha512": "sha512-kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
       "path": "microsoft.netcore.platforms/1.1.0",
       "hashPath": "microsoft.netcore.platforms.1.1.0.nupkg.sha512"
     },
@@ -224,6 +236,13 @@
       "sha512": "sha512-JufQi0vPQ0xGnAczR13AUFglDyVYt4Kqnz1AZaiKZ5+GICq0/1MH/mO/eAJHt/mHW1zjKBJd7kV26SrxddAhiw==",
       "path": "system.runtime/4.3.0",
       "hashPath": "system.runtime.4.3.0.nupkg.sha512"
+    },
+    "Xamanimation/1.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-CXYLcQulqAL9qxRMecm5P5YXbOWiBGK0mgtV2buyHehLjbj6Hf+EdHs8cqVztrD47/zAiTAz2yDCURRXC8d33Q==",
+      "path": "xamanimation/1.3.0",
+      "hashPath": "xamanimation.1.3.0.nupkg.sha512"
     },
     "Xamarin.Essentials/1.5.3.2": {
       "type": "package",

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Proyecto.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,9 +13,11 @@ namespace Proyecto.Vistas
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Presupuesto : ContentPage
     {
+        PresupuestoViewModel context = new PresupuestoViewModel();
         public Presupuesto()
         {
             InitializeComponent();
+            BindingContext = context;
         }
     }
 }

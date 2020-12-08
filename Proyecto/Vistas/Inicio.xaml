@@ -3,12 +3,23 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:xamanimation="clr-namespace:Xamanimation;assembly=Xamanimation"
              mc:Ignorable="d"
              Title="Inicio"
              x:Class="Proyecto.Vistas.Inicio">
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Opción" IconImageSource=""/>
     </ContentPage.ToolbarItems>
+    <!--
+    <Page.Resources>
+        <ResourceDictionary>
+            <xamanimation:StoryBoard x:Key="escalarImg" Target="{x:Reference imgPresupuesto}">
+                <xamanimation:ScaleToAnimation Duration="300" Scale="2"/>
+                <xamanimation:ScaleToAnimation Duration="300" Scale="1" Easing="BounceOut"/>
+            </xamanimation:StoryBoard>            
+        </ResourceDictionary>
+    </Page.Resources>
+    -->
     <ScrollView>
         <Grid RowSpacing="0"> 
             <Grid.RowDefinitions>
@@ -51,9 +62,16 @@
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <Image Grid.Row="0" Grid.Column="0" Source="ingreGastos.png">
+                <Image Grid.Row="0" Grid.Column="0" x:Name="imgPresupuesto" Source="ingreGastos.png">
+                    <!--
+                    <Image.Triggers>
+                        <EventTrigger Event="Clicked">
+                            <xamanimation:BeginAnimation Animation="{StaticResource escalarImg}"/>
+                        </EventTrigger>
+                    </Image.Triggers>
+                    -->
                     <Image.GestureRecognizers >
-                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_Presupuesto"/>
+                        <TapGestureRecognizer Command="{Binding PresupuestoCommand}" />
                     </Image.GestureRecognizers>
                 </Image>
                 <Label Grid.Row="1" Grid.Column="0" Text="Modulo 1: Presupuesto"/>
@@ -62,7 +80,7 @@
 
                 <Image Grid.Row="0" Grid.Column="1" Source="imagen.png" HeightRequest="203" Scale="0.7">
                     <Image.GestureRecognizers >
-                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_Plan_Gastos"/>
+                        <TapGestureRecognizer Command="{Binding PlanGCommand}"/>
                     </Image.GestureRecognizers>
                 </Image>
                 <Label Grid.Row="1" Grid.Column="1" Text="Modulo 2: Plan de gastos"/>
@@ -70,7 +88,7 @@
 
                 <Image Grid.Row="3" Grid.Column="0" Source="Ahorro.png">
                     <Image.GestureRecognizers >
-                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_Ahorro"/>
+                        <TapGestureRecognizer Command="{Binding AhorroCommand}"/>
                     </Image.GestureRecognizers>
                 </Image>
                 <Label Grid.Row="4" Grid.Column="0" Text="Modulo 3: Ahorro" />

@@ -5,7 +5,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:local="clr-namespace:Proyecto.Actividades"
              mc:Ignorable="d"
-             x:Class="Proyecto.Vistas.ActividadP1">
+             x:Class="Proyecto.Vistas.ActividadP1"
+             Shell.TabBarIsVisible="False">
     <StackLayout>
         <local:PuzzlePresupuestoView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
     </StackLayout>
