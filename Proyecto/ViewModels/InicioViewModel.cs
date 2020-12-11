@@ -29,7 +29,7 @@ namespace Proyecto.ViewModels
         }
         public async Task IrAPresupuesto(string idModulo)
         {
-            await Shell.Current.GoToAsync($"//moduloPresupuesto?modulo={idModulo}");
+            await Shell.Current.GoToAsync("moduloPresupuesto");
         }
     }
 }

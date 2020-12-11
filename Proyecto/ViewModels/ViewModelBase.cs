@@ -16,7 +16,7 @@ namespace Proyecto.ViewModels
         }
         public void RegistrarRutas()
         {
-            Routing.RegisterRoute("//moduloPresupuesto", typeof(introPresupuesto));
+            Routing.RegisterRoute("moduloPresupuesto", typeof(introPresupuesto));
             Routing.RegisterRoute("Presupuesto", typeof(Presupuesto));
             Routing.RegisterRoute("PlanGastos", typeof(PlanGastos));
             Routing.RegisterRoute("Ahorro", typeof(Ahorro));
