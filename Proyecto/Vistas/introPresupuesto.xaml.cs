@@ -11,27 +11,33 @@ using Xamarin.Forms.Xaml;
 namespace Proyecto.Vistas
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    [QueryProperty("Modulo", "modulo")]
-
+    [QueryProperty(nameof(Modulo), nameof(Modulo))]
     public partial class introPresupuesto : ContentPage
     {
-        string modulo = "";
+        string modulo;
         public string Modulo
         {
-            get => modulo;
-            set 
+            set
             {
-                modulo = Uri.UnescapeDataString(value);
-                OnPropertyChanged();
+                BindingContext = new IntroPresupuestoViewModel(value);
             }
+            get { return modulo; }
         }
-
         IntroPresupuestoViewModel context;
         public introPresupuesto()
         {
             InitializeComponent();
-            context = new IntroPresupuestoViewModel(Modulo);
-            BindingContext = context;
+            this.SizeChanged += NewsListPageSizeChanged;
+        }
+
+        private void NewsListPageSizeChanged(object sender, EventArgs e)
+        {
+            if (BindingContext == null)
+            {
+                string idModulo = Modulo;
+                BindingContext = new IntroPresupuestoViewModel(idModulo);
+            }
+            this.SizeChanged -= NewsListPageSizeChanged;
         }
     }
 }

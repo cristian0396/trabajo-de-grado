@@ -12,12 +12,12 @@ using System.Threading.Tasks;
 namespace Proyecto.ViewModels
 {
     [AddINotifyPropertyChangedInterface]
-    
+   
     public class IntroPresupuestoViewModel : ViewModelBase
     {
         public ObservableCollection<IntroduccionModel> Introduccion { get; set; }
-        private int modulo;
         public int PosicionIndice { get; set; }
+        public string IDModulo { get; set; }
         public string TextoBotonSiguiente
         {
             get
@@ -30,41 +30,92 @@ namespace Proyecto.ViewModels
         public ICommand ComandoSiguiente { get; set; }
         public ICommand ComandoOmitir { get; set; }
 
-        public int Modulo
+        public IntroPresupuestoViewModel(string Modulo)
         {
-            get { return modulo; }
-            set
+            IDModulo = Modulo;
+            if (IDModulo == "1")
             {
-                modulo = value;
-                OnPropertyChanged();
+                Introduccion = new ObservableCollection<IntroduccionModel>
+                {
+                    new IntroduccionModel()
+                    {
+                        DirImagen = "presupuesto.png",
+                        Titulo = "Modulo de Presupuesto",
+                        Contenido = "Esta es la corta definición de presupuesto",
+                        CarouselItem = new RecorridoItemPage()
+                    },
+                    new IntroduccionModel()
+                    {
+                        DirImagen = "books.png",
+                        Titulo = "Importancia",
+                        Contenido = "Esta es la corta descripcion de la importancia del presupuesto",
+                        CarouselItem = new RecorridoItemPage()
+                    },
+                    new IntroduccionModel()
+                    {
+                        DirImagen = "edificio2.png",
+                        Titulo = "Ejemplos",
+                        Contenido = "Aqui hay un ejemplo",
+                        CarouselItem = new RecorridoItemPage()
+                    }
+                };
             }
-        }
-        public IntroPresupuestoViewModel(string modulo)
-        {
-            Introduccion = new ObservableCollection<IntroduccionModel>
+            else if(IDModulo == "2")
             {
-                new IntroduccionModel()
+                Introduccion = new ObservableCollection<IntroduccionModel>
                 {
-                    DirImagen = "presupuesto.png",
-                    Titulo = "Modulo de Presupuesto",
-                    Contenido = "Esta es la corta definición de presupuesto",
-                    CarouselItem = new RecorridoItemPage()
-                },
-                new IntroduccionModel()
+                    new IntroduccionModel()
+                    {
+                        DirImagen = "imagen.png",
+                        Titulo = "Modulo de Plan de Gastos",
+                        Contenido = "Esta es la corta definición de presupuesto",
+                        CarouselItem = new RecorridoItemPage()
+                    },
+                    new IntroduccionModel()
+                    {
+                        DirImagen = "books.png",
+                        Titulo = "Importancia",
+                        Contenido = "Esta es la corta descripcion de la importancia del presupuesto",
+                        CarouselItem = new RecorridoItemPage()
+                    },
+                    new IntroduccionModel()
+                    {
+                        DirImagen = "edificio2.png",
+                        Titulo = "Ejemplos",
+                        Contenido = "Aqui hay un ejemplo",
+                        CarouselItem = new RecorridoItemPage()
+                    }
+                };
+            }
+            else
+            {
+                Introduccion = new ObservableCollection<IntroduccionModel>
                 {
-                    DirImagen = "books.png",
-                    Titulo = "Importancia",
-                    Contenido = "Esta es la corta descripcion de la importancia del presupuesto",
-                    CarouselItem = new RecorridoItemPage()
-                },
-                new IntroduccionModel()
-                {
-                    DirImagen = "edificio2.png",
-                    Titulo = "Ejemplos",
-                    Contenido = "Aqui hay un ejemplo",
-                    CarouselItem = new RecorridoItemPage()
-                }
-            };
+                    new IntroduccionModel()
+                    {
+                        DirImagen = "Ahorro.png",
+                        Titulo = "Modulo de Plan de Gastos",
+                        Contenido = "Esta es la corta definición de Ahorro",
+                        CarouselItem = new RecorridoItemPage()
+                    },
+                    new IntroduccionModel()
+                    {
+                        DirImagen = "books.png",
+                        Titulo = "Importancia",
+                        Contenido = "Esta es la corta descripcion de la importancia del presupuesto",
+                        CarouselItem = new RecorridoItemPage()
+                    },
+                    new IntroduccionModel()
+                    {
+                        DirImagen = "edificio2.png",
+                        Titulo = "Ejemplos",
+                        Contenido = "Aqui hay un ejemplo",
+                        CarouselItem = new RecorridoItemPage()
+                    }
+                };
+
+            }
+                                 
             
             foreach(var intro in Introduccion)
             {
@@ -89,7 +140,18 @@ namespace Proyecto.ViewModels
         }
 
         private async Task  Omitir(){
-            await Shell.Current.GoToAsync("Presupuesto");
+            if(IDModulo == "1")
+            {
+                await Shell.Current.GoToAsync(nameof(Presupuesto));
+            }
+            else if(IDModulo == "2")
+            {
+                await Shell.Current.GoToAsync(nameof(PlanGastos));
+            }
+            else
+            {
+                await Shell.Current.GoToAsync(nameof(Ahorro));
+            }            
         }
     }
 }

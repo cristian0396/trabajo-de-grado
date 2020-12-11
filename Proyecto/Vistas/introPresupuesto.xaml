@@ -35,7 +35,6 @@
                 </CarouselView.ItemTemplate>
             </CarouselView>
             <Button Grid.Row="2" BackgroundColor="White" CornerRadius="20" HeightRequest="40" Margin="0,10,0,24" HorizontalOptions="CenterAndExpand" Command="{Binding ComandoSiguiente}" Text="{Binding TextoBotonSiguiente}" WidthRequest="245"/>
-
         </Grid>        
     </ContentPage.Content>
 </ContentPage>
