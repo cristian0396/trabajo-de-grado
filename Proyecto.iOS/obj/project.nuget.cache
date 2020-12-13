@@ -1,0 +1,33 @@
+{
+  "version": 2,
+  "dgSpecHash": "79ADhQuy6PLqIck05Wv0hczjQKDdlLF21PJ7k4zgRkX3+nvmH+W0TGTBE8YrycnRauZ9u7elmULEqbJfNbe3RA==",
+  "success": true,
+  "projectFilePath": "G:\\EduFinanzas\\trabajo-de-grado\\Proyecto.iOS\\Proyecto.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\alejo\\.nuget\\packages\\cocossharp\\1.7.1\\cocossharp.1.7.1.nupkg.sha512",
+    "C:\\Users\\alejo\\.nuget\\packages\\cocossharp.forms\\1.7.1\\cocossharp.forms.1.7.1.nupkg.sha512",
+    "C:\\Users\\alejo\\.nuget\\packages\\fody\\6.3.0\\fody.6.3.0.nupkg.sha512",
+    "C:\\Users\\alejo\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\alejo\\.nuget\\packages\\propertychanged.fody\\3.3.1\\propertychanged.fody.3.3.1.nupkg.sha512",
+    "C:\\Users\\alejo\\.nuget\\packages\\system.componentmodel\\4.3.0\\system.componentmodel.4.3.0.nupkg.sha512",
+    "C:\\Users\\alejo\\.nuget\\packages\\xamanimation\\1.3.0\\xamanimation.1.3.0.nupkg.sha512",
+    "C:\\Users\\alejo\\.nuget\\packages\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
+    "C:\\Users\\alejo\\.nuget\\packages\\xamarin.forms\\4.8.0.1687\\xamarin.forms.4.8.0.1687.nupkg.sha512",
+    "C:\\Users\\alejo\\.nuget\\packages\\xamarin.forms.pancakeview\\2.3.0.759\\xamarin.forms.pancakeview.2.3.0.759.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1602",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "CocosSharp.Forms 1.7.1 no proporciona un límite inferior inclusivo para la dependencia CocosSharp. Se resolvió una mejor coincidencia aproximada de CocosSharp 1.7.1.",
+      "libraryId": "CocosSharp",
+      "targetGraphs": [
+        "Xamarin.iOS,Version=v1.0",
+        "Xamarin.iOS,Version=v1.0/win",
+        "Xamarin.iOS,Version=v1.0/win-x64",
+        "Xamarin.iOS,Version=v1.0/win-x86"
+      ]
+    }
+  ]
+}

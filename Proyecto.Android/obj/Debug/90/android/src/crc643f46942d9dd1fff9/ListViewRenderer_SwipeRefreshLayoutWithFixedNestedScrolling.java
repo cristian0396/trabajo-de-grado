@@ -11,9 +11,6 @@ public class ListViewRenderer_SwipeRefreshLayoutWithFixedNestedScrolling
 	static {
 		__md_methods = 
 			"n_onInterceptTouchEvent:(Landroid/view/MotionEvent;)Z:GetOnInterceptTouchEvent_Landroid_view_MotionEvent_Handler\n" +
-			"n_onNestedScrollAccepted:(Landroid/view/View;Landroid/view/View;I)V:GetOnNestedScrollAccepted_Landroid_view_View_Landroid_view_View_IHandler\n" +
-			"n_onStopNestedScroll:(Landroid/view/View;)V:GetOnStopNestedScroll_Landroid_view_View_Handler\n" +
-			"n_onNestedScroll:(Landroid/view/View;IIII)V:GetOnNestedScroll_Landroid_view_View_IIIIHandler\n" +
 			"";
 		mono.android.Runtime.register ("Xamarin.Forms.Platform.Android.ListViewRenderer+SwipeRefreshLayoutWithFixedNestedScrolling, Xamarin.Forms.Platform.Android", ListViewRenderer_SwipeRefreshLayoutWithFixedNestedScrolling.class, __md_methods);
 	}
@@ -41,30 +38,6 @@ public class ListViewRenderer_SwipeRefreshLayoutWithFixedNestedScrolling
 	}
 
 	private native boolean n_onInterceptTouchEvent (android.view.MotionEvent p0);
-
-
-	public void onNestedScrollAccepted (android.view.View p0, android.view.View p1, int p2)
-	{
-		n_onNestedScrollAccepted (p0, p1, p2);
-	}
-
-	private native void n_onNestedScrollAccepted (android.view.View p0, android.view.View p1, int p2);
-
-
-	public void onStopNestedScroll (android.view.View p0)
-	{
-		n_onStopNestedScroll (p0);
-	}
-
-	private native void n_onStopNestedScroll (android.view.View p0);
-
-
-	public void onNestedScroll (android.view.View p0, int p1, int p2, int p3, int p4)
-	{
-		n_onNestedScroll (p0, p1, p2, p3, p4);
-	}
-
-	private native void n_onNestedScroll (android.view.View p0, int p1, int p2, int p3, int p4);
 
 	private java.util.ArrayList refList;
 	public void monodroidAddReference (java.lang.Object obj)

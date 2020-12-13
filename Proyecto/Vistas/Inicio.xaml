@@ -10,16 +10,18 @@
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Opción" IconImageSource=""/>
     </ContentPage.ToolbarItems>
-    <!--
+    
     <Page.Resources>
         <ResourceDictionary>
             <xamanimation:StoryBoard x:Key="escalarImg" Target="{x:Reference imgPresupuesto}">
                 <xamanimation:ScaleToAnimation Duration="300" Scale="2"/>
                 <xamanimation:ScaleToAnimation Duration="300" Scale="1" Easing="BounceOut"/>
-            </xamanimation:StoryBoard>            
+            </xamanimation:StoryBoard> 
+            <xamanimation:FadeToAnimation x:Key="FadeToAnimation" Target="{x:Reference imgPresupuesto}"
+             Duration="2000" Opacity="0"/>
         </ResourceDictionary>
     </Page.Resources>
-    -->
+    
     <ScrollView>
         <Grid RowSpacing="0"> 
             <Grid.RowDefinitions>
@@ -63,13 +65,13 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
                 <Image Grid.Row="0" Grid.Column="0" x:Name="imgPresupuesto" Source="ingreGastos.png">
-                    <!--
+                    
                     <Image.Triggers>
                         <EventTrigger Event="Clicked">
-                            <xamanimation:BeginAnimation Animation="{StaticResource escalarImg}"/>
+                            <xamanimation:BeginAnimation Animation="{StaticResource FadeToAnimation}"/>
                         </EventTrigger>
                     </Image.Triggers>
-                    -->
+                    
                     <Image.GestureRecognizers >
                         <TapGestureRecognizer Command="{Binding PresupuestoCommand}" />
                     </Image.GestureRecognizers>

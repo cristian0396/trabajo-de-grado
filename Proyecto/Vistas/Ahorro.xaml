@@ -5,7 +5,11 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              Title="Ahorro"
-             x:Class="Proyecto.Vistas.Ahorro">
+             x:Class="Proyecto.Vistas.Ahorro"
+             Shell.TabBarIsVisible="False">
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior Command="{Binding BotonAtrasCommand}"/>
+    </Shell.BackButtonBehavior>
     <ContentPage.Content>
         <ScrollView>
             <Grid RowSpacing="0">

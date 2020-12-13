@@ -6,7 +6,11 @@
              mc:Ignorable="d"
              Title="Presupuesto"
              x:Class="Proyecto.Vistas.Presupuesto"
-             NavigationPage.HasNavigationBar="False">
+             NavigationPage.HasNavigationBar="False"
+             Shell.TabBarIsVisible="False">
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior Command="{Binding BotonAtrasCommand}"/>
+    </Shell.BackButtonBehavior>
     <ContentPage.Content>
         <ScrollView>
             <Grid RowSpacing="0">

@@ -15,6 +15,7 @@ namespace Proyecto.Vistas
     public partial class introPresupuesto : ContentPage
     {
         string modulo;
+        IntroPresupuestoViewModel context;
         public string Modulo
         {
             set
@@ -23,7 +24,7 @@ namespace Proyecto.Vistas
             }
             get { return modulo; }
         }
-        IntroPresupuestoViewModel context;
+        
         public introPresupuesto()
         {
             InitializeComponent();

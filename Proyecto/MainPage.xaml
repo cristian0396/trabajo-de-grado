@@ -12,14 +12,8 @@
     </Shell.FlyoutHeader>
 
     <FlyoutItem Title="MyTabApp" FlyoutDisplayOptions="AsMultipleItems">
-        <ShellContent Title="Inicio" Route="inicio" Icon="home.png"
+        <ShellContent Title="Inicio" Route="Inicio" Icon="home.png"
                       IsTabStop="True" ContentTemplate="{DataTemplate local:Inicio}"/>
-        <ShellContent Title="Presupuesto" Route="Presupuesto" Icon="presupuesto.png"
-                      IsTabStop="True" ContentTemplate="{DataTemplate local:Presupuesto}"/>
-        <ShellContent Title="Plan Gastos" Route="PlanGastos" Icon="imagen.png"
-                      IsTabStop="True" ContentTemplate="{DataTemplate local:PlanGastos}"/>
-        <ShellContent Title="Ahorro" Route="Ahorro" Icon="Ahorro.jpeg"
-                      IsTabStop="True" ContentTemplate="{DataTemplate local:Ahorro}"/>
         <ShellContent Title="Evaluaciones "  Icon="evaluacion.png" IsTabStop="True" ContentTemplate="{DataTemplate local:Inicio}"/>
         <ShellContent Title="Configuración " Icon="administracion.png" IsTabStop="True" ContentTemplate="{DataTemplate local:Inicio}"/>
         <ShellContent Title="Ayuda " Icon="pregunta.png" IsTabStop="True" ContentTemplate="{DataTemplate local:Inicio}"/>

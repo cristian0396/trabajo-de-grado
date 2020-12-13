@@ -44,6 +44,7 @@ G:\EduFinanzas\trabajo-de-grado\Proyecto\bin\Debug\netstandard2.0\Proyecto.deps.
 G:\EduFinanzas\trabajo-de-grado\Proyecto\bin\Debug\netstandard2.0\Proyecto.dll
 G:\EduFinanzas\trabajo-de-grado\Proyecto\bin\Debug\netstandard2.0\ref\Proyecto.dll
 G:\EduFinanzas\trabajo-de-grado\Proyecto\bin\Debug\netstandard2.0\Proyecto.pdb
+G:\EduFinanzas\trabajo-de-grado\Proyecto\obj\Debug\netstandard2.0\Proyecto.csprojAssemblyReference.cache
 G:\EduFinanzas\trabajo-de-grado\Proyecto\obj\Debug\netstandard2.0\App.xaml.g.cs
 G:\EduFinanzas\trabajo-de-grado\Proyecto\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
 G:\EduFinanzas\trabajo-de-grado\Proyecto\obj\Debug\netstandard2.0\Vistas\ActividadP1.xaml.g.cs
@@ -58,9 +59,9 @@ G:\EduFinanzas\trabajo-de-grado\Proyecto\obj\Debug\netstandard2.0\Vistas\Recorri
 G:\EduFinanzas\trabajo-de-grado\Proyecto\obj\Debug\netstandard2.0\Vistas\Registro.xaml.g.cs
 G:\EduFinanzas\trabajo-de-grado\Proyecto\obj\Debug\netstandard2.0\Proyecto.AssemblyInfoInputs.cache
 G:\EduFinanzas\trabajo-de-grado\Proyecto\obj\Debug\netstandard2.0\Proyecto.AssemblyInfo.cs
+G:\EduFinanzas\trabajo-de-grado\Proyecto\obj\Debug\netstandard2.0\Proyecto.csproj.CoreCompileInputs.cache
 G:\EduFinanzas\trabajo-de-grado\Proyecto\obj\Debug\netstandard2.0\Proyecto.csproj.Fody.CopyLocal.cache
 G:\EduFinanzas\trabajo-de-grado\Proyecto\obj\Debug\netstandard2.0\XamlC.stamp
 G:\EduFinanzas\trabajo-de-grado\Proyecto\obj\Debug\netstandard2.0\Proyecto.dll
 G:\EduFinanzas\trabajo-de-grado\Proyecto\obj\Debug\netstandard2.0\ref\Proyecto.dll
 G:\EduFinanzas\trabajo-de-grado\Proyecto\obj\Debug\netstandard2.0\Proyecto.pdb
-G:\EduFinanzas\trabajo-de-grado\Proyecto\obj\Debug\netstandard2.0\Proyecto.csprojAssemblyReference.cache

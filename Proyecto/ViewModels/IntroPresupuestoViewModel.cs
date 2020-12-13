@@ -39,21 +39,21 @@ namespace Proyecto.ViewModels
                 {
                     new IntroduccionModel()
                     {
-                        DirImagen = "presupuesto.png",
+                        DirImagen = "ledger.png",
                         Titulo = "Modulo de Presupuesto",
                         Contenido = "Esta es la corta definición de presupuesto",
                         CarouselItem = new RecorridoItemPage()
                     },
                     new IntroduccionModel()
                     {
-                        DirImagen = "books.png",
+                        DirImagen = "importantPresu.png",
                         Titulo = "Importancia",
                         Contenido = "Esta es la corta descripcion de la importancia del presupuesto",
                         CarouselItem = new RecorridoItemPage()
                     },
                     new IntroduccionModel()
                     {
-                        DirImagen = "edificio2.png",
+                        DirImagen = "IdeaPresu.png",
                         Titulo = "Ejemplos",
                         Contenido = "Aqui hay un ejemplo",
                         CarouselItem = new RecorridoItemPage()
