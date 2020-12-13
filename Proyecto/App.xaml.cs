@@ -19,7 +19,7 @@ namespace Proyecto
 
             //MainPage = new NavigationPage(new Aterrizaje());
             //MainPage = new MainPage();
-            MainPage = new MainPage();
+            MainPage = new ActividadP1();
         }
 
         protected override void OnStart()

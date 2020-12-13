@@ -29,6 +29,8 @@ namespace Proyecto.Actividades
             {
                 ccGView.DesignResolution = new CCSizeI(App.Width, App.Height);
                 _scene = new PuzzlePresupuesto(ccGView);
+                //_scene.DrawParticle();
+                /*
                 var touchEvent = new CCEventListenerTouchOneByOne();
                 touchEvent.OnTouchBegan = (touch, _event) =>
                 {
@@ -40,8 +42,9 @@ namespace Proyecto.Actividades
                 {
                     _scene.DrawParticle(touch.LocationOnScreen);
                 };
-
+                
                 _scene.AddEventListener(touchEvent);
+                */
                 ccGView.RunWithScene(_scene);
             }
         }
