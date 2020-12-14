@@ -1572,3 +1572,10 @@ G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\stamp\_ConvertReso
 G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
+G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\ejemplo.png
+G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\financemedal.png
+G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\money.png
+G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\bankbuilding.png
+G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\important.png
+G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\moneydef.png
+G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\safein.png

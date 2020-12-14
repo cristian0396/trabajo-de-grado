@@ -17,6 +17,7 @@ namespace Proyecto.Actividades
             gameView.ContentManager.SearchPaths = contentSearchPaths;
             InicializarCapas();
             CrearFondo();
+
             _layer = new CCLayer();           
         }
 

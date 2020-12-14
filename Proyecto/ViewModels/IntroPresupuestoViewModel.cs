@@ -41,7 +41,7 @@ namespace Proyecto.ViewModels
                     {
                         DirImagen = "ledger.png",
                         Titulo = "Modulo de Presupuesto",
-                        Contenido = "Esta es la corta definición de presupuesto",
+                        Contenido = "Es la cantidad de plata calculada para hacer frente a los gastos generales de la vida cotidiana, de un viaje u otros. Es decir que es una estimación anticipada de ingresos y gastos que habrán de producirse en un período determinado",
                         CarouselItem = new RecorridoItemPage()
                     },
                     new IntroduccionModel()
@@ -66,21 +66,21 @@ namespace Proyecto.ViewModels
                 {
                     new IntroduccionModel()
                     {
-                        DirImagen = "imagen.png",
+                        DirImagen = "ejemplo.png",
                         Titulo = "Modulo de Plan de Gastos",
                         Contenido = "Esta es la corta definición de presupuesto",
                         CarouselItem = new RecorridoItemPage()
                     },
                     new IntroduccionModel()
                     {
-                        DirImagen = "books.png",
+                        DirImagen = "money.png",
                         Titulo = "Importancia",
                         Contenido = "Esta es la corta descripcion de la importancia del presupuesto",
                         CarouselItem = new RecorridoItemPage()
                     },
                     new IntroduccionModel()
                     {
-                        DirImagen = "edificio2.png",
+                        DirImagen = "financeMedal.png",
                         Titulo = "Ejemplos",
                         Contenido = "Aqui hay un ejemplo",
                         CarouselItem = new RecorridoItemPage()
@@ -93,21 +93,21 @@ namespace Proyecto.ViewModels
                 {
                     new IntroduccionModel()
                     {
-                        DirImagen = "Ahorro.png",
+                        DirImagen = "moneydef.png",
                         Titulo = "Modulo de Plan de Gastos",
                         Contenido = "Esta es la corta definición de Ahorro",
                         CarouselItem = new RecorridoItemPage()
                     },
                     new IntroduccionModel()
                     {
-                        DirImagen = "books.png",
+                        DirImagen = "safeIn.png",
                         Titulo = "Importancia",
                         Contenido = "Esta es la corta descripcion de la importancia del presupuesto",
                         CarouselItem = new RecorridoItemPage()
                     },
                     new IntroduccionModel()
                     {
-                        DirImagen = "edificio2.png",
+                        DirImagen = "bankBuilding.png",
                         Titulo = "Ejemplos",
                         Contenido = "Aqui hay un ejemplo",
                         CarouselItem = new RecorridoItemPage()
