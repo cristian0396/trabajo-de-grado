@@ -16,10 +16,7 @@ namespace Proyecto.Actividades.Entidades
         CCPoint desiredLocation;
         public CCPoint Velocity;
 
-        CCSprite ficha1;
-        CCSprite ficha2;
-        CCSprite ficha3;
-        CCSprite ficha4;
+        CCSprite ficha;
         public Polygon Polygon
         {
             get;
@@ -48,18 +45,12 @@ namespace Proyecto.Actividades.Entidades
 
         private void crearFichas()
         {
-            ficha1 = new CCSprite("piezaIzq.png");
-            //ficha2 = new CCSprite("piezaIzq.png");
-            //ficha3 = new CCSprite("piezaIzq.png");
-            //ficha4 = new CCSprite("piezaIzq.png");
-
-            ficha1.IsAntialiased = false;
-            //ficha2.IsAntialiased = false;
-            //ficha3.IsAntialiased = false;
-            //ficha4.IsAntialiased = false;
+            ficha = new CCSprite("pieza.png");
+            ficha.Scale = 0.2f;
+            ficha.IsAntialiased = false;
             // offset it so the monkey's paddle lines up with the collision:
-            ficha1.PositionY = -24;
-            this.AddChild(ficha1);
+            ficha.PositionY = -24;
+            this.AddChild(ficha);
         }
 
         public void HandleInput(CCPoint touchPoint)
@@ -87,16 +78,7 @@ namespace Proyecto.Actividades.Entidades
             if (ratio > 1) ratio = 1;
             if (ratio < -1) ratio = -1;
 
-            this.Rotation = ratio * maxRotation;
-
-            // This value adds a slight amount of rotation
-            // to the vine. Having a small amount of tilt looks nice.
-            
-            //float vineAngle = this.Velocity.X / 100.0f;
-
-            //leftVine.Rotation = -this.Rotation + vineAngle;
-            //rightVine.Rotation = -this.Rotation + vineAngle;
-            
+            this.Rotation = ratio * maxRotation;            
         }
 
         internal void SetDesiredPositionToCurrentPosition()

@@ -8,10 +8,12 @@ namespace Proyecto.Actividades
 {
     public class PuzzlePresupuesto : CCScene
     {
-        CCLayer _layer;
         CCLayer CapaDeFondo;
         CCLayer CapaDeJuego;
         PaletaPrincipal paleta;
+        PaletaPrincipal paleta2;
+        PaletaPrincipal paleta3;
+        PaletaPrincipal paleta4;
 
         private bool hasGameEnded;
 
@@ -24,9 +26,7 @@ namespace Proyecto.Actividades
             CrearFondo();
             CrearPaleta();
             CreateTouchListener();
-            Schedule(Activity);
-
-            //_layer = new CCLayer();           
+            Schedule(Activity);          
         }
 
         private void InicializarCapas()
@@ -44,35 +44,33 @@ namespace Proyecto.Actividades
             background.IsAntialiased = false;
             CapaDeFondo.AddChild(background);
         }
-        /*
-        public void DrawParticle()
-        {
-            
-            var explosion = new CCParticleExplosion(CCPoint.Zero)
-            {
-                TotalParticles = 10,
-                StartColor = new CCColor4F(CCColor3B.White),
-                EndColor = new CCColor4F(CCColor3B.Black),
-                Position = new CCPoint(point.X / App.Density, App.Height - point.Y / App.Density)
-            };
-            
-             var label = new CCLabel("Tap to begin", "Arial", 30, CCLabelFormat.SystemFont);
-            label.PositionX = _layer.ContentSize.Width / 2.0f;
-            label.PositionY = _layer.ContentSize.Height / 2.0f;
-            label.Color = CCColor3B.White;
-            _layer.AddChild(label);
-        }
-        */
-
+        
         private void CrearPaleta()
         {
             paleta = new PaletaPrincipal();
             paleta.PositionX = CapaDeJuego.ContentSize.Width / 2.0f;
             paleta.PositionY = CapaDeJuego.ContentSize.Height / 2.0f;
-
             paleta.SetDesiredPositionToCurrentPosition();
-
             CapaDeJuego.AddChild(paleta);
+
+            paleta2 = new PaletaPrincipal();
+            paleta2.PositionX = CapaDeJuego.ContentSize.Width / 2.0f;
+            paleta2.PositionY = CapaDeJuego.ContentSize.Height / 2.0f;
+            paleta2.SetDesiredPositionToCurrentPosition();
+            CapaDeJuego.AddChild(paleta2);
+
+            paleta3 = new PaletaPrincipal();
+            paleta3.PositionX = CapaDeJuego.ContentSize.Width / 2.0f;
+            paleta3.PositionY = CapaDeJuego.ContentSize.Height / 2.0f;
+            paleta.SetDesiredPositionToCurrentPosition();
+            CapaDeJuego.AddChild(paleta3);
+
+
+            paleta4 = new PaletaPrincipal();
+            paleta4.PositionX = CapaDeJuego.ContentSize.Width / 2.0f;
+            paleta4.PositionY = CapaDeJuego.ContentSize.Height / 2.0f;
+            paleta.SetDesiredPositionToCurrentPosition();
+            CapaDeJuego.AddChild(paleta4);
         }
 
         private void CreateTouchListener()

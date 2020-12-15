@@ -29,22 +29,6 @@ namespace Proyecto.Actividades
             {
                 ccGView.DesignResolution = new CCSizeI(384, 512);
                 _scene = new PuzzlePresupuesto(ccGView);
-                //_scene.DrawParticle();
-                /*
-                var touchEvent = new CCEventListenerTouchOneByOne();
-                touchEvent.OnTouchBegan = (touch, _event) =>
-                {
-                    _scene.DrawParticle(touch.LocationOnScreen);
-                    return true;
-                };
-
-                touchEvent.OnTouchMoved = (touch, _event) =>
-                {
-                    _scene.DrawParticle(touch.LocationOnScreen);
-                };
-                
-                _scene.AddEventListener(touchEvent);
-                */
                 ccGView.RunWithScene(_scene);
             }
         }

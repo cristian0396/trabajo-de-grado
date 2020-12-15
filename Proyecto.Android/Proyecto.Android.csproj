@@ -208,6 +208,9 @@
   <ItemGroup>
     <AndroidAsset Include="Content\Images\piezaIzq.png" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Content\Images\pieza.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
