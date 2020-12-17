@@ -8,14 +8,10 @@ namespace Proyecto.Actividades
 {
     public class PuzzlePresupuesto : CCScene
     {
-        CCLayer CapaDeFondo;
-        CCLayer CapaDeJuego;
-        PaletaPrincipal paleta;
-        PaletaPrincipal paleta2;
-        PaletaPrincipal paleta3;
-        PaletaPrincipal paleta4;
+        CCLayer CapaDeFondo, CapaDeJuego;
+        PaletaPrincipal paleta, paleta2, paleta3, paleta4;
+        CCSprite paleta5, paleta6, paleta7, paleta8;
         private int ControlPaletas;
-
         private bool hasGameEnded;
 
         public PuzzlePresupuesto(CCGameView gameView) : base(gameView)
@@ -28,7 +24,7 @@ namespace Proyecto.Actividades
             CrearFondo();
             CrearPaletas();
             CreateTouchListener();
-            Schedule(Activity);          
+            Schedule(Activity);
         }
 
         private void InicializarCapas()
@@ -41,40 +37,68 @@ namespace Proyecto.Actividades
         }
         private void CrearFondo()
         {
-            var background = new CCSprite("back5.jpeg");
+            var background = new CCSprite("greenBG.jpg");
             background.AnchorPoint = new CCPoint(0, 0);
             background.IsAntialiased = false;
             background.Scale = 1.2f;
             CapaDeFondo.AddChild(background);
         }
-                
+
         private void CrearPaletas()
         {
             paleta = new PaletaPrincipal();
-            paleta.PositionX = CapaDeJuego.ContentSize.Width / 2.0f;
+            paleta.PositionX = 300;
             paleta.PositionY = CapaDeJuego.ContentSize.Height / 2.0f;
             paleta.SetDesiredPositionToCurrentPosition();
             CapaDeJuego.AddChild(paleta);
 
             paleta2 = new PaletaPrincipal();
-            paleta2.PositionX = 100;
-            paleta2.PositionY = 450;
+            paleta2.PositionX = 300;
+            paleta2.PositionY = CapaDeJuego.ContentSize.Height / 2.0f;
             paleta2.SetDesiredPositionToCurrentPosition();
             CapaDeJuego.AddChild(paleta2);
 
             paleta3 = new PaletaPrincipal();
-            paleta3.PositionX = CapaDeJuego.ContentSize.Width / 2.0f;
+            paleta3.PositionX = 300;
             paleta3.PositionY = CapaDeJuego.ContentSize.Height / 2.0f;
-            paleta.SetDesiredPositionToCurrentPosition();
+            paleta3.SetDesiredPositionToCurrentPosition();
             CapaDeJuego.AddChild(paleta3);
 
 
             paleta4 = new PaletaPrincipal();
-            paleta4.PositionX = CapaDeJuego.ContentSize.Width / 2.0f;
+            paleta4.PositionX = 300;
             paleta4.PositionY = CapaDeJuego.ContentSize.Height / 2.0f;
-            paleta.SetDesiredPositionToCurrentPosition();
+            paleta4.SetDesiredPositionToCurrentPosition();
             CapaDeJuego.AddChild(paleta4);
-                       
+
+            paleta5 = new CCSprite("piezaIzquierda.jpeg");
+            paleta5.Scale = 0.25f;
+            paleta5.IsAntialiased = false;
+            paleta5.PositionX = 100;
+            paleta5.PositionY = 400;
+            CapaDeJuego.AddChild(paleta5);
+
+            paleta6 = new CCSprite("piezaIzquierda.jpeg");
+            paleta6.Scale = 0.25f;
+            paleta6.IsAntialiased = false;
+            paleta6.PositionX = 100;
+            paleta6.PositionY = 290;
+            CapaDeJuego.AddChild(paleta6);
+
+            paleta7 = new CCSprite("piezaIzquierda.jpeg");
+            paleta7.Scale = 0.25f;
+            paleta7.IsAntialiased = false;
+            paleta7.PositionX = 100;
+            paleta7.PositionY = 180;
+            CapaDeJuego.AddChild(paleta7);
+
+            paleta8 = new CCSprite("piezaIzquierda.jpeg");
+            paleta8.Scale = 0.25f;
+            paleta8.IsAntialiased = false;
+            paleta8.PositionX = 100;
+            paleta8.PositionY = 70;
+            CapaDeJuego.AddChild(paleta8);
+
         }
 
         private void CreateTouchListener()
@@ -112,10 +136,7 @@ namespace Proyecto.Actividades
                 case 3:
                     paleta4.HandleInput(locationOnScreen);
                     break;
-                default:
-                    paleta.HandleInput(locationOnScreen);
-                    break;
-            }            
+            }
         }
 
         private void Activity(float frameTimeInSeconds)
@@ -136,58 +157,53 @@ namespace Proyecto.Actividades
                     case 3:
                         paleta4.Activity(frameTimeInSeconds);
                         break;
-                    default:
-                        paleta.Activity(frameTimeInSeconds);
-                        break;
-                }               
+                }
                 EjecutarColision();
             }
         }
-        
+
         private void EjecutarColision()
         {
             PaletaPrincipal piezaActual;
-            for (int i = 3; i > -1; i--)
+            switch (ControlPaletas)
             {
-                switch(i){
-                    case 0:
-                        piezaActual = paleta;
-                        break;
-                    case 1:
-                        piezaActual = paleta2;
-                        break;
-                    case 2:
-                        piezaActual = paleta3;
-                        break;
-                    case 3:
-                        piezaActual = paleta4;
-                        break;
-                    default: 
-                        piezaActual = paleta;
-                        break;
-                }                 
-                PiezaVsPieza(piezaActual);
+                case 0:
+                    piezaActual = paleta;
+                    break;
+                case 1:
+                    piezaActual = paleta2;
+                    break;
+                case 2:
+                    piezaActual = paleta3;
+                    break;
+                case 3:
+                    piezaActual = paleta4;
+                    break;
+                default:
+                    piezaActual = paleta;
+                    break;
             }
+            PiezaVsPieza(piezaActual);
+           
         }
-        
+
         private void PiezaVsPieza(PaletaPrincipal pieza)
         {
             var fichaActual = paleta2;
             bool estaDentro = false;
-            if(pieza.PositionX > 100 && pieza.PositionX < 200 && pieza.PositionY < 500 && pieza.PositionY > 400)
+            if (pieza.PositionX > 100 && pieza.PositionX < 200 && pieza.PositionY < 500 && pieza.PositionY > 400)
             {
                 estaDentro = true;
-                pieza.RemoveFromParent();
+                //pieza.RemoveFromParent();
             }
 
             if (estaDentro)
             {
                 pieza.PositionX = 200;
-                pieza.PositionY = 450;
-                paleta.SetDesiredPositionToCurrentPosition();
+                pieza.PositionY = 400;
+                pieza.SetDesiredPositionToCurrentPosition();
                 ControlPaletas++;
-                ControlPaletas++;
-            }            
-        }        
+            }
+        }
     }
 }

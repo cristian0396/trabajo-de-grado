@@ -1107,6 +1107,14 @@ G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\books
 G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\importantpresu.png
 G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\ledger.png
 G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\ideapresu.png
+G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\ejemplo.png
+G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\financemedal.png
+G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\money.png
+G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\bankbuilding.png
+G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\important.png
+G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\moneydef.png
+G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\safein.png
+G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\presupuestoinicial.png
 G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\uploadflags.txt
 G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\resolvedassemblies.hash
 G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\android\assets\box2d.dll
@@ -1569,11 +1577,3 @@ G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\stamp\_ConvertReso
 G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
-G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\ejemplo.png
-G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\financemedal.png
-G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\money.png
-G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\bankbuilding.png
-G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\important.png
-G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\moneydef.png
-G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\safein.png
-G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\presupuestoinicial.png

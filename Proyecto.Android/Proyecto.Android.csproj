@@ -200,12 +200,6 @@
     <AndroidAsset Include="Content\Images\piezaIzquierda.jpeg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Content\Images\back3.jpeg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Content\Images\back5.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable\PresupuestoInicial.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

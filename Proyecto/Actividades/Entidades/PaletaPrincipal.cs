@@ -48,8 +48,6 @@ namespace Proyecto.Actividades.Entidades
             ficha = new CCSprite("piezaIzquierda.jpeg");
             ficha.Scale = 0.25f;
             ficha.IsAntialiased = false;
-            // offset it so the monkey's paddle lines up with the collision:
-            ficha.PositionY = -24;
             this.AddChild(ficha);
         }
 
