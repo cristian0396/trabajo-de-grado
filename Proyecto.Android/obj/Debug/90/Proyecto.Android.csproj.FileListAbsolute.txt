@@ -1085,7 +1085,6 @@ G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\mipmap-xxhdpi\
 G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\mipmap-xxhdpi\launcher_foreground.png
 G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\mipmap-xxxhdpi\icon.png
 G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\mipmap-xxxhdpi\launcher_foreground.png
-G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\menu.png
 G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\hombre.png
 G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\administracion.png
 G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\evaluacion.png
@@ -1101,8 +1100,6 @@ G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\flujo
 G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\smiling.png
 G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\key.png
 G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\travel.jpg
-G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\diccionario.png
-G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\edificio.png
 G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\edificio2.png
 G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\presupuesto.png
 G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\home.png
@@ -1579,3 +1576,4 @@ G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\bankb
 G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\important.png
 G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\moneydef.png
 G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\safein.png
+G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\presupuestoinicial.png

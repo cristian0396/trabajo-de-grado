@@ -40,24 +40,30 @@ namespace Proyecto.ViewModels
                     new IntroduccionModel()
                     {
                         DirImagen = "ledger.png",
-                        Titulo = "Modulo de Presupuesto",
-                        Contenido = "Es la cantidad de plata calculada para hacer frente a los gastos generales de la vida cotidiana, de un viaje u otros. Es decir que es una estimación anticipada de ingresos y gastos que habrán de producirse en un período determinado",
+                        Titulo = "Presupuesto",
+                        Contenido = "Es la cantidad de plata calculada para hacer frente a los gastos generales de la vida cotidiana, de un viaje u otros. Es decir que es una estimación anticipada de ingresos y gastos que habrán de producirse en un período determinado.",
                         CarouselItem = new RecorridoItemPage()
                     },
                     new IntroduccionModel()
                     {
                         DirImagen = "importantPresu.png",
                         Titulo = "Importancia",
-                        Contenido = "Esta es la corta descripcion de la importancia del presupuesto",
+                        Contenido = "Para la toma de decisiones, por ejemplo, la puesta en marcha de un negocio o el inicio de un proyecto; permite identificar, determinar y gestionar los recursos que se emplearan para el cumplimiento de metas planeadas, de forma que sea óptimo y eficiente.",
                         CarouselItem = new RecorridoItemPage()
                     },
                     new IntroduccionModel()
                     {
                         DirImagen = "IdeaPresu.png",
-                        Titulo = "Ejemplos",
-                        Contenido = "Aqui hay un ejemplo",
+                        Titulo = "Ejemplo",
+                        Contenido = "A continuación, un ejemplo de un presupuesto inicial, donde hay un pequeño margen para el ahorro y por otro lado se describen ingresos y gastos, lo que es el ideal en todo presupuesto. ",
+                        CarouselItem = new RecorridoItemPage()
+                    },
+                    new IntroduccionModel()
+                    {
+                        DirImagen = "PresupuestoInicial.PNG",
                         CarouselItem = new RecorridoItemPage()
                     }
+
                 };
             }
             else if(IDModulo == "2")
@@ -67,15 +73,15 @@ namespace Proyecto.ViewModels
                     new IntroduccionModel()
                     {
                         DirImagen = "ejemplo.png",
-                        Titulo = "Modulo de Plan de Gastos",
-                        Contenido = "Esta es la corta definición de presupuesto",
+                        Titulo = "Gastos",
+                        Contenido = "Es la utilización o consumo de un bien o servicio a cambio de una contraprestación, se suele realizar mediante una cantidad saliente de dinero. También se denomina egreso.",
                         CarouselItem = new RecorridoItemPage()
                     },
                     new IntroduccionModel()
                     {
                         DirImagen = "money.png",
                         Titulo = "Importancia",
-                        Contenido = "Esta es la corta descripcion de la importancia del presupuesto",
+                        Contenido = "Es importante conocer los gastos mensuales ya que permite obtener información relevante sobre la rentabilidad y el desempeño de las actividades personales. Además, ayuda también en la planificación  y en la toma de decisiones sobre inversiones futuras.",
                         CarouselItem = new RecorridoItemPage()
                     },
                     new IntroduccionModel()

@@ -6,15 +6,17 @@
              mc:Ignorable="d"
              x:Class="Proyecto.Vistas.RecorridoItemPage">
   <ContentView.Content>
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="220"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
-            <Image Grid.Row="0" Source="{Binding DirImagen}" Margin="0,30,0,0"/>
-            <Label Grid.Row="1" Text="{Binding Titulo}" FontSize="30" TextColor="white" Margin="20,30,0,20"/>
-            <Label Grid.Row="2" Text="{Binding Contenido}" FontSize="20" TextColor="white" Margin="20,0,0,20" />
-        </Grid>
+        <ScrollView>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Image Grid.Row="0" Source="{Binding DirImagen}" Margin="0,30,0,0"/>
+                <Label Grid.Row="1" Text="{Binding Titulo}" FontSize="30" TextColor="white" Margin="20,30,0,20"/>            
+                <Label Grid.Row="2" Text="{Binding Contenido}" FontSize="20" TextColor="white" Margin="20,0,0,20" />                
+            </Grid>
+        </ScrollView>
     </ContentView.Content>
 </ContentView>

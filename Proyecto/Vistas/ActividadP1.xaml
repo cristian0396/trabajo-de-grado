@@ -6,8 +6,14 @@
              xmlns:local="clr-namespace:Proyecto.Actividades"
              mc:Ignorable="d"
              x:Class="Proyecto.Vistas.ActividadP1"
-             Shell.TabBarIsVisible="False">
-    <StackLayout>
-        <local:PuzzlePresupuestoView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
-    </StackLayout>
+             Shell.TabBarIsVisible="False"
+             Shell.NavBarIsVisible="False">
+    <ContentPage.Content>
+        <Grid BackgroundColor="#AEB6BF">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <local:PuzzlePresupuestoView Grid.Row="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+        </Grid>
+    </ContentPage.Content>
 </ContentPage>
