@@ -8,18 +8,15 @@ namespace Proyecto
     public partial class App : Application
     {
         #region Properties
-        public static int Width { get; set; }
-        public static int Height { get; set; }
-        public static int Density { get; set; }
+        public static int Width { get; set; } //Ancho del dispositivo Android - se genera desde proyecto Android (usado en las actividades)
+        public static int Height { get; set; } //Altura del dispositivo Android - se genera desde proyecto Android (usado en las actividades)
+        public static int Density { get; set; } //Densidad del dispositivo Android - se genera desde proyecto Android (usado en las actividades)
         #endregion
 
         public App()
         {
             InitializeComponent();
-
-            //MainPage = new NavigationPage(new Aterrizaje());
-            //MainPage = new MainPage();
-            MainPage = new ActividadP1();
+            MainPage = new MainPage();
         }
 
         protected override void OnStart()

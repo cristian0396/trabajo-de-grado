@@ -27,7 +27,7 @@ namespace Proyecto.Actividades
 
             if (ccGView != null)
             {
-                ccGView.DesignResolution = new CCSizeI(384, 512);
+                ccGView.DesignResolution = new CCSizeI(App.Width, App.Height);
                 _scene = new PuzzlePresupuesto(ccGView);
                 ccGView.RunWithScene(_scene);
             }

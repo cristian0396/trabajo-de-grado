@@ -87,8 +87,8 @@ namespace Proyecto.ViewModels
                     new IntroduccionModel()
                     {
                         DirImagen = "financeMedal.png",
-                        Titulo = "Ejemplos",
-                        Contenido = "Aqui hay un ejemplo",
+                        Titulo = "Ejemplo",
+                        Contenido = "Al momento de adquirir un carro, estamos comprando un bien que conlleva unos gastos tales como gasolina, mantenimiento, seguros y parqueaderos. Es importante tener en cuenta que poseer un carro no es algo barato y para mantenerlo se necesita de más plata de la ya invertida, por lo que, hacer el plan de gastos permite determinar si es factible o no adquirir un carro dependiendo de la situación de cada persona. ",
                         CarouselItem = new RecorridoItemPage()
                     }
                 };

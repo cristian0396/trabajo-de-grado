@@ -37,7 +37,7 @@ namespace Proyecto.Actividades
         }
         private void CrearFondo()
         {
-            var background = new CCSprite("greenBG.jpg");
+            var background = new CCSprite("background1.png");
             background.AnchorPoint = new CCPoint(0, 0);
             background.IsAntialiased = false;
             background.Scale = 1.2f;

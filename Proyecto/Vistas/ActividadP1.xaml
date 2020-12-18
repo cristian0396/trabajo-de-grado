@@ -9,7 +9,7 @@
              Shell.TabBarIsVisible="False"
              Shell.NavBarIsVisible="False">
     <ContentPage.Content>
-        <Grid BackgroundColor="#AEB6BF">
+        <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition/>
             </Grid.RowDefinitions>
