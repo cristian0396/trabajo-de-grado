@@ -187,21 +187,39 @@ namespace Proyecto.Actividades
            
         }
 
+        private void ubicarPieza(int x, int y)
+        {
+            CCSprite nuevaPieza = new CCSprite("piezaIzquierda.jpeg");
+            nuevaPieza.Scale = 0.25f;
+            nuevaPieza.IsAntialiased = false;
+            nuevaPieza.PositionX = x;
+            nuevaPieza.PositionY = y;
+            CapaDeJuego.AddChild(nuevaPieza);
+        }
         private void PiezaVsPieza(PaletaPrincipal pieza)
         {
-            var fichaActual = paleta2;
-            bool estaDentro = false;
-            if (pieza.PositionX > 100 && pieza.PositionX < 200 && pieza.PositionY < 500 && pieza.PositionY > 400)
-            {
-                estaDentro = true;
-                //pieza.RemoveFromParent();
+            if (pieza.PositionX > 100 && pieza.PositionX < 200 && pieza.PositionY < 430 && pieza.PositionY > 370)
+            {               
+                pieza.RemoveFromParent();
+                ubicarPieza(250, 400);
+                ControlPaletas++;
             }
-
-            if (estaDentro)
+            if (pieza.PositionX > 100 && pieza.PositionX < 200 && pieza.PositionY < 320 && pieza.PositionY > 260)
             {
-                pieza.PositionX = 200;
-                pieza.PositionY = 400;
-                pieza.SetDesiredPositionToCurrentPosition();
+                pieza.RemoveFromParent();
+                ubicarPieza(250, 290);
+                ControlPaletas++;
+            }
+            if (pieza.PositionX > 100 && pieza.PositionX < 200 && pieza.PositionY < 210 && pieza.PositionY > 150)
+            {
+                pieza.RemoveFromParent();
+                ubicarPieza(250, 180);
+                ControlPaletas++;
+            }
+            if (pieza.PositionX > 100 && pieza.PositionX < 200 && pieza.PositionY < 100 && pieza.PositionY > 40)
+            {
+                pieza.RemoveFromParent();
+                ubicarPieza(250, 70);
                 ControlPaletas++;
             }
         }
