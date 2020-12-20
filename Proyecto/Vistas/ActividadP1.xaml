@@ -13,6 +13,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition/>
             </Grid.RowDefinitions>
+            <!--La información proviene del viewModel PuzzlePresupuestoView en la carpeta Actividades-->
             <local:PuzzlePresupuestoView Grid.Row="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
         </Grid>
     </ContentPage.Content>

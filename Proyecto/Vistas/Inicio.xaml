@@ -8,9 +8,10 @@
              Title="Inicio"
              x:Class="Proyecto.Vistas.Inicio">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Opción" IconImageSource=""/>
+        <ToolbarItem Text="Opción" IconImageSource=""/>         <!--Opción que aparece en la parte superior derecha de la app-->
     </ContentPage.ToolbarItems>
     
+    <!--Diccionario que contiene animaciones con la libreria Xamanimation, pero no sirve por ahora con el shell-->
     <Page.Resources>
         <ResourceDictionary>
             <xamanimation:StoryBoard x:Key="escalarImg" Target="{x:Reference imgPresupuesto}">
@@ -39,7 +40,7 @@
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                
+                <!--barras en la parte superior del progreso-->
                 <Label Grid.Row="0" Grid.Column="0" Text="Esta semana:" FontSize="22" Margin="10,10,0,15"/>
                 <ProgressBar Grid.Row="1" Grid.Column="0" Progress="0.6" ScaleY="4" ProgressColor="#77D371" Margin="15,0,0,0" />
                 <Label Grid.Row="1" Grid.Column="1" Text="Presupuesto" FontSize="16" Margin="40,5,0,0" />
@@ -49,8 +50,8 @@
 
                 <ProgressBar Grid.Row="3" Grid.Column="0" Progress="0.1" ScaleY="4" ProgressColor="Red" Margin="15,0,0,0" />
                 <Label Grid.Row="3" Grid.Column="1" Text="Ahorro" FontSize="16" Margin="40,5,0,0"/>
-
             </Grid>
+            <!--Imagenes que conducen hacia los modulos financieros-->
             <Grid Grid.Row="1" RowSpacing="0" Padding="14">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="180"/>
@@ -64,14 +65,16 @@
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <Image Grid.Row="0" Grid.Column="0" x:Name="imgPresupuesto" Source="ingreGastos.png">
-                    
+                
+                <!--Presupuesto-->
+                <Image Grid.Row="0" Grid.Column="0" x:Name="imgPresupuesto" Source="ingreGastos.png"> 
+                    <!--Animaciones que no sirven por ahora-->
                     <Image.Triggers>
                         <EventTrigger Event="Clicked">
                             <xamanimation:BeginAnimation Animation="{StaticResource FadeToAnimation}"/>
                         </EventTrigger>
                     </Image.Triggers>
-                    
+                    <!--Con esto se usa el comando del viewModel al hacer click en la imagen-->
                     <Image.GestureRecognizers >
                         <TapGestureRecognizer Command="{Binding PresupuestoCommand}" />
                     </Image.GestureRecognizers>
@@ -79,23 +82,27 @@
                 <Label Grid.Row="1" Grid.Column="0" Text="Modulo 1: Presupuesto"/>
                 <ProgressBar Grid.Row="2" Grid.Column="0" Progress="1" ScaleY="2"  ProgressColor="#77D371" />
                 
-
+                <!--Plan de Gastos-->
                 <Image Grid.Row="0" Grid.Column="1" Source="imagen.png" HeightRequest="203" Scale="0.7">
+                    <!--Con esto se usa el comando del viewModel al hacer click en la imagen-->
                     <Image.GestureRecognizers >
                         <TapGestureRecognizer Command="{Binding PlanGCommand}"/>
                     </Image.GestureRecognizers>
                 </Image>
                 <Label Grid.Row="1" Grid.Column="1" Text="Modulo 2: Plan de gastos"/>
                 <ProgressBar Grid.Row="2" Grid.Column="1" Progress="1" ScaleY="2"  ProgressColor="#77D371"/>
-
+                
+                <!--Ahorro-->
                 <Image Grid.Row="3" Grid.Column="0" Source="Ahorro.png">
+                    <!--Con esto se usa el comando del viewModel al hacer click en la imagen-->
                     <Image.GestureRecognizers >
                         <TapGestureRecognizer Command="{Binding AhorroCommand}"/>
                     </Image.GestureRecognizers>
                 </Image>
                 <Label Grid.Row="4" Grid.Column="0" Text="Modulo 3: Ahorro" />
                 <ProgressBar Grid.Row="5" Grid.Column="0" Progress="0.5" ScaleY="2"  ProgressColor="#77D371" />
-
+                
+                <!--Modulo NO DEFINIDO-->
                 <Image Grid.Row="3" Grid.Column="1" Source="meta.png" Margin="15,20,30,0"/>
                 <Label Grid.Row="4" Grid.Column="1" Text="Modulo 4:"/>
                 <ProgressBar Grid.Row="5" Grid.Column="1" Progress="0" ScaleY="2"  ProgressColor="#77D371" />

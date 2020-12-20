@@ -23,14 +23,14 @@ namespace Proyecto.ViewModels
             Actividad1Command = new Command(async () => await IrAActividad1(), () => true);
             BotonAtrasCommand = new Command(async () => await IrAInicio(), () => true);
         }
-        public async Task IrAActividad1()
+        public async Task IrAActividad1() //Función para que se activa al hacer click en la imagen de la primer lección
         {
             await Shell.Current.GoToAsync("ActividadP1");
         }
 
-        public async Task IrAInicio()
+        public async Task IrAInicio() //Función que se activa al dar click en el boton de atrás
         {
-            await Shell.Current.GoToAsync("../..");
+            await Shell.Current.GoToAsync("../.."); //Con esto se logra retroceder al inicio, se realizan dos retrocesos
         }
     }
 }

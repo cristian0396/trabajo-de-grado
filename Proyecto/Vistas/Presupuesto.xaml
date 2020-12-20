@@ -8,6 +8,7 @@
              x:Class="Proyecto.Vistas.Presupuesto"
              NavigationPage.HasNavigationBar="False"
              Shell.TabBarIsVisible="False">
+    <!-- modificar el comportamiento por defecto del boton de atrás-->
     <Shell.BackButtonBehavior>
         <BackButtonBehavior Command="{Binding BotonAtrasCommand}"/>
     </Shell.BackButtonBehavior>
@@ -31,19 +32,20 @@
                     </Grid.ColumnDefinitions>
 
                     <Label Grid.Row="0" Grid.Column="0" Text="Lección 1" FontSize="18" Margin="25,0,0,0"/>
+                    <!-- Imagen que denota la primera lección, lleva a la vista de ActividadP1-->
                     <Image Grid.Row="1" Grid.Column="0" Source="ingreGastos.png">
                         <Image.GestureRecognizers >
                             <TapGestureRecognizer Command="{Binding Actividad1Command}" />
                         </Image.GestureRecognizers>
                     </Image>
+                    <!-- Campos donde el usuario digita sus ingresos y gastos-->
                     <Label Grid.Row="2" Grid.Column="0" Text="Ingresos: " FontSize="16" Margin="10,10,0,15"/>
                     <Entry Grid.Row="3" Grid.Column="0" Text="$"/>
-
                     <ProgressBar Grid.Row="1" Grid.Column="1" Progress="0.6" ScaleY="1" ProgressColor="#77D371" Margin="15,0,0,0" />
                     <Label Grid.Row="2" Grid.Column="1" Text="Gastos: " FontSize="16" Margin="10,10,0,15"/>
                     <Entry Grid.Row="3" Grid.Column="1" Text="$"/>
-
                 </Grid>
+                <!-- Codigo que denota la segunda lección y los demás items presentados en la vista-->
                 <Grid Grid.Row="1" RowSpacing="0" Padding="14">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="40" />
@@ -60,17 +62,13 @@
 
                     <Label Grid.Row="0" Grid.Column="0" Text="Lección 2" FontSize="18" Margin="25,0,0,0"/>
                     <Image Grid.Row="1" Grid.Column="0" Source="FlujoCaja.jpeg"/>
-
                     <ProgressBar Grid.Row="1" Grid.Column="1" Progress="0" ScaleY="1" ProgressColor="#566573" Margin="15,0,0,0" />
                     <Button Grid.Row="2" Grid.Column="1" Text="Ir al simulador"/>
-
+                    <!-- Información adicional al final del modulo-->
                     <Label Grid.Row="3" Grid.Column="0" Text="Esto es de tu interes!" FontSize="16" Margin="0,40,0,0"/>
                     <Label Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2"
                            Text="Actualmente tu estado financiero es aceptable, aunque puedes generar más ingresos invirtiendo o comprando activos! Sigue asi!" FontSize="16" />
-
                     <Image Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Source="smiling.png" Scale="0.5" />
-                    
-
                 </Grid>
             </Grid>
         </ScrollView>

@@ -7,6 +7,7 @@
              Title="Ahorro"
              x:Class="Proyecto.Vistas.Ahorro"
              Shell.TabBarIsVisible="False">
+    <!-- modificar el comportamiento por defecto del boton de atrás-->
     <Shell.BackButtonBehavior>
         <BackButtonBehavior Command="{Binding BotonAtrasCommand}"/>
     </Shell.BackButtonBehavior>
@@ -18,6 +19,7 @@
                     <RowDefinition Height="210"/>
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
+                <!-- Codigo de la primera lección-->
                 <Grid Grid.Row="0" ColumnSpacing="20" Padding="20" RowSpacing="0">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="40" />
@@ -31,9 +33,8 @@
                     <Label Grid.Row="0" Grid.Column="0" Text="Lección 1" FontSize="18" Margin="25,0,0,0"/>
                     <Image Grid.Row="0" Grid.Column="1" Source="key.png" HorizontalOptions="End"/>
                     <Image Grid.Row="1" Grid.Column="0" Source="meta.jpeg"/>
-                    <ProgressBar Grid.Row="1" Grid.Column="1" Progress="0.6" ScaleY="1" ProgressColor="#77D371" Margin="15,0,0,0" />         
-
-                </Grid>
+                    <ProgressBar Grid.Row="1" Grid.Column="1" Progress="0.6" ScaleY="1" ProgressColor="#77D371" Margin="15,0,0,0" />
+                </Grid>                
                 <Grid Grid.Row="1" ColumnSpacing="20" RowSpacing="10" Padding="14">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="20" />
@@ -44,15 +45,15 @@
                         <ColumnDefinition/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-
+                    <!-- Información estatica-->
                     <Label Grid.Row="0" Grid.Column="0" Text="Objetivo" FontSize="18" Margin="25,0,0,0"/>
                     <Label Grid.Row="1" Grid.Column="0"
                            Text="Dentro de 6 meses 
                            tengo que poder viajar a los Paises bajos" FontSize="16" VerticalOptions="Center" Margin="15,0,0,0"/>
                     <ProgressBar Grid.Row="2" Grid.Column="0" Progress="0.3" ScaleY="1" ProgressColor="#77D371" Margin="15,0,0,0" />
-
                     <Image Grid.Row="1" Grid.Column="1" Source="travel.jpg"/>
                 </Grid>
+                <!-- Codigo de la segunda lección-->
                 <Grid Grid.Row="2" ColumnSpacing="20" Padding="14" RowSpacing="0">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="40" />
@@ -63,14 +64,11 @@
                         <ColumnDefinition/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-
                     <Label Grid.Row="0" Grid.Column="0" Text="Lección 2" FontSize="18" Margin="25,0,0,0"/>
                     <Image Grid.Row="1" Grid.Column="0" Source="ahorro.jpeg"/>
-                    <ProgressBar Grid.Row="1" Grid.Column="1" Progress="0.1" ScaleY="1" ProgressColor="#77D371" Margin="15,0,0,0" />
-                    
+                    <ProgressBar Grid.Row="1" Grid.Column="1" Progress="0.1" ScaleY="1" ProgressColor="#77D371" Margin="15,0,0,0" />                    
                     <Button Grid.Row="2" Grid.Column="0" Text="Actividad" Margin="0,20,0,0"/>
                     <Button Grid.Row="2" Grid.Column="1" Text="Siguiente Nivel" Margin="0,20,0,0"/>
-
                 </Grid>
             </Grid>
         </ScrollView>

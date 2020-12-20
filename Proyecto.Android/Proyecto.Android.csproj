@@ -173,9 +173,6 @@
     <AndroidResource Include="Resources\drawable\IdeaPresu.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Content\Images\greenBG.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable\ejemplo.png" />
   </ItemGroup>
   <ItemGroup>

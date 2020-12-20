@@ -7,8 +7,9 @@
              xmlns:viewmodel="clr-namespace:Proyecto.ViewModels"
              mc:Ignorable="d"
              x:Class="Proyecto.Vistas.introPresupuesto"
-             Shell.NavBarIsVisible="False"
+             Shell.NavBarIsVisible="False" 
              Shell.TabBarIsVisible="False">
+    <!-- Vista de las introducciones a los modulos, se hace uso de la libreria Xamarin.Forms.PancakeView-->
     <ContentPage.Content>
         <Grid>
             <Grid.RowDefinitions>
@@ -16,6 +17,7 @@
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
+            <!-- Con esta porción de codigo se establece un fondo con degradado o gradiente-->
             <yummy:PancakeView Grid.RowSpan="3"  BackgroundGradientStartPoint="0,0" BackgroundGradientEndPoint="1,0">
                 <yummy:PancakeView.BackgroundGradientStops>
                     <yummy:GradientStopCollection>
@@ -25,8 +27,9 @@
                     </yummy:GradientStopCollection>
                 </yummy:PancakeView.BackgroundGradientStops>
             </yummy:PancakeView>
+            <!-- Boton parte superior derecha-->
             <Button Grid.Row="0" Command="{Binding ComandoOmitir}" BackgroundColor="Transparent" Margin="0,10,10,0" HorizontalOptions="End" Text="Omitir" TextColor="White"/>
-            
+            <!-- Aqui se define que el contenido del carrusel estan en la contenView llamda RecorridoItemPage-->
             <CarouselView Grid.Row="1" ItemsSource="{Binding Introduccion}" Position="{Binding PosicionIndice, Mode=TwoWay}">
                 <CarouselView.ItemTemplate>
                     <DataTemplate>
@@ -34,6 +37,7 @@
                     </DataTemplate>
                 </CarouselView.ItemTemplate>
             </CarouselView>
+            <!-- Boton parte Inferior-->
             <Button Grid.Row="2" BackgroundColor="White" CornerRadius="20" HeightRequest="40" Margin="0,10,0,24" HorizontalOptions="CenterAndExpand" Command="{Binding ComandoSiguiente}" Text="{Binding TextoBotonSiguiente}" WidthRequest="245"/>
         </Grid>        
     </ContentPage.Content>

@@ -7,6 +7,7 @@
              Title="Plan de Gastos"
              x:Class="Proyecto.Vistas.PlanGastos"
              Shell.TabBarIsVisible="False">
+    <!-- modificar el comportamiento por defecto del boton de atrás-->
     <Shell.BackButtonBehavior>
         <BackButtonBehavior Command="{Binding BotonAtrasCommand}"/>
     </Shell.BackButtonBehavior>
@@ -17,6 +18,7 @@
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
+                <!-- Codigo de la primera lección-->
                 <Grid Grid.Row="0" ColumnSpacing="20" Padding="20" RowSpacing="0">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="40" />
@@ -37,8 +39,8 @@
                     <ProgressBar Grid.Row="1" Grid.Column="1" Progress="0.4" ScaleY="1" ProgressColor="#77D371" Margin="15,0,0,0" />
                     <Label Grid.Row="2" Grid.Column="1" Text="Gastos: " FontSize="16" Margin="10,20,0,0"/>
                     <Entry Grid.Row="3" Grid.Column="1" Text="$"/>
-
                 </Grid>
+                <!-- Codigo de la segunda lección-->
                 <Grid Grid.Row="1" RowSpacing="0" Padding="14">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
@@ -53,7 +55,8 @@
                         <ColumnDefinition/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-
+                    <!-- Se construye la tableContent con una Listview-->
+                    <!-- ListView #1 HEADER-->
                     <Frame Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Padding="0" BackgroundColor="Aqua" BorderColor="DarkSlateGray">
                         <Grid Padding="0">
                             <Grid.ColumnDefinitions>
@@ -73,6 +76,7 @@
                             <BoxView BackgroundColor="DarkSlateGray" WidthRequest="1" Grid.Column="3" HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand"/>
                         </Grid>
                     </Frame>
+                    <!-- Contenido de la Listview #1-->
                     <!--
                     <ListView Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" SeparatorVisibility="None" SelectionMode="None" HasUnevenRows="False">
                         <ListView.ItemTemplate>
@@ -103,6 +107,7 @@
                         </ListView.ItemTemplate>
                     </ListView>
                     -->
+                    <!-- ListView #2 HEADER-->
                     <Label Grid.Row="2" Grid.Column="0" Text="Nombre: " FontSize="16" Margin="10,30,0,15"/>
                     <Entry Grid.Row="3" Grid.Column="0"/>
                     <Label Grid.Row="2" Grid.Column="1" Text="Prioridad: " FontSize="16" Margin="10,30,0,15"/>
@@ -128,6 +133,7 @@
                             <BoxView BackgroundColor="DarkSlateGray" WidthRequest="1" Grid.Column="3" HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand"/>
                         </Grid>
                     </Frame>
+                    <!-- Contenido de la Listview #2-->
                     <!--
                     <ListView Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" SeparatorVisibility="None" SelectionMode="None" HasUnevenRows="False">
                         <ListView.ItemTemplate>
@@ -158,10 +164,8 @@
                         </ListView.ItemTemplate>
                     </ListView>
                     -->
-
                     <Button Grid.Row="6" Grid.Column="0" Text="Generar reporte" Margin="0,30,0,0"/>
                     <Button Grid.Row="6" Grid.Column="1" Text="Siguiente nivel" Margin="0,30,0,0"/>
-
                 </Grid>
             </Grid>
         </ScrollView>

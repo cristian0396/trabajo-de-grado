@@ -6,11 +6,11 @@
              mc:Ignorable="d"
              xmlns:local="clr-namespace:Proyecto.Vistas"
              x:Class="Proyecto.MainPage">
-
+    <!--Aqui se indica que el header del menu Hamburguesa esta alojado en el contenView llamado MenuHeader--> 
     <Shell.FlyoutHeader>
         <local:MenuHeader/>
     </Shell.FlyoutHeader>
-
+    <!--Aqui se crean los items que estan tanto en el menu hamburguesa(navbar) como en el menuTab-->
     <FlyoutItem Title="MyTabApp" FlyoutDisplayOptions="AsMultipleItems">
         <ShellContent Title="Inicio" Route="Inicio" Icon="home.png"
                       IsTabStop="True" ContentTemplate="{DataTemplate local:Inicio}"/>

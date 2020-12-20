@@ -5,6 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="Proyecto.Vistas.RecorridoItemPage">
+    <!--Contenido principal del carrouselView (imagen, subtitulo, texto) de la introducción de cada modulo-->
   <ContentView.Content>
         <ScrollView>
             <Grid>

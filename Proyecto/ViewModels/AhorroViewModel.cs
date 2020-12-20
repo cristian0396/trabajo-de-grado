@@ -21,9 +21,9 @@ namespace Proyecto.ViewModels
         {
             BotonAtrasCommand = new Command(async () => await IrAInicio(), () => true);
         }
-        public async Task IrAInicio()
+        public async Task IrAInicio() //Función que se activa al dar click en el boton de atrás
         {
-            await Shell.Current.GoToAsync("../..");
+            await Shell.Current.GoToAsync("../.."); //Con esto se logra retroceder al inicio, se realizan dos retrocesos
         }
     }
 }

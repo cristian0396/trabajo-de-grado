@@ -5,13 +5,13 @@ using CocosSharp;
 using Proyecto.Actividades.Entidades;
 
 namespace Proyecto.Actividades
-{
+{ //Clase principal que abstrae el juego de puzzle presupuesto
     public class PuzzlePresupuesto : CCScene
     {
         CCLayer CapaDeFondo, CapaDeJuego;
         PaletaPrincipal paleta, paleta2, paleta3, paleta4;
         CCSprite paleta5, paleta6, paleta7, paleta8;
-        private int ControlPaletas;
+        private int ControlPaletas; //variable usada para saber que ficha es la que el usuario esta manejando actualmente
         private bool hasGameEnded;
 
         public PuzzlePresupuesto(CCGameView gameView) : base(gameView)
@@ -45,7 +45,7 @@ namespace Proyecto.Actividades
         }
 
         private void CrearPaletas()
-        {
+        { //función que inicializa todas las fichas del puzzle en las respectivas ubicaciones
             paleta = new PaletaPrincipal();
             paleta.PositionX = 300;
             paleta.PositionY = CapaDeJuego.ContentSize.Height / 2.0f;
@@ -102,7 +102,7 @@ namespace Proyecto.Actividades
         }
 
         private void CreateTouchListener()
-        {
+        { //función que crea un evento para cuando el usuario toque la pantalla
             var touchListener = new CCEventListenerTouchAllAtOnce();
             touchListener.OnTouchesMoved = HandleTouchesMoved;
             //touchListener.OnTouchesBegan = HandleTouchesBegan;
@@ -119,7 +119,7 @@ namespace Proyecto.Actividades
         }
         */
         void HandleTouchesMoved(System.Collections.Generic.List<CCTouch> touches, CCEvent touchEvent)
-        {
+        { //función que se encarga de darle manejo al uso de las fichas en el juego
             // we only care about the first touch:
             var locationOnScreen = touches[0].Location;
             switch (ControlPaletas)
@@ -140,7 +140,7 @@ namespace Proyecto.Actividades
         }
 
         private void Activity(float frameTimeInSeconds)
-        {
+        { //función que controla toda la actividad en el juego, se ejecuta por medio de Schedule()
             if (hasGameEnded == false)
             {
                 switch (ControlPaletas)
@@ -163,7 +163,7 @@ namespace Proyecto.Actividades
         }
 
         private void EjecutarColision()
-        {
+        { //función que da manejo a las colisiones del juego
             PaletaPrincipal piezaActual;
             switch (ControlPaletas)
             {
@@ -188,7 +188,7 @@ namespace Proyecto.Actividades
         }
 
         private void ubicarPieza(int x, int y)
-        {
+        { //función que le entra las coordenadas en que la ficha estatica creada debe ubicarse
             CCSprite nuevaPieza = new CCSprite("piezaIzquierda.jpeg");
             nuevaPieza.Scale = 0.25f;
             nuevaPieza.IsAntialiased = false;
@@ -197,7 +197,7 @@ namespace Proyecto.Actividades
             CapaDeJuego.AddChild(nuevaPieza);
         }
         private void PiezaVsPieza(PaletaPrincipal pieza)
-        {
+        { //función que determina unos rangos en que la pieza usada puede entrar para luego generar otra ficha estatica que se une con la ficha concepto
             if (pieza.PositionX > 100 && pieza.PositionX < 200 && pieza.PositionY < 430 && pieza.PositionY > 370)
             {               
                 pieza.RemoveFromParent();

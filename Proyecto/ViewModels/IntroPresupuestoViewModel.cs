@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Proyecto.ViewModels
 {
-    [AddINotifyPropertyChangedInterface]
+    [AddINotifyPropertyChangedInterface] //Usado por la libreria Foody que permite la propagación de contenido INotifyPropertyChanged
    
     public class IntroPresupuestoViewModel : ViewModelBase
     {
@@ -31,7 +31,8 @@ namespace Proyecto.ViewModels
         public ICommand ComandoOmitir { get; set; }
 
         public IntroPresupuestoViewModel(string Modulo)
-        {
+        {//Constructor donde se recibe el idModulo y con respecto a ello se muestran los diferentes iconos, definiciones y ejemplos de cada modulo
+
             IDModulo = Modulo;
             if (IDModulo == "1")
             {
@@ -119,7 +120,6 @@ namespace Proyecto.ViewModels
                         CarouselItem = new RecorridoItemPage()
                     }
                 };
-
             }
                                  
             
@@ -133,7 +133,7 @@ namespace Proyecto.ViewModels
             ComandoOmitir = new Command(async () => await Omitir(), () => true);
         }
 
-        private void Siguiente(object obj)
+        private void Siguiente(object obj) //Función que permite actualizar el indice en que se esta en el carrouselView, en caso de que se este en la ultima se cambia la función del boton a "hecho"
         {
             if (PosicionIndice < Introduccion.Count - 1)
             {
@@ -145,7 +145,7 @@ namespace Proyecto.ViewModels
             }
         }
 
-        private async Task  Omitir(){
+        private async Task  Omitir(){ //Función que dirije al usuario al respectivo modulo
             if(IDModulo == "1")
             {
                 await Shell.Current.GoToAsync(nameof(Presupuesto));
