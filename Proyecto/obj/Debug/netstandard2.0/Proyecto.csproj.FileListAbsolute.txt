@@ -65,3 +65,4 @@ G:\EduFinanzas\trabajo-de-grado\Proyecto\obj\Debug\netstandard2.0\Proyecto.dll
 G:\EduFinanzas\trabajo-de-grado\Proyecto\obj\Debug\netstandard2.0\ref\Proyecto.dll
 G:\EduFinanzas\trabajo-de-grado\Proyecto\obj\Debug\netstandard2.0\Proyecto.pdb
 G:\EduFinanzas\trabajo-de-grado\Proyecto\obj\Debug\netstandard2.0\Proyecto.csprojAssemblyReference.cache
+G:\EduFinanzas\trabajo-de-grado\Proyecto\obj\Debug\netstandard2.0\Vistas\JuegoFruit.xaml.g.cs

@@ -40,7 +40,7 @@ namespace Proyecto.Actividades
             var background = new CCSprite("background1.png");
             background.AnchorPoint = new CCPoint(0, 0);
             background.IsAntialiased = false;
-            background.Scale = 1.2f;
+            background.ContentSize = new CCSize(App.Width, App.Height);
             CapaDeFondo.AddChild(background);
         }
 

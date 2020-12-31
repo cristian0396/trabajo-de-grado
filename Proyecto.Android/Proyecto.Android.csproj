@@ -202,6 +202,14 @@
   <ItemGroup>
     <AndroidAsset Include="Content\Images\background1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Content\Images\background.png" />
+    <AndroidAsset Include="Content\Images\cherry.png" />
+    <AndroidAsset Include="Content\Images\foreground.png" />
+    <AndroidAsset Include="Content\Images\lemon.png" />
+    <AndroidAsset Include="Content\Images\monkey.png" />
+    <AndroidAsset Include="Content\Images\vine.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
