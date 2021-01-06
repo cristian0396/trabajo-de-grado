@@ -13,6 +13,7 @@
           "NETStandard.Library": "2.0.3",
           "Newtonsoft.Json": "12.0.3",
           "PropertyChanged.Fody": "3.3.1",
+          "Rg.Plugins.Popup": "2.0.0.9",
           "Xamanimation": "1.3.0",
           "Xamarin.Essentials": "1.5.3.2",
           "Xamarin.Forms": "4.8.0.1687",
@@ -74,6 +75,17 @@
           "lib/netstandard2.0/PropertyChanged.dll": {
             "assemblyVersion": "3.3.1.0",
             "fileVersion": "3.3.1.0"
+          }
+        }
+      },
+      "Rg.Plugins.Popup/2.0.0.9": {
+        "dependencies": {
+          "Xamarin.Forms": "4.8.0.1687"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Rg.Plugins.Popup.dll": {
+            "assemblyVersion": "2.0.0.9",
+            "fileVersion": "2.0.0.9"
           }
         }
       },
@@ -215,6 +227,13 @@
       "sha512": "sha512-/K/X8wn2IZV7Zezb+WvieOalWopFJKEcB7BrPoDFCj74VexupWdtvqriCoifSyrX0E+XhTzk0cVQd26hQ7TODg==",
       "path": "propertychanged.fody/3.3.1",
       "hashPath": "propertychanged.fody.3.3.1.nupkg.sha512"
+    },
+    "Rg.Plugins.Popup/2.0.0.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9jLbXDFJV0zl3s19CICqZlsmGD3zCKobwvg3LGOO37vSnixncfZZHqXhx/ZsGNMC0ZsZiycRaRJQaJ6q0ww27A==",
+      "path": "rg.plugins.popup/2.0.0.9",
+      "hashPath": "rg.plugins.popup.2.0.0.9.nupkg.sha512"
     },
     "System.ComponentModel/4.3.0": {
       "type": "package",

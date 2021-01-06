@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Bee6jDr/YH7rqZH55Dpfrv4qdDg74SaI6971+qnX5YpUc1UESb4J/vtr+t1vyhqZyJtmCEQxY97yAI0NGDyElg==",
+  "dgSpecHash": "Sa+mXcL7byPSWmCWHd4/T/8zdUZ2UqZBwfuJy+CwSZY+QLiAZ2722iRq8UjYOlu5LL1Jyg2wudyFtheVajN3Pw==",
   "success": true,
   "projectFilePath": "G:\\EduFinanzas\\trabajo-de-grado\\Proyecto\\Proyecto.csproj",
   "expectedPackageFiles": [
@@ -12,6 +12,7 @@
     "C:\\Users\\alejo\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
     "C:\\Users\\alejo\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\alejo\\.nuget\\packages\\propertychanged.fody\\3.3.1\\propertychanged.fody.3.3.1.nupkg.sha512",
+    "C:\\Users\\alejo\\.nuget\\packages\\rg.plugins.popup\\2.0.0.9\\rg.plugins.popup.2.0.0.9.nupkg.sha512",
     "C:\\Users\\alejo\\.nuget\\packages\\system.componentmodel\\4.3.0\\system.componentmodel.4.3.0.nupkg.sha512",
     "C:\\Users\\alejo\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\alejo\\.nuget\\packages\\system.runtime\\4.3.0\\system.runtime.4.3.0.nupkg.sha512",
