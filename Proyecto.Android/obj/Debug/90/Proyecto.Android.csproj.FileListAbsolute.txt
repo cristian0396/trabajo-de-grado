@@ -1577,3 +1577,5 @@ G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\stamp\_ConvertReso
 G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
+G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\gastoencolombia.jpg
+G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\tablahorro.png

@@ -89,7 +89,12 @@ namespace Proyecto.ViewModels
                     {
                         DirImagen = "financeMedal.png",
                         Titulo = "Ejemplo",
-                        Contenido = "Al momento de adquirir un carro, estamos comprando un bien que conlleva unos gastos tales como gasolina, mantenimiento, seguros y parqueaderos. Es importante tener en cuenta que poseer un carro no es algo barato y para mantenerlo se necesita de más plata de la ya invertida, por lo que, hacer el plan de gastos permite determinar si es factible o no adquirir un carro dependiendo de la situación de cada persona. ",
+                        Contenido = "A continuación, se mostrará un ejemplo real de los gastos generales de un colombiano promedio según el Dane en el 2015",
+                        CarouselItem = new RecorridoItemPage()
+                    },
+                    new IntroduccionModel()
+                    {
+                        DirImagen = "gastoEnColombia.jpg",
                         CarouselItem = new RecorridoItemPage()
                     }
                 };
@@ -101,22 +106,27 @@ namespace Proyecto.ViewModels
                     new IntroduccionModel()
                     {
                         DirImagen = "moneydef.png",
-                        Titulo = "Modulo de Plan de Gastos",
-                        Contenido = "Esta es la corta definición de Ahorro",
+                        Titulo = "Ahorro",
+                        Contenido = "Ahorrar es una forma inteligente de guardar dinero (lograr un patrimonio) y alcanzar tus metas. Todos podemos hacerlo, sin importar si ganamos mucho o poco, cualquier aporte sirve al momento de ahorrar",
                         CarouselItem = new RecorridoItemPage()
                     },
                     new IntroduccionModel()
                     {
                         DirImagen = "safeIn.png",
                         Titulo = "Importancia",
-                        Contenido = "Esta es la corta descripcion de la importancia del presupuesto",
+                        Contenido = "Es importante ahorrar en el presente para afrontar las necesidades o imprevistos de un futuro financiero incierto, estar preparados para cualquier emergencia o gastos inesperados, el ahorro también puede invertirse para poder cumplir tus metas a futuro. ",
                         CarouselItem = new RecorridoItemPage()
                     },
                     new IntroduccionModel()
                     {
                         DirImagen = "bankBuilding.png",
                         Titulo = "Ejemplos",
-                        Contenido = "Aqui hay un ejemplo",
+                        Contenido = "A continuación, encontrarás un ejemplo de ahorro personal orientado a obtener un bien que dependiendo de cada persona puede ser por lujo o por necesidad.",
+                        CarouselItem = new RecorridoItemPage()
+                    },
+                    new IntroduccionModel()
+                    {
+                        DirImagen = "tablahorro.png",
                         CarouselItem = new RecorridoItemPage()
                     }
                 };
