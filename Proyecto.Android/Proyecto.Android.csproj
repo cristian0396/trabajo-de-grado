@@ -232,7 +232,7 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Content\Images\p6.png" />
-    <Content Include="Content\Images\r6.png" />
+    <AndroidAsset Include="Content\Images\r6.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>

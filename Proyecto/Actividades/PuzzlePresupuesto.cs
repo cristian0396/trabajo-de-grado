@@ -46,34 +46,12 @@ namespace Proyecto.Actividades
 
         private void CrearPaletas()
         { //función que inicializa todas las fichas del puzzle en las respectivas ubicaciones
-            paleta = new PaletaPrincipal();
-            paleta.crearFichas("r1.png");
-            paleta.PositionX = 300;
-            paleta.PositionY = CapaDeJuego.ContentSize.Height / 2.0f;
-            paleta.SetDesiredPositionToCurrentPosition();
-            CapaDeJuego.AddChild(paleta);
-
-            paleta2 = new PaletaPrincipal();
-            paleta2.crearFichas("r2.png");
-            paleta2.PositionX = 300;
-            paleta2.PositionY = CapaDeJuego.ContentSize.Height / 2.0f;
-            paleta2.SetDesiredPositionToCurrentPosition();
-            CapaDeJuego.AddChild(paleta2);
-
-            paleta3 = new PaletaPrincipal();
-            paleta3.crearFichas("r3.png");
-            paleta3.PositionX = 300;
-            paleta3.PositionY = CapaDeJuego.ContentSize.Height / 2.0f;
-            paleta3.SetDesiredPositionToCurrentPosition();
-            CapaDeJuego.AddChild(paleta3);
-
-
-            paleta4 = new PaletaPrincipal();
-            paleta4.crearFichas("r4.png");
-            paleta4.PositionX = 300;
-            paleta4.PositionY = CapaDeJuego.ContentSize.Height / 2.0f;
-            paleta4.SetDesiredPositionToCurrentPosition();
-            CapaDeJuego.AddChild(paleta4);
+            paleta12 = new PaletaPrincipal();
+            paleta12.crearFichas("r6.png");
+            paleta12.PositionX = 300;
+            paleta12.PositionY = CapaDeJuego.ContentSize.Height / 2.0f;
+            paleta12.SetDesiredPositionToCurrentPosition();
+            CapaDeJuego.AddChild(paleta12);
 
             paleta11 = new PaletaPrincipal();
             paleta11.crearFichas("r5.png");
@@ -82,49 +60,70 @@ namespace Proyecto.Actividades
             paleta11.SetDesiredPositionToCurrentPosition();
             CapaDeJuego.AddChild(paleta11);
 
-            paleta12 = new PaletaPrincipal();
-            paleta12.crearFichas("r6.png");
-            paleta12.PositionX = 300;
-            paleta12.PositionY = CapaDeJuego.ContentSize.Height / 2.0f;
-            paleta12.SetDesiredPositionToCurrentPosition();
-            CapaDeJuego.AddChild(paleta12);
+            paleta4 = new PaletaPrincipal();
+            paleta4.crearFichas("r4.png");
+            paleta4.PositionX = 300;
+            paleta4.PositionY = CapaDeJuego.ContentSize.Height / 2.0f;
+            paleta4.SetDesiredPositionToCurrentPosition();
+            CapaDeJuego.AddChild(paleta4);
 
-            paleta5 = new CCSprite("p3.png"); //tercer ficha izquierda más arriba
+            paleta3 = new PaletaPrincipal();
+            paleta3.crearFichas("r3.png");
+            paleta3.PositionX = 300;
+            paleta3.PositionY = CapaDeJuego.ContentSize.Height / 2.0f;
+            paleta3.SetDesiredPositionToCurrentPosition();
+            CapaDeJuego.AddChild(paleta3);
+
+            paleta2 = new PaletaPrincipal();
+            paleta2.crearFichas("r2.png");
+            paleta2.PositionX = 300;
+            paleta2.PositionY = CapaDeJuego.ContentSize.Height / 2.0f;
+            paleta2.SetDesiredPositionToCurrentPosition();
+            CapaDeJuego.AddChild(paleta2);
+
+            paleta = new PaletaPrincipal();
+            paleta.crearFichas("r1.png");
+            paleta.PositionX = 300;
+            paleta.PositionY = CapaDeJuego.ContentSize.Height / 2.0f;
+            paleta.SetDesiredPositionToCurrentPosition();
+            CapaDeJuego.AddChild(paleta);
+
+            paleta5 = new CCSprite("p6.png"); //tercer ficha izquierda más arriba
             paleta5.Scale = 0.4f;
             paleta5.IsAntialiased = false;
             paleta5.PositionX = 100;
             paleta5.PositionY = 400;
             CapaDeJuego.AddChild(paleta5);
 
-            paleta6 = new CCSprite("p4.png"); //cuarta ficha izquierda más arriba
+            paleta6 = new CCSprite("p1.png"); //cuarta ficha izquierda más arriba
             paleta6.Scale = 0.4f;
             paleta6.IsAntialiased = false;
             paleta6.PositionX = 100;
             paleta6.PositionY = 290;
             CapaDeJuego.AddChild(paleta6);
 
-            paleta7 = new CCSprite("p5.png");
+            paleta7 = new CCSprite("p3.png");
             paleta7.Scale = 0.4f;
             paleta7.IsAntialiased = false;
             paleta7.PositionX = 100;
             paleta7.PositionY = 180;
             CapaDeJuego.AddChild(paleta7);
 
-            paleta8 = new CCSprite("p6.png"); 
+            paleta8 = new CCSprite("p2.png"); 
             paleta8.Scale = 0.4f;
             paleta8.IsAntialiased = false;
             paleta8.PositionX = 100;
             paleta8.PositionY = 70;
             CapaDeJuego.AddChild(paleta8);
 
-            paleta9 = new CCSprite("p2.png");  //segunda ficha izquierda más arriba
+            paleta9 = new CCSprite("p4.png");  //segunda ficha izquierda más arriba
             paleta9.Scale = 0.4f;
             paleta9.IsAntialiased = false;
             paleta9.PositionX = 100;
             paleta9.PositionY = 510;
             CapaDeJuego.AddChild(paleta9);
 
-            paleta10 = new CCSprite("p1.png"); //ficha izquierda más arriba
+            paleta10 = new CCSprite("p5.png"); //ficha izquierda más arriba
             paleta10.Scale = 0.4f;
             paleta10.IsAntialiased = false;
             paleta10.PositionX = 100;
@@ -168,6 +167,12 @@ namespace Proyecto.Actividades
                 case 3:
                     paleta4.HandleInput(locationOnScreen);
                     break;
+                case 4:
+                    paleta11.HandleInput(locationOnScreen);
+                    break;
+                case 5:
+                    paleta12.HandleInput(locationOnScreen);
+                    break;
             }
         }
 
@@ -188,6 +193,12 @@ namespace Proyecto.Actividades
                         break;
                     case 3:
                         paleta4.Activity(frameTimeInSeconds);
+                        break;
+                    case 4:
+                        paleta11.Activity(frameTimeInSeconds);
+                        break;
+                    case 5:
+                        paleta12.Activity(frameTimeInSeconds);
                         break;
                 }
                 EjecutarColision();
@@ -211,6 +222,12 @@ namespace Proyecto.Actividades
                 case 3:
                     piezaActual = paleta4;
                     break;
+                case 4:
+                    piezaActual = paleta11;
+                    break;
+                case 5:
+                    piezaActual = paleta12;
+                    break;
                 default:
                     piezaActual = paleta;
                     break;
@@ -219,9 +236,9 @@ namespace Proyecto.Actividades
            
         }
 
-        private void ubicarPieza(int x, int y)
+        private void ubicarPieza(string dir, int x, int y)
         { //función que le entra las coordenadas en que la ficha estatica creada debe ubicarse
-            CCSprite nuevaPieza = new CCSprite("r1.png");
+            CCSprite nuevaPieza = new CCSprite(dir);
             nuevaPieza.Scale = 0.4f;
             nuevaPieza.IsAntialiased = false;
             nuevaPieza.PositionX = x;
@@ -230,28 +247,40 @@ namespace Proyecto.Actividades
         }
         private void PiezaVsPieza(PaletaPrincipal pieza)
         { //función que determina unos rangos en que la pieza usada puede entrar para luego generar otra ficha estatica que se une con la ficha concepto
-            if (pieza.PositionX > 100 && pieza.PositionX < 200 && pieza.PositionY < 430 && pieza.PositionY > 370)
+            if (pieza.PositionX > 100 && pieza.PositionX < 250 && pieza.PositionY < 650 && pieza.PositionY > 590)
+            {
+                pieza.RemoveFromParent();
+                ubicarPieza("r1.png", 230, 620);
+                ControlPaletas++;
+            }
+            if (pieza.PositionX > 100 && pieza.PositionX < 250 && pieza.PositionY < 540 && pieza.PositionY > 480)
+            {
+                pieza.RemoveFromParent();
+                ubicarPieza("r2.png", 230, 510);
+                ControlPaletas++;
+            }
+            if (pieza.PositionX > 100 && pieza.PositionX < 250 && pieza.PositionY < 430 && pieza.PositionY > 370)
             {               
                 pieza.RemoveFromParent();
-                ubicarPieza(250, 400);
+                ubicarPieza("r3.png", 230, 400);
                 ControlPaletas++;
             }
-            if (pieza.PositionX > 100 && pieza.PositionX < 200 && pieza.PositionY < 320 && pieza.PositionY > 260)
+            if (pieza.PositionX > 100 && pieza.PositionX < 250 && pieza.PositionY < 320 && pieza.PositionY > 260)
             {
                 pieza.RemoveFromParent();
-                ubicarPieza(250, 290);
+                ubicarPieza("r4.png", 230, 290);
                 ControlPaletas++;
             }
-            if (pieza.PositionX > 100 && pieza.PositionX < 200 && pieza.PositionY < 210 && pieza.PositionY > 150)
+            if (pieza.PositionX > 100 && pieza.PositionX < 250 && pieza.PositionY < 210 && pieza.PositionY > 150)
             {
                 pieza.RemoveFromParent();
-                ubicarPieza(250, 180);
+                ubicarPieza("r5.png", 230, 180);
                 ControlPaletas++;
             }
-            if (pieza.PositionX > 100 && pieza.PositionX < 200 && pieza.PositionY < 100 && pieza.PositionY > 40)
+            if (pieza.PositionX > 100 && pieza.PositionX < 250 && pieza.PositionY < 100 && pieza.PositionY > 40)
             {
                 pieza.RemoveFromParent();
-                ubicarPieza(250, 70);
+                ubicarPieza("r6.png", 230, 70);
                 ControlPaletas++;
             }
         }
