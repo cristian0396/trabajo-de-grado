@@ -9,7 +9,7 @@ namespace Proyecto.Actividades
     public class PuzzlePresupuesto : CCScene
     {
         CCLayer CapaDeFondo, CapaDeJuego;
-        PaletaPrincipal paleta, paleta2, paleta3, paleta4, paleta11, paleta12;
+        PaletaPrincipal paleta;
         CCSprite paleta5, paleta6, paleta7, paleta8, paleta9, paleta10;
         private int ControlPaletas; //variable usada para saber que ficha es la que el usuario esta manejando actualmente
         private bool hasGameEnded;
@@ -46,41 +46,6 @@ namespace Proyecto.Actividades
 
         private void CrearPaletas()
         { //función que inicializa todas las fichas del puzzle en las respectivas ubicaciones
-            paleta12 = new PaletaPrincipal();
-            paleta12.crearFichas("r6.png");
-            paleta12.PositionX = 300;
-            paleta12.PositionY = CapaDeJuego.ContentSize.Height / 2.0f;
-            paleta12.SetDesiredPositionToCurrentPosition();
-            CapaDeJuego.AddChild(paleta12);
-
-            paleta11 = new PaletaPrincipal();
-            paleta11.crearFichas("r5.png");
-            paleta11.PositionX = 300;
-            paleta11.PositionY = CapaDeJuego.ContentSize.Height / 2.0f;
-            paleta11.SetDesiredPositionToCurrentPosition();
-            CapaDeJuego.AddChild(paleta11);
-
-            paleta4 = new PaletaPrincipal();
-            paleta4.crearFichas("r4.png");
-            paleta4.PositionX = 300;
-            paleta4.PositionY = CapaDeJuego.ContentSize.Height / 2.0f;
-            paleta4.SetDesiredPositionToCurrentPosition();
-            CapaDeJuego.AddChild(paleta4);
-
-            paleta3 = new PaletaPrincipal();
-            paleta3.crearFichas("r3.png");
-            paleta3.PositionX = 300;
-            paleta3.PositionY = CapaDeJuego.ContentSize.Height / 2.0f;
-            paleta3.SetDesiredPositionToCurrentPosition();
-            CapaDeJuego.AddChild(paleta3);
-
-            paleta2 = new PaletaPrincipal();
-            paleta2.crearFichas("r2.png");
-            paleta2.PositionX = 300;
-            paleta2.PositionY = CapaDeJuego.ContentSize.Height / 2.0f;
-            paleta2.SetDesiredPositionToCurrentPosition();
-            CapaDeJuego.AddChild(paleta2);
-
             paleta = new PaletaPrincipal();
             paleta.crearFichas("r1.png");
             paleta.PositionX = 300;
@@ -149,90 +114,35 @@ namespace Proyecto.Actividades
             }
         }
         */
+
+        void CrearNuevaFicha(string dir)
+        {
+            paleta = new PaletaPrincipal();
+            paleta.crearFichas(dir);
+            paleta.PositionX = 300;
+            paleta.PositionY = CapaDeJuego.ContentSize.Height / 2.0f;
+            paleta.SetDesiredPositionToCurrentPosition();
+            CapaDeJuego.AddChild(paleta);            
+        }
         void HandleTouchesMoved(System.Collections.Generic.List<CCTouch> touches, CCEvent touchEvent)
         { //función que se encarga de darle manejo al uso de las fichas en el juego
             // we only care about the first touch:
             var locationOnScreen = touches[0].Location;
-            switch (ControlPaletas)
-            {
-                case 0:
-                    paleta.HandleInput(locationOnScreen);
-                    break;
-                case 1:
-                    paleta2.HandleInput(locationOnScreen);
-                    break;
-                case 2:
-                    paleta3.HandleInput(locationOnScreen);
-                    break;
-                case 3:
-                    paleta4.HandleInput(locationOnScreen);
-                    break;
-                case 4:
-                    paleta11.HandleInput(locationOnScreen);
-                    break;
-                case 5:
-                    paleta12.HandleInput(locationOnScreen);
-                    break;
-            }
+            paleta.HandleInput(locationOnScreen);        
         }
 
         private void Activity(float frameTimeInSeconds)
         { //función que controla toda la actividad en el juego, se ejecuta por medio de Schedule()
             if (hasGameEnded == false)
             {
-                switch (ControlPaletas)
-                {
-                    case 0:
-                        paleta.Activity(frameTimeInSeconds);
-                        break;
-                    case 1:
-                        paleta2.Activity(frameTimeInSeconds);
-                        break;
-                    case 2:
-                        paleta3.Activity(frameTimeInSeconds);
-                        break;
-                    case 3:
-                        paleta4.Activity(frameTimeInSeconds);
-                        break;
-                    case 4:
-                        paleta11.Activity(frameTimeInSeconds);
-                        break;
-                    case 5:
-                        paleta12.Activity(frameTimeInSeconds);
-                        break;
-                }
+                paleta.Activity(frameTimeInSeconds);
                 EjecutarColision();
             }
         }
 
         private void EjecutarColision()
-        { //función que da manejo a las colisiones del juego
-            PaletaPrincipal piezaActual;
-            switch (ControlPaletas)
-            {
-                case 0:
-                    piezaActual = paleta;
-                    break;
-                case 1:
-                    piezaActual = paleta2;
-                    break;
-                case 2:
-                    piezaActual = paleta3;
-                    break;
-                case 3:
-                    piezaActual = paleta4;
-                    break;
-                case 4:
-                    piezaActual = paleta11;
-                    break;
-                case 5:
-                    piezaActual = paleta12;
-                    break;
-                default:
-                    piezaActual = paleta;
-                    break;
-            }
-            PiezaVsPieza(piezaActual);
+        { //función que da manejo a las colisiones del juego            
+            PiezaVsPieza(paleta);
            
         }
 
@@ -250,37 +160,42 @@ namespace Proyecto.Actividades
             if (pieza.PositionX > 100 && pieza.PositionX < 250 && pieza.PositionY < 650 && pieza.PositionY > 590)
             {
                 pieza.RemoveFromParent();
-                ubicarPieza("r1.png", 230, 620);
+                ubicarPieza("r5.png", 230, 620);
+                CrearNuevaFicha("r6.png");
                 ControlPaletas++;
             }
             if (pieza.PositionX > 100 && pieza.PositionX < 250 && pieza.PositionY < 540 && pieza.PositionY > 480)
             {
                 pieza.RemoveFromParent();
-                ubicarPieza("r2.png", 230, 510);
+                ubicarPieza("r4.png", 230, 510);
+                CrearNuevaFicha("r5.png");
                 ControlPaletas++;
             }
             if (pieza.PositionX > 100 && pieza.PositionX < 250 && pieza.PositionY < 430 && pieza.PositionY > 370)
             {               
                 pieza.RemoveFromParent();
-                ubicarPieza("r3.png", 230, 400);
+                ubicarPieza("r6.png", 230, 400);
                 ControlPaletas++;
             }
             if (pieza.PositionX > 100 && pieza.PositionX < 250 && pieza.PositionY < 320 && pieza.PositionY > 260)
             {
                 pieza.RemoveFromParent();
-                ubicarPieza("r4.png", 230, 290);
+                ubicarPieza("r1.png", 230, 290);
+                CrearNuevaFicha("r2.png");
                 ControlPaletas++;
             }
             if (pieza.PositionX > 100 && pieza.PositionX < 250 && pieza.PositionY < 210 && pieza.PositionY > 150)
             {
                 pieza.RemoveFromParent();
-                ubicarPieza("r5.png", 230, 180);
+                ubicarPieza("r3.png", 230, 180);
+                CrearNuevaFicha("r4.png");
                 ControlPaletas++;
             }
             if (pieza.PositionX > 100 && pieza.PositionX < 250 && pieza.PositionY < 100 && pieza.PositionY > 40)
             {
                 pieza.RemoveFromParent();
-                ubicarPieza("r6.png", 230, 70);
+                ubicarPieza("r2.png", 230, 70);
+                CrearNuevaFicha("r3.png");
                 ControlPaletas++;
             }
         }
