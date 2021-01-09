@@ -30,7 +30,7 @@ namespace Proyecto.ViewModels
         }
         public async Task IrAActividad1() //Función para que se activa al hacer click en la imagen de la primer lección
         {
-            await Shell.Current.GoToAsync("ActividadP1");
+            await Shell.Current.GoToAsync("LeccionP1");
         }
 
         public async Task IrAInicio() //Función que se activa al dar click en el boton de atrás
@@ -41,7 +41,7 @@ namespace Proyecto.ViewModels
         public async Task IrAJuego() //Función para que se activa al hacer click en la imagen de la primer lección
         {
             //await Shell.Current.GoToAsync("JuegoFruit");
-            //((MessageViewModel)PopUpView.BindingContext).Titulo = "Instrucciones";
+            ((MessageViewModel)PopUpView.BindingContext).Titulo = "Instrucciones";
             ((MessageViewModel)PopUpView.BindingContext).Message = "Esta es la primer instrucción";            
             await PopupNavigation.Instance.PushAsync(PopUpView);
         }

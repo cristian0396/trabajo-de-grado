@@ -39,14 +39,14 @@ namespace Proyecto.Actividades.Entidades
 
         public PaletaPrincipal()
         {
-            crearFichas();
+            //crearFichas();
             CreateCollision();
         }
 
-        private void crearFichas()
+        public void crearFichas(string dir)
         {
-            ficha = new CCSprite("piezaIzquierda.jpeg");
-            ficha.Scale = 0.25f;
+            ficha = new CCSprite(dir);
+            ficha.Scale = 0.4f;
             ficha.IsAntialiased = false;
             this.AddChild(ficha);
         }

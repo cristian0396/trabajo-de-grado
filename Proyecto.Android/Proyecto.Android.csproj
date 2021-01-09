@@ -197,13 +197,7 @@
     <AndroidResource Include="Resources\drawable\safeIn.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Content\Images\piezaIzquierda.jpeg" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable\PresupuestoInicial.PNG" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Content\Images\background1.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Content\Images\background.png" />
@@ -218,6 +212,27 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\tablahorro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Content\Images\fondopuzzle.jpg" />
+    <AndroidAsset Include="Content\Images\p1.png" />
+    <AndroidAsset Include="Content\Images\p2.png" />
+    <AndroidAsset Include="Content\Images\r1.png" />
+    <AndroidAsset Include="Content\Images\r2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Content\Images\p3.png" />
+    <AndroidAsset Include="Content\Images\p4.png" />
+    <AndroidAsset Include="Content\Images\r3.png" />
+    <AndroidAsset Include="Content\Images\r4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Content\Images\p5.png" />
+    <AndroidAsset Include="Content\Images\r5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Content\Images\p6.png" />
+    <Content Include="Content\Images\r6.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>

@@ -49,7 +49,7 @@
         <FlexLayout Style="{StaticResource Container}">
             <Frame Style="{StaticResource Modal}">
                 <StackLayout>
-                    <!--<Label Text="{Binding Titulo}" Style="{StaticResource Titulo}"/>-->
+                    <Label Text="{Binding Titulo}" Style="{StaticResource Message}"/>
                     <Label Text="{Binding Message}" Style="{StaticResource Message}"/>
                     <Button Text="Aceptar" Command="{Binding CloseCommand}" TextColor="White"></Button>
                 </StackLayout>

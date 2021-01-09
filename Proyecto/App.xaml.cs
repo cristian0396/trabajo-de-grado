@@ -16,7 +16,7 @@ namespace Proyecto
         public App()
         {
             InitializeComponent();
-            MainPage = new MainPage();
+            MainPage = new ActividadP1();
         }
 
         protected override void OnStart()
