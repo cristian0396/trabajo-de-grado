@@ -3,20 +3,26 @@ using System.Collections.Generic;
 using System.Text;
 using CocosSharp;
 using Proyecto.Actividades.Entidades;
+using Proyecto.Actividades.Escenas;
 
 namespace Proyecto.Actividades
 { //Clase principal que abstrae el juego de puzzle presupuesto
     public class PuzzlePresupuesto : CCScene
     {
         CCLayer CapaDeFondo, CapaDeJuego;
+        CCGameView GameView;
         PaletaPrincipal paleta;
         CCSprite paleta5, paleta6, paleta7, paleta8, paleta9, paleta10, correct;        
         private int ControlPaletas; //variable usada para saber que ficha es la que el usuario esta manejando actualmente
+        int score = 0;
         private bool hasGameEnded;
+        ScoreText scoreText;
+        CCLayer hudLayer;
 
         public PuzzlePresupuesto(CCGameView gameView) : base(gameView)
         {
             //Width device: 411px Height: 683px
+            GameView = gameView;
             var contentSearchPaths = new List<string>() { "Images" };
             gameView.ContentManager.SearchPaths = contentSearchPaths;
             ControlPaletas = 0;
@@ -24,6 +30,7 @@ namespace Proyecto.Actividades
             CrearFondo();
             CrearPaletas();
             CreateTouchListener();
+            CreateHud();
             Schedule(Activity);
         }
 
@@ -34,6 +41,9 @@ namespace Proyecto.Actividades
 
             CapaDeJuego = new CCLayer();
             this.AddLayer(CapaDeJuego);
+
+            hudLayer = new CCLayer();
+            this.AddLayer(hudLayer);
         }
         private void CrearFondo()
         {
@@ -88,31 +98,30 @@ namespace Proyecto.Actividades
             paleta9.PositionY = 510;
             CapaDeJuego.AddChild(paleta9);
 
-            paleta10 = new CCSprite("p5.png"); //ficha izquierda más arriba
-            paleta10.Scale = 0.4f;
-            paleta10.IsAntialiased = false;
-            paleta10.PositionX = 100;
-            paleta10.PositionY = 620;
-            CapaDeJuego.AddChild(paleta10);
+            //paleta10 = new CCSprite("p5.png");        //ficha izquierda más arriba
+            //paleta10.Scale = 0.4f;
+            //paleta10.IsAntialiased = false;
+            //paleta10.PositionX = 100;
+            //paleta10.PositionY = 620;
+            //CapaDeJuego.AddChild(paleta10);
         }
 
         private void CreateTouchListener()
         { //función que crea un evento para cuando el usuario toque la pantalla
             var touchListener = new CCEventListenerTouchAllAtOnce();
             touchListener.OnTouchesMoved = HandleTouchesMoved;
-            //touchListener.OnTouchesBegan = HandleTouchesBegan;
+            touchListener.OnTouchesBegan = HandleTouchesBegan;
             CapaDeJuego.AddEventListener(touchListener);
         }
-        /*
+        
         private void HandleTouchesBegan(List<CCTouch> arg1, CCEvent arg2)
         {
             if (hasGameEnded)
             {
-                var newScene = new TitleScene(GameController.GameView);
-                GameController.GoToScene(newScene);
+                var newScene = new PuzzlePresupuesto(GameView);
+                GameView.Director.ReplaceScene(newScene);
             }
-        }
-        */
+        }        
 
         void CrearNuevaFicha(string dir)
         {
@@ -171,11 +180,8 @@ namespace Proyecto.Actividades
                     CrearNuevaFicha("r4.png");
                     break;
                 case 4:
-                    CrearNuevaFicha("r5.png");
-                    break;
-                case 5:
                     CrearNuevaFicha("r6.png");
-                    break;
+                    break;                    
             }
 
         }
@@ -189,30 +195,63 @@ namespace Proyecto.Actividades
             correct.PositionY = y;
             CapaDeJuego.AddChild(correct);
         }
+
+        private void CreateHud()
+        {
+            scoreText = new ScoreText();
+            scoreText.PositionX = 10;
+            scoreText.PositionY = hudLayer.ContentSize.Height - 30;
+            scoreText.Score = 0;
+            hudLayer.AddChild(scoreText);
+        }
+
+        private void EndGame()
+        {
+            hasGameEnded = true;
+            // dim the background:
+            var drawNode = new CCDrawNode();
+            drawNode.DrawRect(
+                new CCRect(0, 0, 2000, 2000),
+                new CCColor4B(0, 0, 0, 160));
+            hudLayer.Children.Add(drawNode);
+
+            var endGameLabel = new CCLabel("Game Over\nFinal Score:" + " " + score,
+                "Arial", 40, CCLabelFormat.SystemFont);
+            endGameLabel.HorizontalAlignment = CCTextAlignment.Center;
+            endGameLabel.Color = CCColor3B.White;
+            endGameLabel.VerticalAlignment = CCVerticalTextAlignment.Center;
+            endGameLabel.PositionX = hudLayer.ContentSize.Width / 2.0f;
+            endGameLabel.PositionY = hudLayer.ContentSize.Height / 2.0f;
+            hudLayer.Children.Add(endGameLabel);
+        }
         private void PiezaVsPieza(PaletaPrincipal pieza)
         { //función que determina unos rangos en que la pieza usada puede entrar para luego generar otra ficha estatica que se une con la ficha concepto            
             
-            if (pieza.PositionX > 100 && pieza.PositionX < 250 && pieza.PositionY < 650 && pieza.PositionY > 590 )
-            {               
-                if (ControlPaletas == 4)
-                {
-                    pieza.RemoveFromParent();
-                    ubicarPieza("r5.png", 230, 620);
-                    CrearNuevaFicha("r6.png");
-                    Checkear(360, 620);
-                    ControlPaletas++;
-                }
-                else
-                {
-                    pieza.RemoveFromParent();
-                    EscogerNuevaFicha();                   
-                }                
-            }
+            //if (pieza.PositionX > 100 && pieza.PositionX < 250 && pieza.PositionY < 650 && pieza.PositionY > 590 )
+            //{               
+            //    if (ControlPaletas == 4)
+            //    {
+            //        score += 10;
+            //        scoreText.Score = score;
+            //        pieza.RemoveFromParent();
+            //        ubicarPieza("r5.png", 230, 620);
+            //        CrearNuevaFicha("r6.png");
+            //        Checkear(360, 620);
+            //        ControlPaletas++;
+            //    }
+            //    else
+            //    {
+            //        pieza.RemoveFromParent();
+            //        EscogerNuevaFicha();                   
+            //    }                
+            //}
             if (pieza.PositionX > 100 && pieza.PositionX < 250 && pieza.PositionY < 540 && pieza.PositionY > 480)
             {
                 
                 if (ControlPaletas == 3)
                 {
+                    score += 10;
+                    scoreText.Score = score;
                     pieza.RemoveFromParent();
                     ubicarPieza("r4.png", 230, 510);
                     CrearNuevaFicha("r5.png");
@@ -228,12 +267,15 @@ namespace Proyecto.Actividades
             }
             if (pieza.PositionX > 100 && pieza.PositionX < 250 && pieza.PositionY < 430 && pieza.PositionY > 370)
             {
-                if (ControlPaletas == 5)
+                if (ControlPaletas == 4)
                 {
+                    score += 10;
+                    scoreText.Score = score;
                     pieza.RemoveFromParent();
                     ubicarPieza("r6.png", 230, 400);
                     Checkear(360, 400);
                     ControlPaletas++;
+                    EndGame();
                 }
                 else
                 {
@@ -245,6 +287,8 @@ namespace Proyecto.Actividades
             {
                 if (ControlPaletas == 0)
                 {
+                    score += 10;
+                    scoreText.Score = score;
                     pieza.RemoveFromParent();
                     ubicarPieza("r1.png", 230, 290);
                     CrearNuevaFicha("r2.png");
@@ -261,6 +305,8 @@ namespace Proyecto.Actividades
             {
                 if (ControlPaletas == 2)
                 {
+                    score += 10;
+                    scoreText.Score = score;
                     pieza.RemoveFromParent();
                     ubicarPieza("r3.png", 230, 180);
                     CrearNuevaFicha("r4.png");
@@ -277,6 +323,8 @@ namespace Proyecto.Actividades
             {
                 if (ControlPaletas == 1)
                 {
+                    score += 10;
+                    scoreText.Score = score;
                     pieza.RemoveFromParent();
                     ubicarPieza("r2.png", 230, 70);
                     CrearNuevaFicha("r3.png");

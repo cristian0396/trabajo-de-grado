@@ -40,10 +40,10 @@ namespace Proyecto.ViewModels
          
         public async Task IrAJuego() //Función para que se activa al hacer click en la imagen de la primer lección
         {
-            //await Shell.Current.GoToAsync("JuegoFruit");
-            ((MessageViewModel)PopUpView.BindingContext).Titulo = "Instrucciones";
-            ((MessageViewModel)PopUpView.BindingContext).Message = "Esta es la primer instrucción";            
-            await PopupNavigation.Instance.PushAsync(PopUpView);
+            await Shell.Current.GoToAsync("JuegoFruit");
+            //((MessageViewModel)PopUpView.BindingContext).Titulo = "Instrucciones";
+            //((MessageViewModel)PopUpView.BindingContext).Message = "Esta es la primer instrucción";            
+            //await PopupNavigation.Instance.PushAsync(PopUpView);
         }
     }
 }

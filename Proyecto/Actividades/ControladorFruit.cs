@@ -28,7 +28,7 @@ namespace Proyecto.Actividades
             if (ccGView != null)
             {
                 ccGView.DesignResolution = new CCSizeI(App.Width, App.Height); //utilizar el ancho y alto que retorna el dispositivo Android
-                _scene = new FruitFalls(ccGView); //inicializar PuzzlePresupuesto
+                _scene = new FruitFalls(ccGView); //inicializar FruitFalls juego
                 ccGView.RunWithScene(_scene); //ejecutar escena
             }
         }
