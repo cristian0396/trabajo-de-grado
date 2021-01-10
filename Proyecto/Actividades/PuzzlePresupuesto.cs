@@ -10,7 +10,7 @@ namespace Proyecto.Actividades
     {
         CCLayer CapaDeFondo, CapaDeJuego;
         PaletaPrincipal paleta;
-        CCSprite paleta5, paleta6, paleta7, paleta8, paleta9, paleta10;
+        CCSprite paleta5, paleta6, paleta7, paleta8, paleta9, paleta10, correct;        
         private int ControlPaletas; //variable usada para saber que ficha es la que el usuario esta manejando actualmente
         private bool hasGameEnded;
 
@@ -94,7 +94,6 @@ namespace Proyecto.Actividades
             paleta10.PositionX = 100;
             paleta10.PositionY = 620;
             CapaDeJuego.AddChild(paleta10);
-
         }
 
         private void CreateTouchListener()
@@ -142,8 +141,7 @@ namespace Proyecto.Actividades
 
         private void EjecutarColision()
         { //función que da manejo a las colisiones del juego            
-            PiezaVsPieza(paleta);
-           
+            PiezaVsPieza(paleta);           
         }
 
         private void ubicarPieza(string dir, int x, int y)
@@ -155,48 +153,141 @@ namespace Proyecto.Actividades
             nuevaPieza.PositionY = y;
             CapaDeJuego.AddChild(nuevaPieza);
         }
-        private void PiezaVsPieza(PaletaPrincipal pieza)
-        { //función que determina unos rangos en que la pieza usada puede entrar para luego generar otra ficha estatica que se une con la ficha concepto
-            if (pieza.PositionX > 100 && pieza.PositionX < 250 && pieza.PositionY < 650 && pieza.PositionY > 590)
+
+        private void EscogerNuevaFicha()
+        {
+            switch (ControlPaletas)
             {
-                pieza.RemoveFromParent();
-                ubicarPieza("r5.png", 230, 620);
-                CrearNuevaFicha("r6.png");
-                ControlPaletas++;
+                case 0:
+                    CrearNuevaFicha("r1.png");
+                    break;
+                case 1:
+                    CrearNuevaFicha("r2.png");
+                    break;
+                case 2:
+                    CrearNuevaFicha("r3.png");
+                    break;
+                case 3:
+                    CrearNuevaFicha("r4.png");
+                    break;
+                case 4:
+                    CrearNuevaFicha("r5.png");
+                    break;
+                case 5:
+                    CrearNuevaFicha("r6.png");
+                    break;
+            }
+
+        }
+
+        private void Checkear(int x, int y)
+        {
+            correct = new CCSprite("check.png");
+            correct.Scale = 0.07f;
+            correct.IsAntialiased = false;
+            correct.PositionX = x;
+            correct.PositionY = y;
+            CapaDeJuego.AddChild(correct);
+        }
+        private void PiezaVsPieza(PaletaPrincipal pieza)
+        { //función que determina unos rangos en que la pieza usada puede entrar para luego generar otra ficha estatica que se une con la ficha concepto            
+            
+            if (pieza.PositionX > 100 && pieza.PositionX < 250 && pieza.PositionY < 650 && pieza.PositionY > 590 )
+            {               
+                if (ControlPaletas == 4)
+                {
+                    pieza.RemoveFromParent();
+                    ubicarPieza("r5.png", 230, 620);
+                    CrearNuevaFicha("r6.png");
+                    Checkear(360, 620);
+                    ControlPaletas++;
+                }
+                else
+                {
+                    pieza.RemoveFromParent();
+                    EscogerNuevaFicha();                   
+                }                
             }
             if (pieza.PositionX > 100 && pieza.PositionX < 250 && pieza.PositionY < 540 && pieza.PositionY > 480)
             {
-                pieza.RemoveFromParent();
-                ubicarPieza("r4.png", 230, 510);
-                CrearNuevaFicha("r5.png");
-                ControlPaletas++;
+                
+                if (ControlPaletas == 3)
+                {
+                    pieza.RemoveFromParent();
+                    ubicarPieza("r4.png", 230, 510);
+                    CrearNuevaFicha("r5.png");
+                    Checkear(360, 510);
+                    ControlPaletas++;
+                }
+                else
+                {
+                    pieza.RemoveFromParent();
+                    EscogerNuevaFicha();
+
+                }                
             }
             if (pieza.PositionX > 100 && pieza.PositionX < 250 && pieza.PositionY < 430 && pieza.PositionY > 370)
-            {               
-                pieza.RemoveFromParent();
-                ubicarPieza("r6.png", 230, 400);
-                ControlPaletas++;
+            {
+                if (ControlPaletas == 5)
+                {
+                    pieza.RemoveFromParent();
+                    ubicarPieza("r6.png", 230, 400);
+                    Checkear(360, 400);
+                    ControlPaletas++;
+                }
+                else
+                {
+                    pieza.RemoveFromParent();
+                    EscogerNuevaFicha();
+                }                
             }
             if (pieza.PositionX > 100 && pieza.PositionX < 250 && pieza.PositionY < 320 && pieza.PositionY > 260)
             {
-                pieza.RemoveFromParent();
-                ubicarPieza("r1.png", 230, 290);
-                CrearNuevaFicha("r2.png");
-                ControlPaletas++;
+                if (ControlPaletas == 0)
+                {
+                    pieza.RemoveFromParent();
+                    ubicarPieza("r1.png", 230, 290);
+                    CrearNuevaFicha("r2.png");
+                    Checkear(360, 290);
+                    ControlPaletas++;
+                }
+                else
+                {
+                    pieza.RemoveFromParent();
+                    EscogerNuevaFicha();
+                }                
             }
             if (pieza.PositionX > 100 && pieza.PositionX < 250 && pieza.PositionY < 210 && pieza.PositionY > 150)
             {
-                pieza.RemoveFromParent();
-                ubicarPieza("r3.png", 230, 180);
-                CrearNuevaFicha("r4.png");
-                ControlPaletas++;
+                if (ControlPaletas == 2)
+                {
+                    pieza.RemoveFromParent();
+                    ubicarPieza("r3.png", 230, 180);
+                    CrearNuevaFicha("r4.png");
+                    Checkear(360, 180);
+                    ControlPaletas++;
+                }
+                else
+                {
+                    pieza.RemoveFromParent();
+                    EscogerNuevaFicha();
+                }                
             }
             if (pieza.PositionX > 100 && pieza.PositionX < 250 && pieza.PositionY < 100 && pieza.PositionY > 40)
             {
-                pieza.RemoveFromParent();
-                ubicarPieza("r2.png", 230, 70);
-                CrearNuevaFicha("r3.png");
-                ControlPaletas++;
+                if (ControlPaletas == 1)
+                {
+                    pieza.RemoveFromParent();
+                    ubicarPieza("r2.png", 230, 70);
+                    CrearNuevaFicha("r3.png");
+                    Checkear(360, 70);
+                    ControlPaletas++;
+                }
+                else
+                {
+                    pieza.RemoveFromParent();
+                    EscogerNuevaFicha();
+                }                
             }
         }
     }

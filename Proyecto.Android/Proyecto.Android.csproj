@@ -234,6 +234,9 @@
     <AndroidAsset Include="Content\Images\p6.png" />
     <AndroidAsset Include="Content\Images\r6.png" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Content\Images\check.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
