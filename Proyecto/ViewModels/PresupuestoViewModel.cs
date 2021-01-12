@@ -12,6 +12,7 @@ namespace Proyecto.ViewModels
     public class PresupuestoViewModel : ViewModelBase
     {
         public ICommand Actividad1Command { get; set; }
+        public ICommand Actividad2Command { get; set; }
         public ICommand BotonAtrasCommand { get; set; }
         public ICommand juegoCommand { get; set; }
         public PopUp PopUpView { get; set; }
@@ -25,6 +26,7 @@ namespace Proyecto.ViewModels
         public void InicializarComandos()
         {
             Actividad1Command = new Command(async () => await IrAActividad1(), () => true);
+            Actividad2Command = new Command(async () => await IrAActividad1(), () => true);
             BotonAtrasCommand = new Command(async () => await IrAInicio(), () => true);
             juegoCommand = new Command(async () => await IrAJuego(), () => true);
         }

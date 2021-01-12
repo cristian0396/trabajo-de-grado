@@ -68,3 +68,4 @@ G:\EduFinanzas\trabajo-de-grado\Proyecto\obj\Debug\netstandard2.0\Proyecto.cspro
 G:\EduFinanzas\trabajo-de-grado\Proyecto\obj\Debug\netstandard2.0\Vistas\JuegoFruit.xaml.g.cs
 G:\EduFinanzas\trabajo-de-grado\Proyecto\obj\Debug\netstandard2.0\Vistas\PopUp.xaml.g.cs
 G:\EduFinanzas\trabajo-de-grado\Proyecto\obj\Debug\netstandard2.0\Vistas\LeccionP1.xaml.g.cs
+G:\EduFinanzas\trabajo-de-grado\Proyecto\obj\Debug\netstandard2.0\Vistas\ActividadP2.xaml.g.cs

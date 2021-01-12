@@ -7,7 +7,7 @@ using Xamarin.Forms;
 
 namespace Proyecto.ViewModels
 {
-    public class LeccionP1ViewModel
+    public class LeccionP1ViewModel : ViewModelBase
     {
         public ICommand ActividadP1Command { get; set; }
 
@@ -23,7 +23,7 @@ namespace Proyecto.ViewModels
 
         public async Task IrActividadP1() 
         { 
-            await Shell.Current.GoToAsync("ActividadP1"); 
+            await Shell.Current.GoToAsync("ActividadP2"); 
         } 
     }
 }
