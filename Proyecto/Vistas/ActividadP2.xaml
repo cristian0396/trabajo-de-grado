@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Proyecto.Vistas.ActividadP2">
     <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Reporte"/>
         <ToolbarItem Text="Agregar" Command="{Binding AgregarCommand}"/>
         <!--Opción que aparece en la parte superior derecha de la app-->
     </ContentPage.ToolbarItems>
@@ -10,7 +11,6 @@
         <ScrollView>
             <Grid Padding="14" RowSpacing="0" >
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="40" />
                     <RowDefinition Height="60" />
                     <RowDefinition Height="40" />
                     <RowDefinition Height="60" />
@@ -21,18 +21,13 @@
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-
-                <Label Grid.Row="0" Grid.Column="0" Text="Gastos: " FontSize="16" Margin="10,20,0,0"/>
-                <Entry Text="{Binding Gastos}" Grid.Row="1" Grid.Column="0"/>
-                
-                <Label Grid.Row="0" Grid.Column="1" Text="Ingresos: " FontSize="16" Margin="10,20,0,0"/>
-                <Entry Text="{Binding Ingresos}" Grid.Row="1" Grid.Column="1"/>
-
-                <Label Grid.Row="2" Grid.Column="0" Text="Descripción: " FontSize="16" Margin="10,20,0,0"/>
-                <Entry Text="{Binding Descripcion}" Grid.Row="3" Grid.ColumnSpan="2" Margin="0,0,0,10"/>
+                <Picker Grid.Row="0" Grid.Column="0" Title="--Seleccionar--" ItemsSource="{Binding IngreGastos}" ItemDisplayBinding="{Binding Nombre}" SelectedItem="{Binding Tema}"/>
+                <Entry Text="{Binding Valor}" Placeholder="Ingresa el valor" Grid.Row="0" Grid.Column="1"/>
+                <Label Grid.Row="1" Grid.Column="0" Text="Descripción: " FontSize="16" Margin="10,20,0,0"/>
+                <Entry Text="{Binding Descripcion}" Grid.Row="2" Grid.ColumnSpan="2" Margin="0,0,0,10"/>
                 <!-- Se construye la tableContent con una Listview-->
                 <!-- ListView #1 HEADER-->
-                <Frame Grid.Row="4" Grid.ColumnSpan="2" Padding="0" BackgroundColor="GreenYellow" BorderColor="DarkSlateGray">
+                <Frame Grid.Row="3" Grid.ColumnSpan="2" Padding="0" BackgroundColor="GreenYellow" BorderColor="DarkSlateGray">
                     <Grid Padding="0">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition/>
@@ -52,7 +47,7 @@
                     </Grid>
                 </Frame>
                 <!-- Contenido de la Listview #1-->
-                <ListView x:Name="ListaPresupuesto" Grid.Row="5" ItemsSource="{Binding ItemsList}" Grid.ColumnSpan="2" SeparatorVisibility="None" SelectionMode="None" HasUnevenRows="False">
+                <ListView x:Name="ListaPresupuesto" Grid.Row="4" ItemsSource="{Binding ItemsList}" Grid.ColumnSpan="2" SeparatorVisibility="None" SelectionMode="None" HasUnevenRows="False">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>

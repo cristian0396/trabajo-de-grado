@@ -12,37 +12,30 @@ namespace Proyecto.Actividades
     public class ActividadP2ViewModel : ViewModelBase
     {
         public string Descripcion { get; set; }
-        public string Ingresos { get; set; }
-        public string Gastos { get; set; }
-
-        private List<TPresupuesto> listaTPresupuesto;
-        public ObservableCollection<TPresupuesto> ItemsList { get; set; } 
-
-        private TPresupuesto itemPresupuesto;
-        public ICommand AgregarCommand { get; set; }
-        private TPresupuesto ItemPresupuesto
+        public IngresoGastos Tema { get; set; }
+        public string Valor { get; set; }
+        public List<IngresoGastos> IngreGastos { get; set; }
+        public List<TPresupuesto> ListaTPresupuesto { get; set; }
+        private ObservableCollection<TPresupuesto> itemsList; 
+        public ICommand AgregarCommand { get; set; }        
+        public ObservableCollection<TPresupuesto> ItemsList
         {
-            get { return itemPresupuesto; }
+            get { return itemsList; }
             set
             {
-                itemPresupuesto = value;
-                OnPropertyChanged();
-            }
-        }
-        private List<TPresupuesto> ListaTPresupuesto
-        {
-            get { return listaTPresupuesto; }
-            set
-            {
-                listaTPresupuesto = value;
+                itemsList = value;
                 OnPropertyChanged();
             }
         }
         public ActividadP2ViewModel()
         {
-            listaTPresupuesto = new List<TPresupuesto>();
+            IngreGastos = new List<IngresoGastos>()
+            {
+                new IngresoGastos(){ ID = 1, Nombre = "Ingresos"},
+                new IngresoGastos(){ ID = 2, Nombre = "Gastos"}           
+            };
+            ListaTPresupuesto = new List<TPresupuesto>();
             ItemsList = new ObservableCollection<TPresupuesto>();
-            itemPresupuesto = new TPresupuesto();
             InicializarComandos();
         }
 
@@ -52,12 +45,25 @@ namespace Proyecto.Actividades
         }
         public void AgregarItemLista()
         {
-            ItemPresupuesto.Descripcion = Descripcion;
-            ItemPresupuesto.Ingresos = Ingresos;
-            ItemPresupuesto.Gastos = Gastos;
-            ListaTPresupuesto.Add(ItemPresupuesto);
-            ItemsList.Add(ItemPresupuesto);
-            //ItemsList = new ObservableCollection<TPresupuesto>(ListaTPresupuesto);
+            TPresupuesto temp = new TPresupuesto();
+            temp.Descripcion = Descripcion;
+            if(Tema.Nombre == "Ingresos")
+            {
+                temp.Ingresos = Valor;
+            }
+            else
+            {
+                temp.Gastos = Valor;
+            }            
+            //ListaTPresupuesto.Add(temp);
+            ItemsList.Add(temp);
+            //ItemsList = new ObservableCollection<TPresupuesto>(ListaTPresupuesto);            
+        }
+
+        public class IngresoGastos
+        {
+            public int ID { get; set; }
+            public string Nombre {get; set;}
         }
     }
 }
