@@ -66,36 +66,36 @@ namespace Proyecto.Actividades
             paleta5 = new CCSprite("p6.png"); //tercer ficha izquierda más arriba
             paleta5.Scale = 0.4f;
             paleta5.IsAntialiased = false;
-            paleta5.PositionX = 100;
-            paleta5.PositionY = 400;
+            paleta5.PositionX = 80;
+            paleta5.PositionY = 440;
             CapaDeJuego.AddChild(paleta5);
 
             paleta6 = new CCSprite("p1.png"); //cuarta ficha izquierda más arriba
             paleta6.Scale = 0.4f;
             paleta6.IsAntialiased = false;
-            paleta6.PositionX = 100;
-            paleta6.PositionY = 290;
+            paleta6.PositionX = 80;
+            paleta6.PositionY = 320;
             CapaDeJuego.AddChild(paleta6);
 
             paleta7 = new CCSprite("p3.png");
             paleta7.Scale = 0.4f;
             paleta7.IsAntialiased = false;
-            paleta7.PositionX = 100;
-            paleta7.PositionY = 180;
+            paleta7.PositionX = 80;
+            paleta7.PositionY = 200;
             CapaDeJuego.AddChild(paleta7);
 
             paleta8 = new CCSprite("p2.png"); 
             paleta8.Scale = 0.4f;
             paleta8.IsAntialiased = false;
-            paleta8.PositionX = 100;
-            paleta8.PositionY = 70;
+            paleta8.PositionX = 80;
+            paleta8.PositionY = 80;
             CapaDeJuego.AddChild(paleta8);
 
             paleta9 = new CCSprite("p4.png");  //segunda ficha izquierda más arriba
             paleta9.Scale = 0.4f;
             paleta9.IsAntialiased = false;
-            paleta9.PositionX = 100;
-            paleta9.PositionY = 510;
+            paleta9.PositionX = 80;
+            paleta9.PositionY = 560;
             CapaDeJuego.AddChild(paleta9);
 
             //paleta10 = new CCSprite("p5.png");        //ficha izquierda más arriba
@@ -199,8 +199,8 @@ namespace Proyecto.Actividades
         private void CreateHud()
         {
             scoreText = new ScoreText();
-            scoreText.PositionX = 10;
-            scoreText.PositionY = hudLayer.ContentSize.Height - 30;
+            scoreText.PositionX = 20;
+            scoreText.PositionY = hudLayer.ContentSize.Height - 20;
             scoreText.Score = 0;
             hudLayer.AddChild(scoreText);
         }
@@ -245,7 +245,7 @@ namespace Proyecto.Actividades
             //        EscogerNuevaFicha();                   
             //    }                
             //}
-            if (pieza.PositionX > 100 && pieza.PositionX < 250 && pieza.PositionY < 540 && pieza.PositionY > 480)
+            if (pieza.PositionX > 60 && pieza.PositionX < 210 && pieza.PositionY < 560 && pieza.PositionY > 500)
             {
                 
                 if (ControlPaletas == 3)
@@ -253,86 +253,110 @@ namespace Proyecto.Actividades
                     score += 10;
                     scoreText.Score = score;
                     pieza.RemoveFromParent();
-                    ubicarPieza("r4.png", 230, 510);
+                    ubicarPieza("r4.png", 210, 560);
                     CrearNuevaFicha("r5.png");
-                    Checkear(360, 510);
+                    Checkear(360, 560);
                     ControlPaletas++;
                 }
                 else
                 {
+                    if(score > 0)
+                    {
+                        score -= 5;
+                        scoreText.Score = score;
+                    }                    
                     pieza.RemoveFromParent();
                     EscogerNuevaFicha();
-
                 }                
             }
-            if (pieza.PositionX > 100 && pieza.PositionX < 250 && pieza.PositionY < 430 && pieza.PositionY > 370)
+            if (pieza.PositionX > 60 && pieza.PositionX < 210 && pieza.PositionY < 450 && pieza.PositionY > 390)
             {
                 if (ControlPaletas == 4)
                 {
                     score += 10;
                     scoreText.Score = score;
                     pieza.RemoveFromParent();
-                    ubicarPieza("r6.png", 230, 400);
-                    Checkear(360, 400);
+                    ubicarPieza("r6.png", 210, 440);
+                    Checkear(360, 440);
                     ControlPaletas++;
                     EndGame();
                 }
                 else
                 {
+                    if (score > 0)
+                    {
+                        score -= 5;
+                        scoreText.Score = score;
+                    }
                     pieza.RemoveFromParent();
                     EscogerNuevaFicha();
                 }                
             }
-            if (pieza.PositionX > 100 && pieza.PositionX < 250 && pieza.PositionY < 320 && pieza.PositionY > 260)
+            if (pieza.PositionX > 60 && pieza.PositionX < 210 && pieza.PositionY < 340 && pieza.PositionY > 280)
             {
                 if (ControlPaletas == 0)
                 {
                     score += 10;
                     scoreText.Score = score;
                     pieza.RemoveFromParent();
-                    ubicarPieza("r1.png", 230, 290);
+                    ubicarPieza("r1.png", 210, 320);
                     CrearNuevaFicha("r2.png");
-                    Checkear(360, 290);
+                    Checkear(360, 320);
                     ControlPaletas++;
                 }
                 else
                 {
+                    if (score > 0)
+                    {
+                        score -= 5;
+                        scoreText.Score = score;
+                    }
                     pieza.RemoveFromParent();
                     EscogerNuevaFicha();
                 }                
             }
-            if (pieza.PositionX > 100 && pieza.PositionX < 250 && pieza.PositionY < 210 && pieza.PositionY > 150)
+            if (pieza.PositionX > 60 && pieza.PositionX < 210 && pieza.PositionY < 230 && pieza.PositionY > 170)
             {
                 if (ControlPaletas == 2)
                 {
                     score += 10;
                     scoreText.Score = score;
                     pieza.RemoveFromParent();
-                    ubicarPieza("r3.png", 230, 180);
+                    ubicarPieza("r3.png", 210, 200);
                     CrearNuevaFicha("r4.png");
-                    Checkear(360, 180);
+                    Checkear(360, 200);
                     ControlPaletas++;
                 }
                 else
                 {
+                    if (score > 0)
+                    {
+                        score -= 5;
+                        scoreText.Score = score;
+                    }
                     pieza.RemoveFromParent();
                     EscogerNuevaFicha();
                 }                
             }
-            if (pieza.PositionX > 100 && pieza.PositionX < 250 && pieza.PositionY < 100 && pieza.PositionY > 40)
+            if (pieza.PositionX > 60 && pieza.PositionX < 210 && pieza.PositionY < 120 && pieza.PositionY > 60)
             {
                 if (ControlPaletas == 1)
                 {
                     score += 10;
                     scoreText.Score = score;
                     pieza.RemoveFromParent();
-                    ubicarPieza("r2.png", 230, 70);
+                    ubicarPieza("r2.png", 210, 80);
                     CrearNuevaFicha("r3.png");
-                    Checkear(360, 70);
+                    Checkear(360, 80);
                     ControlPaletas++;
                 }
                 else
                 {
+                    if (score > 0)
+                    {
+                        score -= 5;
+                        scoreText.Score = score;
+                    }
                     pieza.RemoveFromParent();
                     EscogerNuevaFicha();
                 }                

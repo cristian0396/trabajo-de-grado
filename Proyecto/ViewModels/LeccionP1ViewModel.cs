@@ -23,7 +23,7 @@ namespace Proyecto.ViewModels
 
         public async Task IrActividadP1() 
         { 
-            await Shell.Current.GoToAsync("ActividadP2"); 
+            await Shell.Current.GoToAsync("ActividadP1"); 
         } 
     }
 }
