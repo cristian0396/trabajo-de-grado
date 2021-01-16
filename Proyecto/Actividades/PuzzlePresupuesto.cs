@@ -23,8 +23,9 @@ namespace Proyecto.Actividades
         {
             //Width device: 411px Height: 683px
             GameView = gameView;
-            var contentSearchPaths = new List<string>() { "Images" };
+            var contentSearchPaths = new List<string>() { "Images", "Sounds" };
             gameView.ContentManager.SearchPaths = contentSearchPaths;
+            //CCAudioEngine.SharedEngine.PlayBackgroundMusic("Ambiente");
             ControlPaletas = 0;
             InicializarCapas();
             CrearFondo();
@@ -58,45 +59,10 @@ namespace Proyecto.Actividades
         { //función que inicializa todas las fichas del puzzle en las respectivas ubicaciones
             paleta = new PaletaPrincipal();
             paleta.crearFichas("r1.png");
-            paleta.PositionX = 300;
-            paleta.PositionY = CapaDeJuego.ContentSize.Height / 2.0f;
+            paleta.PositionX = 315;
+            paleta.PositionY = 635; //CapaDeJuego.ContentSize.Height / 2.0f;
             paleta.SetDesiredPositionToCurrentPosition();
             CapaDeJuego.AddChild(paleta);
-
-            paleta5 = new CCSprite("p6.png"); //tercer ficha izquierda más arriba
-            paleta5.Scale = 0.4f;
-            paleta5.IsAntialiased = false;
-            paleta5.PositionX = 80;
-            paleta5.PositionY = 440;
-            CapaDeJuego.AddChild(paleta5);
-
-            paleta6 = new CCSprite("p1.png"); //cuarta ficha izquierda más arriba
-            paleta6.Scale = 0.4f;
-            paleta6.IsAntialiased = false;
-            paleta6.PositionX = 80;
-            paleta6.PositionY = 320;
-            CapaDeJuego.AddChild(paleta6);
-
-            paleta7 = new CCSprite("p3.png");
-            paleta7.Scale = 0.4f;
-            paleta7.IsAntialiased = false;
-            paleta7.PositionX = 80;
-            paleta7.PositionY = 200;
-            CapaDeJuego.AddChild(paleta7);
-
-            paleta8 = new CCSprite("p2.png"); 
-            paleta8.Scale = 0.4f;
-            paleta8.IsAntialiased = false;
-            paleta8.PositionX = 80;
-            paleta8.PositionY = 80;
-            CapaDeJuego.AddChild(paleta8);
-
-            paleta9 = new CCSprite("p4.png");  //segunda ficha izquierda más arriba
-            paleta9.Scale = 0.4f;
-            paleta9.IsAntialiased = false;
-            paleta9.PositionX = 80;
-            paleta9.PositionY = 560;
-            CapaDeJuego.AddChild(paleta9);
 
             //paleta10 = new CCSprite("p5.png");        //ficha izquierda más arriba
             //paleta10.Scale = 0.4f;
@@ -104,6 +70,41 @@ namespace Proyecto.Actividades
             //paleta10.PositionX = 100;
             //paleta10.PositionY = 620;
             //CapaDeJuego.AddChild(paleta10);
+
+            paleta9 = new CCSprite("p4.png");  //segunda ficha izquierda más arriba
+            paleta9.Scale = 0.4f;
+            paleta9.IsAntialiased = false;
+            paleta9.PositionX = 80;
+            paleta9.PositionY = 535;
+            CapaDeJuego.AddChild(paleta9);
+
+            paleta5 = new CCSprite("p6.png"); //tercer ficha izquierda más arriba
+            paleta5.Scale = 0.4f;
+            paleta5.IsAntialiased = false;
+            paleta5.PositionX = 80;
+            paleta5.PositionY = 415;
+            CapaDeJuego.AddChild(paleta5);
+
+            paleta6 = new CCSprite("p1.png"); //cuarta ficha izquierda más arriba
+            paleta6.Scale = 0.4f;
+            paleta6.IsAntialiased = false;
+            paleta6.PositionX = 80;
+            paleta6.PositionY = 295;
+            CapaDeJuego.AddChild(paleta6);
+
+            paleta7 = new CCSprite("p3.png");
+            paleta7.Scale = 0.4f;
+            paleta7.IsAntialiased = false;
+            paleta7.PositionX = 80;
+            paleta7.PositionY = 175;
+            CapaDeJuego.AddChild(paleta7);
+
+            paleta8 = new CCSprite("p2.png"); 
+            paleta8.Scale = 0.4f;
+            paleta8.IsAntialiased = false;
+            paleta8.PositionX = 80;
+            paleta8.PositionY = 55;
+            CapaDeJuego.AddChild(paleta8);           
         }
 
         private void CreateTouchListener()
@@ -127,8 +128,8 @@ namespace Proyecto.Actividades
         {
             paleta = new PaletaPrincipal();
             paleta.crearFichas(dir);
-            paleta.PositionX = 300;
-            paleta.PositionY = CapaDeJuego.ContentSize.Height / 2.0f;
+            paleta.PositionX = 315;
+            paleta.PositionY = 635;
             paleta.SetDesiredPositionToCurrentPosition();
             CapaDeJuego.AddChild(paleta);            
         }
@@ -250,17 +251,19 @@ namespace Proyecto.Actividades
                 
                 if (ControlPaletas == 3)
                 {
+                    CCAudioEngine.SharedEngine.PlayEffect("good");
                     score += 10;
                     scoreText.Score = score;
                     pieza.RemoveFromParent();
-                    ubicarPieza("r4.png", 210, 560);
+                    ubicarPieza("r4.png", 210, 535);                    
                     CrearNuevaFicha("r5.png");
-                    Checkear(360, 560);
+                    Checkear(335, 535);
                     ControlPaletas++;
                 }
                 else
                 {
-                    if(score > 0)
+                    CCAudioEngine.SharedEngine.PlayEffect("bad");
+                    if (score > 0)
                     {
                         score -= 5;
                         scoreText.Score = score;
@@ -273,16 +276,18 @@ namespace Proyecto.Actividades
             {
                 if (ControlPaletas == 4)
                 {
+                    CCAudioEngine.SharedEngine.PlayEffect("good");
                     score += 10;
                     scoreText.Score = score;
                     pieza.RemoveFromParent();
-                    ubicarPieza("r6.png", 210, 440);
-                    Checkear(360, 440);
+                    ubicarPieza("r6.png", 210, 415);                    
+                    Checkear(335, 415);
                     ControlPaletas++;
                     EndGame();
                 }
                 else
                 {
+                    CCAudioEngine.SharedEngine.PlayEffect("bad");
                     if (score > 0)
                     {
                         score -= 5;
@@ -296,16 +301,18 @@ namespace Proyecto.Actividades
             {
                 if (ControlPaletas == 0)
                 {
+                    CCAudioEngine.SharedEngine.PlayEffect("good");
                     score += 10;
                     scoreText.Score = score;
                     pieza.RemoveFromParent();
-                    ubicarPieza("r1.png", 210, 320);
+                    ubicarPieza("r1.png", 210, 295);                    
                     CrearNuevaFicha("r2.png");
-                    Checkear(360, 320);
+                    Checkear(335, 295);
                     ControlPaletas++;
                 }
                 else
                 {
+                    CCAudioEngine.SharedEngine.PlayEffect("bad");
                     if (score > 0)
                     {
                         score -= 5;
@@ -319,16 +326,18 @@ namespace Proyecto.Actividades
             {
                 if (ControlPaletas == 2)
                 {
+                    CCAudioEngine.SharedEngine.PlayEffect("good");
                     score += 10;
                     scoreText.Score = score;
                     pieza.RemoveFromParent();
-                    ubicarPieza("r3.png", 210, 200);
+                    ubicarPieza("r3.png", 210, 175);                    
                     CrearNuevaFicha("r4.png");
-                    Checkear(360, 200);
+                    Checkear(335, 175);
                     ControlPaletas++;
                 }
                 else
                 {
+                    CCAudioEngine.SharedEngine.PlayEffect("bad");
                     if (score > 0)
                     {
                         score -= 5;
@@ -342,16 +351,18 @@ namespace Proyecto.Actividades
             {
                 if (ControlPaletas == 1)
                 {
+                    CCAudioEngine.SharedEngine.PlayEffect("good");
                     score += 10;
                     scoreText.Score = score;
                     pieza.RemoveFromParent();
-                    ubicarPieza("r2.png", 210, 80);
+                    ubicarPieza("r2.png", 210, 55);                    
                     CrearNuevaFicha("r3.png");
-                    Checkear(360, 80);
+                    Checkear(335, 55);
                     ControlPaletas++;
                 }
                 else
                 {
+                    CCAudioEngine.SharedEngine.PlayEffect("bad");
                     if (score > 0)
                     {
                         score -= 5;

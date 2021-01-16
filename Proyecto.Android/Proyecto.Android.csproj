@@ -237,6 +237,15 @@
   <ItemGroup>
     <AndroidAsset Include="Content\Images\check.png" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Content\Sounds\Ambiente.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Content\Sounds\good.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Content\Sounds\bad.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
