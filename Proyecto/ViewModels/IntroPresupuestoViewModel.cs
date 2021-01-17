@@ -8,6 +8,7 @@ using System.Windows.Input;
 using Xamarin.Forms;
 using PropertyChanged;
 using System.Threading.Tasks;
+using Rg.Plugins.Popup.Services;
 
 namespace Proyecto.ViewModels
 {
@@ -18,6 +19,7 @@ namespace Proyecto.ViewModels
         public ObservableCollection<IntroduccionModel> Introduccion { get; set; }
         public int PosicionIndice { get; set; }
         public string IDModulo { get; set; }
+        public PopUp2 PopUpView { get; set; }
         public string TextoBotonSiguiente
         {
             get
@@ -32,6 +34,7 @@ namespace Proyecto.ViewModels
 
         public IntroPresupuestoViewModel(string Modulo)
         {//Constructor donde se recibe el idModulo y con respecto a ello se muestran los diferentes iconos, definiciones y ejemplos de cada modulo
+            PopUpView = new PopUp2();
 
             IDModulo = Modulo;
             if (IDModulo == "1")
@@ -148,6 +151,9 @@ namespace Proyecto.ViewModels
             if (PosicionIndice < Introduccion.Count - 1)
             {
                 PosicionIndice++;
+                ((MessageViewModel)PopUpView.BindingContext).Titulo = "Instrucciones";
+                ((MessageViewModel)PopUpView.BindingContext).Message = "Comenzando la prueba del PopUp numero 2.";
+                PopupNavigation.Instance.PushAsync(PopUpView);
             }
             else
             {

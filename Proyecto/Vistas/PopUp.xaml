@@ -29,15 +29,22 @@
             </Style>
 
             <Style x:Key="Message" TargetType="Label">
+                <Setter Property="FontSize" Value="14"></Setter>
+                <Setter Property="TextColor" Value="Black"></Setter>
+                <Setter Property="HorizontalTextAlignment" Value="Start"></Setter>
+                <Setter Property="Margin" Value="0,0,0,20"></Setter>
+            </Style>
+
+            <Style x:Key="Title" TargetType="Label">
                 <Setter Property="FontSize" Value="20"></Setter>
-                <Setter Property="TextColor" Value="#E74C3C "></Setter>
+                <Setter Property="TextColor" Value="Tomato"></Setter>
                 <Setter Property="HorizontalTextAlignment" Value="Center"></Setter>
                 <Setter Property="Margin" Value="0,0,0,20"></Setter>
             </Style>
 
             <Style TargetType="Button">
                 <Setter Property="HeightRequest" Value="50"></Setter>
-                <Setter Property="BackgroundColor" Value="#F4D03F"></Setter>
+                <Setter Property="BackgroundColor" Value="#159AF0"></Setter>
                 <Setter Property="Margin" Value="40,0,40,0"></Setter>
                 <Setter Property="CornerRadius" Value="10"></Setter>
             </Style>
@@ -49,7 +56,7 @@
         <FlexLayout Style="{StaticResource Container}">
             <Frame Style="{StaticResource Modal}">
                 <StackLayout>
-                    <Label Text="{Binding Titulo}" Style="{StaticResource Message}"/>
+                    <Label Text="{Binding Titulo}" Style="{StaticResource Title}"/>
                     <Label Text="{Binding Message}" Style="{StaticResource Message}"/>
                     <Button Text="Aceptar" Command="{Binding CloseCommand}" TextColor="White"></Button>
                 </StackLayout>
