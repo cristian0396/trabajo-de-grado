@@ -151,7 +151,6 @@ namespace Proyecto.ViewModels
             if (PosicionIndice < Introduccion.Count - 1)
             {
                 PosicionIndice++;
-                ((MessageViewModel)PopUpView.BindingContext).Titulo = "Instrucciones";
                 ((MessageViewModel)PopUpView.BindingContext).Message = "Comenzando la prueba del PopUp numero 2.";
                 PopupNavigation.Instance.PushAsync(PopUpView);
             }

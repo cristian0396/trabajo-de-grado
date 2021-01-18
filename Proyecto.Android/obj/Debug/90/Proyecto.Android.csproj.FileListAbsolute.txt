@@ -1583,3 +1583,5 @@ G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\android\assets\Rg.
 G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\android\assets\Rg.Plugins.Popup.pdb
 G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\android\src\crc643dd37f507f3d9710\PopupPageRenderer.java
 G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\android\src\crc64fdbeeba101bd56dc\RgGestureDetectorListener.java
+G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\flecha1.png
+G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\flecha.png
