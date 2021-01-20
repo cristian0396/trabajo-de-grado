@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             mc:Ignorable="d"
+             x:Class="Proyecto.Vistas.PopUps.PopUp6">
+    <!--Ventana emergente de TOTAL GASTOS-->
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="Contenido" TargetType="ContentPage" ApplyToDerivedTypes="True">
+                <Setter Property="BackgroundColor" Value="Transparent"></Setter>
+            </Style>
+            <Style x:Key="Message" TargetType="Label">
+                <Setter Property="FontSize" Value="18"></Setter>
+                <Setter Property="TextColor" Value="White"></Setter>
+                <Setter Property="HorizontalTextAlignment" Value="Start"></Setter>
+                <Setter Property="Margin" Value="20,0,20,0"></Setter>
+            </Style>
+            <Style x:Key="Flecha" TargetType="Image" ApplyToDerivedTypes="True">
+                <Setter Property="Rotation" Value="90"></Setter>
+                <Setter Property="Scale" Value="1"></Setter>
+                <Setter Property="Source" Value="flecha1.png"></Setter>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content Style="{StaticResource Contenido}">
+        <Grid RowSpacing="0">
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding CloseCommand}" />
+            </Grid.GestureRecognizers>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="320"/>
+                <RowDefinition Height="180"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="60"/>
+            </Grid.ColumnDefinitions>
+            <Image Grid.Row="1" Grid.Column="1" x:Name="imgFlecha" Style="{StaticResource Flecha}"></Image>
+            <Label Grid.Row="2" Grid.ColumnSpan="3" Text="{Binding Message}" Style="{StaticResource Message}"/>
+        </Grid>
+    </ContentPage.Content>
+</pages:PopupPage>

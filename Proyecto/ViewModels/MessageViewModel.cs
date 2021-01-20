@@ -18,6 +18,8 @@ namespace Proyecto.ViewModels
 
         public ICommand CloseCommand { get; set; }
         public ICommand NewCommand { get; set; }
+
+        public string Opcion { get; set; }
         #endregion
 
         #region Getters y Setters
@@ -55,10 +57,37 @@ namespace Proyecto.ViewModels
 
         public async Task NewPopUp()
         {
-            PopUp5 PopUpView = new PopUp5();
+            PopUp3 PopUpView3 = new PopUp3();
+            PopUp4 PopUpView4 = new PopUp4();
+            PopUp5 PopUpView5 = new PopUp5();
+            PopUp6 PopUpView6 = new PopUp6();
             await PopupNavigation.Instance.PopAsync();
-            ((MessageViewModel)PopUpView.BindingContext).Message = "Esta funcionando.";
-            await PopupNavigation.Instance.PushAsync(PopUpView);
+            switch (Opcion) 
+            {
+                case "3":
+                    ((MessageViewModel)PopUpView3.BindingContext).Message = "Estos gastos generalmente no cambian" +
+                        " es decir, se mantienen porque cubren las necesidades más basicas de cada persona.";
+                    ((MessageViewModel)PopUpView3.BindingContext).Opcion = "4";
+                    await PopupNavigation.Instance.PushAsync(PopUpView3);
+                    break;
+                case "4":
+                    ((MessageViewModel)PopUpView4.BindingContext).Message = "Estos gastos son todos aquellos que pueden diferir en cada mes" +
+                        " según la actividad de la persona.";
+                    ((MessageViewModel)PopUpView4.BindingContext).Opcion = "5";
+                    await PopupNavigation.Instance.PushAsync(PopUpView4);
+                    break;
+                case "5":
+                    ((MessageViewModel)PopUpView5.BindingContext).Message = "El ahorro es definido por cada persona para que se acomode a sus capacidades económicas, " +
+                        "se recomienda que sea fijo y de al menos el 10% del total de los ingresos.";
+                    ((MessageViewModel)PopUpView5.BindingContext).Opcion = "6";
+                    await PopupNavigation.Instance.PushAsync(PopUpView5);
+                    break;
+                case "6":
+                    ((MessageViewModel)PopUpView6.BindingContext).Message = "Este es el Total de gastos," +
+                        " se calcula sumando todos los gastos, tanto gastos fijos como variables, se debe tener en cuenta cualquier salida de plata.";
+                    await PopupNavigation.Instance.PushAsync(PopUpView6);
+                    break;                    
+            }
         }
     }
 }

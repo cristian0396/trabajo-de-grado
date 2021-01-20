@@ -151,8 +151,13 @@ namespace Proyecto.ViewModels
             if (PosicionIndice < Introduccion.Count - 1)
             {
                 PosicionIndice++;
-                ((MessageViewModel)PopUpView.BindingContext).Message = "Comenzando la prueba del PopUp numero 2.";
-                PopupNavigation.Instance.PushAsync(PopUpView);
+                if (PosicionIndice == Introduccion.Count - 1)
+                {
+                    ((MessageViewModel)PopUpView.BindingContext).Message = "Este es el Total Ingresos, aquí encontraras todos los ingresos recibidos" +
+                    " y se calcula sumando todos los aportes en este caso: tu sueldo y el aporte familiar.";
+                    ((MessageViewModel)PopUpView.BindingContext).Opcion = "3";
+                    PopupNavigation.Instance.PushAsync(PopUpView);
+                }                
             }
             else
             {

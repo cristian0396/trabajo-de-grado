@@ -14,9 +14,9 @@
             </Style>
             <Style x:Key="Message" TargetType="Label">
                 <Setter Property="FontSize" Value="18"></Setter>
-                <Setter Property="TextColor" Value="Black"></Setter>
-                <Setter Property="HorizontalTextAlignment" Value="Center"></Setter>
-                <Setter Property="Margin" Value="0,0,0,20"></Setter>
+                <Setter Property="TextColor" Value="White"></Setter>
+                <Setter Property="HorizontalTextAlignment" Value="Start"></Setter>
+                <Setter Property="Margin" Value="20,0,20,0"></Setter>
             </Style>
             <Style x:Key="Flecha" TargetType="Image" ApplyToDerivedTypes="True">
                 <Setter Property="Rotation" Value="-90"></Setter>
@@ -29,10 +29,10 @@
     <ContentPage.Content Style="{StaticResource Contenido}">
         <Grid RowSpacing="0">
             <Grid.GestureRecognizers>
-                <TapGestureRecognizer Command="{Binding CloseCommand}" />
+                <TapGestureRecognizer Command="{Binding NewCommand}" />
             </Grid.GestureRecognizers>
             <Grid.RowDefinitions>
-                <RowDefinition Height="248"/>
+                <RowDefinition Height="290"/>
                 <RowDefinition Height="170"/>
                 <RowDefinition Height="180"/>
             </Grid.RowDefinitions>

@@ -14,9 +14,9 @@
             </Style>
             <Style x:Key="Message" TargetType="Label">
                 <Setter Property="FontSize" Value="18"></Setter>
-                <Setter Property="TextColor" Value="Black"></Setter>
-                <Setter Property="HorizontalTextAlignment" Value="Center"></Setter>
-                <Setter Property="Margin" Value="0,0,0,20"></Setter>
+                <Setter Property="TextColor" Value="White"></Setter>
+                <Setter Property="HorizontalTextAlignment" Value="Start"></Setter>
+                <Setter Property="Margin" Value="20,0,20,0"></Setter>
             </Style>
             <Style x:Key="Flecha" TargetType="Image" ApplyToDerivedTypes="True">
                 <Setter Property="Rotation" Value="90"></Setter>
