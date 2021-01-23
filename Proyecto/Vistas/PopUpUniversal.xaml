@@ -5,8 +5,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
              mc:Ignorable="d"
-             x:Class="Proyecto.Vistas.PopUps.PopUp3">
-    <!--Ventana emergente de GASTOS FIJOS-->
+             x:Class="Proyecto.Vistas.PopUpUniversal">
+    <!--Ventana emergente flechas introducción-->
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style x:Key="Contenido" TargetType="ContentPage" ApplyToDerivedTypes="True">
@@ -19,9 +19,9 @@
                 <Setter Property="Margin" Value="20,0,20,0"></Setter>
             </Style>
             <Style x:Key="Flecha" TargetType="Image" ApplyToDerivedTypes="True">
-                <Setter Property="Rotation" Value="-90"></Setter>
-                <Setter Property="Scale" Value="1"></Setter>
-                <Setter Property="Source" Value="flecha.png"></Setter>
+                <Setter Property="Rotation" Value="{Binding Rotacion}"></Setter>
+                <Setter Property="Scale" Value="{Binding Escala}"></Setter>
+                <Setter Property="Source" Value="{Binding Source}"></Setter>
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
@@ -32,16 +32,18 @@
                 <TapGestureRecognizer Command="{Binding NewCommand}" />
             </Grid.GestureRecognizers>
             <Grid.RowDefinitions>
-                <RowDefinition Height="200"/>
-                <RowDefinition Height="170"/>
-                <RowDefinition Height="180"/>
+                <RowDefinition Height="{Binding Alturas[0]}"/>
+                <RowDefinition Height="{Binding Alturas[1]}"/>
+                <RowDefinition Height="{Binding Alturas[2]}"/>
+                <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
+                <ColumnDefinition Width="{Binding Width}"/>
             </Grid.ColumnDefinitions>
-            <Image Grid.Row="1" Grid.Column="0" x:Name="imgFlecha" Style="{StaticResource Flecha}"></Image>
-            <Label Grid.Row="2" Grid.ColumnSpan="2" Text="{Binding Message}" Style="{StaticResource Message}"/>
+            <Image Grid.Row="1" Grid.Column="{Binding GridColumn}" x:Name="imgFlecha" Style="{StaticResource Flecha}"></Image>
+            <Label Grid.Row="2" Grid.ColumnSpan="3" Text="{Binding Message}" Style="{StaticResource Message}"/>
         </Grid>
     </ContentPage.Content>
 </pages:PopupPage>

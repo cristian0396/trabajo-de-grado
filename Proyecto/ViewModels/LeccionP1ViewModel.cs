@@ -12,6 +12,7 @@ namespace Proyecto.ViewModels
     public class LeccionP1ViewModel : ViewModelBase
     {
         public ICommand ActividadP1Command { get; set; }
+        public ICommand PopUpCommand { get; set; }
         public PopUp PopUpView { get; set; }
 
         public LeccionP1ViewModel() //constructor
@@ -23,10 +24,11 @@ namespace Proyecto.ViewModels
         public void InicializarComandos()
         {
             ActividadP1Command = new Command(async () => await IrActividadP1(), () => true);
+            PopUpCommand = new Command(async () => await ActivarPopUps(), () => true);
         }
 
-        public async Task IrActividadP1() 
-        {            
+        public async Task IrActividadP1()
+        {
             await Shell.Current.GoToAsync("ActividadP1");
             ((MessageViewModel)PopUpView.BindingContext).Titulo = "Instrucciones";
             ((MessageViewModel)PopUpView.BindingContext).Message = "1. Relaciona conceptos, encaja la ficha derecha con alguna del lado izquierdo.\n" +
@@ -39,6 +41,12 @@ namespace Proyecto.ViewModels
                 "\n" +
                 "5. Los puntos que obtengas, se guardaran automaticamente.\n";
             await PopupNavigation.Instance.PushAsync(PopUpView);
-        } 
+        }
+                
+        public async Task ActivarPopUps()
+        {
+            //await PopupNavigation.Instance.PushAsync(PopUpView2);
+        }
+        
     }
 }

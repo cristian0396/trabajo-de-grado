@@ -19,7 +19,7 @@ namespace Proyecto.ViewModels
         public ObservableCollection<IntroduccionModel> Introduccion { get; set; }
         public int PosicionIndice { get; set; }
         public string IDModulo { get; set; }
-        public PopUp2 PopUpView { get; set; }
+        public PopUpUniversal PopUpView { get; set; }
         public string TextoBotonSiguiente
         {
             get
@@ -34,7 +34,7 @@ namespace Proyecto.ViewModels
 
         public IntroPresupuestoViewModel(string Modulo)
         {//Constructor donde se recibe el idModulo y con respecto a ello se muestran los diferentes iconos, definiciones y ejemplos de cada modulo
-            PopUpView = new PopUp2();
+            PopUpView = new PopUpUniversal();
 
             IDModulo = Modulo;
             if (IDModulo == "1")
@@ -153,9 +153,15 @@ namespace Proyecto.ViewModels
                 PosicionIndice++;
                 if (PosicionIndice == Introduccion.Count - 1)
                 {
-                    ((MessageViewModel)PopUpView.BindingContext).Message = "Este es el Total Ingresos, aquí encontraras todos los ingresos recibidos" +
+                    List<int> Heights = new List<int>() { 135, 220 };
+                    ((PopUpViewModel)PopUpView.BindingContext).Message = "Este es el Total Ingresos, aquí encontraras todos los ingresos recibidos" +
                     " y se calcula sumando todos los aportes en este caso: tu sueldo y el aporte familiar.";
-                    ((MessageViewModel)PopUpView.BindingContext).Opcion = "3";
+                    ((PopUpViewModel)PopUpView.BindingContext).Rotacion = 90;
+                    ((PopUpViewModel)PopUpView.BindingContext).Escala = 1;
+                    ((PopUpViewModel)PopUpView.BindingContext).Source = "flecha1.png";
+                    ((PopUpViewModel)PopUpView.BindingContext).Alturas = Heights;
+                    ((PopUpViewModel)PopUpView.BindingContext).Opcion = "3";
+                    ((PopUpViewModel)PopUpView.BindingContext).GridColumn = 1;
                     PopupNavigation.Instance.PushAsync(PopUpView);
                 }                
             }

@@ -11,10 +11,10 @@ using Xamarin.Forms.Xaml;
 namespace Proyecto.Vistas
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class PopUp2
+    public partial class PopUpUniversal
     {
-        MessageViewModel context = new MessageViewModel();
-        public PopUp2()
+        PopUpViewModel context = new PopUpViewModel();
+        public PopUpUniversal()
         {
             InitializeComponent();
             BindingContext = context;

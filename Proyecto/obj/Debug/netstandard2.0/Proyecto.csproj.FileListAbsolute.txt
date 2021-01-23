@@ -64,14 +64,10 @@ G:\EduFinanzas\trabajo-de-grado\Proyecto\obj\Debug\netstandard2.0\XamlC.stamp
 G:\EduFinanzas\trabajo-de-grado\Proyecto\obj\Debug\netstandard2.0\Proyecto.dll
 G:\EduFinanzas\trabajo-de-grado\Proyecto\obj\Debug\netstandard2.0\ref\Proyecto.dll
 G:\EduFinanzas\trabajo-de-grado\Proyecto\obj\Debug\netstandard2.0\Proyecto.pdb
-G:\EduFinanzas\trabajo-de-grado\Proyecto\obj\Debug\netstandard2.0\Proyecto.csprojAssemblyReference.cache
 G:\EduFinanzas\trabajo-de-grado\Proyecto\obj\Debug\netstandard2.0\Vistas\JuegoFruit.xaml.g.cs
 G:\EduFinanzas\trabajo-de-grado\Proyecto\obj\Debug\netstandard2.0\Vistas\PopUp.xaml.g.cs
 G:\EduFinanzas\trabajo-de-grado\Proyecto\obj\Debug\netstandard2.0\Vistas\LeccionP1.xaml.g.cs
 G:\EduFinanzas\trabajo-de-grado\Proyecto\obj\Debug\netstandard2.0\Vistas\ActividadP2.xaml.g.cs
 G:\EduFinanzas\trabajo-de-grado\Proyecto\obj\Debug\netstandard2.0\Vistas\LeccionP2.xaml.g.cs
-G:\EduFinanzas\trabajo-de-grado\Proyecto\obj\Debug\netstandard2.0\Vistas\PopUp2.xaml.g.cs
-G:\EduFinanzas\trabajo-de-grado\Proyecto\obj\Debug\netstandard2.0\Vistas\PopUps\PopUp3.xaml.g.cs
-G:\EduFinanzas\trabajo-de-grado\Proyecto\obj\Debug\netstandard2.0\Vistas\PopUps\PopUp4.xaml.g.cs
-G:\EduFinanzas\trabajo-de-grado\Proyecto\obj\Debug\netstandard2.0\Vistas\PopUps\PopUp5.xaml.g.cs
-G:\EduFinanzas\trabajo-de-grado\Proyecto\obj\Debug\netstandard2.0\Vistas\PopUps\PopUp6.xaml.g.cs
+G:\EduFinanzas\trabajo-de-grado\Proyecto\obj\Debug\netstandard2.0\Proyecto.csprojAssemblyReference.cache
+G:\EduFinanzas\trabajo-de-grado\Proyecto\obj\Debug\netstandard2.0\Vistas\PopUpUniversal.xaml.g.cs

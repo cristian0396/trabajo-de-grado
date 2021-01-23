@@ -1585,3 +1585,10 @@ G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\android\src\crc643
 G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\android\src\crc64fdbeeba101bd56dc\RgGestureDetectorListener.java
 G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\flecha1.png
 G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\flecha.png
+G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\juan.png
+G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\juan1.png
+G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\juanca.png
+G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\juanca1.png
+G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\tablero1.png
+G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\profe.png
+G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\profe2.png

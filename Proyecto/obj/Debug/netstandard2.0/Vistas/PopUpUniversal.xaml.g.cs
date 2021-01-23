@@ -8,20 +8,20 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("Proyecto.Vistas.PopUp2.xaml", "Vistas/PopUp2.xaml", typeof(global::Proyecto.Vistas.PopUp2))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("Proyecto.Vistas.PopUpUniversal.xaml", "Vistas/PopUpUniversal.xaml", typeof(global::Proyecto.Vistas.PopUpUniversal))]
 
 namespace Proyecto.Vistas {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Vistas\\PopUp2.xaml")]
-    public partial class PopUp2 : global::Rg.Plugins.Popup.Pages.PopupPage {
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Vistas\\PopUpUniversal.xaml")]
+    public partial class PopUpUniversal : global::Rg.Plugins.Popup.Pages.PopupPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::Xamarin.Forms.Image imgFlecha;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
-            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(PopUp2));
+            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(PopUpUniversal));
             imgFlecha = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Image>(this, "imgFlecha");
         }
     }

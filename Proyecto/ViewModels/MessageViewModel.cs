@@ -1,5 +1,4 @@
 ﻿using Proyecto.Vistas;
-using Proyecto.Vistas.PopUps;
 using Rg.Plugins.Popup.Services;
 using System;
 using System.Collections.Generic;
@@ -57,6 +56,7 @@ namespace Proyecto.ViewModels
 
         public async Task NewPopUp()
         {
+            /*
             PopUp3 PopUpView3 = new PopUp3();
             PopUp4 PopUpView4 = new PopUp4();
             PopUp5 PopUpView5 = new PopUp5();
@@ -88,6 +88,7 @@ namespace Proyecto.ViewModels
                     await PopupNavigation.Instance.PushAsync(PopUpView6);
                     break;                    
             }
+            */
         }
     }
 }
