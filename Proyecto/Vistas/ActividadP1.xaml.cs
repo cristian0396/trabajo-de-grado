@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Proyecto.Actividades;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,11 @@ namespace Proyecto.Vistas
         public ActividadP1()
         {
             InitializeComponent();
+        }
+        protected override bool OnBackButtonPressed()
+        {
+            Shell.Current.GoToAsync("..");
+            return base.OnBackButtonPressed();
         }
     }
 }

@@ -4,6 +4,7 @@ using System.Text;
 using CocosSharp;
 using Proyecto.Actividades.Entidades;
 using Proyecto.Actividades.Escenas;
+using Xamarin.Forms;
 
 namespace Proyecto.Actividades
 { //Clase principal que abstrae el juego de puzzle presupuesto
@@ -114,6 +115,7 @@ namespace Proyecto.Actividades
         {
             if (hasGameEnded)
             {
+                //Shell.Current.GoToAsync("../..");
                 var newScene = new PuzzlePresupuesto(GameView);
                 GameView.Director.ReplaceScene(newScene);
             }

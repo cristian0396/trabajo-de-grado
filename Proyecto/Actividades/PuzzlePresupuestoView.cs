@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace Proyecto.Actividades
@@ -32,6 +33,10 @@ namespace Proyecto.Actividades
                 _scene = new PuzzlePresupuesto(ccGView); //inicializar PuzzlePresupuesto
                 ccGView.RunWithScene(_scene); //ejecutar escena
             }
+        }
+        public void IrAtras()
+        {
+            Shell.Current.GoToAsync("../..");
         }
     }    
 }
