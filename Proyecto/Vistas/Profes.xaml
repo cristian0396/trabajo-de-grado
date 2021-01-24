@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             mc:Ignorable="d"
+             x:Class="Proyecto.Vistas.Profes">
+    <!--Ventana emergente Lecciones-->
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="Imagen" TargetType="Image" ApplyToDerivedTypes="True">
+                <Setter Property="Rotation" Value="{Binding Rotacion}"></Setter>
+                <Setter Property="Scale" Value="{Binding Escala}"></Setter>
+                <Setter Property="Source" Value="{Binding Source}"></Setter>
+                <Setter Property="VerticalOptions" Value="{Binding Vertical}"></Setter>
+                <Setter Property="HorizontalOptions" Value="{Binding Horizontal}"></Setter>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <Grid RowSpacing="0">
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding NewCommand}" />
+            </Grid.GestureRecognizers>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="{Binding Alturas[0]}"/>
+                <RowDefinition Height="{Binding Alturas[1]}"/>
+            </Grid.RowDefinitions>
+            <StackLayout Grid.Row="{Binding GridRow}" Padding="15">
+                <Image Style="{StaticResource Imagen}"></Image>
+            </StackLayout>
+            
+        </Grid>
+    </ContentPage.Content>
+</pages:PopupPage>

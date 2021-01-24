@@ -19,6 +19,7 @@ namespace Proyecto.ViewModels
         {
             InicializarComandos();
             PopUpView = new PopUp();
+            ActivarPopUps();
         }
 
         public void InicializarComandos()
@@ -45,7 +46,15 @@ namespace Proyecto.ViewModels
                 
         public async Task ActivarPopUps()
         {
-            //await PopupNavigation.Instance.PushAsync(PopUpView2);
+            List<int> Heights = new List<int>() {20};
+            Profes PopUpView2 = new Profes();
+            ((ProfesViewModel)PopUpView2.BindingContext).Rotacion = 0;
+            ((ProfesViewModel)PopUpView2.BindingContext).Escala = 0.4f;
+            ((ProfesViewModel)PopUpView2.BindingContext).Source = "juan1.png";
+            ((ProfesViewModel)PopUpView2.BindingContext).Alturas = Heights;
+            ((ProfesViewModel)PopUpView2.BindingContext).Opcion = "2";
+            ((ProfesViewModel)PopUpView2.BindingContext).GridRow = 1;
+            await PopupNavigation.Instance.PushAsync(PopUpView2);
         }
         
     }

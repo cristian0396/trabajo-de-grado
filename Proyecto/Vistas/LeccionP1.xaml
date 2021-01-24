@@ -2,46 +2,15 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Proyecto.Vistas.LeccionP1"
-             Shell.NavBarIsVisible="False" 
-             Shell.TabBarIsVisible="False">
+             Shell.TabBarIsVisible="False"
+             Shell.NavBarIsVisible="False">
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Actividad!" IconImageSource="" Command="{Binding ActividadP1Command}"/>
         <!--Opción que aparece en la parte superior derecha de la app-->
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <StackLayout BackgroundColor="Black">
-            <!--
-            <StackLayout>
-                <Label Text="Aprende a crear tu propio presupuesto personal!" FontSize="18" TextColor="DarkBlue" HorizontalTextAlignment="Center"/>
-            </StackLayout>
-            -->
-            <ScrollView>
-                <Grid RowSpacing="0">
-                    <!--
-                    <Grid.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding PopUpCommand}" />
-                    </Grid.GestureRecognizers>
-                    -->
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                    </Grid.ColumnDefinitions>
-                    <!--
-                    <Image Grid.Row="0" Grid.ColumnSpan="2" Source="tablero1.png" HorizontalOptions="CenterAndExpand"/>
-                    <Image Grid.Row="1" Grid.ColumnSpan="2" Source="juan1.png" HorizontalOptions="Center"/>
-                    
-                    <Image Grid.Row="0" Grid.ColumnSpan="2" Source="profe.png" HorizontalOptions="Center"/>
-                    <Image Grid.Row="1" Grid.ColumnSpan="2" Source="profe2.png" HorizontalOptions="Center"/>
-                    -->
-                </Grid>
-            </ScrollView>
+        <StackLayout >
+            <Image Source="leccionfondo.png" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
