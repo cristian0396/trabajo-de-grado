@@ -9,12 +9,11 @@
     <!--Ventana emergente Lecciones-->
     <ContentPage.Resources>
         <ResourceDictionary>
-            <Style x:Key="Imagen" TargetType="Image" ApplyToDerivedTypes="True">
-                <Setter Property="Rotation" Value="{Binding Rotacion}"></Setter>
-                <Setter Property="Scale" Value="{Binding Escala}"></Setter>
-                <Setter Property="Source" Value="{Binding Source}"></Setter>
-                <Setter Property="VerticalOptions" Value="{Binding Vertical}"></Setter>
-                <Setter Property="HorizontalOptions" Value="{Binding Horizontal}"></Setter>
+            <Style x:Key="Imagen1" TargetType="Image" ApplyToDerivedTypes="True">
+                <Setter Property="Source" Value="{Binding Sources[0]}"></Setter>
+            </Style>
+            <Style x:Key="Imagen2" TargetType="Image" ApplyToDerivedTypes="True">
+                <Setter Property="Source" Value="{Binding Sources[1]}"></Setter>
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
@@ -28,10 +27,8 @@
                 <RowDefinition Height="{Binding Alturas[0]}"/>
                 <RowDefinition Height="{Binding Alturas[1]}"/>
             </Grid.RowDefinitions>
-            <StackLayout Grid.Row="{Binding GridRow}" Padding="15">
-                <Image Style="{StaticResource Imagen}"></Image>
-            </StackLayout>
-            
+            <Image Grid.Row="0" Margin="0,50,0,0" Style="{StaticResource Imagen1}"></Image>
+            <Image Grid.Row="1" Style="{StaticResource Imagen2}"></Image>
         </Grid>
     </ContentPage.Content>
 </pages:PopupPage>

@@ -46,14 +46,12 @@ namespace Proyecto.ViewModels
                 
         public async Task ActivarPopUps()
         {
-            List<int> Heights = new List<int>() {20};
+            List<int> Heights = new List<int>() {270, 270};
+            List<string> Sources = new List<string> { "tablero0.png", "juan1.png"};
             Profes PopUpView2 = new Profes();
-            ((ProfesViewModel)PopUpView2.BindingContext).Rotacion = 0;
-            ((ProfesViewModel)PopUpView2.BindingContext).Escala = 0.4f;
-            ((ProfesViewModel)PopUpView2.BindingContext).Source = "juan1.png";
+            ((ProfesViewModel)PopUpView2.BindingContext).Sources = Sources;
             ((ProfesViewModel)PopUpView2.BindingContext).Alturas = Heights;
             ((ProfesViewModel)PopUpView2.BindingContext).Opcion = "2";
-            ((ProfesViewModel)PopUpView2.BindingContext).GridRow = 1;
             await PopupNavigation.Instance.PushAsync(PopUpView2);
         }
         

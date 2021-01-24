@@ -11,17 +11,11 @@ namespace Proyecto.ViewModels
 {
     public class ProfesViewModel : ViewModelBase
     {
-        public int Rotacion { get; set; }
-        public float Escala { get; set; }
-        public string Source { get; set; }
+        public List<string> Sources { get; set; }
         public List<int> Alturas { get; set; }
         public ICommand CloseCommand { get; set; }
         public ICommand NewCommand { get; set; }
         public string Opcion { get; set; }
-        public int GridColumn { get; set; }
-        public int GridRow { get; set; }
-        public string Vertical { get; set; }
-        public string Horizontal { get; set; }
 
         public ProfesViewModel()
         {
@@ -35,76 +29,66 @@ namespace Proyecto.ViewModels
 
         public async Task NewPopUp()
         {
+            await PopupNavigation.Instance.PopAsync();
             Profes PopUpView1 = new Profes();
-            PopUpUniversal PopUpView = new PopUpUniversal();
             List<int> Heights = new List<int>();
+            List<string> Sources = new List<string>();
             switch (Opcion)
             {
                 case "2":
-                    ((ProfesViewModel)PopUpView1.BindingContext).Opcion = "8";
-                    ((ProfesViewModel)PopUpView1.BindingContext).Rotacion = 0;
-                    ((ProfesViewModel)PopUpView1.BindingContext).Escala = 0.8f;
-                    ((ProfesViewModel)PopUpView1.BindingContext).Source = "tablero0.png";
+                    Sources.Add("tablero01.png");
+                    Sources.Add("juan.png");
+                    Heights.Add(270);
+                    Heights.Add(270);
+                    ((ProfesViewModel)PopUpView1.BindingContext).Sources = Sources;
                     ((ProfesViewModel)PopUpView1.BindingContext).Alturas = Heights;
-                    ((ProfesViewModel)PopUpView1.BindingContext).GridRow = 0;
-                    ((ProfesViewModel)PopUpView1.BindingContext).Vertical = "End";
-                    ((ProfesViewModel)PopUpView1.BindingContext).Horizontal = "End";
+                    ((ProfesViewModel)PopUpView1.BindingContext).Opcion = "3";
                     await PopupNavigation.Instance.PushAsync(PopUpView1);
                     break;
 
                 case "3":
-                    Heights.Add(200);
-                    Heights.Add(170);
-                    Heights.Add(180);
-                    ((PopUpViewModel)PopUpView.BindingContext).Message = "Estos gastos generalmente no cambian" +
-                        " es decir, se mantienen porque cubren las necesidades más basicas de cada persona.";
-                    ((PopUpViewModel)PopUpView.BindingContext).Opcion = "4";
-                    ((PopUpViewModel)PopUpView.BindingContext).Rotacion = -90;
-                    ((PopUpViewModel)PopUpView.BindingContext).Escala = 1;
-                    ((PopUpViewModel)PopUpView.BindingContext).Source = "flecha.png";
-                    ((PopUpViewModel)PopUpView.BindingContext).Alturas = Heights;
-                    ((PopUpViewModel)PopUpView.BindingContext).GridColumn = 0;
-                    await PopupNavigation.Instance.PushAsync(PopUpView);
+                    Sources.Add("tablero02.png");
+                    Sources.Add("juanca.png");
+                    Heights.Add(270);
+                    Heights.Add(270);
+                    ((ProfesViewModel)PopUpView1.BindingContext).Sources = Sources;
+                    ((ProfesViewModel)PopUpView1.BindingContext).Alturas = Heights;
+                    ((ProfesViewModel)PopUpView1.BindingContext).Opcion = "4";
+                    await PopupNavigation.Instance.PushAsync(PopUpView1);
                     break;
                 case "4":
-                    Heights.Add(248);
-                    Heights.Add(170);
-                    Heights.Add(180);
-                    ((PopUpViewModel)PopUpView.BindingContext).Message = "Estos gastos son todos aquellos que pueden diferir en cada mes" +
-                        " según la actividad de la persona.";
-                    ((PopUpViewModel)PopUpView.BindingContext).Opcion = "5";
-                    ((PopUpViewModel)PopUpView.BindingContext).Rotacion = -90;
-                    ((PopUpViewModel)PopUpView.BindingContext).Escala = 1;
-                    ((PopUpViewModel)PopUpView.BindingContext).Source = "flecha.png";
-                    ((PopUpViewModel)PopUpView.BindingContext).Alturas = Heights;
-                    ((PopUpViewModel)PopUpView.BindingContext).GridColumn = 0;
-                    await PopupNavigation.Instance.PushAsync(PopUpView);
+                    Sources.Add("tablero03.png");
+                    Sources.Add("juanca1.png");
+                    Heights.Add(270);
+                    Heights.Add(270);
+                    ((ProfesViewModel)PopUpView1.BindingContext).Sources = Sources;
+                    ((ProfesViewModel)PopUpView1.BindingContext).Alturas = Heights;
+                    ((ProfesViewModel)PopUpView1.BindingContext).Opcion = "5";
+                    await PopupNavigation.Instance.PushAsync(PopUpView1);
                     break;
                 case "5":
-                    Heights.Add(290);
-                    Heights.Add(170);
-                    Heights.Add(180);
-                    ((PopUpViewModel)PopUpView.BindingContext).Message = "El ahorro es definido por cada persona para que se acomode a sus capacidades económicas, " +
-                        "se recomienda que sea fijo y de al menos el 10% del total de los ingresos.";
-                    ((PopUpViewModel)PopUpView.BindingContext).Opcion = "6";
-                    ((PopUpViewModel)PopUpView.BindingContext).Rotacion = -90;
-                    ((PopUpViewModel)PopUpView.BindingContext).Escala = 1;
-                    ((PopUpViewModel)PopUpView.BindingContext).Source = "flecha.png";
-                    ((PopUpViewModel)PopUpView.BindingContext).Alturas = Heights;
-                    ((PopUpViewModel)PopUpView.BindingContext).GridColumn = 0;
-                    await PopupNavigation.Instance.PushAsync(PopUpView);
+                    Sources.Add("tablero04.png");
+                    Sources.Add("juan1.png");
+                    Heights.Add(270);
+                    Heights.Add(270);
+                    ((ProfesViewModel)PopUpView1.BindingContext).Sources = Sources;
+                    ((ProfesViewModel)PopUpView1.BindingContext).Alturas = Heights;
+                    ((ProfesViewModel)PopUpView1.BindingContext).Opcion = "6";
+                    await PopupNavigation.Instance.PushAsync(PopUpView1);
                     break;
                 case "6":
-                    Heights.Add(320);
-                    Heights.Add(180);
-                    ((PopUpViewModel)PopUpView.BindingContext).Message = "Este es el Total de gastos," +
-                        " se calcula sumando todos los gastos, tanto gastos fijos como variables, se debe tener en cuenta cualquier salida de plata.";
-                    ((PopUpViewModel)PopUpView.BindingContext).Rotacion = 90;
-                    ((PopUpViewModel)PopUpView.BindingContext).Escala = 1;
-                    ((PopUpViewModel)PopUpView.BindingContext).Source = "flecha1.png";
-                    ((PopUpViewModel)PopUpView.BindingContext).Alturas = Heights;
-                    ((PopUpViewModel)PopUpView.BindingContext).GridColumn = 1;
-                    ((PopUpViewModel)PopUpView.BindingContext).Width = 60;
+                    await Shell.Current.GoToAsync("ActividadP1");
+                    PopUp PopUpView = new PopUp();
+                    ((MessageViewModel)PopUpView.BindingContext).Titulo = "Instrucciones";
+                    ((MessageViewModel)PopUpView.BindingContext).Message = "1. Relaciona conceptos, encaja la ficha derecha con alguna del lado izquierdo.\n" +
+                        "\n" +
+                        "2. Si encajas la ficha donde no es, pierdes 5 puntos.\n" +
+                        "\n" +
+                        "3. Si la encajas correctamente ganas 10 puntos.\n" +
+                        "\n" +
+                        "4. Cada vez que encajes una pieza, aparece otra en la esquina superior derecha.\n" +
+                        "\n" +
+                        "5. Los puntos que obtengas, se guardaran automaticamente.\n";
                     await PopupNavigation.Instance.PushAsync(PopUpView);
                     break;
             }
