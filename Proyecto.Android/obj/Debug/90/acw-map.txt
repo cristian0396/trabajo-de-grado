@@ -1,6 +1,9 @@
 Proyecto.Droid.MainActivity, Proyecto.Android;crc643cfe60957d7363fd.MainActivity
 Proyecto.Droid.MainActivity;crc643cfe60957d7363fd.MainActivity
 proyecto.droid.MainActivity;crc643cfe60957d7363fd.MainActivity
+Proyecto.Droid.SplashActivity, Proyecto.Android;crc643cfe60957d7363fd.SplashActivity
+Proyecto.Droid.SplashActivity;crc643cfe60957d7363fd.SplashActivity
+proyecto.droid.SplashActivity;crc643cfe60957d7363fd.SplashActivity
 CocosSharp.CCGameView, CocosSharp;crc64f955e4dd247bcdf3.CCGameView
 CocosSharp.CCGameView;crc64f955e4dd247bcdf3.CCGameView
 cocossharp.CCGameView;crc64f955e4dd247bcdf3.CCGameView
