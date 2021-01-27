@@ -5242,6 +5242,9 @@ public final class R {
     public static final int RtlOverlay_Widget_AppCompat_SearchView_MagIcon=0x7f0e00e4;
     public static final int RtlUnderlay_Widget_AppCompat_ActionButton=0x7f0e00e5;
     public static final int RtlUnderlay_Widget_AppCompat_ActionButton_Overflow=0x7f0e00e6;
+    /**
+     * codigo agregado para la pantalla de carga inicial
+     */
     public static final int SplashTheme=0x7f0e00e7;
     public static final int TextAppearance_AppCompat=0x7f0e00e8;
     public static final int TextAppearance_AppCompat_Body1=0x7f0e00e9;

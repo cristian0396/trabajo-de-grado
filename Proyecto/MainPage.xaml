@@ -20,5 +20,4 @@
     </FlyoutItem>    
 
     <ShellContent Title="Cerrar Sesión " Icon="leave.png" IsTabStop="True" ContentTemplate="{DataTemplate local:Inicio}"/>
-
 </Shell>

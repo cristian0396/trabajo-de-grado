@@ -5,9 +5,9 @@
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-  <application android:label="Proyecto.Android" android:name="android.app.Application" android:allowBackup="true" android:icon="@mipmap/icon" android:debuggable="true" android:extractNativeLibs="true">
-    <activity android:configChanges="orientation|screenSize" android:icon="@mipmap/icon" android:label="Proyecto" android:theme="@style/MainTheme" android:name="crc643cfe60957d7363fd.MainActivity" />
-    <activity android:configChanges="screenSize" android:label="SplashActivity" android:noHistory="true" android:theme="@style/SplashTheme" android:name="crc643cfe60957d7363fd.SplashActivity">
+  <application android:label="Proyecto.Android" android:name="android.app.Application" android:allowBackup="true" android:icon="@drawable/books" android:debuggable="true" android:extractNativeLibs="true">
+    <activity android:configChanges="orientation|screenSize" android:icon="@drawable/books" android:label="Edufinanzas" android:theme="@style/MainTheme" android:name="crc643cfe60957d7363fd.MainActivity" />
+    <activity android:configChanges="screenSize" android:label="Edufinanzas" android:noHistory="true" android:theme="@style/SplashTheme" android:name="crc643cfe60957d7363fd.SplashActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />

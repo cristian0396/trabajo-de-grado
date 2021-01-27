@@ -12,8 +12,7 @@ namespace Proyecto
 {
     [DesignTimeVisible(false)]    
     public partial class MainPage : Xamarin.Forms.Shell
-    {
-        
+    {        
         public MainPage()
         {
             InitializeComponent();

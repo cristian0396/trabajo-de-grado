@@ -8,7 +8,7 @@
              Title="Inicio"
              x:Class="Proyecto.Vistas.Inicio">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Opción" IconImageSource=""/>         <!--Opción que aparece en la parte superior derecha de la app-->
+        <ToolbarItem Text="Opción" IconImageSource="administracion.png"/>         <!--Opción que aparece en la parte superior derecha de la app-->
     </ContentPage.ToolbarItems>
     
     <!--Diccionario que contiene animaciones con la libreria Xamanimation, pero no sirve por ahora con el shell-->

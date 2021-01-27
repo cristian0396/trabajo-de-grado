@@ -27,23 +27,25 @@
     </ContentPage.Resources>
 
     <ContentPage.Content Style="{StaticResource Contenido}">
-        <Grid RowSpacing="0">
-            <Grid.GestureRecognizers>
-                <TapGestureRecognizer Command="{Binding NewCommand}" />
-            </Grid.GestureRecognizers>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="{Binding Alturas[0]}"/>
-                <RowDefinition Height="{Binding Alturas[1]}"/>
-                <RowDefinition Height="{Binding Alturas[2]}"/>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition Width="{Binding Width}"/>
-            </Grid.ColumnDefinitions>
-            <Image Grid.Row="1" Grid.Column="{Binding GridColumn}" x:Name="imgFlecha" Style="{StaticResource Flecha}"></Image>
-            <Label Grid.Row="2" Grid.ColumnSpan="3" Text="{Binding Message}" Style="{StaticResource Message}"/>
-        </Grid>
+        <ScrollView>
+            <Grid RowSpacing="0">
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding NewCommand}" />
+                </Grid.GestureRecognizers>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="{Binding Alturas[0]}"/>
+                    <RowDefinition Height="{Binding Alturas[1]}"/>
+                    <RowDefinition Height="{Binding Alturas[2]}"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="{Binding Width}"/>
+                </Grid.ColumnDefinitions>
+                <Image Grid.Row="1" Grid.Column="{Binding GridColumn}" x:Name="imgFlecha" Style="{StaticResource Flecha}"></Image>
+                <Label Grid.Row="2" Grid.ColumnSpan="3" Text="{Binding Message}" Style="{StaticResource Message}"/>
+            </Grid>
+        </ScrollView>    
     </ContentPage.Content>
 </pages:PopupPage>

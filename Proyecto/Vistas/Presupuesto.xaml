@@ -23,8 +23,6 @@
                     <Grid.RowDefinitions>
                         <RowDefinition Height="40" />
                         <RowDefinition Height="120"/>
-                        <RowDefinition Height="50"/>
-                        <RowDefinition Height="50"/>
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
@@ -38,12 +36,7 @@
                             <TapGestureRecognizer Command="{Binding Actividad1Command}" />
                         </Image.GestureRecognizers>
                     </Image>
-                    <!-- Campos donde el usuario digita sus ingresos y gastos-->
-                    <Label Grid.Row="2" Grid.Column="0" Text="Ingresos: " FontSize="16" Margin="10,10,0,15"/>
-                    <Entry Grid.Row="3" Grid.Column="0" Text="$"/>
                     <ProgressBar Grid.Row="1" Grid.Column="1" Progress="0.6" ScaleY="1" ProgressColor="#77D371" Margin="15,0,0,0" />
-                    <Label Grid.Row="2" Grid.Column="1" Text="Gastos: " FontSize="16" Margin="10,10,0,15"/>
-                    <Entry Grid.Row="3" Grid.Column="1" Text="$"/>
                 </Grid>
                 <!-- Codigo que denota la segunda lección y los demás items presentados en la vista-->
                 <Grid Grid.Row="1" RowSpacing="0" Padding="14">

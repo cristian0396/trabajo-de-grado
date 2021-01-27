@@ -9,17 +9,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+//Actividad especifica de Android que permite utilizar la pantalla de carga inicial
+
 namespace Proyecto.Droid
 {
-    [Activity(Label = "SplashActivity", Theme = "@style/SplashTheme", MainLauncher = true, NoHistory = true, ConfigurationChanges = Android.Content.PM.ConfigChanges.ScreenSize) ]
+    [Activity(Label = "Edufinanzas", Theme = "@style/SplashTheme", MainLauncher = true, NoHistory = true, ConfigurationChanges = Android.Content.PM.ConfigChanges.ScreenSize) ]
     public class SplashActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-
             StartActivity(new Intent(Application.Context, typeof(MainActivity)));
-            // Create your application here
         }
     }
 }

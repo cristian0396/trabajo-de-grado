@@ -225,7 +225,7 @@ namespace Proyecto.Actividades
         private void PiezaVsPieza(PaletaPrincipal pieza)
         { //función que determina unos rangos en que la pieza usada puede entrar para luego generar otra ficha estatica que se une con la ficha concepto   
             float xCentro = (CapaDeJuego.ContentSize.Width / 4.0f); // ubicación centro de las fichas izquierdas
-            float xCentroD = (CapaDeJuego.ContentSize.Width / 4.0f) + 240 + 20;
+            float xCentroD = (CapaDeJuego.ContentSize.Width / 4.0f) + 240;
             if (pieza.PositionX > xCentro && pieza.PositionX < xCentro + 130 && pieza.PositionY < (CapaDeJuego.ContentSize.Height / 2.0f) + (CapaDeJuego.ContentSize.Height / 3.54f) + 48 && pieza.PositionY > (CapaDeJuego.ContentSize.Height / 2.0f) + (CapaDeJuego.ContentSize.Height / 3.54f) - 48)
             {
                 
@@ -236,7 +236,7 @@ namespace Proyecto.Actividades
                     scoreText.Score = score;
                     pieza.RemoveFromParent();
                     ubicarPieza("r4.png", CapaDeJuego.ContentSize.Width / 4.0f + 130, (CapaDeJuego.ContentSize.Height / 2.0f) + (CapaDeJuego.ContentSize.Height / 3.54f));                    
-                    CrearNuevaFicha("r5.png");
+                    CrearNuevaFicha("r6.png");
                     Checkear(xCentroD, (CapaDeJuego.ContentSize.Height / 2.0f) + (CapaDeJuego.ContentSize.Height / 3.54f));
                     ControlPaletas++;
                 }
