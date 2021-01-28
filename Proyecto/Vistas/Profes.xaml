@@ -19,16 +19,22 @@
     </ContentPage.Resources>
 
     <ContentPage.Content>
-        <Grid RowSpacing="0">
+        <Grid RowSpacing="0" Padding="20">
             <Grid.GestureRecognizers>
                 <TapGestureRecognizer Command="{Binding NewCommand}" />
             </Grid.GestureRecognizers>
             <Grid.RowDefinitions>
+                <RowDefinition Height="20"/>
                 <RowDefinition Height="{Binding Alturas[0]}"/>
                 <RowDefinition Height="{Binding Alturas[1]}"/>
             </Grid.RowDefinitions>
-            <Image Grid.Row="0" Margin="0,50,0,0" Style="{StaticResource Imagen1}"></Image>
-            <Image Grid.Row="1" Style="{StaticResource Imagen2}"></Image>
+            <Label Grid.Row="0" Text="Omitir" HorizontalOptions="End" FontSize="18" TextColor="LightGreen">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding OmitirCommand}"/>
+                </Label.GestureRecognizers>
+            </Label>
+            <Image Grid.Row="1" Margin="0,50,0,0" Style="{StaticResource Imagen1}"></Image>
+            <Image Grid.Row="2" Style="{StaticResource Imagen2}"></Image>
         </Grid>
     </ContentPage.Content>
 </pages:PopupPage>

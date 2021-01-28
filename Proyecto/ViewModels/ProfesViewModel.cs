@@ -3,6 +3,7 @@ using Rg.Plugins.Popup.Services;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Essentials;
@@ -18,47 +19,49 @@ namespace Proyecto.ViewModels
         public ICommand NewCommand { get; set; }
         public string Opcion { get; set; }
         public string OpcionInicial { get; set; }
-
+        public ICommand OmitirCommand { get; set; }
+        public CancellationTokenSource _speakButtonCancellationTokenSource { get; set; }
         public ProfesViewModel(string opcionMusica)
         {
             OpcionInicial = opcionMusica;
+            _speakButtonCancellationTokenSource = new CancellationTokenSource();
             CloseCommand = new Command(async () => await Close(), () => true);
             NewCommand = new Command(async () => await NewPopUp(), () => true);
+            OmitirCommand = new Command(async () => await OmitirIntro(), () => true);
             ActivarTextoAVoz();
         }
 
         private async Task ActivarTextoAVoz()
         {
-            string titulo;
             string texto;
             switch (OpcionInicial){
                 case "1":
-                    titulo = "Presupuesto";
-                    texto = "Para desarrollar un presupuesto se recomienda que se cumpla con los siguientes consejos: ";
-                    await TextToSpeech.SpeakAsync(titulo);
-                    await TextToSpeech.SpeakAsync(texto);
+                    texto = " Presupuesto" +
+                        "Para desarrollar un presupuesto se recomienda que se cumpla con los siguientes consejos: ";
+                    await TextToSpeech.SpeakAsync(texto, _speakButtonCancellationTokenSource.Token);
                     break;
                 case "2":
                     texto = "Fijar un objetivo concreto o meta a cumplir en un periodo limitado de tiempo y que sea alcanzable para cada persona." +
                         " Tener presente y muy claro el ingreso que recibe. " +
                         "Determinar los costos y gastos u obligaciones fijas que se tienen.";
-                    await TextToSpeech.SpeakAsync(texto);
+                    await TextToSpeech.SpeakAsync(texto, _speakButtonCancellationTokenSource.Token);
                     break;
                 case "3":
                     texto = "Priorizar las obligaciones, teniendo en cuenta que las más importantes tienen que ser subsanadas primero. " +
                         "Determinar los gastos variables que se puedan presentar. ";
-                    await TextToSpeech.SpeakAsync(texto);
+                    await TextToSpeech.SpeakAsync(texto, _speakButtonCancellationTokenSource.Token);
                     break;
                 case "4":
                     texto = "Los gastos totales no deben superar el 90% de los ingresos recibidos. " +
                         "Escoger un valor o porcentaje el cual cree que se podría ahorrar después de haber descontado todas las obligaciones.";
-                    await TextToSpeech.SpeakAsync(texto);
+         
+                    await TextToSpeech.SpeakAsync(texto, _speakButtonCancellationTokenSource.Token);
                     break;
                 case "5":
                     texto = "Es fundamental que los gastos pasados y la deuda personal se tengan en cuenta cuando se crea este tipo de presupuesto, " +
                         "ya que implican una salida de plata. También los ingresos que reciben forman parte fundamental del presupuesto y cualquier " +
                         "ingreso obtenido implica una entrada de plata. ";
-                    await TextToSpeech.SpeakAsync(texto);
+                    await TextToSpeech.SpeakAsync(texto, _speakButtonCancellationTokenSource.Token);
                     break;
             }
         }
@@ -67,9 +70,17 @@ namespace Proyecto.ViewModels
             await PopupNavigation.Instance.PopAsync();
         }
 
+        public async Task OmitirIntro()
+        {
+            await Close();
+            _speakButtonCancellationTokenSource?.Cancel();
+            await Shell.Current.GoToAsync("ActividadP1");
+        }
+
         public async Task NewPopUp()
         {
             await PopupNavigation.Instance.PopAsync();
+            _speakButtonCancellationTokenSource?.Cancel();
             Profes PopUpView1;
             List<int> Heights = new List<int>();
             List<string> Sources = new List<string>();
