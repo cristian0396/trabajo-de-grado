@@ -17,52 +17,60 @@ namespace Proyecto.ViewModels
         public List<int> Alturas { get; set; }
         public ICommand CloseCommand { get; set; }
         public ICommand NewCommand { get; set; }
+        public ICommand VozCommand { get; set; }
         public string Opcion { get; set; }
         public string OpcionInicial { get; set; }
         public ICommand OmitirCommand { get; set; }
         public CancellationTokenSource _speakButtonCancellationTokenSource { get; set; }
-        public ProfesViewModel(string opcionMusica)
+        public bool SwitchVoz { get; set; }
+        public ProfesViewModel(string opcionMusica, bool vozEncendida)
         {
+            SwitchVoz = vozEncendida;
             OpcionInicial = opcionMusica;
             _speakButtonCancellationTokenSource = new CancellationTokenSource();
             CloseCommand = new Command(async () => await Close(), () => true);
             NewCommand = new Command(async () => await NewPopUp(), () => true);
             OmitirCommand = new Command(async () => await OmitirIntro(), () => true);
+            VozCommand = new Command(async () => await ActivarTextoAVoz(), () => true);
             ActivarTextoAVoz();
         }
 
         private async Task ActivarTextoAVoz()
         {
             string texto;
-            switch (OpcionInicial){
-                case "1":
-                    texto = " Presupuesto" +
-                        "Para desarrollar un presupuesto se recomienda que se cumpla con los siguientes consejos: ";
-                    await TextToSpeech.SpeakAsync(texto, _speakButtonCancellationTokenSource.Token);
-                    break;
-                case "2":
-                    texto = "Fijar un objetivo concreto o meta a cumplir en un periodo limitado de tiempo y que sea alcanzable para cada persona." +
-                        " Tener presente y muy claro el ingreso que recibe. " +
-                        "Determinar los costos y gastos u obligaciones fijas que se tienen.";
-                    await TextToSpeech.SpeakAsync(texto, _speakButtonCancellationTokenSource.Token);
-                    break;
-                case "3":
-                    texto = "Priorizar las obligaciones, teniendo en cuenta que las más importantes tienen que ser subsanadas primero. " +
-                        "Determinar los gastos variables que se puedan presentar. ";
-                    await TextToSpeech.SpeakAsync(texto, _speakButtonCancellationTokenSource.Token);
-                    break;
-                case "4":
-                    texto = "Los gastos totales no deben superar el 90% de los ingresos recibidos. " +
-                        "Escoger un valor o porcentaje el cual cree que se podría ahorrar después de haber descontado todas las obligaciones.";
-         
-                    await TextToSpeech.SpeakAsync(texto, _speakButtonCancellationTokenSource.Token);
-                    break;
-                case "5":
-                    texto = "Es fundamental que los gastos pasados y la deuda personal se tengan en cuenta cuando se crea este tipo de presupuesto, " +
-                        "ya que implican una salida de plata. También los ingresos que reciben forman parte fundamental del presupuesto y cualquier " +
-                        "ingreso obtenido implica una entrada de plata. ";
-                    await TextToSpeech.SpeakAsync(texto, _speakButtonCancellationTokenSource.Token);
-                    break;
+            if (SwitchVoz)
+            {
+                switch (OpcionInicial)
+                {
+                    case "1":
+                        texto = " Presupuesto" +
+                            "Para desarrollar un presupuesto se recomienda que se cumpla con los siguientes consejos: ";
+                        await TextToSpeech.SpeakAsync(texto, _speakButtonCancellationTokenSource.Token);
+                        break;
+                    case "2":
+                        texto = "Fijar un objetivo concreto o meta a cumplir en un periodo limitado de tiempo y que sea alcanzable para cada persona." +
+                            " Tener presente y muy claro el ingreso que recibe. " +
+                            "Determinar los costos y gastos u obligaciones fijas que se tienen.";
+                        await TextToSpeech.SpeakAsync(texto, _speakButtonCancellationTokenSource.Token);
+                        break;
+                    case "3":
+                        texto = "Priorizar las obligaciones, teniendo en cuenta que las más importantes tienen que ser subsanadas primero. " +
+                            "Determinar los gastos variables que se puedan presentar. ";
+                        await TextToSpeech.SpeakAsync(texto, _speakButtonCancellationTokenSource.Token);
+                        break;
+                    case "4":
+                        texto = "Los gastos totales no deben superar el 90% de los ingresos recibidos. " +
+                            "Escoger un valor o porcentaje el cual cree que se podría ahorrar después de haber descontado todas las obligaciones.";
+
+                        await TextToSpeech.SpeakAsync(texto, _speakButtonCancellationTokenSource.Token);
+                        break;
+                    case "5":
+                        texto = "Es fundamental que los gastos pasados y la deuda personal se tengan en cuenta cuando se crea este tipo de presupuesto, " +
+                            "ya que implican una salida de plata. También los ingresos que reciben forman parte fundamental del presupuesto y cualquier " +
+                            "ingreso obtenido implica una entrada de plata. ";
+                        await TextToSpeech.SpeakAsync(texto, _speakButtonCancellationTokenSource.Token);
+                        break;
+                }
             }
         }
         public async Task Close()
@@ -91,7 +99,7 @@ namespace Proyecto.ViewModels
                     Sources.Add("juan.png");
                     Heights.Add(270);
                     Heights.Add(270);
-                    PopUpView1 = new Profes("2");
+                    PopUpView1 = new Profes("2", SwitchVoz);
                     ((ProfesViewModel)PopUpView1.BindingContext).Sources = Sources;
                     ((ProfesViewModel)PopUpView1.BindingContext).Alturas = Heights;
                     ((ProfesViewModel)PopUpView1.BindingContext).Opcion = "3";
@@ -103,7 +111,7 @@ namespace Proyecto.ViewModels
                     Sources.Add("juanca.png");
                     Heights.Add(270);
                     Heights.Add(270);
-                    PopUpView1 = new Profes("3");
+                    PopUpView1 = new Profes("3", SwitchVoz);
                     ((ProfesViewModel)PopUpView1.BindingContext).Sources = Sources;
                     ((ProfesViewModel)PopUpView1.BindingContext).Alturas = Heights;
                     ((ProfesViewModel)PopUpView1.BindingContext).Opcion = "4";
@@ -114,7 +122,7 @@ namespace Proyecto.ViewModels
                     Sources.Add("juanca1.png");
                     Heights.Add(270);
                     Heights.Add(270);
-                    PopUpView1 = new Profes("4");
+                    PopUpView1 = new Profes("4", SwitchVoz);
                     ((ProfesViewModel)PopUpView1.BindingContext).Sources = Sources;
                     ((ProfesViewModel)PopUpView1.BindingContext).Alturas = Heights;
                     ((ProfesViewModel)PopUpView1.BindingContext).Opcion = "5";
@@ -125,7 +133,7 @@ namespace Proyecto.ViewModels
                     Sources.Add("juan1.png");
                     Heights.Add(270);
                     Heights.Add(270);
-                    PopUpView1 = new Profes("5");
+                    PopUpView1 = new Profes("5", SwitchVoz);
                     ((ProfesViewModel)PopUpView1.BindingContext).Sources = Sources;
                     ((ProfesViewModel)PopUpView1.BindingContext).Alturas = Heights;
                     ((ProfesViewModel)PopUpView1.BindingContext).Opcion = "6";

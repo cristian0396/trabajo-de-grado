@@ -5,6 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
              mc:Ignorable="d"
+             xmlns:local1="clr-namespace:Proyecto.Behaviors"
              x:Class="Proyecto.Vistas.Profes">
     <!--Ventana emergente Lecciones-->
     <ContentPage.Resources>
@@ -19,15 +20,21 @@
     </ContentPage.Resources>
 
     <ContentPage.Content>
-        <Grid RowSpacing="0" Padding="20">
+        <Grid RowSpacing="0" Padding="30">
             <Grid.GestureRecognizers>
                 <TapGestureRecognizer Command="{Binding NewCommand}" />
             </Grid.GestureRecognizers>
             <Grid.RowDefinitions>
-                <RowDefinition Height="20"/>
+                <RowDefinition Height="60"/>
                 <RowDefinition Height="{Binding Alturas[0]}"/>
                 <RowDefinition Height="{Binding Alturas[1]}"/>
             </Grid.RowDefinitions>
+            <Label Grid.Row="0" Text="Voz!" FontSize="18" TextColor="LightGreen" HorizontalOptions="Start"/>
+            <Switch Grid.Row="0" HorizontalOptions="Start" Margin="0,30,0,0"  ThumbColor="LightGreen" OnColor="LightGreen" IsToggled="{Binding SwitchVoz}">
+                <Switch.Behaviors>
+                    <local1:EventToCommandBehavior EventName="Toggled" Command="{Binding VozCommand}" />
+                </Switch.Behaviors>
+            </Switch>
             <Label Grid.Row="0" Text="Omitir" HorizontalOptions="End" FontSize="18" TextColor="LightGreen">
                 <Label.GestureRecognizers>
                     <TapGestureRecognizer Command="{Binding OmitirCommand}"/>

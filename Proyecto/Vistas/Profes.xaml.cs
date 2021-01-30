@@ -13,10 +13,10 @@ namespace Proyecto.Vistas
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Profes
     {
-        public Profes(string opcionMusica)
+        public Profes(string opcionMusica, bool vozEncendida)
         {
             InitializeComponent();
-            BindingContext = new ProfesViewModel(opcionMusica); 
+            BindingContext = new ProfesViewModel(opcionMusica, vozEncendida); 
         }
     }
 }
