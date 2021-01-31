@@ -1,12 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Proyecto.Vistas.ActividadP2">
+             x:Class="Proyecto.Vistas.ActividadP2"             
+             Shell.TabBarIsVisible="False">
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Reporte"/>
         <ToolbarItem Text="Agregar" Command="{Binding AgregarCommand}"/>
         <!--Opción que aparece en la parte superior derecha de la app-->
     </ContentPage.ToolbarItems>
+    <!-- modificar el comportamiento por defecto del boton de atrás-->
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior Command="{Binding BotonAtrasCommand}"/>
+    </Shell.BackButtonBehavior>
     <ContentPage.Content>
         <ScrollView>
             <Grid Padding="14" RowSpacing="0" >

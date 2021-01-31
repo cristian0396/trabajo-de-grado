@@ -20,5 +20,10 @@ namespace Proyecto.Vistas
             InitializeComponent();
             BindingContext = context;
         }
+        protected override bool OnBackButtonPressed()
+        {
+            Shell.Current.GoToAsync("..");
+            return base.OnBackButtonPressed();
+        }
     }
 }

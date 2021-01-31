@@ -33,10 +33,6 @@ namespace Proyecto.Actividades
                 _scene = new PuzzlePresupuesto(ccGView); //inicializar PuzzlePresupuesto
                 ccGView.RunWithScene(_scene); //ejecutar escena
             }
-        }
-        public void IrAtras()
-        {
-            Shell.Current.GoToAsync("../..");
-        }
+        }        
     }    
 }

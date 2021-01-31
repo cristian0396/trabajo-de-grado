@@ -19,6 +19,7 @@ namespace Proyecto.ViewModels
         public ICommand NewCommand { get; set; }
         public ICommand VozCommand { get; set; }
         public string Opcion { get; set; }
+        public int Actividad { get; set; }
         public string OpcionInicial { get; set; }
         public ICommand OmitirCommand { get; set; }
         public CancellationTokenSource _speakButtonCancellationTokenSource { get; set; }
@@ -61,13 +62,31 @@ namespace Proyecto.ViewModels
                     case "4":
                         texto = "Los gastos totales no deben superar el 90% de los ingresos recibidos. " +
                             "Escoger un valor o porcentaje el cual cree que se podría ahorrar después de haber descontado todas las obligaciones.";
-
                         await TextToSpeech.SpeakAsync(texto, _speakButtonCancellationTokenSource.Token);
                         break;
                     case "5":
                         texto = "Es fundamental que los gastos pasados y la deuda personal se tengan en cuenta cuando se crea este tipo de presupuesto, " +
                             "ya que implican una salida de plata. También los ingresos que reciben forman parte fundamental del presupuesto y cualquier " +
                             "ingreso obtenido implica una entrada de plata. ";
+                        await TextToSpeech.SpeakAsync(texto, _speakButtonCancellationTokenSource.Token);
+                        break;
+                    case "6":
+                        texto = "Despues de hacer el presupuesto es recomendable mirar y analizar cada una de las variables que se han identificado y hacer los ajustes que crea pertinentes.";
+                        await TextToSpeech.SpeakAsync(texto, _speakButtonCancellationTokenSource.Token);
+                        break;
+                    case "7":
+                        texto = "Una vez hayas puesto en marcha las recomendaciones, está disponible un documento guia.";
+                        await TextToSpeech.SpeakAsync(texto, _speakButtonCancellationTokenSource.Token);
+                        break;
+                    case "8":
+                        texto = "Futuro Financiero " +
+                            " Sé inteligente con la plata. Empieza a cuidarla para que el dia en que la necesites esté ahi y no tengas que pasar por el suplicio" +
+                            " de pedir prestado, esto afecta tu futuro financiero. Además, comienza a tomar en serio las inversiones de cualquier tipo. ";
+                        await TextToSpeech.SpeakAsync(texto, _speakButtonCancellationTokenSource.Token);
+                        break;
+                    case "9":
+                        texto = "Evita los gastos impulsivos. Una vez que te acostumbras a evitar gastos impulsivos generaras el hábito de la moderación, esto es esencial" +
+                            " a la hora de fijar una meta y poder cumplirla sin ningún contratiempo. ";
                         await TextToSpeech.SpeakAsync(texto, _speakButtonCancellationTokenSource.Token);
                         break;
                 }
@@ -82,7 +101,14 @@ namespace Proyecto.ViewModels
         {
             await Close();
             _speakButtonCancellationTokenSource?.Cancel();
-            await Shell.Current.GoToAsync("ActividadP1");
+            if (Actividad == 1)
+            {
+                await Shell.Current.GoToAsync("ActividadP1");
+            }
+            else
+            {
+                await Shell.Current.GoToAsync("ActividadP2");
+            }            
         }
 
         public async Task NewPopUp()
@@ -97,46 +123,50 @@ namespace Proyecto.ViewModels
                 case "2":
                     Sources.Add("tablero01.png");
                     Sources.Add("juan.png");
-                    Heights.Add(270);
-                    Heights.Add(270);
+                    Heights.Add(240);
+                    Heights.Add(260);
                     PopUpView1 = new Profes("2", SwitchVoz);
                     ((ProfesViewModel)PopUpView1.BindingContext).Sources = Sources;
                     ((ProfesViewModel)PopUpView1.BindingContext).Alturas = Heights;
                     ((ProfesViewModel)PopUpView1.BindingContext).Opcion = "3";
+                    ((ProfesViewModel)PopUpView1.BindingContext).Actividad = 1;
                     await PopupNavigation.Instance.PushAsync(PopUpView1);
                     break;
 
                 case "3":
                     Sources.Add("tablero02.png");
                     Sources.Add("juanca.png");
-                    Heights.Add(270);
-                    Heights.Add(270);
+                    Heights.Add(240);
+                    Heights.Add(260);
                     PopUpView1 = new Profes("3", SwitchVoz);
                     ((ProfesViewModel)PopUpView1.BindingContext).Sources = Sources;
                     ((ProfesViewModel)PopUpView1.BindingContext).Alturas = Heights;
                     ((ProfesViewModel)PopUpView1.BindingContext).Opcion = "4";
+                    ((ProfesViewModel)PopUpView1.BindingContext).Actividad = 1;
                     await PopupNavigation.Instance.PushAsync(PopUpView1);
                     break;
                 case "4":
                     Sources.Add("tablero03.png");
                     Sources.Add("juanca1.png");
-                    Heights.Add(270);
-                    Heights.Add(270);
+                    Heights.Add(240);
+                    Heights.Add(260);
                     PopUpView1 = new Profes("4", SwitchVoz);
                     ((ProfesViewModel)PopUpView1.BindingContext).Sources = Sources;
                     ((ProfesViewModel)PopUpView1.BindingContext).Alturas = Heights;
                     ((ProfesViewModel)PopUpView1.BindingContext).Opcion = "5";
+                    ((ProfesViewModel)PopUpView1.BindingContext).Actividad = 1;
                     await PopupNavigation.Instance.PushAsync(PopUpView1);
                     break;
                 case "5":
                     Sources.Add("tablero04.png");
                     Sources.Add("juan1.png");
-                    Heights.Add(270);
-                    Heights.Add(270);
+                    Heights.Add(240);
+                    Heights.Add(260);
                     PopUpView1 = new Profes("5", SwitchVoz);
                     ((ProfesViewModel)PopUpView1.BindingContext).Sources = Sources;
                     ((ProfesViewModel)PopUpView1.BindingContext).Alturas = Heights;
                     ((ProfesViewModel)PopUpView1.BindingContext).Opcion = "6";
+                    ((ProfesViewModel)PopUpView1.BindingContext).Actividad = 1;
                     await PopupNavigation.Instance.PushAsync(PopUpView1);
                     break;
                 case "6":
@@ -153,6 +183,46 @@ namespace Proyecto.ViewModels
                         "\n" +
                         "5. Los puntos que obtengas, se guardaran automaticamente.\n";
                     await PopupNavigation.Instance.PushAsync(PopUpView);
+                    break;
+                //casos de la lección #2
+                case "7":
+                    Sources.Add("tablero11.png");
+                    Sources.Add("mono2.png");
+                    Heights.Add(240);
+                    Heights.Add(260);
+                    PopUpView1 = new Profes("7", SwitchVoz);
+                    ((ProfesViewModel)PopUpView1.BindingContext).Sources = Sources;
+                    ((ProfesViewModel)PopUpView1.BindingContext).Alturas = Heights;
+                    ((ProfesViewModel)PopUpView1.BindingContext).Opcion = "8";
+                    ((ProfesViewModel)PopUpView1.BindingContext).Actividad = 2;
+                    await PopupNavigation.Instance.PushAsync(PopUpView1);
+                    break;
+                case "8":
+                    Sources.Add("tablero12.png");
+                    Sources.Add("juan2.png");
+                    Heights.Add(240);
+                    Heights.Add(260);
+                    PopUpView1 = new Profes("8", SwitchVoz);
+                    ((ProfesViewModel)PopUpView1.BindingContext).Sources = Sources;
+                    ((ProfesViewModel)PopUpView1.BindingContext).Alturas = Heights;
+                    ((ProfesViewModel)PopUpView1.BindingContext).Opcion = "9";
+                    ((ProfesViewModel)PopUpView1.BindingContext).Actividad = 2;
+                    await PopupNavigation.Instance.PushAsync(PopUpView1);
+                    break;
+                case "9":
+                    Sources.Add("tablero13.png");
+                    Sources.Add("juan3.png");
+                    Heights.Add(240);
+                    Heights.Add(260);
+                    PopUpView1 = new Profes("9", SwitchVoz);
+                    ((ProfesViewModel)PopUpView1.BindingContext).Sources = Sources;
+                    ((ProfesViewModel)PopUpView1.BindingContext).Alturas = Heights;
+                    ((ProfesViewModel)PopUpView1.BindingContext).Opcion = "10";
+                    ((ProfesViewModel)PopUpView1.BindingContext).Actividad = 2;
+                    await PopupNavigation.Instance.PushAsync(PopUpView1);
+                    break;
+                case "10":
+                    await Shell.Current.GoToAsync("ActividadP2");
                     break;
             }
         }

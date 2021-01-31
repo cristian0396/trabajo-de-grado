@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
 
@@ -13,6 +14,7 @@ namespace Proyecto.Actividades
     {
         public string Descripcion { get; set; }
         public IngresoGastos Tema { get; set; }
+        public ICommand BotonAtrasCommand { get; set; }
         public string Valor { get; set; }
         public List<IngresoGastos> IngreGastos { get; set; }
         public List<TPresupuesto> ListaTPresupuesto { get; set; }
@@ -42,6 +44,7 @@ namespace Proyecto.Actividades
         public void InicializarComandos()
         {
             AgregarCommand = new Command(AgregarItemLista);
+            BotonAtrasCommand = new Command(async () => await IrAPresupuesto(), () => true);
         }
         public void AgregarItemLista()
         {
@@ -60,6 +63,10 @@ namespace Proyecto.Actividades
             //ItemsList = new ObservableCollection<TPresupuesto>(ListaTPresupuesto);            
         }
 
+        public async Task IrAPresupuesto() //Función que se activa al dar click en el boton de atrás
+        {
+            await Shell.Current.GoToAsync("../.."); //Con esto se logra retroceder al inicio de presupuesto, se realizan dos retrocesos
+        }
         public class IngresoGastos
         {
             public int ID { get; set; }

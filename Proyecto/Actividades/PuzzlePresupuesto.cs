@@ -181,7 +181,6 @@ namespace Proyecto.Actividades
                     CrearNuevaFicha("r6.png");
                     break;                    
             }
-
         }
 
         private void Checkear(float x, float y)
