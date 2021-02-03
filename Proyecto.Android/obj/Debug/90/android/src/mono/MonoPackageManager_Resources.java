@@ -3,6 +3,7 @@ public class MonoPackageManager_Resources {
 	public static String[] Assemblies = new String[]{
 		/* We need to ensure that "Proyecto.Android.dll" comes first in this list. */
 		"Proyecto.Android.dll",
+		"Behaviors.dll",
 		"box2d.dll",
 		"CocosSharp.dll",
 		"CocosSharp.Forms.dll",

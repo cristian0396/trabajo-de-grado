@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:behaviors="clr-namespace:Behaviors;assembly=Behaviors"
              x:Class="Proyecto.Vistas.ActividadP2"             
              Shell.TabBarIsVisible="False">
     <ContentPage.ToolbarItems>
@@ -26,10 +27,17 @@
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <Picker Grid.Row="0" Grid.Column="0" Title="--Seleccionar--" ItemsSource="{Binding IngreGastos}" ItemDisplayBinding="{Binding Nombre}" SelectedItem="{Binding Tema}"/>
+                <Picker Grid.Row="0" Grid.Column="0" Title="--Seleccionar--" ItemsSource="{Binding IngreGastos}" ItemDisplayBinding="{Binding Nombre}" SelectedItem="{Binding Tema}">
+                    <Picker.Behaviors>
+                        <behaviors:EventHandlerBehavior EventName="SelectedIndexChanged">
+                            <behaviors:InvokeCommandAction  Command="{Binding ItemSeleccionadoCommand}"/>
+                        </behaviors:EventHandlerBehavior>
+                    </Picker.Behaviors>
+                </Picker>
                 <Entry Text="{Binding Valor}" Placeholder="Ingresa el valor" Grid.Row="0" Grid.Column="1"/>
                 <Label Grid.Row="1" Grid.Column="0" Text="Descripción: " FontSize="16" Margin="10,20,0,0"/>
-                <Entry Text="{Binding Descripcion}" Grid.Row="2" Grid.ColumnSpan="2" Margin="0,0,0,10"/>
+                <Picker Grid.Row="2" Grid.ColumnSpan="2" IsEnabled="{Binding ActivarPicker}" Margin="0,0,0,10" Title="--Seleccionar--" ItemsSource="{Binding ListaDescrip}" ItemDisplayBinding="{Binding Descripcion}" SelectedItem="{Binding DescEscogido}" />
+                <!--<Entry Text="{Binding Descripcion}" Grid.Row="2" Grid.ColumnSpan="2" Margin="0,0,0,10"/>-->
                 <!-- Se construye la tableContent con una Listview-->
                 <!-- ListView #1 HEADER-->
                 <Frame Grid.Row="3" Grid.ColumnSpan="2" Padding="0" BackgroundColor="GreenYellow" BorderColor="DarkSlateGray">

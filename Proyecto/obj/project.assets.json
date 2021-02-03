@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     ".NETStandard,Version=v2.0": {
+      "Behaviors.Forms/1.4.0": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "Xamarin.Forms": "3.0.0.482510"
+        },
+        "compile": {
+          "lib/netstandard1.0/Behaviors.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/Behaviors.dll": {}
+        }
+      },
       "CocosSharp/1.7.1": {
         "type": "package",
         "compile": {
@@ -191,6 +204,19 @@
     }
   },
   "libraries": {
+    "Behaviors.Forms/1.4.0": {
+      "sha512": "z0D3U3LgiezsF+uKqG9KJdBTPpfjCZ+gG+ctRHLxC98WCVumBmPhCvBKwFVafMR0Ez87x617BQsgzK5ARu853g==",
+      "type": "package",
+      "path": "behaviors.forms/1.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "behaviors.forms.1.4.0.nupkg.sha512",
+        "behaviors.forms.nuspec",
+        "lib/netstandard1.0/Behaviors.dll",
+        "lib/netstandard1.0/Behaviors.pdb"
+      ]
+    },
     "CocosSharp/1.7.1": {
       "sha512": "ld9x++vo1xqAVb7jy6QZ5VBJ+D5FZhFwjMiMH7OLc+ss0U71hCWRaT/lVKRj2KELI9HoZpf9H0e8mYOYAYZayA==",
       "type": "package",
@@ -1157,6 +1183,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
+      "Behaviors.Forms >= 1.4.0",
       "CocosSharp.Forms >= 1.7.1",
       "NETStandard.Library >= 2.0.3",
       "Newtonsoft.Json >= 12.0.3",
@@ -1212,6 +1239,10 @@
       "netstandard2.0": {
         "targetAlias": "netstandard2.0",
         "dependencies": {
+          "Behaviors.Forms": {
+            "target": "Package",
+            "version": "[1.4.0, )"
+          },
           "CocosSharp.Forms": {
             "target": "Package",
             "version": "[1.7.1, )"

@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Sa+mXcL7byPSWmCWHd4/T/8zdUZ2UqZBwfuJy+CwSZY+QLiAZ2722iRq8UjYOlu5LL1Jyg2wudyFtheVajN3Pw==",
+  "dgSpecHash": "3xTTQMIpcja+eAmTOvCFFIKYMTqMAuyznXRXT3gW5oWTnNRIoJMfVXYRMlhaSnVQ3bDdklkpmwY5yVWFcY/DPw==",
   "success": true,
   "projectFilePath": "G:\\EduFinanzas\\trabajo-de-grado\\Proyecto\\Proyecto.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\alejo\\.nuget\\packages\\behaviors.forms\\1.4.0\\behaviors.forms.1.4.0.nupkg.sha512",
     "C:\\Users\\alejo\\.nuget\\packages\\cocossharp\\1.7.1\\cocossharp.1.7.1.nupkg.sha512",
     "C:\\Users\\alejo\\.nuget\\packages\\cocossharp.forms\\1.7.1\\cocossharp.forms.1.7.1.nupkg.sha512",
     "C:\\Users\\alejo\\.nuget\\packages\\fody\\6.3.0\\fody.6.3.0.nupkg.sha512",

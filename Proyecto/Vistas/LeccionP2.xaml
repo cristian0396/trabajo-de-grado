@@ -6,7 +6,7 @@
              Shell.NavBarIsVisible="False">
     <ContentPage.Content>
         <StackLayout >
-            <Image Source="leccionfondo.png" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+            <Image Source="fondo01.png" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
