@@ -14,9 +14,8 @@ namespace Proyecto.ViewModels
         #region Properties
         private string titulo;
         private string message;
-
+        private string image;
         public ICommand CloseCommand { get; set; }
-
         public string Opcion { get; set; }
         #endregion
 
@@ -27,6 +26,16 @@ namespace Proyecto.ViewModels
             set
             {
                 message = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public string Image
+        {
+            get { return image; }
+            set
+            {
+                image = value;
                 OnPropertyChanged();
             }
         }

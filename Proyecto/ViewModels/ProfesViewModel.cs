@@ -104,6 +104,18 @@ namespace Proyecto.ViewModels
             if (Actividad == 1)
             {
                 await Shell.Current.GoToAsync("ActividadP1");
+                PopUp PopUpView = new PopUp();
+                ((MessageViewModel)PopUpView.BindingContext).Titulo = "Instrucciones";
+                ((MessageViewModel)PopUpView.BindingContext).Message = "1. Relaciona conceptos, encaja la ficha derecha con alguna del lado izquierdo.\n" +
+                    "\n" +
+                    "2. Si encajas la ficha donde no es, pierdes 5 puntos.\n" +
+                    "\n" +
+                    "3. Si la encajas correctamente ganas 10 puntos.\n" +
+                    "\n" +
+                    "4. Cada vez que encajes una pieza, aparece otra en la esquina superior derecha.\n" +
+                    "\n" +
+                    "5. Los puntos que obtengas, se guardaran automaticamente.\n";
+                await PopupNavigation.Instance.PushAsync(PopUpView);
             }
             else
             {

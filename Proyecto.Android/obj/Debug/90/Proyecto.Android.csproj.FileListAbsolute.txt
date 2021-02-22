@@ -1144,7 +1144,6 @@ G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\table
 G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\tablero12.png
 G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\tablero13.png
 G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\fondo01.png
-G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\logosine.png
 G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\logo.png
 G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\uploadflags.txt
 G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\resolvedassemblies.hash
@@ -1624,3 +1623,14 @@ G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\stamp\_ConvertReso
 G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
+G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\logo1.png
+G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\logointerno.png
+G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\bien.png
+G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\mal1.png
+G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\rodri.png
+G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\rodri1.png
+G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\rodri2.png
+G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\agregar.png
+G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\eliminar.png
+G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\limpiar.png
+G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\reporte.png

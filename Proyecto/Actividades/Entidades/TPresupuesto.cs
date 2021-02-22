@@ -7,6 +7,8 @@ namespace Proyecto.Actividades.Entidades
 {
     public class TPresupuesto : BaseModel
     {
+        private int id;
+
         private string descripcion;
 
         private string ingresos;
@@ -14,6 +16,8 @@ namespace Proyecto.Actividades.Entidades
         private string gastos;
 
         private string total;
+
+        private DateTime fecha;
 
         public string Descripcion
         {
@@ -24,7 +28,24 @@ namespace Proyecto.Actividades.Entidades
                 OnPropertyChanged();
             }
         }
-
+        public int ID
+        {
+            get { return id; }
+            set
+            {
+                id = value;
+                OnPropertyChanged();
+            }
+        }
+        public DateTime Fecha
+        {
+            get { return fecha; }
+            set
+            {
+                fecha = value;
+                OnPropertyChanged();
+            }
+        }
         public string Ingresos
         {
             get { return ingresos; }
