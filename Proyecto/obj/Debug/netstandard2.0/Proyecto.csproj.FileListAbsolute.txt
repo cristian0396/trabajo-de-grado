@@ -52,8 +52,6 @@ G:\EduFinanzas\trabajo-de-grado\Proyecto\obj\Debug\netstandard2.0\Vistas\Ahorro.
 G:\EduFinanzas\trabajo-de-grado\Proyecto\obj\Debug\netstandard2.0\Vistas\Inicio.xaml.g.cs
 G:\EduFinanzas\trabajo-de-grado\Proyecto\obj\Debug\netstandard2.0\Vistas\introPresupuesto.xaml.g.cs
 G:\EduFinanzas\trabajo-de-grado\Proyecto\obj\Debug\netstandard2.0\Vistas\JuegoFruit.xaml.g.cs
-G:\EduFinanzas\trabajo-de-grado\Proyecto\obj\Debug\netstandard2.0\Vistas\LeccionP1.xaml.g.cs
-G:\EduFinanzas\trabajo-de-grado\Proyecto\obj\Debug\netstandard2.0\Vistas\LeccionP2.xaml.g.cs
 G:\EduFinanzas\trabajo-de-grado\Proyecto\obj\Debug\netstandard2.0\Vistas\Login.xaml.g.cs
 G:\EduFinanzas\trabajo-de-grado\Proyecto\obj\Debug\netstandard2.0\Vistas\MenuHeader.xaml.g.cs
 G:\EduFinanzas\trabajo-de-grado\Proyecto\obj\Debug\netstandard2.0\Vistas\PlanGastos.xaml.g.cs

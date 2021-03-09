@@ -20,8 +20,6 @@ namespace Proyecto.ViewModels
         {
             SourceImg = sourceImg;
             ActivityOption = activityOption;
-            Console.WriteLine(SourceImg);
-            Console.WriteLine(ActivityOption);
             InicializarComandos();
             PopUpView = new PopUp();
             ActivarPopUps();
@@ -60,6 +58,18 @@ namespace Proyecto.ViewModels
                     ((ProfesViewModel)PopUpView2.BindingContext).Sources = Sources;
                     ((ProfesViewModel)PopUpView2.BindingContext).Alturas = Heights;
                     ((ProfesViewModel)PopUpView2.BindingContext).Opcion = "7";
+                    ((ProfesViewModel)PopUpView2.BindingContext).Actividad = 2;
+                    await PopupNavigation.Instance.PushAsync(PopUpView2);
+                    break;
+                case "3":
+                    Heights.Add(240);
+                    Heights.Add(260);
+                    Sources.Add("punto1.png");
+                    Sources.Add("mujer1.png");
+                    PopUpView2 = new Profes("9", false);
+                    ((ProfesViewModel)PopUpView2.BindingContext).Sources = Sources;
+                    ((ProfesViewModel)PopUpView2.BindingContext).Alturas = Heights;
+                    ((ProfesViewModel)PopUpView2.BindingContext).Opcion = "11";
                     ((ProfesViewModel)PopUpView2.BindingContext).Actividad = 2;
                     await PopupNavigation.Instance.PushAsync(PopUpView2);
                     break;

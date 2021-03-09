@@ -19,13 +19,17 @@ namespace Proyecto.Vistas
         {
             set
             {
-                if (value == "leccionfondo.png")
+                switch (value)
                 {
-                    BindingContext = new FondoLeccionesViewModel(value, "1"); //Se establece la comunicación con el modelView y se manda un parametro indicando la información del modulo que se necesita
-                }
-                else
-                {
-                    BindingContext = new FondoLeccionesViewModel(value, "2"); //Se establece la comunicación con el modelView y se manda un parametro indicando la información del modulo que se necesita
+                    case "leccionfondo.png":
+                        BindingContext = new FondoLeccionesViewModel(value, "1"); //Se establece la comunicación con el modelView y se manda un parametro indicando la información del modulo que se necesita
+                        break;
+                    case "fondo01.png":
+                        BindingContext = new FondoLeccionesViewModel(value, "2"); //Se establece la comunicación con el modelView y se manda un parametro indicando la información del modulo que se necesita
+                        break;
+                    case "fondo1.png":
+                        BindingContext = new FondoLeccionesViewModel(value, "3"); //Se establece la comunicación con el modelView y se manda un parametro indicando la información del modulo que se necesita
+                        break;
                 }
             }
             get { return sourceImg; }
@@ -42,13 +46,18 @@ namespace Proyecto.Vistas
             if (BindingContext == null)
             {
                 string _sourceImg = SourceImg;
-                if (_sourceImg == "leccionfondo.png") {
-                    BindingContext = new FondoLeccionesViewModel(_sourceImg, "1"); //Se establece la comunicación con el modelView y se manda un parametro indicando la información del modulo que se necesita
-                }
-                else
+                switch (_sourceImg)
                 {
-                    BindingContext = new FondoLeccionesViewModel(_sourceImg, "2"); //Se establece la comunicación con el modelView y se manda un parametro indicando la información del modulo que se necesita
-                }               
+                    case "leccionfondo.png":
+                        BindingContext = new FondoLeccionesViewModel(_sourceImg, "1"); //Se establece la comunicación con el modelView y se manda un parametro indicando la información del modulo que se necesita
+                        break;
+                    case "fondo01.png":
+                        BindingContext = new FondoLeccionesViewModel(_sourceImg, "2"); //Se establece la comunicación con el modelView y se manda un parametro indicando la información del modulo que se necesita
+                        break;
+                    case "fondo1.png":
+                        BindingContext = new FondoLeccionesViewModel(_sourceImg, "3"); //Se establece la comunicación con el modelView y se manda un parametro indicando la información del modulo que se necesita
+                        break;
+                }                             
             }
             this.SizeChanged -= NewsListPageSizeChanged;
         }

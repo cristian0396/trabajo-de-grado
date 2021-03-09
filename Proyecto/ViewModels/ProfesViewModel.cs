@@ -238,6 +238,55 @@ namespace Proyecto.ViewModels
                 case "10":
                     await Shell.Current.GoToAsync("ActividadP2");
                     break;
+                //casos de la lección #3
+                case "11":
+                    Sources.Add("punto2.png");
+                    Sources.Add("mujer3.png");
+                    Heights.Add(240);
+                    Heights.Add(260);
+                    PopUpView1 = new Profes("9", SwitchVoz); //arreglar textoAvoz
+                    ((ProfesViewModel)PopUpView1.BindingContext).Sources = Sources;
+                    ((ProfesViewModel)PopUpView1.BindingContext).Alturas = Heights;
+                    ((ProfesViewModel)PopUpView1.BindingContext).Opcion = "12";
+                    ((ProfesViewModel)PopUpView1.BindingContext).Actividad = 2;
+                    await PopupNavigation.Instance.PushAsync(PopUpView1);
+                    break;
+                case "12":
+                    Sources.Add("punto3.png");
+                    Sources.Add("mujer4.png");
+                    Heights.Add(240);
+                    Heights.Add(260);
+                    PopUpView1 = new Profes("8", SwitchVoz);
+                    ((ProfesViewModel)PopUpView1.BindingContext).Sources = Sources;
+                    ((ProfesViewModel)PopUpView1.BindingContext).Alturas = Heights;
+                    ((ProfesViewModel)PopUpView1.BindingContext).Opcion = "13";
+                    ((ProfesViewModel)PopUpView1.BindingContext).Actividad = 2;
+                    await PopupNavigation.Instance.PushAsync(PopUpView1);
+                    break;
+                case "13":
+                    Sources.Add("punto4.png");
+                    Sources.Add("mujer7.png");
+                    Heights.Add(240);
+                    Heights.Add(260);
+                    PopUpView1 = new Profes("9", SwitchVoz);
+                    ((ProfesViewModel)PopUpView1.BindingContext).Sources = Sources;
+                    ((ProfesViewModel)PopUpView1.BindingContext).Alturas = Heights;
+                    ((ProfesViewModel)PopUpView1.BindingContext).Opcion = "14";
+                    ((ProfesViewModel)PopUpView1.BindingContext).Actividad = 2;
+                    await PopupNavigation.Instance.PushAsync(PopUpView1);
+                    break;
+                case "14":
+                    Sources.Add("punto5.png");
+                    Sources.Add("mujer8.png");
+                    Heights.Add(240);
+                    Heights.Add(260);
+                    PopUpView1 = new Profes("9", SwitchVoz);
+                    ((ProfesViewModel)PopUpView1.BindingContext).Sources = Sources;
+                    ((ProfesViewModel)PopUpView1.BindingContext).Alturas = Heights;
+                    ((ProfesViewModel)PopUpView1.BindingContext).Opcion = "15";
+                    ((ProfesViewModel)PopUpView1.BindingContext).Actividad = 2;
+                    await PopupNavigation.Instance.PushAsync(PopUpView1);
+                    break;
             }
         }
     }

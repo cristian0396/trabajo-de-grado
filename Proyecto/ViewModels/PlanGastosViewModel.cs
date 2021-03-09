@@ -11,6 +11,8 @@ namespace Proyecto.ViewModels
     public class PlanGastosViewModel : ViewModelBase
     {
         public ICommand BotonAtrasCommand { get; set; }
+        public ICommand Leccion1Command { get; set; }
+        public ICommand Leccion2Command { get; set; }
 
         public PlanGastosViewModel()
         {
@@ -19,7 +21,18 @@ namespace Proyecto.ViewModels
 
         public void InicializarComandos()
         {
+            Leccion1Command = new Command(async () => await IrALeccion1("fondo1.png"), () => true);
+            Leccion2Command = new Command(async () => await IrALeccion2("fondo01.png"), () => true);
             BotonAtrasCommand = new Command(async () => await IrAInicio(), () => true);
+        }
+        public async Task IrALeccion1(string sourceImage) //Función para que se activa al hacer click en la imagen de la primer lección
+        {
+            await Shell.Current.GoToAsync($"{nameof(FondoLecciones)}?SourceImg={sourceImage}");
+        }
+
+        public async Task IrALeccion2(string sourceImage) //Función para que se activa al hacer click en la imagen de la primer lección
+        {
+            await Shell.Current.GoToAsync($"{nameof(FondoLecciones)}?SourceImg={sourceImage}");
         }
         public async Task IrAInicio() //Función que se activa al dar click en el boton de atrás
         {

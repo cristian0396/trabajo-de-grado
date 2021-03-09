@@ -32,7 +32,11 @@
                     </Grid.ColumnDefinitions>
 
                     <Label Grid.Row="0" Grid.Column="0" Text="Lección 1" FontSize="18"/>
-                    <Image Grid.Row="1" Grid.Column="0" Source="imagen.png"/>
+                    <Image Grid.Row="1" Grid.Column="0" Source="imagen.png">
+                        <Image.GestureRecognizers >
+                            <TapGestureRecognizer Command="{Binding Leccion1Command}" />
+                        </Image.GestureRecognizers>
+                    </Image>
                     <Label Grid.Row="2" Grid.Column="0" Text="Descripción: " FontSize="16" Margin="10,20,0,0"/>
                     <Entry Grid.Row="3" Grid.Column="0"/>
 
