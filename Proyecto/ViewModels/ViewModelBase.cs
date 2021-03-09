@@ -25,6 +25,7 @@ namespace Proyecto.ViewModels
             Routing.RegisterRoute(nameof(LeccionP1), typeof(LeccionP1));
             Routing.RegisterRoute(nameof(LeccionP2), typeof(LeccionP2));
             Routing.RegisterRoute(nameof(ActividadP2), typeof(ActividadP2));
+            Routing.RegisterRoute(nameof(FondoLecciones), typeof(FondoLecciones));
         }
 
         public virtual async Task ConstructorAsync(object parameters)

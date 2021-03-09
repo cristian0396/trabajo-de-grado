@@ -15,7 +15,6 @@ namespace Proyecto.Vistas
     public partial class introPresupuesto : ContentPage
     {
         string modulo;
-        IntroPresupuestoViewModel context;
         public string Modulo
         {
             set

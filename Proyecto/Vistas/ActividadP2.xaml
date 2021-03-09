@@ -12,7 +12,7 @@
     </ContentPage.Resources>
     
     <ContentPage.ToolbarItems>
-        <ToolbarItem IconImageSource="reporte.png" Command="{Binding BotonReporteCommand}"/>
+        <ToolbarItem IconImageSource="reporte.png"  Command="{Binding BotonReporteCommand}"/>
         <ToolbarItem IconImageSource="eliminar.png" Command="{Binding EliminarCommand}"/>
         <ToolbarItem IconImageSource="limpiar.png" Command="{Binding BotonLimpiarCommand}"/>
         <ToolbarItem IconImageSource="agregar.png" Command="{Binding AgregarCommand}"/>
@@ -50,9 +50,9 @@
                 <Picker Grid.Row="2" Grid.Column="0" IsEnabled="{Binding ActivarPicker}" Margin="0,0,0,10" Title="--Seleccionar--" ItemsSource="{Binding ListaDescrip}" ItemDisplayBinding="{Binding Descripcion}" SelectedItem="{Binding DescEscogido}" />
                 <Picker Grid.Row="2" Grid.Column="1" Margin="0,0,0,10" Title="Periodo" ItemsSource="{Binding ListaPeriodo}" ItemDisplayBinding="{Binding Valor}" SelectedItem="{Binding Periocicidad}" />
                 <Label Grid.Row="3" Grid.Column="0" Text="Total de gastos: " FontSize="15" VerticalOptions="Center" HorizontalOptions="Center"  TextColor="Black"/>
-                <Label Grid.Row="3"  Grid.Column="1" Text="{Binding TotalGastos}" FontSize="15" VerticalOptions="Center" HorizontalOptions="Center" TextColor="Black"/>
+                <Label Grid.Row="3"  Grid.Column="1" Text="{Binding TotalGastosFormat}" FontSize="15" VerticalOptions="Center" HorizontalOptions="Center" TextColor="Black"/>
                 <Label Grid.Row="4" Grid.Column="0" Text="Total de ingresos: " FontSize="15" VerticalOptions="Center" HorizontalOptions="Center" TextColor="Black"/>
-                <Label Grid.Row="4" Grid.Column="1" Text="{Binding TotalIngresos}" FontSize="15" VerticalOptions="Center" HorizontalOptions="Center" TextColor="Black" />
+                <Label Grid.Row="4" Grid.Column="1" Text="{Binding TotalIngresosFormat}" FontSize="15" VerticalOptions="Center" HorizontalOptions="Center" TextColor="Black" />
                 <!-- ListView #1 HEADER-->
                 <Frame Grid.Row="5" Grid.ColumnSpan="2" Padding="0" BackgroundColor="GreenYellow" BorderColor="DarkSlateGray">
                     <Grid Padding="0">
@@ -74,9 +74,9 @@
                     </Grid>
                 </Frame>
                 <!-- Contenido de la Listview #1-->
-                <ListView x:Name="ListaPresupuesto" Grid.Row="6" ItemsSource="{Binding ItemsList}" SelectedItem="{Binding ItemSeleccionado, Mode=TwoWay}" Grid.ColumnSpan="2" SeparatorVisibility="None"  HasUnevenRows="False">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
+                <ListView x:Name="ListaPresupuesto" Grid.Row="6" ItemsSource="{Binding ItemsList}" SelectedItem="{Binding ItemSeleccionado, Mode=TwoWay}" Grid.ColumnSpan="2" SeparatorVisibility="None"  HasUnevenRows="False" >
+                    <ListView.ItemTemplate TextColor="Black">
+                        <DataTemplate >
                             <ViewCell>
                                 <Grid Padding="0" RowSpacing="0">
                                     <Grid.ColumnDefinitions>
@@ -86,7 +86,7 @@
                                         <ColumnDefinition Width="80"/>
                                     </Grid.ColumnDefinitions>
 
-                                    <Label Grid.Column="0" Text="{Binding Descripcion}" FontSize="15" VerticalOptions="Center" HorizontalOptions="Center" TextColor="Black"/>
+                                    <Label Grid.Column="0" Text="{Binding Descripcion}" FontSize="15" VerticalOptions="Center" HorizontalOptions="Start" />
                                     <Label Grid.Column="1" Text="{Binding Ingresos}" FontSize="15" VerticalOptions="Center" HorizontalOptions="Center" />
                                     <Label Grid.Column="2" Text="{Binding Gastos}" FontSize="15" VerticalOptions="Center" HorizontalOptions="Center" />
                                     <Label Grid.Column="3" Text="{Binding Fecha}" FontSize="15" VerticalOptions="Center" HorizontalOptions="Center"/>

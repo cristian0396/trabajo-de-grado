@@ -23,19 +23,19 @@ namespace Proyecto.ViewModels
 
         public void InicializarComandos()
         {
-            Actividad1Command = new Command(async () => await IrAActividad1(), () => true);
-            Actividad2Command = new Command(async () => await IrAActividad2(), () => true);
+            Actividad1Command = new Command(async () => await IrAActividad1("leccionfondo.png"), () => true);
+            Actividad2Command = new Command(async () => await IrAActividad2("fondo01.png"), () => true);
             BotonAtrasCommand = new Command(async () => await IrAInicio(), () => true);
             juegoCommand = new Command(async () => await IrAJuego(), () => true);
         }
-        public async Task IrAActividad1() //Función para que se activa al hacer click en la imagen de la primer lección
+        public async Task IrAActividad1(string sourceImage) //Función para que se activa al hacer click en la imagen de la primer lección
         {
-            await Shell.Current.GoToAsync("LeccionP1");
+            await Shell.Current.GoToAsync($"{nameof(FondoLecciones)}?SourceImg={sourceImage}");
         }
 
-        public async Task IrAActividad2() //Función para que se activa al hacer click en la imagen de la primer lección
+        public async Task IrAActividad2(string sourceImage) //Función para que se activa al hacer click en la imagen de la primer lección
         {
-            await Shell.Current.GoToAsync("LeccionP2");
+            await Shell.Current.GoToAsync($"{nameof(FondoLecciones)}?SourceImg={sourceImage}");
         }
 
         public async Task IrAInicio() //Función que se activa al dar click en el boton de atrás

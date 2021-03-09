@@ -115,6 +115,7 @@ namespace Proyecto.ViewModels
                     "4. Cada vez que encajes una pieza, aparece otra en la esquina superior derecha.\n" +
                     "\n" +
                     "5. Los puntos que obtengas, se guardaran automaticamente.\n";
+                ((MessageViewModel)PopUpView.BindingContext).ActivarConsejos = false;
                 await PopupNavigation.Instance.PushAsync(PopUpView);
             }
             else
@@ -194,6 +195,7 @@ namespace Proyecto.ViewModels
                         "4. Cada vez que encajes una pieza, aparece otra en la esquina superior derecha.\n" +
                         "\n" +
                         "5. Los puntos que obtengas, se guardaran automaticamente.\n";
+                    ((MessageViewModel)PopUpView.BindingContext).ActivarConsejos = false;
                     await PopupNavigation.Instance.PushAsync(PopUpView);
                     break;
                 //casos de la lección #2

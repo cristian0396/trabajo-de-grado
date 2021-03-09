@@ -5,6 +5,7 @@ using Rg.Plugins.Popup.Services;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Globalization;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -17,6 +18,8 @@ namespace Proyecto.Actividades
         public int TotalIngresos { get; set; }
         public int PosicionActual { get; set; }
         public int TotalGastos { get; set; }
+        public string TotalGastosFormat { get; set; }
+        public string TotalIngresosFormat { get; set; }
         public bool ActivarPicker { get; set; }
         public IngresoGastos Tema { get; set; }
         public Periodo Periocicidad { get; set; }
@@ -60,6 +63,8 @@ namespace Proyecto.Actividades
             PosicionActual = 0;
             TotalIngresos = 0;
             TotalGastos = 0;
+            TotalGastosFormat = 0.ToString("C");
+            TotalIngresosFormat = 0.ToString("C");
             ActivarPicker = false;
             IngreGastos = new List<IngresoGastos>()
             {
@@ -93,12 +98,24 @@ namespace Proyecto.Actividades
             TotalGastos = 0;
             TotalIngresos = 0;
             PosicionActual = 0;
+            TotalIngresosFormat = "0";
+            TotalGastosFormat = "0";
         }
 
         public void EliminarItemSeleccionado()
         {
             if(itemsList.Count > 0)
             {
+                if(itemSeleccionado.Ingresos != "")
+                {
+                    TotalIngresos -= int.Parse(ItemSeleccionado.Ingresos, NumberStyles.Currency);
+                    TotalIngresosFormat = TotalIngresos.ToString("C");                    
+                }
+                else
+                {
+                    TotalGastos -= int.Parse(ItemSeleccionado.Gastos, NumberStyles.Currency);
+                    TotalGastosFormat = TotalGastos.ToString("C");
+                }                
                 int indice = ItemsList.IndexOf(ItemSeleccionado);
                 ItemsList.RemoveAt(indice);
                 PosicionActual -= 1;
@@ -149,12 +166,14 @@ namespace Proyecto.Actividades
                 {
                     valorAnual = Convert.ToInt32(Valor) * 12;
                     TotalIngresos += valorAnual;
-                    temp.Ingresos = Convert.ToString(valorAnual);
+                    TotalIngresosFormat = TotalIngresos.ToString("C");
+                    temp.Ingresos = valorAnual.ToString("C");
                 }
                 else
                 {
-                    temp.Ingresos = Valor;
+                    temp.Ingresos = Convert.ToInt32(Valor).ToString("C");
                     TotalIngresos += Convert.ToInt32(Valor);
+                    TotalIngresosFormat = Convert.ToInt32(TotalIngresos).ToString("C");
                 }                
             }
             else
@@ -163,13 +182,15 @@ namespace Proyecto.Actividades
                 {
                     valorAnual = Convert.ToInt32(Valor) * 12;
                     TotalGastos += valorAnual;
-                    temp.Gastos = Convert.ToString(valorAnual);
+                    TotalGastosFormat = TotalGastos.ToString("C");
+                    temp.Gastos = valorAnual.ToString("C");
 
                 }
                 else
                 {
-                    temp.Gastos = Valor;
+                    temp.Gastos = Convert.ToInt32(Valor).ToString("C");
                     TotalGastos += Convert.ToInt32(Valor);
+                    TotalGastosFormat = Convert.ToInt32(TotalGastos).ToString("C");
                 }                
             }
             
@@ -181,12 +202,25 @@ namespace Proyecto.Actividades
         public async Task GenerarReporte()
         {
             PopUp PopUpView = new PopUp();
+            bool mensual;
+            if(Periocicidad.Valor == "Mensual")
+            {
+                mensual = true;
+            }
+            else
+            {
+                mensual = false;
+            }
             if (TotalIngresos > TotalGastos)
             {
                 ((MessageViewModel)PopUpView.BindingContext).Image = "bien.png";
                 ((MessageViewModel)PopUpView.BindingContext).Message = "Tus ingresos están por encima de tus gastos, vas muy bien," +
                     " eso significa que puedes ahorrar o darte un gusto de vez en cuando, pero con moderación, también podrías ahorrar lo suficiente" +
                     " para poder invertirlo en lo que tu quieras.";
+                ((MessageViewModel)PopUpView.BindingContext).ActivarConsejos = true;
+                ((MessageViewModel)PopUpView.BindingContext).TotalIngresos = TotalIngresos;
+                ((MessageViewModel)PopUpView.BindingContext).TotalGastos = TotalGastos;
+                ((MessageViewModel)PopUpView.BindingContext).Mensual = mensual;
                 await PopupNavigation.Instance.PushAsync(PopUpView);
             }
             else if(TotalIngresos < TotalGastos){
