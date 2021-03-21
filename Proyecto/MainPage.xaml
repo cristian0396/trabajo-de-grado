@@ -18,6 +18,5 @@
         <ShellContent Title="Configuración " Icon="administracion.png" IsTabStop="True" ContentTemplate="{DataTemplate local:Inicio}"/>
         <ShellContent Title="Ayuda " Icon="pregunta.png" IsTabStop="True" ContentTemplate="{DataTemplate local:Inicio}"/>
     </FlyoutItem>    
-
     <ShellContent Title="Cerrar Sesión " Icon="leave.png" IsTabStop="True" ContentTemplate="{DataTemplate local:Inicio}"/>
 </Shell>

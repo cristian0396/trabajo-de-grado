@@ -11,8 +11,8 @@ namespace Proyecto.ViewModels
 {
     public class PresupuestoViewModel : ViewModelBase
     {
-        public ICommand Actividad1Command { get; set; }
-        public ICommand Actividad2Command { get; set; }
+        public ICommand Leccion1Command { get; set; }
+        public ICommand Leccion2Command { get; set; }
         public ICommand BotonAtrasCommand { get; set; }
         public ICommand juegoCommand { get; set; }        
 
@@ -23,18 +23,20 @@ namespace Proyecto.ViewModels
 
         public void InicializarComandos()
         {
-            Actividad1Command = new Command(async () => await IrAActividad1("leccionfondo.png"), () => true);
-            Actividad2Command = new Command(async () => await IrAActividad2("fondo01.png"), () => true);
+            Leccion1Command = new Command(async () => await IrALeccion1(), () => true);
+            Leccion2Command = new Command(async () => await IrALeccion2(), () => true);
             BotonAtrasCommand = new Command(async () => await IrAInicio(), () => true);
             juegoCommand = new Command(async () => await IrAJuego(), () => true);
         }
-        public async Task IrAActividad1(string sourceImage) //Función para que se activa al hacer click en la imagen de la primer lección
+        public async Task IrALeccion1() //Función que se activa al hacer click en la imagen de la primer lección
         {
+            string sourceImage = "leccionfondo.png";
             await Shell.Current.GoToAsync($"{nameof(FondoLecciones)}?SourceImg={sourceImage}");
         }
 
-        public async Task IrAActividad2(string sourceImage) //Función para que se activa al hacer click en la imagen de la primer lección
+        public async Task IrALeccion2() //Función que se activa al hacer click en la imagen de la primer lección
         {
+            string sourceImage = "fondo01.png";
             await Shell.Current.GoToAsync($"{nameof(FondoLecciones)}?SourceImg={sourceImage}");
         }
 
@@ -43,7 +45,7 @@ namespace Proyecto.ViewModels
             await Shell.Current.GoToAsync("../.."); //Con esto se logra retroceder al inicio, se realizan dos retrocesos
         }
          
-        public async Task IrAJuego() //Función para que se activa al hacer click en la imagen de la primer lección
+        public async Task IrAJuego() //Función que se activa al hacer click en la imagen de la primer lección
         {
             await Shell.Current.GoToAsync("JuegoFruit");
         }

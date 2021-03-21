@@ -33,10 +33,15 @@ namespace Proyecto.ViewModels
         public ICommand ComandoOmitir { get; set; }
 
         public IntroPresupuestoViewModel(string Modulo)
-        {//Constructor donde se recibe el idModulo y con respecto a ello se muestran los diferentes iconos, definiciones y ejemplos de cada modulo
+        {//Constructor 
             PopUpView = new PopUpUniversal();
-
             IDModulo = Modulo;
+            EscogerIntroduccion();            
+        }
+
+        //Funcion donde se recibe el idModulo y con respecto a el se muestran los diferentes iconos, definiciones y ejemplos respectivos
+        private void EscogerIntroduccion()
+        {
             if (IDModulo == "1")
             {
                 Introduccion = new ObservableCollection<IntroduccionModel>
@@ -70,7 +75,7 @@ namespace Proyecto.ViewModels
 
                 };
             }
-            else if(IDModulo == "2")
+            else if (IDModulo == "2")
             {
                 Introduccion = new ObservableCollection<IntroduccionModel>
                 {
@@ -134,9 +139,7 @@ namespace Proyecto.ViewModels
                     }
                 };
             }
-                                 
-            
-            foreach(var intro in Introduccion)
+            foreach (var intro in Introduccion)
             {
                 intro.CarouselItem.BindingContext = intro;
 
@@ -154,14 +157,9 @@ namespace Proyecto.ViewModels
                 if (PosicionIndice == Introduccion.Count - 1)
                 {
                     List<int> Heights = new List<int>() { 135, 220 };
-                    ((PopUpViewModel)PopUpView.BindingContext).Message = "Este es el Total Ingresos, aquí encontraras todos los ingresos recibidos" +
+                    string message = "Este es el Total Ingresos, aquí encontraras todos los ingresos recibidos" +
                     " y se calcula sumando todos los aportes en este caso: tu sueldo y el aporte familiar.";
-                    ((PopUpViewModel)PopUpView.BindingContext).Rotacion = 90;
-                    ((PopUpViewModel)PopUpView.BindingContext).Escala = 1;
-                    ((PopUpViewModel)PopUpView.BindingContext).Source = "flecha1.png";
-                    ((PopUpViewModel)PopUpView.BindingContext).Alturas = Heights;
-                    ((PopUpViewModel)PopUpView.BindingContext).Opcion = "3";
-                    ((PopUpViewModel)PopUpView.BindingContext).GridColumn = 1;
+                    ((PopUpViewModel)PopUpView.BindingContext).InitializeFields( _popUp: ((PopUpViewModel)PopUpView.BindingContext), rotacion: 90, escala: 1, source: "flecha1.png", alturas: Heights, opcion: "3", gridColumn: 1, message: message);
                     PopupNavigation.Instance.PushAsync(PopUpView);
                 }                
             }

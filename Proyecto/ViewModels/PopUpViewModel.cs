@@ -14,9 +14,7 @@ namespace Proyecto.ViewModels
         public int Rotacion { get; set; }
         public float Escala { get; set; }
         public string Source { get; set; }
-        public List<int> Alturas { get; set; }
-        public ICommand CloseCommand { get; set; }
-        public ICommand NewCommand { get; set; }
+        public List<int> Alturas { get; set; }        
         public string Opcion { get; set; }
         public int GridColumn { get; set; }
         public int Width { get; set; }
@@ -31,6 +29,8 @@ namespace Proyecto.ViewModels
                 OnPropertyChanged();
             }
         }
+        public ICommand CloseCommand { get; set; }
+        public ICommand NewCommand { get; set; }
 
         public PopUpViewModel()
         {
@@ -42,10 +42,24 @@ namespace Proyecto.ViewModels
             await PopupNavigation.Instance.PopAsync();
         }
 
+        public void InitializeFields(PopUpViewModel _popUp, int rotacion = default(int), float escala =  default(float), string source = default(string), List<int> alturas = default(List<int>), string opcion = default(string), int gridColumn = default(int), int width = default(int), string message = default(string))
+        {
+            _popUp.Rotacion = rotacion;
+            _popUp.Escala = escala;
+            _popUp.Source = source;
+            _popUp.Alturas = alturas;
+            _popUp.Opcion = opcion;
+            _popUp.GridColumn = gridColumn;
+            _popUp.Width = width;
+            _popUp.Message = message;
+        }
         public async Task NewPopUp()
         {
             PopUpUniversal PopUpView = new PopUpUniversal();
             List<int> Heights = new List<int>();
+            string message, _source = "flecha.png";
+            int _rotacion = -90, _escala = 1, _gridColumn = 0;
+
             await PopupNavigation.Instance.PopAsync();
             switch (Opcion)
             {
@@ -53,55 +67,35 @@ namespace Proyecto.ViewModels
                     Heights.Add(200);
                     Heights.Add(170);
                     Heights.Add(180);
-                    ((PopUpViewModel)PopUpView.BindingContext).Message = "Estos gastos generalmente no cambian" +
+                    message = "Estos gastos generalmente no cambian" +
                         " es decir, se mantienen porque cubren las necesidades más basicas de cada persona.";
-                    ((PopUpViewModel)PopUpView.BindingContext).Opcion = "4";
-                    ((PopUpViewModel)PopUpView.BindingContext).Rotacion = -90;
-                    ((PopUpViewModel)PopUpView.BindingContext).Escala = 1;
-                    ((PopUpViewModel)PopUpView.BindingContext).Source = "flecha.png";
-                    ((PopUpViewModel)PopUpView.BindingContext).Alturas = Heights;
-                    ((PopUpViewModel)PopUpView.BindingContext).GridColumn = 0;
+                    ((PopUpViewModel)PopUpView.BindingContext).InitializeFields(_popUp: ((PopUpViewModel)PopUpView.BindingContext), rotacion: _rotacion, escala: _escala, source: _source, alturas: Heights, opcion: "4", gridColumn: _gridColumn, message: message);
                     await PopupNavigation.Instance.PushAsync(PopUpView);
                     break;
                 case "4":
                     Heights.Add(248);
                     Heights.Add(170);
                     Heights.Add(180);
-                    ((PopUpViewModel)PopUpView.BindingContext).Message = "Estos gastos son todos aquellos que pueden diferir en cada mes" +
+                    message = "Estos gastos son todos aquellos que pueden diferir en cada mes" +
                         " según la actividad de la persona.";
-                    ((PopUpViewModel)PopUpView.BindingContext).Opcion = "5";
-                    ((PopUpViewModel)PopUpView.BindingContext).Rotacion = -90;
-                    ((PopUpViewModel)PopUpView.BindingContext).Escala = 1;
-                    ((PopUpViewModel)PopUpView.BindingContext).Source = "flecha.png";
-                    ((PopUpViewModel)PopUpView.BindingContext).Alturas = Heights;
-                    ((PopUpViewModel)PopUpView.BindingContext).GridColumn = 0;
+                    ((PopUpViewModel)PopUpView.BindingContext).InitializeFields(_popUp: ((PopUpViewModel)PopUpView.BindingContext), rotacion: _rotacion, escala: _escala, source: _source, alturas: Heights, opcion: "5", gridColumn: _gridColumn, message: message);
                     await PopupNavigation.Instance.PushAsync(PopUpView);
                     break;
                 case "5":
                     Heights.Add(290);
                     Heights.Add(170);
                     Heights.Add(180);
-                    ((PopUpViewModel)PopUpView.BindingContext).Message = "El ahorro es definido por cada persona para que se acomode a sus capacidades económicas, " +
+                    message = "El ahorro es definido por cada persona para que se acomode a sus capacidades económicas, " +
                         "se recomienda que sea fijo y de al menos el 10% del total de los ingresos.";
-                    ((PopUpViewModel)PopUpView.BindingContext).Opcion = "6";
-                    ((PopUpViewModel)PopUpView.BindingContext).Rotacion = -90;
-                    ((PopUpViewModel)PopUpView.BindingContext).Escala = 1;
-                    ((PopUpViewModel)PopUpView.BindingContext).Source = "flecha.png";
-                    ((PopUpViewModel)PopUpView.BindingContext).Alturas = Heights;
-                    ((PopUpViewModel)PopUpView.BindingContext).GridColumn = 0;
+                    ((PopUpViewModel)PopUpView.BindingContext).InitializeFields(_popUp: ((PopUpViewModel)PopUpView.BindingContext), rotacion: _rotacion, escala: _escala, source: _source, alturas: Heights, opcion: "6", gridColumn: _gridColumn, message: message);
                     await PopupNavigation.Instance.PushAsync(PopUpView);
                     break;
                 case "6":
                     Heights.Add(320);
                     Heights.Add(180);
-                    ((PopUpViewModel)PopUpView.BindingContext).Message = "Este es el Total de gastos," +
+                    message = "Este es el Total de gastos," +
                         " se calcula sumando todos los gastos, tanto gastos fijos como variables, se debe tener en cuenta cualquier salida de plata.";
-                    ((PopUpViewModel)PopUpView.BindingContext).Rotacion = 90;
-                    ((PopUpViewModel)PopUpView.BindingContext).Escala = 1;
-                    ((PopUpViewModel)PopUpView.BindingContext).Source = "flecha1.png";
-                    ((PopUpViewModel)PopUpView.BindingContext).Alturas = Heights;
-                    ((PopUpViewModel)PopUpView.BindingContext).GridColumn = 1;
-                    ((PopUpViewModel)PopUpView.BindingContext).Width = 60;
+                    ((PopUpViewModel)PopUpView.BindingContext).InitializeFields(_popUp: ((PopUpViewModel)PopUpView.BindingContext), rotacion: 90, escala: _escala, source: "flecha1.png", alturas: Heights, gridColumn: 1, message: message, width: 60);
                     await PopupNavigation.Instance.PushAsync(PopUpView);
                     break;
             }
