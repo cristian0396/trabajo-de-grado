@@ -18,9 +18,9 @@ namespace Proyecto.ViewModels
         public bool ActivarConsejos { get; set; }
         public int TotalIngresos { get; set; }
         public int TotalGastos { get; set; }
-        public bool Mensual { get; set; }
-        public ICommand CloseCommand { get; set; }
+        public bool Mensual { get; set; }        
         public string Opcion { get; set; }
+        public ICommand CloseCommand { get; set; }
         #endregion
 
         #region Getters y Setters
@@ -60,6 +60,12 @@ namespace Proyecto.ViewModels
             CloseCommand = new Command(async () => await Close(), () => true);
         }
 
+        public void InitializeFields(MessageViewModel _popUp, string titulo = default(string), string mensaje = default(string), bool activarConsejos = default(bool))
+        {
+            _popUp.Titulo = titulo;
+            _popUp.Message = mensaje;
+            _popUp.ActivarConsejos = activarConsejos;
+        }
         public async Task Close()
         {
             await PopupNavigation.Instance.PopAsync();

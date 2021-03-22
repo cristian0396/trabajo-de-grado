@@ -1123,8 +1123,6 @@ G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\juan.
 G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\juan1.png
 G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\juanca.png
 G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\juanca1.png
-G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\profe.png
-G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\profe2.png
 G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\leccionfondo.png
 G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\tablero0.png
 G:\EduFinanzas\trabajo-de-grado\Proyecto.Android\obj\Debug\90\res\drawable\tablero02.png

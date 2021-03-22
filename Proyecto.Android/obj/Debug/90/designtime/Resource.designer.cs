@@ -13721,88 +13721,82 @@ namespace Proyecto.Droid
 			public const int PresupuestoInicial = 2131165187;
 			
 			// aapt resource value: 0x7F0700A9
-			public const int profe = 2131165353;
+			public const int punto1 = 2131165353;
 			
 			// aapt resource value: 0x7F0700AA
-			public const int profe2 = 2131165354;
+			public const int punto2 = 2131165354;
 			
 			// aapt resource value: 0x7F0700AB
-			public const int punto1 = 2131165355;
+			public const int punto3 = 2131165355;
 			
 			// aapt resource value: 0x7F0700AC
-			public const int punto2 = 2131165356;
+			public const int punto4 = 2131165356;
 			
 			// aapt resource value: 0x7F0700AD
-			public const int punto3 = 2131165357;
+			public const int punto5 = 2131165357;
 			
 			// aapt resource value: 0x7F0700AE
-			public const int punto4 = 2131165358;
+			public const int reporte = 2131165358;
 			
 			// aapt resource value: 0x7F0700AF
-			public const int punto5 = 2131165359;
+			public const int rodri = 2131165359;
 			
 			// aapt resource value: 0x7F0700B0
-			public const int reporte = 2131165360;
+			public const int rodri1 = 2131165360;
 			
 			// aapt resource value: 0x7F0700B1
-			public const int rodri = 2131165361;
+			public const int rodri2 = 2131165361;
 			
 			// aapt resource value: 0x7F0700B2
-			public const int rodri1 = 2131165362;
+			public const int safeIn = 2131165362;
 			
 			// aapt resource value: 0x7F0700B3
-			public const int rodri2 = 2131165363;
+			public const int smiling = 2131165363;
 			
 			// aapt resource value: 0x7F0700B4
-			public const int safeIn = 2131165364;
+			public const int splash_screen = 2131165364;
 			
 			// aapt resource value: 0x7F0700B5
-			public const int smiling = 2131165365;
+			public const int tablahorro = 2131165365;
 			
 			// aapt resource value: 0x7F0700B6
-			public const int splash_screen = 2131165366;
+			public const int tablero0 = 2131165366;
 			
 			// aapt resource value: 0x7F0700B7
-			public const int tablahorro = 2131165367;
+			public const int tablero01 = 2131165367;
 			
 			// aapt resource value: 0x7F0700B8
-			public const int tablero0 = 2131165368;
+			public const int tablero02 = 2131165368;
 			
 			// aapt resource value: 0x7F0700B9
-			public const int tablero01 = 2131165369;
+			public const int tablero03 = 2131165369;
 			
 			// aapt resource value: 0x7F0700BA
-			public const int tablero02 = 2131165370;
+			public const int tablero04 = 2131165370;
 			
 			// aapt resource value: 0x7F0700BB
-			public const int tablero03 = 2131165371;
+			public const int tablero10 = 2131165371;
 			
 			// aapt resource value: 0x7F0700BC
-			public const int tablero04 = 2131165372;
+			public const int tablero11 = 2131165372;
 			
 			// aapt resource value: 0x7F0700BD
-			public const int tablero10 = 2131165373;
+			public const int tablero12 = 2131165373;
 			
 			// aapt resource value: 0x7F0700BE
-			public const int tablero11 = 2131165374;
+			public const int tablero13 = 2131165374;
 			
 			// aapt resource value: 0x7F0700BF
-			public const int tablero12 = 2131165375;
+			public const int tooltip_frame_dark = 2131165375;
 			
 			// aapt resource value: 0x7F0700C0
-			public const int tablero13 = 2131165376;
+			public const int tooltip_frame_light = 2131165376;
 			
 			// aapt resource value: 0x7F0700C1
-			public const int tooltip_frame_dark = 2131165377;
+			public const int travel = 2131165377;
 			
 			// aapt resource value: 0x7F0700C2
-			public const int tooltip_frame_light = 2131165378;
-			
-			// aapt resource value: 0x7F0700C3
-			public const int travel = 2131165379;
-			
-			// aapt resource value: 0x7F0700C4
-			public const int user = 2131165380;
+			public const int user = 2131165378;
 			
 			static Drawable()
 			{

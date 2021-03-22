@@ -34,7 +34,7 @@ namespace Proyecto.ViewModels
             await Shell.Current.GoToAsync($"{nameof(FondoLecciones)}?SourceImg={sourceImage}");
         }
 
-        public async Task IrALeccion2() //Función que se activa al hacer click en la imagen de la primer lección
+        public async Task IrALeccion2() //Función que se activa al hacer click en la imagen de la segunda lección
         {
             string sourceImage = "fondo01.png";
             await Shell.Current.GoToAsync($"{nameof(FondoLecciones)}?SourceImg={sourceImage}");
@@ -45,7 +45,7 @@ namespace Proyecto.ViewModels
             await Shell.Current.GoToAsync("../.."); //Con esto se logra retroceder al inicio, se realizan dos retrocesos
         }
          
-        public async Task IrAJuego() //Función que se activa al hacer click en la imagen de la primer lección
+        public async Task IrAJuego() //Función que se activa al hacer click en la imagen emoji
         {
             await Shell.Current.GoToAsync("JuegoFruit");
         }

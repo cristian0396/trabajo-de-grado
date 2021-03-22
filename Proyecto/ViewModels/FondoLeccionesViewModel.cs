@@ -20,8 +20,8 @@ namespace Proyecto.ViewModels
         {
             SourceImg = sourceImg;
             ActivityOption = activityOption;
-            InicializarComandos();
             PopUpView = new PopUp();
+            InicializarComandos();            
             ActivarPopUps();
         }
 
@@ -32,49 +32,33 @@ namespace Proyecto.ViewModels
 
         public async Task ActivarPopUps()
         {
-            List<int> Heights = new List<int>();
+            List<int> Heights = new List<int>() { 240,260};
             List<string> Sources = new List<string>();
             Profes PopUpView2;
             switch (ActivityOption)
             {
-                case "1":
-                    Heights.Add(240);
-                    Heights.Add(260);
+                case "1":                    
                     Sources.Add("tablero0.png");
                     Sources.Add("juan1.png");
                     PopUpView2 = new Profes("1", false);
-                    ((ProfesViewModel)PopUpView2.BindingContext).Sources = Sources;
-                    ((ProfesViewModel)PopUpView2.BindingContext).Alturas = Heights;
-                    ((ProfesViewModel)PopUpView2.BindingContext).Opcion = "2";
-                    ((ProfesViewModel)PopUpView2.BindingContext).Actividad = 1;
+                    ((ProfesViewModel)PopUpView2.BindingContext).InitializeFields(_popUp: ((ProfesViewModel)PopUpView2.BindingContext), sources: Sources, alturas: Heights, actividad: 1, opcion: "2");
                     await PopupNavigation.Instance.PushAsync(PopUpView2);
                     break;
                 case "2":
-                    Heights.Add(240);
-                    Heights.Add(260);
                     Sources.Add("tablero10.png");
                     Sources.Add("mono3.png");
                     PopUpView2 = new Profes("6", false);
-                    ((ProfesViewModel)PopUpView2.BindingContext).Sources = Sources;
-                    ((ProfesViewModel)PopUpView2.BindingContext).Alturas = Heights;
-                    ((ProfesViewModel)PopUpView2.BindingContext).Opcion = "7";
-                    ((ProfesViewModel)PopUpView2.BindingContext).Actividad = 2;
+                    ((ProfesViewModel)PopUpView2.BindingContext).InitializeFields(_popUp: ((ProfesViewModel)PopUpView2.BindingContext), sources: Sources, alturas: Heights, actividad: 2, opcion: "7");
                     await PopupNavigation.Instance.PushAsync(PopUpView2);
                     break;
                 case "3":
-                    Heights.Add(240);
-                    Heights.Add(260);
                     Sources.Add("punto1.png");
                     Sources.Add("mujer1.png");
                     PopUpView2 = new Profes("9", false);
-                    ((ProfesViewModel)PopUpView2.BindingContext).Sources = Sources;
-                    ((ProfesViewModel)PopUpView2.BindingContext).Alturas = Heights;
-                    ((ProfesViewModel)PopUpView2.BindingContext).Opcion = "11";
-                    ((ProfesViewModel)PopUpView2.BindingContext).Actividad = 2;
+                    ((ProfesViewModel)PopUpView2.BindingContext).InitializeFields(_popUp: ((ProfesViewModel)PopUpView2.BindingContext), sources: Sources, alturas: Heights, actividad: 2, opcion: "11");
                     await PopupNavigation.Instance.PushAsync(PopUpView2);
                     break;
-            }
-            
+            }            
         }
     }
 }

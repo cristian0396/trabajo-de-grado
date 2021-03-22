@@ -265,12 +265,6 @@
     <AndroidResource Include="Resources\drawable\juanca1.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\profe.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\profe2.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable\leccionfondo.png" />
   </ItemGroup>
   <ItemGroup>
@@ -411,7 +405,7 @@
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties XamarinHotReloadUnhandledDeviceExceptionProyectoAndroidHideInfoBar="True" TriggeredFromHotReload="False" />
+      <UserProperties TriggeredFromHotReload="False" XamarinHotReloadUnhandledDeviceExceptionProyectoAndroidHideInfoBar="True" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>
