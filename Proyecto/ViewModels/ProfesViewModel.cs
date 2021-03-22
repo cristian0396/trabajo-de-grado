@@ -62,6 +62,7 @@ namespace Proyecto.ViewModels
                         texto = "Es fundamental que los gastos pasados y la deuda personal se tengan en cuenta cuando se crea este tipo de presupuesto, " +
                             "ya que implican una salida de plata. También los ingresos que reciben forman parte fundamental del presupuesto y cualquier " + "ingreso obtenido implica una entrada de plata. ";
                         break;
+                    //lección #2 Presupuesto
                     case "6":
                         texto = "Despues de hacer el presupuesto es recomendable mirar y analizar cada una de las variables que se han identificado y hacer los ajustes que crea pertinentes.";
                         break;
@@ -76,6 +77,27 @@ namespace Proyecto.ViewModels
                         texto = "Evita los gastos impulsivos. Una vez que te acostumbras a evitar gastos impulsivos generaras el hábito de la moderación, esto es esencial" +
                             " a la hora de fijar una meta y poder cumplirla sin ningún contratiempo. ";
                         break;
+                    //lección #1 Plan de gastos
+                    case "10":
+                        texto = "El primer paso para potenciar el manejo de los gastos es establecer los gastos prioritarios y seguirlos fielmente, como la rentas, servicios, matrículas, comida, entre otros." +
+                            "Estos gastos deben ir reflejados en tu presupuesto mensual como gastos fijos";
+                        break;
+                    case "11":
+                        texto = "Empiece por presupuestar el pago de su salud, pensión y ARL que le permitan gozar de tranquilidad para vivir su dia a dia. Si es empleado con seguridad, tales aportes son los primero" +
+                            "que le descuentan cuando le pagan su salario, pero si es independiente póngalos en su lista de prioridades.";
+                        break;
+                    case "12":
+                        texto = "Dé prioridad a los gastos personales que afectan su tranquilidad para sobrevivir y que parten de un compromiso, muchas veces contractual, como el pago del arriendo, pago de la cuota de su vivienda" +
+                            "y pago de los servicios públicos. ";
+                        break;
+                    case "13":
+                        texto = "Estime cuál es el costo requerido para sus productos alimenticios y tenga en cuenta que su gasto debe enfocarlo a lo básico en materia alimentaria." +
+                            "Si desea comprar productos que no son básicos no pierda de vista que por no ser prioritarios los puede sacar de su canasta cualquier momento sin mayores preocupaciones.";
+                        break;
+                    case "14":
+                        texto = "Y por último te aconsejamos que intentes con probar con productos sustitutos a menor precio, así como comprar en las plazas de mercado. Realice siempre el ejercicio de comparar y no se vaya" +
+                            "por la primera alternativa que se le presente.";
+                        break;
                 }
                 await TextToSpeech.SpeakAsync(texto, _speakButtonCancellationTokenSource.Token);
             }
@@ -86,28 +108,14 @@ namespace Proyecto.ViewModels
             await PopupNavigation.Instance.PopAsync();
         }
 
-        private async Task ActivarVentanaActividadP1()
-        {
-            PopUp PopUpView = new PopUp();
-            string mensaje = "1. Relaciona conceptos, encaja la ficha derecha con alguna del lado izquierdo.\n" +
-                "\n" +
-                "2. Si encajas la ficha donde no es, pierdes 5 puntos.\n" +
-                "\n" +
-                "3. Si la encajas correctamente ganas 10 puntos.\n" +
-                "\n" +
-                "4. Cada vez que encajes una pieza, aparece otra en la esquina superior derecha.\n" +
-                "\n" +
-                "5. Los puntos que obtengas, se guardaran automaticamente.\n";
-            ((MessageViewModel)PopUpView.BindingContext).InitializeFields(_popUp: ((MessageViewModel)PopUpView.BindingContext), mensaje: mensaje, titulo: "Instrucciones", activarConsejos: false);
-            await PopupNavigation.Instance.PushAsync(PopUpView);
-        }
         public async Task OmitirIntro()
         {
             await Close();            
             if (Actividad == 1)
             {
                 await Shell.Current.GoToAsync("ActividadP1");
-                await ActivarVentanaActividadP1();
+                PopUp PopUpView = new PopUp();
+                await ((MessageViewModel)PopUpView.BindingContext).ActivarVentanaActividadP1(PopUpView);
             }
             else
             {
@@ -160,7 +168,8 @@ namespace Proyecto.ViewModels
                     break;
                 case "6":
                     await Shell.Current.GoToAsync("ActividadP1");
-                    await ActivarVentanaActividadP1();
+                    PopUp PopUpView = new PopUp();
+                    await ((MessageViewModel)PopUpView.BindingContext).ActivarVentanaActividadP1(PopUpView);
                     break;
                 //casos de la lección #2
                 case "7":
@@ -187,32 +196,32 @@ namespace Proyecto.ViewModels
                 case "10":
                     await Shell.Current.GoToAsync("ActividadP2");
                     break;
-                //casos de la lección #2 modulo Plan de gastos
+                //casos de la lección #1 modulo Plan de gastos
                 case "11":
                     Sources.Add("punto2.png");
                     Sources.Add("mujer3.png");
-                    PopUpView1 = new Profes("9", SwitchVoz); //arreglar textoAvoz
+                    PopUpView1 = new Profes("11", SwitchVoz); 
                     ((ProfesViewModel)PopUpView1.BindingContext).InitializeFields(_popUp: ((ProfesViewModel)PopUpView1.BindingContext), sources: Sources, alturas: Heights, actividad: 2, opcion: "12");
                     await PopupNavigation.Instance.PushAsync(PopUpView1);
                     break;
                 case "12":
                     Sources.Add("punto3.png");
                     Sources.Add("mujer4.png");
-                    PopUpView1 = new Profes("8", SwitchVoz);
+                    PopUpView1 = new Profes("12", SwitchVoz);
                     ((ProfesViewModel)PopUpView1.BindingContext).InitializeFields(_popUp: ((ProfesViewModel)PopUpView1.BindingContext), sources: Sources, alturas: Heights, actividad: 2, opcion: "13");
                     await PopupNavigation.Instance.PushAsync(PopUpView1);
                     break;
                 case "13":
                     Sources.Add("punto4.png");
                     Sources.Add("mujer7.png");
-                    PopUpView1 = new Profes("9", SwitchVoz);
+                    PopUpView1 = new Profes("13", SwitchVoz);
                     ((ProfesViewModel)PopUpView1.BindingContext).InitializeFields(_popUp: ((ProfesViewModel)PopUpView1.BindingContext), sources: Sources, alturas: Heights, actividad: 2, opcion: "14");
                     await PopupNavigation.Instance.PushAsync(PopUpView1);
                     break;
                 case "14":
                     Sources.Add("punto5.png");
                     Sources.Add("mujer8.png");
-                    PopUpView1 = new Profes("9", SwitchVoz);
+                    PopUpView1 = new Profes("14", SwitchVoz);
                     ((ProfesViewModel)PopUpView1.BindingContext).InitializeFields(_popUp: ((ProfesViewModel)PopUpView1.BindingContext), sources: Sources, alturas: Heights, actividad: 2, opcion: "15");
                     await PopupNavigation.Instance.PushAsync(PopUpView1);
                     break;

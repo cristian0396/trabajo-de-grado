@@ -148,7 +148,26 @@ namespace Proyecto.ViewModels
             ComandoSiguiente = new Command(Siguiente);
             ComandoOmitir = new Command(async () => await Omitir(), () => true);
         }
+        private void MostrarFlechas()
+        {
+            List<int> Heights;
+            string message = "";
+            switch (IDModulo)
+            {
+                case "1":
+                    Heights = new List<int>() { 135, 220 };
+                    message = "Este es el Total Ingresos, aquí encontraras todos los ingresos recibidos" + " y se calcula sumando todos los aportes en este caso: tu sueldo y el aporte familiar.";
+                    ((PopUpViewModel)PopUpView.BindingContext).InitializeFields(_popUp: ((PopUpViewModel)PopUpView.BindingContext), rotacion: 90, escala: 1, source: "flecha1.png", alturas: Heights, opcion: "3", gridColumn: 1, message: message);
+                    break;
+                case "2":
+                    Heights = new List<int>() { 230, 220 };
+                    message = "La vivienda es por lo general, el gasto fijo mensual más alto, y uno muy relevante por lo que es necesarios colocarlo en la lista de prioridades";
+                    ((PopUpViewModel)PopUpView.BindingContext).InitializeFields(_popUp: ((PopUpViewModel)PopUpView.BindingContext), rotacion: 90, escala: 0.7f, source: "flecha1.png", alturas: Heights, opcion: "7", gridColumn: 1, message: message);
+                    break;
+            }
+            PopupNavigation.Instance.PushAsync(PopUpView);
 
+        }
         private void Siguiente(object obj) //Función que permite actualizar el indice en que se esta en el carrouselView, en caso de que se este en la ultima se cambia la función del boton a "hecho"
         {
             if (PosicionIndice < Introduccion.Count - 1)
@@ -156,11 +175,7 @@ namespace Proyecto.ViewModels
                 PosicionIndice++;
                 if (PosicionIndice == Introduccion.Count - 1)
                 {
-                    List<int> Heights = new List<int>() { 135, 220 };
-                    string message = "Este es el Total Ingresos, aquí encontraras todos los ingresos recibidos" +
-                    " y se calcula sumando todos los aportes en este caso: tu sueldo y el aporte familiar.";
-                    ((PopUpViewModel)PopUpView.BindingContext).InitializeFields( _popUp: ((PopUpViewModel)PopUpView.BindingContext), rotacion: 90, escala: 1, source: "flecha1.png", alturas: Heights, opcion: "3", gridColumn: 1, message: message);
-                    PopupNavigation.Instance.PushAsync(PopUpView);
+                    MostrarFlechas();                   
                 }                
             }
             else

@@ -98,6 +98,34 @@ namespace Proyecto.ViewModels
                     ((PopUpViewModel)PopUpView.BindingContext).InitializeFields(_popUp: ((PopUpViewModel)PopUpView.BindingContext), rotacion: 90, escala: _escala, source: "flecha1.png", alturas: Heights, gridColumn: 1, message: message, width: 60);
                     await PopupNavigation.Instance.PushAsync(PopUpView);
                     break;
+                case "7":
+                    Heights.Add(300);
+                    Heights.Add(180);
+                    message = "Seguida de la vivienda está la alimentación, te sugerimos comprar raciones grandes de forma quincenal o mensual y de esta forma economizar un poco más.";
+                    ((PopUpViewModel)PopUpView.BindingContext).InitializeFields(_popUp: ((PopUpViewModel)PopUpView.BindingContext), rotacion: 120, escala: 0.7f, source: _source, alturas: Heights, opcion: "8",  gridColumn: 1, message: message, width: 60);
+                    await PopupNavigation.Instance.PushAsync(PopUpView);
+                    break;
+                case "8":
+                    Heights.Add(250);
+                    Heights.Add(180);
+                    message = "Luego viene el transporte, en este gasto te sugerimos analizar bien tus opciones de desplazamiento, muchas veces no se tienen en cuenta alternativas como usar bicicleta o motocicletas que a mediano y largo plazo pueden ser un alivio para tu bolsillo.";
+                    ((PopUpViewModel)PopUpView.BindingContext).InitializeFields(_popUp: ((PopUpViewModel)PopUpView.BindingContext), rotacion: 100, escala: 0.7f, source: _source, alturas: Heights, opcion: "9", gridColumn: 0, message: message, width: 60);
+                    await PopupNavigation.Instance.PushAsync(PopUpView);
+                    break;
+                case "9":
+                    Heights.Add(180);
+                    Heights.Add(180);
+                    message = "La educación, vestuario y calzado representan cerca del 10% de los gastos totales, recuerda asistir y/o inscribirte en cursos de educación financiera!";
+                    ((PopUpViewModel)PopUpView.BindingContext).InitializeFields(_popUp: ((PopUpViewModel)PopUpView.BindingContext), rotacion: 90, escala: 0.7f, source: _source, alturas: Heights, opcion: "10", gridColumn: 0, message: message, width: 60);
+                    await PopupNavigation.Instance.PushAsync(PopUpView);
+                    break;
+                case "10":
+                    Heights.Add(270);
+                    Heights.Add(180);
+                    message = "Por ultimo, pero no menos importante se sitúan los gastos varios, comunicaciones y cultura-diversión, que es el excedente de gastos totales.";
+                    ((PopUpViewModel)PopUpView.BindingContext).InitializeFields(_popUp: ((PopUpViewModel)PopUpView.BindingContext), rotacion: -90, escala: 0.7f, source: _source, alturas: Heights, gridColumn: 1, message: message, width: 60);
+                    await PopupNavigation.Instance.PushAsync(PopUpView);
+                    break;
             }
         }
     }

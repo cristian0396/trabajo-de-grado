@@ -66,6 +66,20 @@ namespace Proyecto.ViewModels
             _popUp.Message = mensaje;
             _popUp.ActivarConsejos = activarConsejos;
         }
+        public async Task ActivarVentanaActividadP1(PopUp PopUpView)
+        {
+            string mensaje = "1. Relaciona conceptos, encaja la ficha derecha con alguna del lado izquierdo.\n" +
+                "\n" +
+                "2. Si encajas la ficha donde no es, pierdes 5 puntos.\n" +
+                "\n" +
+                "3. Si la encajas correctamente ganas 10 puntos.\n" +
+                "\n" +
+                "4. Cada vez que encajes una pieza, aparece otra en la esquina superior derecha.\n" +
+                "\n" +
+                "5. Los puntos que obtengas, se guardaran automaticamente.\n";
+            ((MessageViewModel)PopUpView.BindingContext).InitializeFields(_popUp: ((MessageViewModel)PopUpView.BindingContext), mensaje: mensaje, titulo: "Instrucciones", activarConsejos: false);
+            await PopupNavigation.Instance.PushAsync(PopUpView);
+        }
         public async Task Close()
         {
             await PopupNavigation.Instance.PopAsync();
@@ -92,7 +106,6 @@ namespace Proyecto.ViewModels
                         inversion += ahorro * anios;
                         anios += 1;
                     }
-
                 }
                 PopUp PopUpView = new PopUp();
                 ((MessageViewModel)PopUpView.BindingContext).Titulo = "Consejos!!";

@@ -54,7 +54,7 @@ namespace Proyecto.ViewModels
                 case "3":
                     Sources.Add("punto1.png");
                     Sources.Add("mujer1.png");
-                    PopUpView2 = new Profes("9", false);
+                    PopUpView2 = new Profes("10", false);
                     ((ProfesViewModel)PopUpView2.BindingContext).InitializeFields(_popUp: ((ProfesViewModel)PopUpView2.BindingContext), sources: Sources, alturas: Heights, actividad: 2, opcion: "11");
                     await PopupNavigation.Instance.PushAsync(PopUpView2);
                     break;
