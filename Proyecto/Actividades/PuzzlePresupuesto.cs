@@ -14,20 +14,18 @@ namespace Proyecto.Actividades
         CCGameView GameView;
         PaletaPrincipal paleta;
         CCSprite paleta5, paleta6, paleta7, paleta8, paleta9, correct;        
-        private int ControlPaletas; //variable usada para saber que ficha es la que el usuario esta manejando actualmente
-        int score = 0;
-        private bool hasGameEnded;
+        int ControlPaletas, score = 0; //variable usada para saber que ficha es la que el usuario esta manejando actualmente
+        bool hasGameEnded;
         ScoreText scoreText;
 
         public PuzzlePresupuesto(CCGameView gameView) : base(gameView)
         {
-            //Width device: 411px Height: 683px
-            
+            //Width device: 411px Height: 683px            
             GameView = gameView;
+            ControlPaletas = 0;
             var contentSearchPaths = new List<string>() { "Images", "Sounds" };
             gameView.ContentManager.SearchPaths = contentSearchPaths;
-            CCAudioEngine.SharedEngine.PlayBackgroundMusic("Ambiente");
-            ControlPaletas = 0;
+            CCAudioEngine.SharedEngine.PlayBackgroundMusic("Ambiente");            
             InicializarCapas();            
             CrearFondo();
             CrearPaletas();
@@ -58,13 +56,14 @@ namespace Proyecto.Actividades
 
         private void CrearPaletas()
         { //función que inicializa todas las fichas del puzzle en las respectivas ubicaciones
+            //ficha movible
             paleta = new PaletaPrincipal();
             paleta.crearFichas("r1.png");
             paleta.PositionX = (CapaDeJuego.ContentSize.Width / 2.0f) + (CapaDeJuego.ContentSize.Width / 4.0f);
             paleta.PositionY = (CapaDeJuego.ContentSize.Height / 2.0f) + (CapaDeJuego.ContentSize.Height / 2.34f) ;
             paleta.SetDesiredPositionToCurrentPosition();
             CapaDeJuego.AddChild(paleta);
-
+            //inicio fichas estaticas
             paleta9 = new CCSprite("p4.png");  //primera ficha izquierda más arriba
             paleta9.Scale = 0.4f;
             paleta9.IsAntialiased = false;
@@ -99,10 +98,16 @@ namespace Proyecto.Actividades
             paleta8.IsAntialiased = false;
             paleta8.PositionX = (CapaDeJuego.ContentSize.Width / 2.0f) - (CapaDeJuego.ContentSize.Width / 4.0f);
             paleta8.PositionY = (CapaDeJuego.ContentSize.Height / 2.0f) - (CapaDeJuego.ContentSize.Height / 2.38f);
-            CapaDeJuego.AddChild(paleta8);
-            
+            CapaDeJuego.AddChild(paleta8);            
         }
-
+        private void CreateHud()
+        {
+            scoreText = new ScoreText();
+            scoreText.PositionX = hudLayer.ContentSize.Width - (hudLayer.ContentSize.Width - 20);
+            scoreText.PositionY = hudLayer.ContentSize.Height - 20;
+            scoreText.Score = 0;
+            hudLayer.AddChild(scoreText);
+        }
         private void CreateTouchListener()
         { //función que crea un evento para cuando el usuario toque la pantalla
             var touchListener = new CCEventListenerTouchAllAtOnce();
@@ -115,13 +120,11 @@ namespace Proyecto.Actividades
         {
             if (hasGameEnded)
             {
-                //Shell.Current.GoToAsync("../..");
                 var newScene = new PuzzlePresupuesto(GameView);
                 GameView.Director.ReplaceScene(newScene);
             }
         }        
-
-        void CrearNuevaFicha(string dir)
+        private void CrearNuevaFicha(string dir)
         {
             paleta = new PaletaPrincipal();
             paleta.crearFichas(dir);
@@ -130,7 +133,7 @@ namespace Proyecto.Actividades
             paleta.SetDesiredPositionToCurrentPosition();
             CapaDeJuego.AddChild(paleta);            
         }
-        void HandleTouchesMoved(System.Collections.Generic.List<CCTouch> touches, CCEvent touchEvent)
+        private void HandleTouchesMoved(System.Collections.Generic.List<CCTouch> touches, CCEvent touchEvent)
         { //función que se encarga de darle manejo al uso de las fichas en el juego
             // we only care about the first touch:
             var locationOnScreen = touches[0].Location;
@@ -142,13 +145,8 @@ namespace Proyecto.Actividades
             if (hasGameEnded == false)
             {
                 paleta.Activity(frameTimeInSeconds);
-                EjecutarColision();
+                PiezaVsPieza(paleta); //manejar las colisiones del juego
             }
-        }
-
-        private void EjecutarColision()
-        { //función que da manejo a las colisiones del juego            
-            PiezaVsPieza(paleta);           
         }
 
         private void ubicarPieza(string dir, float x, float y)
@@ -192,26 +190,17 @@ namespace Proyecto.Actividades
             correct.PositionY = y;
             CapaDeJuego.AddChild(correct);
         }
-
-        private void CreateHud()
-        {
-            scoreText = new ScoreText();
-            scoreText.PositionX = hudLayer.ContentSize.Width - (hudLayer.ContentSize.Width - 20);
-            scoreText.PositionY = hudLayer.ContentSize.Height - 20;
-            scoreText.Score = 0;
-            hudLayer.AddChild(scoreText);
-        }
+               
 
         private void EndGame()
         {
             hasGameEnded = true;
-            // dim the background:
             var drawNode = new CCDrawNode();
             drawNode.DrawRect(
                 new CCRect(0, 0, 2000, 2000),
                 new CCColor4B(0, 0, 0, 160));
             hudLayer.Children.Add(drawNode);
-
+            //posicionar score
             var endGameLabel = new CCLabel("Game Over\nFinal Score:" + " " + score,
                 "Arial", 40, CCLabelFormat.SystemFont);
             endGameLabel.HorizontalAlignment = CCTextAlignment.Center;
@@ -221,132 +210,120 @@ namespace Proyecto.Actividades
             endGameLabel.PositionY = hudLayer.ContentSize.Height / 2.0f;
             hudLayer.Children.Add(endGameLabel);
         }
-        private void PiezaVsPieza(PaletaPrincipal pieza)
-        { //función que determina unos rangos en que la pieza usada puede entrar para luego generar otra ficha estatica que se une con la ficha concepto   
-            float xCentro = (CapaDeJuego.ContentSize.Width / 4.0f); // ubicación centro de las fichas izquierdas
-            float xCentroD = (CapaDeJuego.ContentSize.Width / 4.0f) + 240;
-            if (pieza.PositionX > xCentro && pieza.PositionX < xCentro + 130 && pieza.PositionY < (CapaDeJuego.ContentSize.Height / 2.0f) + (CapaDeJuego.ContentSize.Height / 3.54f) + 48 && pieza.PositionY > (CapaDeJuego.ContentSize.Height / 2.0f) + (CapaDeJuego.ContentSize.Height / 3.54f) - 48)
+
+        private void GanarPuntos(string sourceEffect)
+        {
+            CCAudioEngine.SharedEngine.PlayEffect(sourceEffect);
+            score += 10;
+            scoreText.Score = score;
+            ControlPaletas++;
+        }
+
+        private void PerderPuntos(string sourceEffect)
+        {
+            CCAudioEngine.SharedEngine.PlayEffect(sourceEffect);
+            if (score > 0)
             {
-                
+                score -= 5;
+                scoreText.Score = score;
+            }
+        }
+        private void PiezaVsPieza(PaletaPrincipal pieza)
+        { //función que determina unos rangos en que la pieza movible puede entrar para luego generar otra ficha estatica que se une con la ficha concepto   
+            float xCentro = (CapaDeJuego.ContentSize.Width / 4.0f); // ubicación centro de las fichas izquierdas
+            float xCentroD = (CapaDeJuego.ContentSize.Width / 4.0f) + 240, x = CapaDeJuego.ContentSize.Width / 4.0f + 130, y;
+            float limSuperiorF4 = (CapaDeJuego.ContentSize.Height / 2.0f) + (CapaDeJuego.ContentSize.Height / 3.54f) + 48, limInferiorF4 = (CapaDeJuego.ContentSize.Height / 2.0f) + (CapaDeJuego.ContentSize.Height / 3.54f) - 48;
+            float limSuperiorF6 = (CapaDeJuego.ContentSize.Height / 2.0f) + (CapaDeJuego.ContentSize.Height / 9.4f) + 48, limInferiorF6 = (CapaDeJuego.ContentSize.Height / 2.0f) + (CapaDeJuego.ContentSize.Height / 9.4f) - 48;
+            float limSuperiorF1 = (CapaDeJuego.ContentSize.Height / 2.0f) - (CapaDeJuego.ContentSize.Width / 9.0f) + 48, limInferiorF1 = (CapaDeJuego.ContentSize.Height / 2.0f) - (CapaDeJuego.ContentSize.Width / 9.0f) - 48;
+            float limSuperiorF3 = (CapaDeJuego.ContentSize.Height / 2.0f) - (CapaDeJuego.ContentSize.Height / 4.1f) + 48, limInferiorF3 = (CapaDeJuego.ContentSize.Height / 2.0f) - (CapaDeJuego.ContentSize.Height / 4.1f) - 48;
+            float limSuperiorF2 = (CapaDeJuego.ContentSize.Height / 2.0f) - (CapaDeJuego.ContentSize.Height / 2.38f) + 48, limInferiorF2 = (CapaDeJuego.ContentSize.Height / 2.0f) - (CapaDeJuego.ContentSize.Height / 2.38f) - 48;
+            
+            if (pieza.PositionX > xCentro && pieza.PositionX < xCentro + 130 && pieza.PositionY < limSuperiorF4 && pieza.PositionY > limInferiorF4)
+            {                
                 if (ControlPaletas == 3)
-                {
-                    CCAudioEngine.SharedEngine.PlayEffect("good");
-                    score += 10;
-                    scoreText.Score = score;
+                {                    
+                    y = (CapaDeJuego.ContentSize.Height / 2.0f) + (CapaDeJuego.ContentSize.Height / 3.54f);
+                    GanarPuntos("good");                   
                     pieza.RemoveFromParent();
-                    ubicarPieza("r4.png", CapaDeJuego.ContentSize.Width / 4.0f + 130, (CapaDeJuego.ContentSize.Height / 2.0f) + (CapaDeJuego.ContentSize.Height / 3.54f));                    
+                    ubicarPieza("r4.png", x, y);                    
                     CrearNuevaFicha("r6.png");
-                    Checkear(xCentroD, (CapaDeJuego.ContentSize.Height / 2.0f) + (CapaDeJuego.ContentSize.Height / 3.54f));
-                    ControlPaletas++;
+                    Checkear(xCentroD, (CapaDeJuego.ContentSize.Height / 2.0f) + (CapaDeJuego.ContentSize.Height / 3.54f));                    
                 }
                 else
                 {
-                    CCAudioEngine.SharedEngine.PlayEffect("bad");
-                    if (score > 0)
-                    {
-                        score -= 5;
-                        scoreText.Score = score;
-                    }                    
+                    PerderPuntos("bad");                  
                     pieza.RemoveFromParent();
                     EscogerNuevaFicha();
                 }                
             }
-            if (pieza.PositionX > xCentro && pieza.PositionX < xCentro + 130 && pieza.PositionY < (CapaDeJuego.ContentSize.Height / 2.0f) + (CapaDeJuego.ContentSize.Height / 9.4f) + 48 && pieza.PositionY > (CapaDeJuego.ContentSize.Height / 2.0f) + (CapaDeJuego.ContentSize.Height / 9.4f) - 48)
+            if (pieza.PositionX > xCentro && pieza.PositionX < xCentro + 130 && pieza.PositionY < limSuperiorF6 && pieza.PositionY > limInferiorF6)
             {
                 if (ControlPaletas == 4)
                 {
-                    CCAudioEngine.SharedEngine.PlayEffect("good");
-                    score += 10;
-                    scoreText.Score = score;
+                    y = (CapaDeJuego.ContentSize.Height / 2.0f) + (CapaDeJuego.ContentSize.Height / 9.4f);
+                    GanarPuntos("good");
                     pieza.RemoveFromParent();
-                    ubicarPieza("r6.png", CapaDeJuego.ContentSize.Width / 4.0f + 130, (CapaDeJuego.ContentSize.Height / 2.0f) + (CapaDeJuego.ContentSize.Height / 9.4f));                    
+                    ubicarPieza("r6.png", x, y);                    
                     Checkear(xCentroD, (CapaDeJuego.ContentSize.Height / 2.0f) + (CapaDeJuego.ContentSize.Height / 9.4f));
-                    ControlPaletas++;
                     EndGame();
                 }
                 else
                 {
-                    CCAudioEngine.SharedEngine.PlayEffect("bad");
-                    if (score > 0)
-                    {
-                        score -= 5;
-                        scoreText.Score = score;
-                    }
+                    PerderPuntos("bad");
                     pieza.RemoveFromParent();
                     EscogerNuevaFicha();
                 }                
             }
-            if (pieza.PositionX > xCentro && pieza.PositionX < xCentro + 130 && pieza.PositionY < (CapaDeJuego.ContentSize.Height / 2.0f) - (CapaDeJuego.ContentSize.Width / 9.0f) + 48 && pieza.PositionY > (CapaDeJuego.ContentSize.Height / 2.0f) - (CapaDeJuego.ContentSize.Width / 9.0f) - 48)
+            if (pieza.PositionX > xCentro && pieza.PositionX < xCentro + 130 && pieza.PositionY < limSuperiorF1 && pieza.PositionY > limInferiorF1)
             {
                 if (ControlPaletas == 0)
                 {
-                    CCAudioEngine.SharedEngine.PlayEffect("good");
-                    score += 10;
-                    scoreText.Score = score;
+                    y = (CapaDeJuego.ContentSize.Height / 2.0f) - (CapaDeJuego.ContentSize.Width / 9.0f);
+                    GanarPuntos("good");
                     pieza.RemoveFromParent();
-                    ubicarPieza("r1.png", CapaDeJuego.ContentSize.Width / 4.0f + 130, (CapaDeJuego.ContentSize.Height / 2.0f) - (CapaDeJuego.ContentSize.Width / 9.0f));                    
+                    ubicarPieza("r1.png", x, y);                    
                     CrearNuevaFicha("r2.png");
                     Checkear(xCentroD, (CapaDeJuego.ContentSize.Height / 2.0f) - (CapaDeJuego.ContentSize.Width / 9.0f));
-                    ControlPaletas++;
                 }
                 else
                 {
-                    CCAudioEngine.SharedEngine.PlayEffect("bad");
-                    if (score > 0)
-                    {
-                        score -= 5;
-                        scoreText.Score = score;
-                    }
+                    PerderPuntos("bad");
                     pieza.RemoveFromParent();
                     EscogerNuevaFicha();
                 }                
             }
-            if (pieza.PositionX > xCentro && pieza.PositionX < xCentro + 130 && pieza.PositionY < (CapaDeJuego.ContentSize.Height / 2.0f) - (CapaDeJuego.ContentSize.Height / 4.1f) + 48 && pieza.PositionY > (CapaDeJuego.ContentSize.Height / 2.0f) - (CapaDeJuego.ContentSize.Height / 4.1f) - 48)
+            if (pieza.PositionX > xCentro && pieza.PositionX < xCentro + 130 && pieza.PositionY < limSuperiorF3 && pieza.PositionY > limInferiorF3)
             {
                 if (ControlPaletas == 2)
                 {
-                    CCAudioEngine.SharedEngine.PlayEffect("good");
-                    score += 10;
-                    scoreText.Score = score;
+                    y = (CapaDeJuego.ContentSize.Height / 2.0f) - (CapaDeJuego.ContentSize.Height / 4.1f);
+                    GanarPuntos("good");
                     pieza.RemoveFromParent();
-                    ubicarPieza("r3.png", CapaDeJuego.ContentSize.Width / 4.0f + 130, (CapaDeJuego.ContentSize.Height / 2.0f) - (CapaDeJuego.ContentSize.Height / 4.1f));                    
+                    ubicarPieza("r3.png", x, y);                    
                     CrearNuevaFicha("r4.png");
                     Checkear(xCentroD, (CapaDeJuego.ContentSize.Height / 2.0f) - (CapaDeJuego.ContentSize.Height / 4.1f));
-                    ControlPaletas++;
                 }
                 else
                 {
-                    CCAudioEngine.SharedEngine.PlayEffect("bad");
-                    if (score > 0)
-                    {
-                        score -= 5;
-                        scoreText.Score = score;
-                    }
+                    PerderPuntos("bad");
                     pieza.RemoveFromParent();
                     EscogerNuevaFicha();
                 }                
             }
-            if (pieza.PositionX > xCentro && pieza.PositionX < xCentro + 130 && pieza.PositionY < (CapaDeJuego.ContentSize.Height / 2.0f) - (CapaDeJuego.ContentSize.Height / 2.38f) + 48 && pieza.PositionY > (CapaDeJuego.ContentSize.Height / 2.0f) - (CapaDeJuego.ContentSize.Height / 2.38f) - 48)
+            if (pieza.PositionX > xCentro && pieza.PositionX < xCentro + 130 && pieza.PositionY < limSuperiorF2 && pieza.PositionY > limInferiorF2)
             {
                 if (ControlPaletas == 1)
                 {
-                    CCAudioEngine.SharedEngine.PlayEffect("good");
-                    score += 10;
-                    scoreText.Score = score;
+                    y = (CapaDeJuego.ContentSize.Height / 2.0f) - (CapaDeJuego.ContentSize.Height / 2.38f);
+                    GanarPuntos("good");
                     pieza.RemoveFromParent();
-                    ubicarPieza("r2.png", CapaDeJuego.ContentSize.Width / 4.0f + 130, (CapaDeJuego.ContentSize.Height / 2.0f) - (CapaDeJuego.ContentSize.Height / 2.38f));                    
+                    ubicarPieza("r2.png", x, y);                    
                     CrearNuevaFicha("r3.png");
-                    Checkear(xCentroD, (CapaDeJuego.ContentSize.Height / 2.0f) - (CapaDeJuego.ContentSize.Height / 2.38f));
-                    ControlPaletas++;
+                    Checkear(xCentroD, (CapaDeJuego.ContentSize.Height / 2.0f) - (CapaDeJuego.ContentSize.Height / 2.38f));                    
                 }
                 else
                 {
-                    CCAudioEngine.SharedEngine.PlayEffect("bad");
-                    if (score > 0)
-                    {
-                        score -= 5;
-                        scoreText.Score = score;
-                    }
+                    PerderPuntos("bad");
                     pieza.RemoveFromParent();
                     EscogerNuevaFicha();
                 }                

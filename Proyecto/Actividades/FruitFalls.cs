@@ -14,21 +14,14 @@ namespace Proyecto.Actividades
         CCLayer gameplayLayer;
         CCLayer foregroundLayer;
         CCLayer hudLayer;
-
         CCGameView GameView;
-
         int score = 0;
         ScoreText scoreText;
-
         Paddle paddle;
         List<Fruit> fruitList;
-
         Polygon binSplitter;
-
         FruitSpawner spawner;
-
         SolidRectangle splitter;
-
         List<FruitBin> fruitBins;
         private bool hasGameEnded;
         CCLabel debugLabel;
@@ -134,9 +127,7 @@ namespace Proyecto.Actividades
             paddle = new Paddle();
             paddle.PositionX = gameplayLayer.ContentSize.Width / 2.0f;
             paddle.PositionY = gameplayLayer.ContentSize.Height / 2.0f;
-
             paddle.SetDesiredPositionToCurrentPosition();
-
             gameplayLayer.AddChild(paddle);
         }
 

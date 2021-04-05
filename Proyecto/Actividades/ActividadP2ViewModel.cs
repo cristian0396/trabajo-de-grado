@@ -23,20 +23,21 @@ namespace Proyecto.Actividades
         public bool ActivarPicker { get; set; }
         public IngresoGastos Tema { get; set; }
         public Periodo Periocicidad { get; set; }
-        public Descripciones DescEscogido { get; set; }
+        public Descripciones DescEscogido { get; set; }        
+        public string Valor { get; set; }
+        public List<IngresoGastos> IngreGastos { get; set; }
+        public List<Descripciones> ListaDescrip { get; set; }
+        public List<Periodo> ListaPeriodo { get; set; }
+        public List<TPresupuesto> ListaTPresupuesto { get; set; }
         public ICommand BotonAtrasCommand { get; set; }
         public ICommand BotonReporteCommand { get; set; }
         public ICommand BotonLimpiarCommand { get; set; }
         public ICommand AgregarCommand { get; set; }
         public ICommand ItemSeleccionadoCommand { get; set; }
         public ICommand EliminarCommand { get; set; }
-        public string Valor { get; set; }
-        public List<IngresoGastos> IngreGastos { get; set; }
-        public List<Descripciones> ListaDescrip { get; set; }
-        public List<Periodo> ListaPeriodo { get; set; }
-        public List<TPresupuesto> ListaTPresupuesto { get; set; }
 
         private TPresupuesto itemSeleccionado;
+        private ObservableCollection<TPresupuesto> itemsList;
         public TPresupuesto ItemSeleccionado
         {
             get { return itemSeleccionado; }
@@ -46,9 +47,7 @@ namespace Proyecto.Actividades
                 OnPropertyChanged();
             }
 
-        }
-        private ObservableCollection<TPresupuesto> itemsList; 
-                
+        }               
         public ObservableCollection<TPresupuesto> ItemsList
         {
             get { return itemsList; }
@@ -60,16 +59,29 @@ namespace Proyecto.Actividades
         }
         public ActividadP2ViewModel()
         {
+            InicializarVars();
+            InicializarListasDesplegables();           
+            InicializarComandos();
+        }
+
+        private void InicializarVars()
+        {
             PosicionActual = 0;
             TotalIngresos = 0;
             TotalGastos = 0;
             TotalGastosFormat = 0.ToString("C");
             TotalIngresosFormat = 0.ToString("C");
             ActivarPicker = false;
+            ListaTPresupuesto = new List<TPresupuesto>();
+            ItemsList = new ObservableCollection<TPresupuesto>();
+        }
+
+        private void InicializarListasDesplegables()
+        {
             IngreGastos = new List<IngresoGastos>()
             {
                 new IngresoGastos(){ ID = 1, Nombre = "Ingresos"},
-                new IngresoGastos(){ ID = 2, Nombre = "Gastos"}           
+                new IngresoGastos(){ ID = 2, Nombre = "Gastos"}
             };
 
             ListaPeriodo = new List<Periodo>
@@ -77,12 +89,9 @@ namespace Proyecto.Actividades
                 new Periodo(){ID = 1, Valor = "Mensual"},
                 new Periodo(){ID = 2, Valor = "Anual"}
             };
-            ListaTPresupuesto = new List<TPresupuesto>();
-            ItemsList = new ObservableCollection<TPresupuesto>();
-            InicializarComandos();
         }
 
-        public void InicializarComandos()
+        private void InicializarComandos()
         {
             AgregarCommand = new Command(AgregarItemLista);
             BotonAtrasCommand = new Command(async () => await IrAPresupuesto(), () => true);
@@ -98,8 +107,8 @@ namespace Proyecto.Actividades
             TotalGastos = 0;
             TotalIngresos = 0;
             PosicionActual = 0;
-            TotalIngresosFormat = "0";
-            TotalGastosFormat = "0";
+            TotalIngresosFormat = 0.ToString("C"); 
+            TotalGastosFormat = 0.ToString("C");
         }
 
         public void EliminarItemSeleccionado()
@@ -157,9 +166,10 @@ namespace Proyecto.Actividades
             TPresupuesto temp = new TPresupuesto();
             int valorAnual;
             temp.ID = PosicionActual;
-            PosicionActual += 1;
             temp.Descripcion = DescEscogido.Descripcion;
             temp.Fecha = DateTime.Now;
+            PosicionActual += 1;
+            
             if(Tema.Nombre == "Ingresos")
             {
                 if(Periocicidad.Valor == "Anual")
@@ -193,16 +203,14 @@ namespace Proyecto.Actividades
                     TotalGastosFormat = Convert.ToInt32(TotalGastos).ToString("C");
                 }                
             }
-            
-            //ListaTPresupuesto.Add(temp);
-            ItemsList.Add(temp);
-            //ItemsList = new ObservableCollection<TPresupuesto>(ListaTPresupuesto);            
+            ItemsList.Add(temp);        
         }
 
         public async Task GenerarReporte()
         {
             PopUp PopUpView = new PopUp();
             bool mensual;
+            string mensaje;
             if(Periocicidad.Valor == "Mensual")
             {
                 mensual = true;
@@ -213,26 +221,22 @@ namespace Proyecto.Actividades
             }
             if (TotalIngresos > TotalGastos)
             {
-                ((MessageViewModel)PopUpView.BindingContext).Image = "bien.png";
-                ((MessageViewModel)PopUpView.BindingContext).Message = "Tus ingresos están por encima de tus gastos, vas muy bien," +
+                mensaje = "Tus ingresos están por encima de tus gastos, vas muy bien," +
                     " eso significa que puedes ahorrar o darte un gusto de vez en cuando, pero con moderación, también podrías ahorrar lo suficiente" +
                     " para poder invertirlo en lo que tu quieras.";
-                ((MessageViewModel)PopUpView.BindingContext).ActivarConsejos = true;
-                ((MessageViewModel)PopUpView.BindingContext).TotalIngresos = TotalIngresos;
-                ((MessageViewModel)PopUpView.BindingContext).TotalGastos = TotalGastos;
-                ((MessageViewModel)PopUpView.BindingContext).Mensual = mensual;
+                ((MessageViewModel)PopUpView.BindingContext).InitializeFields(_popUp: ((MessageViewModel)PopUpView.BindingContext), mensaje: mensaje, image: "bien.png", activarConsejos: true, totalIngresos: TotalIngresos, totalGastos: TotalGastos, mensual: mensual);
                 await PopupNavigation.Instance.PushAsync(PopUpView);
             }
             else if(TotalIngresos < TotalGastos){
-                ((MessageViewModel)PopUpView.BindingContext).Image = "rodri.png";
-                ((MessageViewModel)PopUpView.BindingContext).Message = "Tus gastos están por encima de tus ingresos, eso es una mala noticia," +
+                mensaje = "Tus gastos están por encima de tus ingresos, eso es una mala noticia," +
                     " recuerda que si gastas mas de lo que ganas no podrás ahorrar para cumplir tus metas, así que ponte las pilas y revisa tus gastos " +
                     " para poder gastar un poco menos. También podrías buscar alternativas de ingresos para poder nivelarte con tus gastos.";
+                ((MessageViewModel)PopUpView.BindingContext).InitializeFields(_popUp: ((MessageViewModel)PopUpView.BindingContext), mensaje: mensaje, image: "rodri.png");
                 await PopupNavigation.Instance.PushAsync(PopUpView);
             }
             
         }
-        public async Task IrAPresupuesto() //Función que se activa al dar click en el boton de atrás
+        public async Task IrAPresupuesto() 
         {
             await Shell.Current.GoToAsync("../.."); //Con esto se logra retroceder al inicio de presupuesto, se realizan dos retrocesos
         }

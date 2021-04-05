@@ -60,11 +60,14 @@ namespace Proyecto.ViewModels
             CloseCommand = new Command(async () => await Close(), () => true);
         }
 
-        public void InitializeFields(MessageViewModel _popUp, string titulo = default(string), string mensaje = default(string), bool activarConsejos = default(bool))
+        public void InitializeFields(MessageViewModel _popUp, string titulo = default(string), string mensaje = default(string), bool activarConsejos = default(bool), string image = default(string), int totalIngresos = default(int), int totalGastos = default(int), bool mensual = default(bool))
         {
             _popUp.Titulo = titulo;
             _popUp.Message = mensaje;
             _popUp.ActivarConsejos = activarConsejos;
+            _popUp.TotalIngresos = totalIngresos;
+            _popUp.TotalGastos = totalGastos;
+            _popUp.Mensual = mensual;
         }
         public async Task ActivarVentanaActividadP1(PopUp PopUpView)
         {
@@ -108,11 +111,11 @@ namespace Proyecto.ViewModels
                     }
                 }
                 PopUp PopUpView = new PopUp();
-                ((MessageViewModel)PopUpView.BindingContext).Titulo = "Consejos!!";
-                ((MessageViewModel)PopUpView.BindingContext).Message = "Te recomendamos en tu caso especifico destinar a \n" +
-                    "\n-Ahorro: " +  ahorro.ToString("C") + " (el 10% del dinero libre) \n" +
+                string mensaje = "Te recomendamos en tu caso especifico destinar a \n" +
+                    "\n-Ahorro: " + ahorro.ToString("C") + " (el 10% del dinero libre) \n" +
                     "\nlo que quiere decir que el dinero restante ( " + otros.ToString("C") + " ) lo puedes utilizar en entretenimiento o lo que tu quieras!!\n" +
-                    "\nPor otro lado, en " + anios +  " año(s) puedes tener alrededor de " + inversion.ToString("C") +  " pesos e invertirlos en algún negocio!";
+                    "\nPor otro lado, en " + anios + " año(s) puedes tener alrededor de " + inversion.ToString("C") + " pesos e invertirlos en algún negocio!";
+                ((MessageViewModel)PopUpView.BindingContext).InitializeFields(_popUp: ((MessageViewModel)PopUpView.BindingContext), mensaje: mensaje, titulo: "Consejos!!");
                 await PopupNavigation.Instance.PushAsync(PopUpView);
             }            
         }
