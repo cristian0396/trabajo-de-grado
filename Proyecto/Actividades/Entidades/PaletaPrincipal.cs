@@ -39,7 +39,6 @@ namespace Proyecto.Actividades.Entidades
 
         public PaletaPrincipal()
         {
-            //crearFichas();
             CreateCollision();
         }
 

@@ -60,7 +60,7 @@ namespace Proyecto.Actividades
             paleta = new PaletaPrincipal();
             paleta.crearFichas("r1.png");
             paleta.PositionX = (CapaDeJuego.ContentSize.Width / 2.0f) + (CapaDeJuego.ContentSize.Width / 4.0f);
-            paleta.PositionY = (CapaDeJuego.ContentSize.Height / 2.0f) + (CapaDeJuego.ContentSize.Height / 2.34f) ;
+            paleta.PositionY = (CapaDeJuego.ContentSize.Height / 2.0f) + (CapaDeJuego.ContentSize.Height / 2.34f);
             paleta.SetDesiredPositionToCurrentPosition();
             CapaDeJuego.AddChild(paleta);
             //inicio fichas estaticas

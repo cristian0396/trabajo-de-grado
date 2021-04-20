@@ -27,7 +27,7 @@ namespace Proyecto.Vistas
                     case "fondo01.png":
                         BindingContext = new FondoLeccionesViewModel(value, "2"); //Se establece la comunicación con el modelView y se manda un parametro indicando la información del modulo que se necesita
                         break;
-                    case "fondo1.png":
+                    case "fondoPlanGastos.png":
                         BindingContext = new FondoLeccionesViewModel(value, "3"); //Se establece la comunicación con el modelView y se manda un parametro indicando la información del modulo que se necesita
                         break;
                 }
@@ -54,7 +54,7 @@ namespace Proyecto.Vistas
                     case "fondo01.png":
                         BindingContext = new FondoLeccionesViewModel(_sourceImg, "2"); //Se establece la comunicación con el modelView y se manda un parametro indicando la información del modulo que se necesita
                         break;
-                    case "fondo1.png":
+                    case "fondoPlanGastos.png":
                         BindingContext = new FondoLeccionesViewModel(_sourceImg, "3"); //Se establece la comunicación con el modelView y se manda un parametro indicando la información del modulo que se necesita
                         break;
                 }                             

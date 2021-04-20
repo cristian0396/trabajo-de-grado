@@ -225,6 +225,9 @@ namespace Proyecto.ViewModels
                     ((ProfesViewModel)PopUpView1.BindingContext).InitializeFields(_popUp: ((ProfesViewModel)PopUpView1.BindingContext), sources: Sources, alturas: Heights, actividad: 2, opcion: "15");
                     await PopupNavigation.Instance.PushAsync(PopUpView1);
                     break;
+                case "15":
+                    await Shell.Current.GoToAsync("ActividadGastos1");
+                    break;
             }
         }
     }

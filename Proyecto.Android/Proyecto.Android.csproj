@@ -325,16 +325,10 @@
     <AndroidResource Include="Resources\drawable\logo.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\logo1.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable\logointerno.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\bien.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\mal1.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\rodri.png" />
@@ -352,28 +346,16 @@
     <AndroidResource Include="Resources\drawable\eliminar.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\limpiar.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable\reporte.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\mujer1.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\mujer2.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable\mujer3.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\mujer4.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\mujer5.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\mujer6.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\mujer7.png" />
@@ -400,12 +382,51 @@
     <AndroidResource Include="Resources\drawable\punto5.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\fondo1.png" />
+    <AndroidAsset Include="Content\Sounds\millonario.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\fondoPlanGastos.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Content\Images\fondo_actividad2.png" />
+    <AndroidAsset Include="Content\Images\pregunta1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Content\Images\respuesta1a.png" />
+    <AndroidAsset Include="Content\Images\respuesta1b.png" />
+    <AndroidAsset Include="Content\Images\respuesta1c.png" />
+    <AndroidAsset Include="Content\Images\respuesta1d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Content\Images\pregunta2.png" />
+    <AndroidAsset Include="Content\Images\pregunta3.png" />
+    <AndroidAsset Include="Content\Images\pregunta4.png" />
+    <AndroidAsset Include="Content\Images\pregunta5.png" />
+    <AndroidAsset Include="Content\Images\respuesta2a.png" />
+    <AndroidAsset Include="Content\Images\respuesta2b.png" />
+    <AndroidAsset Include="Content\Images\respuesta2c.png" />
+    <AndroidAsset Include="Content\Images\respuesta2d.png" />
+    <AndroidAsset Include="Content\Images\respuesta3a.png" />
+    <AndroidAsset Include="Content\Images\respuesta3b.png" />
+    <AndroidAsset Include="Content\Images\respuesta3c.png" />
+    <AndroidAsset Include="Content\Images\respuesta3d.png" />
+    <AndroidAsset Include="Content\Images\respuesta4a.png" />
+    <AndroidAsset Include="Content\Images\respuesta4b.png" />
+    <AndroidAsset Include="Content\Images\respuesta4c.png" />
+    <AndroidAsset Include="Content\Images\respuesta4d.png" />
+    <AndroidAsset Include="Content\Images\respuesta5a.png" />
+    <AndroidAsset Include="Content\Images\respuesta5b.png" />
+    <AndroidAsset Include="Content\Images\respuesta5c.png" />
+    <AndroidAsset Include="Content\Images\respuesta5d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Content\Sounds\correctAnswer.wav" />
+    <AndroidAsset Include="Content\Sounds\wrong.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties TriggeredFromHotReload="False" XamarinHotReloadUnhandledDeviceExceptionProyectoAndroidHideInfoBar="True" />
+      <UserProperties XamarinHotReloadUnhandledDeviceExceptionProyectoAndroidHideInfoBar="True" TriggeredFromHotReload="False" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>

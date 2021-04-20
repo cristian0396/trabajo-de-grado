@@ -20,10 +20,11 @@ namespace Proyecto.ViewModels
             Routing.RegisterRoute(nameof(Presupuesto), typeof(Presupuesto));
             Routing.RegisterRoute(nameof(PlanGastos), typeof(PlanGastos));
             Routing.RegisterRoute(nameof(Ahorro), typeof(Ahorro));
+            Routing.RegisterRoute(nameof(FondoLecciones), typeof(FondoLecciones));
             Routing.RegisterRoute(nameof(ActividadP1), typeof(ActividadP1));
             Routing.RegisterRoute(nameof(JuegoFruit), typeof(JuegoFruit));
             Routing.RegisterRoute(nameof(ActividadP2), typeof(ActividadP2));
-            Routing.RegisterRoute(nameof(FondoLecciones), typeof(FondoLecciones));
+            Routing.RegisterRoute(nameof(ActividadGastos1), typeof(ActividadGastos1));            
         }
 
         public virtual async Task ConstructorAsync(object parameters)
