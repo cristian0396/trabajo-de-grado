@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -29,6 +28,9 @@ namespace Proyecto.Vistas
                         break;
                     case "fondoPlanGastos.png":
                         BindingContext = new FondoLeccionesViewModel(value, "3"); //Se establece la comunicación con el modelView y se manda un parametro indicando la información del modulo que se necesita
+                        break;
+                    case "fondo02.png":
+                        BindingContext = new FondoLeccionesViewModel(value, "4"); //Se establece la comunicación con el modelView y se manda un parametro indicando la información del modulo que se necesita
                         break;
                 }
             }
@@ -56,6 +58,9 @@ namespace Proyecto.Vistas
                         break;
                     case "fondoPlanGastos.png":
                         BindingContext = new FondoLeccionesViewModel(_sourceImg, "3"); //Se establece la comunicación con el modelView y se manda un parametro indicando la información del modulo que se necesita
+                        break;
+                    case "fondo02.png":
+                        BindingContext = new FondoLeccionesViewModel(_sourceImg, "4"); //Se establece la comunicación con el modelView y se manda un parametro indicando la información del modulo que se necesita
                         break;
                 }                             
             }

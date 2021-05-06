@@ -33,7 +33,7 @@ namespace Proyecto.ViewModels
         public ICommand ComandoOmitir { get; set; }
 
         public IntroPresupuestoViewModel(string Modulo)
-        {//Constructor 
+        { 
             PopUpView = new PopUpUniversal();
             IDModulo = Modulo;
             EscogerIntroduccion();            
@@ -142,9 +142,7 @@ namespace Proyecto.ViewModels
             foreach (var intro in Introduccion)
             {
                 intro.CarouselItem.BindingContext = intro;
-
             }
-
             ComandoSiguiente = new Command(Siguiente);
             ComandoOmitir = new Command(async () => await Omitir(), () => true);
         }
@@ -166,7 +164,6 @@ namespace Proyecto.ViewModels
                     break;
             }
             PopupNavigation.Instance.PushAsync(PopUpView);
-
         }
         private void Siguiente(object obj) //Función que permite actualizar el indice en que se esta en el carrouselView, en caso de que se este en la ultima se cambia la función del boton a "hecho"
         {

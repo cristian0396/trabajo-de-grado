@@ -18,8 +18,7 @@
                 <xamanimation:ScaleToAnimation Duration="300" Scale="2"/>
                 <xamanimation:ScaleToAnimation Duration="300" Scale="1" Easing="BounceOut"/>
             </xamanimation:StoryBoard> 
-            <xamanimation:FadeToAnimation x:Key="FadeToAnimation" Target="{x:Reference imgPresupuesto}"
-             Duration="2000" Opacity="0"/>
+            <xamanimation:FadeToAnimation x:Key="FadeToAnimation" Target="{x:Reference imgPresupuesto}" Duration="2000" Opacity="0"/>
         </ResourceDictionary>
     </Page.Resources>
     
@@ -64,8 +63,7 @@
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                
+                </Grid.ColumnDefinitions>                
                 <!--Presupuesto-->
                 <Image Grid.Row="0" Grid.Column="0" x:Name="imgPresupuesto" Source="ingreGastos.png"> 
                     <!--Animaciones que no sirven por ahora-->

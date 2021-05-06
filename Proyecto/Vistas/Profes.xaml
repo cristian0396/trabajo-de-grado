@@ -29,13 +29,13 @@
                 <RowDefinition Height="{Binding Alturas[0]}"/>
                 <RowDefinition Height="{Binding Alturas[1]}"/>
             </Grid.RowDefinitions>
-            <Label Grid.Row="0" Text="Voz!" FontSize="18" TextColor="LightGreen" HorizontalOptions="Start"/>
-            <Switch Grid.Row="0" HorizontalOptions="Start" Margin="0,30,0,0"  ThumbColor="LightGreen" OnColor="LightGreen" IsToggled="{Binding SwitchVoz}">
+            <Label Grid.Row="0" Text="Voz!" FontSize="18" TextColor="LightGreen" HorizontalOptions="Start" IsVisible="{Binding LabelVoz}"/>
+            <Switch Grid.Row="0" HorizontalOptions="Start" Margin="0,30,0,0"  ThumbColor="LightGreen" OnColor="LightGreen" IsToggled="{Binding SwitchVoz}" IsVisible="{Binding BotonDeVoz}">
                 <Switch.Behaviors>
                     <local1:EventToCommandBehavior EventName="Toggled" Command="{Binding VozCommand}" />
                 </Switch.Behaviors>
             </Switch>
-            <Label Grid.Row="0" Text="Omitir" HorizontalOptions="End" FontSize="18" TextColor="LightGreen">
+            <Label Grid.Row="0" Text="Omitir" HorizontalOptions="End" FontSize="18" TextColor="LightGreen" IsVisible="{Binding BotonOmitir}">
                 <Label.GestureRecognizers>
                     <TapGestureRecognizer Command="{Binding OmitirCommand}"/>
                 </Label.GestureRecognizers>

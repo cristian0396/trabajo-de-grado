@@ -147,9 +147,6 @@
     <AndroidResource Include="Resources\drawable\leave.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\FlujoCaja.jpeg" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable\smiling.png" />
   </ItemGroup>
   <ItemGroup>
@@ -280,9 +277,6 @@
     <AndroidResource Include="Resources\drawable\splash_screen.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\logo_dev.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable\tablero01.png" />
   </ItemGroup>
   <ItemGroup>
@@ -320,12 +314,6 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\fondo01.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\logo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\logointerno.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\bien.png" />
@@ -422,6 +410,94 @@
   <ItemGroup>
     <AndroidAsset Include="Content\Sounds\correctAnswer.wav" />
     <AndroidAsset Include="Content\Sounds\wrong.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\leccion1_gastos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\leccion1_presupuesto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\leccion2_presupuesto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Content\Sounds\seleccionRespuesta.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Content\Images\5050.png" />
+    <AndroidAsset Include="Content\Images\llamadaAmigo.png" />
+    <AndroidAsset Include="Content\Images\votacionPublico.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\llamada1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\llamada2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\llamada3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\llamada4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\llamada5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\iconoApp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Content\Images\check2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\leccion2_punto1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\leccion2_punto2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\leccion2_punto3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\leccion2_punto4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\leccion2_punto5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\mujer5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\fondo02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Content\Images\pregunta10.png" />
+    <AndroidAsset Include="Content\Images\pregunta6.png" />
+    <AndroidAsset Include="Content\Images\pregunta7.png" />
+    <AndroidAsset Include="Content\Images\pregunta8.png" />
+    <AndroidAsset Include="Content\Images\pregunta9.png" />
+    <AndroidAsset Include="Content\Images\respuesta10a.png" />
+    <AndroidAsset Include="Content\Images\respuesta10b.png" />
+    <AndroidAsset Include="Content\Images\respuesta10c.png" />
+    <AndroidAsset Include="Content\Images\respuesta10d.png" />
+    <AndroidAsset Include="Content\Images\respuesta6a.png" />
+    <AndroidAsset Include="Content\Images\respuesta6b.png" />
+    <AndroidAsset Include="Content\Images\respuesta6c.png" />
+    <AndroidAsset Include="Content\Images\respuesta6d.png" />
+    <AndroidAsset Include="Content\Images\respuesta7a.png" />
+    <AndroidAsset Include="Content\Images\respuesta7b.png" />
+    <AndroidAsset Include="Content\Images\respuesta7c.png" />
+    <AndroidAsset Include="Content\Images\respuesta7d.png" />
+    <AndroidAsset Include="Content\Images\respuesta8a.png" />
+    <AndroidAsset Include="Content\Images\respuesta8b.png" />
+    <AndroidAsset Include="Content\Images\respuesta8c.png" />
+    <AndroidAsset Include="Content\Images\respuesta8d.png" />
+    <AndroidAsset Include="Content\Images\respuesta9a.png" />
+    <AndroidAsset Include="Content\Images\respuesta9b.png" />
+    <AndroidResource Include="Resources\drawable\mujerDosPuntoDos.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>

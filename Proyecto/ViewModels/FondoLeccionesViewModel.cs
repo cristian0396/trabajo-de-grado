@@ -32,11 +32,11 @@ namespace Proyecto.ViewModels
 
         public async Task ActivarPopUps()
         {
-            List<int> Heights = new List<int>() { 240,260};
+            List<int> Heights = new List<int>() { 240,260 };
             List<string> Sources = new List<string>();
             Profes PopUpView2;
             switch (ActivityOption)
-            {
+            {   //Lecciones modulo presupuesto:
                 case "1":                    
                     Sources.Add("tablero0.png");
                     Sources.Add("juan1.png");
@@ -51,11 +51,19 @@ namespace Proyecto.ViewModels
                     ((ProfesViewModel)PopUpView2.BindingContext).InitializeFields(_popUp: ((ProfesViewModel)PopUpView2.BindingContext), sources: Sources, alturas: Heights, actividad: 2, opcion: "7");
                     await PopupNavigation.Instance.PushAsync(PopUpView2);
                     break;
+                //Lecciones modulo plan de gastos:
                 case "3":
                     Sources.Add("punto1.png");
                     Sources.Add("mujer1.png");
                     PopUpView2 = new Profes("10", false);
-                    ((ProfesViewModel)PopUpView2.BindingContext).InitializeFields(_popUp: ((ProfesViewModel)PopUpView2.BindingContext), sources: Sources, alturas: Heights, actividad: 2, opcion: "11");
+                    ((ProfesViewModel)PopUpView2.BindingContext).InitializeFields(_popUp: ((ProfesViewModel)PopUpView2.BindingContext), sources: Sources, alturas: Heights, actividad: 3, opcion: "11");
+                    await PopupNavigation.Instance.PushAsync(PopUpView2);
+                    break;
+                case "4":
+                    Sources.Add("leccion2_punto1.png");
+                    Sources.Add("mujerDosPuntoDos.png");
+                    PopUpView2 = new Profes("10", false);
+                    ((ProfesViewModel)PopUpView2.BindingContext).InitializeFields(_popUp: ((ProfesViewModel)PopUpView2.BindingContext), sources: Sources, alturas: Heights, actividad: 3, opcion: "16");
                     await PopupNavigation.Instance.PushAsync(PopUpView2);
                     break;
             }            

@@ -24,7 +24,7 @@
                 <Grid Grid.Row="0" ColumnSpacing="20" Padding="20" RowSpacing="0">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="40"/>
-                        <RowDefinition Height="120"/>
+                        <RowDefinition Height="100"/>
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
@@ -32,7 +32,7 @@
                     </Grid.ColumnDefinitions>
                     <Label Grid.Row="0" Grid.Column="0" Text="Lección 1" FontSize="18" Margin="25,0,0,0"/>
                     <!-- Imagen que denota la primera lección, lleva a la vista de ActividadP1-->
-                    <Image Grid.Row="1" Grid.Column="0" Source="ingreGastos.png">
+                    <Image Grid.Row="1" Grid.Column="0" Source="leccion1_presupuesto.png">
                         <Image.GestureRecognizers >
                             <TapGestureRecognizer Command="{Binding Leccion1Command}" />
                         </Image.GestureRecognizers>
@@ -45,28 +45,25 @@
                     <Grid.RowDefinitions>
                         <RowDefinition Height="40" />
                         <RowDefinition Height="120"/>
-                        <RowDefinition Height="50"/>
                         <RowDefinition Height="70"/>
                         <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="120"/>
+                        <RowDefinition Height="100"/>
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
                     <Label Grid.Row="0" Grid.Column="0" Text="Lección 2" FontSize="18" Margin="25,0,0,0"/>
-                    <Image Grid.Row="1" Grid.Column="0" Source="FlujoCaja.jpeg">
+                    <Image Grid.Row="1" Grid.Column="0" Source="leccion2_presupuesto.png">
                         <Image.GestureRecognizers >
                             <TapGestureRecognizer Command="{Binding Leccion2Command}" />
                         </Image.GestureRecognizers>
                     </Image>
                     <ProgressBar Grid.Row="1" Grid.Column="1" Progress="0" ScaleY="1" ProgressColor="#566573" Margin="15,0,0,0" />
-                    <Button Grid.Row="2" Grid.Column="1" Text="Ir al simulador"/>
                     <!-- Información adicional al final del modulo-->
-                    <Label Grid.Row="3" Grid.Column="0" Text="Esto es de tu interes!" FontSize="16" Margin="0,40,0,0"/>
-                    <Label Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2"
-                           Text="Actualmente tu estado financiero es aceptable, aunque puedes generar más ingresos invirtiendo o comprando activos! Sigue asi!" FontSize="16" />
-                    <Image Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Source="smiling.png" Scale="0.5" >
+                    <Label Grid.Row="2" Grid.Column="0" Text="Esto es de tu interes!" FontSize="16" Margin="0,40,0,0"/>
+                    <Label Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Text="Actualmente tu estado financiero es aceptable, aunque puedes generar más ingresos invirtiendo o comprando activos! Sigue asi!" FontSize="16" />
+                    <Image Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Source="smiling.png" Scale="0.5" >
                         <Image.GestureRecognizers >
                             <TapGestureRecognizer Command="{Binding juegoCommand}" />
                         </Image.GestureRecognizers>

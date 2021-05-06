@@ -29,7 +29,6 @@
                         <ColumnDefinition/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-
                     <Label Grid.Row="0" Grid.Column="0" Text="Lección 1" FontSize="18" Margin="25,0,0,0"/>
                     <Image Grid.Row="0" Grid.Column="1" Source="key.png" HorizontalOptions="End"/>
                     <Image Grid.Row="1" Grid.Column="0" Source="meta.jpeg"/>

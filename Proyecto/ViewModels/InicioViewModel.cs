@@ -17,19 +17,19 @@ namespace Proyecto.ViewModels
         #endregion Properties
 
         #region Metodos        
-        public InicioViewModel() //constructor
+        public InicioViewModel()
         {
             InicializarComandos();            
         }
 
         public void InicializarComandos()
         {
-            PresupuestoCommand = new Command(async () => await IrAPresupuesto("1"), () => true);
-            PlanGCommand = new Command(async () => await IrAPresupuesto("2"), () => true);
-            AhorroCommand = new Command(async () => await IrAPresupuesto("3"), () => true);
+            PresupuestoCommand = new Command(async () => await IrAlModulo("1"), () => true);
+            PlanGCommand = new Command(async () => await IrAlModulo("2"), () => true);
+            AhorroCommand = new Command(async () => await IrAlModulo("3"), () => true);
         }
         //Función que se encarga de dirigir la navegación hacia las vistas de introducción de los modulos
-        public async Task IrAPresupuesto(string idModulo) 
+        public async Task IrAlModulo(string idModulo) 
         { //dependiendo del parametro idModulo se determina a que introducción ir, 1 para presupuesto, 2 para gastos, 3 para Ahorro
             await Shell.Current.GoToAsync($"{nameof(introPresupuesto)}?Modulo={idModulo}"); //Navegación mediante URIS O URL's, se usan queryparameters para pasar información entre vistas
         } //El queryParameter llega al cs de la vista de IntroPresupuesto para luego ser enviado al viewModel
