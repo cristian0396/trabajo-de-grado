@@ -460,7 +460,8 @@ namespace Proyecto.Actividades
         {
             var orangeColor = new CCColor3B(255, 119, 0);
             CCAudioEngine.SharedEngine.PlayEffect("seleccionRespuesta");
-            switch (currentQuestion)
+            string question = currentQuestion.Substring(0, currentQuestion.Length - 4);
+            switch (question)
             {
                 case "pregunta1":
                     respuesta4.Color = orangeColor;
@@ -485,13 +486,39 @@ namespace Proyecto.Actividades
                 case "pregunta5":
                     respuesta4.Color = orangeColor;
                     inConfirmation = true;
-                    currentAnswer = "respuesta5";
+                    currentAnswer = "respuesta4";
+                    break;
+                case "pregunta6":
+                    respuesta2.Color = orangeColor;
+                    inConfirmation = true;
+                    currentAnswer = "respuesta2";
+                    break;
+                case "pregunta7":
+                    respuesta4.Color = orangeColor;
+                    inConfirmation = true;
+                    currentAnswer = "respuesta4";
+                    break;
+                case "pregunta8":
+                    respuesta3.Color = orangeColor;
+                    inConfirmation = true;
+                    currentAnswer = "respuesta3";
+                    break;
+                case "pregunta9":
+                    respuesta1.Color = orangeColor;
+                    inConfirmation = true;
+                    currentAnswer = "respuesta1";
+                    break;
+                case "pregunta10":
+                    respuesta4.Color = orangeColor;
+                    inConfirmation = true;
+                    currentAnswer = "respuesta4";
                     break;
             }
         }
         private void EjecutarAyuda5050()
         {
-            switch (currentQuestion)
+            string question = currentQuestion.Substring(0, currentQuestion.Length - 4);
+            switch (question)
             {
                 case "pregunta1":
                     respuesta2.RemoveFromParent();
@@ -513,6 +540,25 @@ namespace Proyecto.Actividades
                     respuesta2.RemoveFromParent();
                     respuesta3.RemoveFromParent();
                     break;
+                case "pregunta6":
+                    respuesta1.RemoveFromParent();
+                    respuesta4.RemoveFromParent();
+                    break;
+                case "pregunta7":
+                    respuesta1.RemoveFromParent();
+                    respuesta3.RemoveFromParent();
+                    break;
+                case "pregunta8":
+                    respuesta2.RemoveFromParent();
+                    respuesta4.RemoveFromParent();
+                    break;
+                case "pregunta9":
+                    respuesta2.RemoveFromParent();
+                    break;
+                case "pregunta10":
+                    respuesta1.RemoveFromParent();
+                    respuesta3.RemoveFromParent();
+                    break;
             }
         }
         private async Task EjecutarAyudaAmigo()
@@ -520,7 +566,8 @@ namespace Proyecto.Actividades
             Profes PopUpView1 = new Profes("", false); ;
             List<int> Heights = new List<int>() { 240, 260 };
             List<string> Sources = new List<string>() { "mujer8.png" };
-            switch (currentQuestion)
+            string question = currentQuestion.Substring(0, currentQuestion.Length - 4);
+            switch (question)
             {
                 case "pregunta1":
                     Sources.Insert(0, "llamada1.png");
@@ -540,6 +587,26 @@ namespace Proyecto.Actividades
                     break;
                 case "pregunta5":
                     Sources.Insert(0, "llamada5.png");
+                    ((ProfesViewModel)PopUpView1.BindingContext).InitializeFields(_popUp: ((ProfesViewModel)PopUpView1.BindingContext), sources: Sources, alturas: Heights, deshabilitarOmitir: true, deshabilitarVoz: true, deshabilitarLabelVoz: true);
+                    break;
+                case "pregunta6":
+                    Sources.Insert(0, "llamada6.png");
+                    ((ProfesViewModel)PopUpView1.BindingContext).InitializeFields(_popUp: ((ProfesViewModel)PopUpView1.BindingContext), sources: Sources, alturas: Heights, deshabilitarOmitir: true, deshabilitarVoz: true, deshabilitarLabelVoz: true);
+                    break;
+                case "pregunta7":
+                    Sources.Insert(0, "llamada7.png");
+                    ((ProfesViewModel)PopUpView1.BindingContext).InitializeFields(_popUp: ((ProfesViewModel)PopUpView1.BindingContext), sources: Sources, alturas: Heights, deshabilitarOmitir: true, deshabilitarVoz: true, deshabilitarLabelVoz: true);
+                    break;
+                case "pregunta8":
+                    Sources.Insert(0, "llamada8.png");
+                    ((ProfesViewModel)PopUpView1.BindingContext).InitializeFields(_popUp: ((ProfesViewModel)PopUpView1.BindingContext), sources: Sources, alturas: Heights, deshabilitarOmitir: true, deshabilitarVoz: true, deshabilitarLabelVoz: true);
+                    break;
+                case "pregunta9":
+                    Sources.Insert(0, "llamada9.png");
+                    ((ProfesViewModel)PopUpView1.BindingContext).InitializeFields(_popUp: ((ProfesViewModel)PopUpView1.BindingContext), sources: Sources, alturas: Heights, deshabilitarOmitir: true, deshabilitarVoz: true, deshabilitarLabelVoz: true);
+                    break;
+                case "pregunta10":
+                    Sources.Insert(0, "llamada10.png");
                     ((ProfesViewModel)PopUpView1.BindingContext).InitializeFields(_popUp: ((ProfesViewModel)PopUpView1.BindingContext), sources: Sources, alturas: Heights, deshabilitarOmitir: true, deshabilitarVoz: true, deshabilitarLabelVoz: true);
                     break;
             }            

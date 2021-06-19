@@ -103,6 +103,85 @@ namespace Proyecto.ViewModels
                         texto = "Y por último te aconsejamos que intentes con probar con productos sustitutos a menor precio, así como comprar en las plazas de mercado. Realice siempre el ejercicio de comparar y no se vaya" +
                             "por la primera alternativa que se le presente.";
                         break;
+                    //lección #2 Plan de gastos
+                    case "15":
+                        texto = "El flujo de caja nos sirve para determinar la capacidad que tiene, en este caso, la persona de generar plata, y asi poder determinar si la persona tiene la capacidad de hacer frente" +
+                            "a sus obligaciones actuales, y, de haber obligaciones proyectadas, poder prever dichas obligaciones.";
+                        break;
+                    case "16":
+                        texto = "Empiece por presupuestar el pago de su salud, pensión y ARL que le permitan gozar de tranquilidad para vivir su dia a dia. Si es empleado con seguridad, tales aportes son los primero" +
+                            "que le descuentan cuando le pagan su salario, pero si es independiente póngalos en su lista de prioridades.";
+                        break;
+                    case "17":
+                        texto = "Teniendo en cuenta la capacidad de la persona de generar ingresos(plata), en segunda instancia, el flujo de caja nos servirá para tomar decisiones. La decisión de invertir, de endeudarse" +
+                            "o de bajar los gastos o cualquier otra, dependiendo de nuestra capacidad comercial o capacidad de generar ingresos(plata)";
+                        break;
+                    case "18":
+                        texto = "El flujo de caja nos permite observar el comportamiento de nuestras finanzas personales, lo cual nos dará la capacidad de formular estrategias y politicas saludables para asegurar un futuro financiero estable";
+                        break;
+                    case "19":
+                        texto = "El proceso de elaboración de un flujo de caja es sencillo, pero debemos definir para que lo vamos a realizar, así la información nos sea realmente útil, debe ser información fidedigna, real y confiable." +
+                            "A continuación los pasos recomendados";
+                        break;
+                    case "20":
+                        texto = "Primero, Definir el periodo a realizar el flujo" +
+                            "Segundo, Determinar el saldo inicial" +
+                            "Tercero, Determinar todas las salidas o egresos de fondos" +
+                            "Cuarto, Determinar todas las salidas o egresos de fondos" +
+                            "Quinto, La suma de los ingresos (menos) la suma de los egresos se obtiene el saldo del periodo." +
+                            "A continuación los pasos recomendados";
+                        break;
+                    //lección #1 Ahorro
+                    case "21":
+                        texto = "El ahorro es una labor que requiere propósito, organización y constancia, estos tres factores son importantes para tener exito al momento de iniciar cualquier tipo de ahorro," +
+                            "sin ellos el camino será dificil de recorrer e incierto para algunas personas.";
+                        break;
+                    case "22":
+                        texto = "Propósito" +
+                            "Si no tienes un propósito claro, no vas a ahorrar de manera constante o te lo puedes gastar todo en una sola salida de compras, por eso es importante definir un proposito o varios," +
+                            "además, establecer los limites de ese proposito y como lo vas a cumplir.";
+                        break;
+                    case "23":
+                        texto = "Organización" +
+                            "Ya sea que planees tus ahorros de forma semanal, quincenal o mensual, debes estar consciente de que hablamos de un plan a largo plazo." +
+                            "De lo contrario te desmotivas, dejas de ahorrar o te gastas lo poco que has guardado.";
+                        break;
+                    case "24":
+                        texto = "Constancia" +
+                            "No se puede parar por ningún motivo, aunque hayas cumplido tu objetivo inicial. Si empiezas ahorrando 10.000, luego puedes ahorrar 15000 y asi nos vamos acostumbrando al hábito" +
+                            "de ahorrar cada vez más siempre que sea posible.";
+                        break;
+                    case "25":
+                        texto = "El ahorro no necesariamente tiene que ser para una emergencia. Claro que un propósito totalmente válido puede ser un viaje o cualquier lujo que quieras darte." +
+                            "De nada vale trabajar tant duro si no te puedes dar un gusto de vez en cuando.";
+                        break;
+                    //lección #2 Ahorro
+                    case "26":
+                        texto = "Al parecer no hay una fórmula mágica pero si hay opciones para ahorrar que se adaptan a las realidades de cada persona:" +
+                            "Lo primero que debemos hacer es diferenciar nuestras necesidades de nuestros deseos, algo fundamental es tener la respuesta a estas preguntas:" +
+                            "¿Realmente lo necesito?" +
+                            "¿Puedo o debo comprarmelo?";
+                        break;
+                    case "27":
+                        texto = "No solo hablamos de ese último iPhone para estar a la moda, sino gastos cotidianos que nos hacen disminuir nuestro capital, o gastos hormiga, como ese café despues del almuerzo" +
+                            "en la cafeteria de la oficina: 1000 por 5 dias a la semana por 4 semanas al mes por 12 meses al año es igual a 240.000 (como mínimo)" +
+                            "Ojo: no hablamos de prohibirnos cosas, sino de tener claro cuales son nuestras prioridades y tener autocontrol.";
+                        break;
+                    case "28":
+                        texto = "Existen opciones de apoyo que te pueden servir para comenzar a ahorrar, por ejemplo una cuenta de ahorros, pero toca conocer/investigar sobre qué productor" +
+                            "bancario es más apropiado para uno: " +
+                            "Cuentas de ahorro" +
+                            "Plazos fijos a corto plazo" +
+                            "Seguros de vida con plan de ahorro";
+                        break;
+                    case "29":
+                        texto = "Pague sus cuentas o ahorro programado a tiempo. Si no pagas tus cuentas antes de la fecha límite, no te engañes, que no estas ahorrando" +
+                            "Esto te evita penalidades y moras, además que construyes tus referencias de crédito y evitas reportes en las centrales de riesgo.";
+                        break;
+                    case "30":
+                        texto = "Las tarjetas de crédito, que al parecer mucha gente las ve como un pago adicional del salario y ahí es donde está el error y empieza el efecto de bola de nieve" +
+                            "Ahora, las tarjetas de crédito no son malas. Al contrario, este es un producto que bien administrado le puedes sacar provecho y te puede ayudar a construir historial crediticio.";
+                        break;
                 }
                 await TextToSpeech.SpeakAsync(texto, _speakButtonCancellationTokenSource.Token);
             }
@@ -268,6 +347,73 @@ namespace Proyecto.ViewModels
                     PopUpView1 = new Profes("14", SwitchVoz);
                     ((ProfesViewModel)PopUpView1.BindingContext).InitializeFields(_popUp: ((ProfesViewModel)PopUpView1.BindingContext), sources: Sources, alturas: Heights, actividad: 3, opcion: "20");
                     await PopupNavigation.Instance.PushAsync(PopUpView1);
+                    break;
+                case "20":
+                    await Shell.Current.GoToAsync("ActividadGastos1");
+                    break;
+                //casos de la lección #1 modulo Ahorro
+                case "21":
+                    Sources.Add("punto2ahorro.png");
+                    Sources.Add("munecos2.png");
+                    PopUpView1 = new Profes("11", SwitchVoz);
+                    ((ProfesViewModel)PopUpView1.BindingContext).InitializeFields(_popUp: ((ProfesViewModel)PopUpView1.BindingContext), sources: Sources, alturas: Heights, actividad: 3, opcion: "22");
+                    await PopupNavigation.Instance.PushAsync(PopUpView1);
+                    break;
+                case "22":
+                    Sources.Add("punto3ahorro.png");
+                    Sources.Add("munecos3.png");
+                    PopUpView1 = new Profes("12", SwitchVoz);
+                    ((ProfesViewModel)PopUpView1.BindingContext).InitializeFields(_popUp: ((ProfesViewModel)PopUpView1.BindingContext), sources: Sources, alturas: Heights, actividad: 3, opcion: "23");
+                    await PopupNavigation.Instance.PushAsync(PopUpView1);
+                    break;
+                case "23":
+                    Sources.Add("punto4ahorro.png");
+                    Sources.Add("munecos4.png");
+                    PopUpView1 = new Profes("13", SwitchVoz);
+                    ((ProfesViewModel)PopUpView1.BindingContext).InitializeFields(_popUp: ((ProfesViewModel)PopUpView1.BindingContext), sources: Sources, alturas: Heights, actividad: 3, opcion: "24");
+                    await PopupNavigation.Instance.PushAsync(PopUpView1);
+                    break;
+                case "24":
+                    Sources.Add("punto5ahorro.png");
+                    Sources.Add("munecos5.png");
+                    PopUpView1 = new Profes("14", SwitchVoz);
+                    ((ProfesViewModel)PopUpView1.BindingContext).InitializeFields(_popUp: ((ProfesViewModel)PopUpView1.BindingContext), sources: Sources, alturas: Heights, actividad: 3, opcion: "25");
+                    await PopupNavigation.Instance.PushAsync(PopUpView1);
+                    break;
+                case "25":
+                    await Shell.Current.GoToAsync("ActividadGastos1");
+                    break;
+                //casos de la lección #2 modulo Ahorro
+                case "26":
+                    Sources.Add("punto7ahorro.png");
+                    Sources.Add("munecos7.png");
+                    PopUpView1 = new Profes("12", SwitchVoz);
+                    ((ProfesViewModel)PopUpView1.BindingContext).InitializeFields(_popUp: ((ProfesViewModel)PopUpView1.BindingContext), sources: Sources, alturas: Heights, actividad: 3, opcion: "27");
+                    await PopupNavigation.Instance.PushAsync(PopUpView1);
+                    break;
+                case "27":
+                    Sources.Add("punto8ahorro.png");
+                    Sources.Add("munecos8.png");
+                    PopUpView1 = new Profes("13", SwitchVoz);
+                    ((ProfesViewModel)PopUpView1.BindingContext).InitializeFields(_popUp: ((ProfesViewModel)PopUpView1.BindingContext), sources: Sources, alturas: Heights, actividad: 3, opcion: "28");
+                    await PopupNavigation.Instance.PushAsync(PopUpView1);
+                    break;
+                case "28":
+                    Sources.Add("punto9ahorro.png");
+                    Sources.Add("munecos9.png");
+                    PopUpView1 = new Profes("14", SwitchVoz);
+                    ((ProfesViewModel)PopUpView1.BindingContext).InitializeFields(_popUp: ((ProfesViewModel)PopUpView1.BindingContext), sources: Sources, alturas: Heights, actividad: 3, opcion: "29");
+                    await PopupNavigation.Instance.PushAsync(PopUpView1);
+                    break;
+                case "29":
+                    Sources.Add("punto10ahorro.png");
+                    Sources.Add("munecos10.png");
+                    PopUpView1 = new Profes("14", SwitchVoz);
+                    ((ProfesViewModel)PopUpView1.BindingContext).InitializeFields(_popUp: ((ProfesViewModel)PopUpView1.BindingContext), sources: Sources, alturas: Heights, actividad: 3, opcion: "30");
+                    await PopupNavigation.Instance.PushAsync(PopUpView1);
+                    break;
+                case "30":
+                    await Shell.Current.GoToAsync("ActividadGastos1");
                     break;
             }
         }

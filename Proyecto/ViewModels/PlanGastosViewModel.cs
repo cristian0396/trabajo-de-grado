@@ -22,7 +22,7 @@ namespace Proyecto.ViewModels
         public void InicializarComandos()
         {
             Leccion1Command = new Command(async () => await IrALeccion1("fondoPlanGastos.png"), () => true);
-            Leccion2Command = new Command(async () => await IrALeccion2("fondo02.png"), () => true);
+            Leccion2Command = new Command(async () => await IrALeccion2("fondolecciondos.png"), () => true);
             BotonAtrasCommand = new Command(async () => await IrAInicio(), () => true);
         }
         public async Task IrALeccion1(string sourceImage) //Función que se activa al hacer click en la imagen de la primer lección

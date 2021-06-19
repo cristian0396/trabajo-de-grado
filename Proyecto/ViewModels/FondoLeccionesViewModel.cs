@@ -66,6 +66,21 @@ namespace Proyecto.ViewModels
                     ((ProfesViewModel)PopUpView2.BindingContext).InitializeFields(_popUp: ((ProfesViewModel)PopUpView2.BindingContext), sources: Sources, alturas: Heights, actividad: 3, opcion: "16");
                     await PopupNavigation.Instance.PushAsync(PopUpView2);
                     break;
+                //Lecciones modulo Ahorro:
+                case "5":
+                    Sources.Add("punto1ahorro.png");
+                    Sources.Add("munecos1.png");
+                    PopUpView2 = new Profes("10", false);
+                    ((ProfesViewModel)PopUpView2.BindingContext).InitializeFields(_popUp: ((ProfesViewModel)PopUpView2.BindingContext), sources: Sources, alturas: Heights, actividad: 3, opcion: "21");
+                    await PopupNavigation.Instance.PushAsync(PopUpView2);
+                    break;
+                case "6":
+                    Sources.Add("punto6ahorro.png");
+                    Sources.Add("munecos6.png");
+                    PopUpView2 = new Profes("10", false);
+                    ((ProfesViewModel)PopUpView2.BindingContext).InitializeFields(_popUp: ((ProfesViewModel)PopUpView2.BindingContext), sources: Sources, alturas: Heights, actividad: 3, opcion: "26");
+                    await PopupNavigation.Instance.PushAsync(PopUpView2);
+                    break;
             }            
         }
     }

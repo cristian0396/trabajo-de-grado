@@ -31,7 +31,11 @@
                     </Grid.ColumnDefinitions>
                     <Label Grid.Row="0" Grid.Column="0" Text="Lección 1" FontSize="18" Margin="25,0,0,0"/>
                     <Image Grid.Row="0" Grid.Column="1" Source="key.png" HorizontalOptions="End"/>
-                    <Image Grid.Row="1" Grid.Column="0" Source="meta.jpeg"/>
+                    <Image Grid.Row="1" Grid.Column="0" Source="meta.jpeg">
+                        <Image.GestureRecognizers >
+                            <TapGestureRecognizer Command="{Binding Leccion1Command}" />
+                        </Image.GestureRecognizers>
+                    </Image>
                     <ProgressBar Grid.Row="1" Grid.Column="1" Progress="0.6" ScaleY="1" ProgressColor="#77D371" Margin="15,0,0,0" />
                 </Grid>                
                 <Grid Grid.Row="1" ColumnSpacing="20" RowSpacing="10" Padding="14">
@@ -64,7 +68,11 @@
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
                     <Label Grid.Row="0" Grid.Column="0" Text="Lección 2" FontSize="18" Margin="25,0,0,0"/>
-                    <Image Grid.Row="1" Grid.Column="0" Source="ahorro.jpeg"/>
+                    <Image Grid.Row="1" Grid.Column="0" Source="ahorro.jpeg">
+                        <Image.GestureRecognizers >
+                            <TapGestureRecognizer Command="{Binding Leccion2Command}" />
+                        </Image.GestureRecognizers>
+                    </Image>
                     <ProgressBar Grid.Row="1" Grid.Column="1" Progress="0.1" ScaleY="1" ProgressColor="#77D371" Margin="15,0,0,0" />                    
                     <Button Grid.Row="2" Grid.Column="0" Text="Actividad" Margin="0,20,0,0"/>
                     <Button Grid.Row="2" Grid.Column="1" Text="Siguiente Nivel" Margin="0,20,0,0"/>
