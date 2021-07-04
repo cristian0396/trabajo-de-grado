@@ -13535,7 +13535,7 @@ namespace Proyecto.Droid
 			public const int fondo02 = 2131165296;
 			
 			// aapt resource value: 0x7F070071
-			public const int fondoahorrodos = 2131165297;
+			public const int fondoahorrotres = 2131165297;
 			
 			// aapt resource value: 0x7F070072
 			public const int fondoahorrouno = 2131165298;

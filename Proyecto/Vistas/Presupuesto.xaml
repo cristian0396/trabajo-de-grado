@@ -65,7 +65,7 @@
                     <Label Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Text="Actualmente tu estado financiero es aceptable, aunque puedes generar más ingresos invirtiendo o comprando activos! Sigue asi!" FontSize="16" />
                     <Image Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Source="smiling.png" Scale="0.5" >
                         <Image.GestureRecognizers >
-                            <TapGestureRecognizer Command="{Binding juegoCommand}" />
+                            <TapGestureRecognizer Command="{Binding JuegoCommand}" />
                         </Image.GestureRecognizers>
                     </Image>
                 </Grid>

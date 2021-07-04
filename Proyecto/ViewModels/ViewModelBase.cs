@@ -16,15 +16,20 @@ namespace Proyecto.ViewModels
         }
         public void RegistrarRutas()
         {
-            Routing.RegisterRoute(nameof(introPresupuesto), typeof(introPresupuesto));
+            //modulos
             Routing.RegisterRoute(nameof(Presupuesto), typeof(Presupuesto));
             Routing.RegisterRoute(nameof(PlanGastos), typeof(PlanGastos));
             Routing.RegisterRoute(nameof(Ahorro), typeof(Ahorro));
+            //introducciones
+            Routing.RegisterRoute(nameof(introPresupuesto), typeof(introPresupuesto));            
             Routing.RegisterRoute(nameof(FondoLecciones), typeof(FondoLecciones));
+            //actividades
             Routing.RegisterRoute(nameof(ActividadP1), typeof(ActividadP1));
-            Routing.RegisterRoute(nameof(JuegoFruit), typeof(JuegoFruit));
             Routing.RegisterRoute(nameof(ActividadP2), typeof(ActividadP2));
-            Routing.RegisterRoute(nameof(ActividadGastos1), typeof(ActividadGastos1));            
+            Routing.RegisterRoute(nameof(ActividadGastos1), typeof(ActividadGastos1));
+            //juegos
+            Routing.RegisterRoute(nameof(JuegoFruit), typeof(JuegoFruit));
+            Routing.RegisterRoute(nameof(JuegoBouncingBall), typeof(JuegoBouncingBall));
         }
 
         public virtual async Task ConstructorAsync(object parameters)

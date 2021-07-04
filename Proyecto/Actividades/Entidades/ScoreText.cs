@@ -16,7 +16,7 @@ namespace Proyecto.Actividades.Entidades
 			set
 			{
 				label.Text = "Score: " + value;
-			}
+			}			
 		}
 
 		public ScoreText()

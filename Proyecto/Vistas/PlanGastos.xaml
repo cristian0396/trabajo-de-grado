@@ -42,6 +42,7 @@
                     <Grid.RowDefinitions>
                         <RowDefinition Height="40" />
                         <RowDefinition Height="120"/>
+                        <RowDefinition Height="100"/>
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
@@ -54,6 +55,11 @@
                         </Image.GestureRecognizers>
                     </Image>
                     <ProgressBar Grid.Row="1" Grid.Column="1" Progress="0" ScaleY="1" ProgressColor="#566573" Margin="15,0,0,0" />
+                    <Image Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Source="smiling.png" Scale="0.5" >
+                        <Image.GestureRecognizers >
+                            <TapGestureRecognizer Command="{Binding JuegoCommand}" />
+                        </Image.GestureRecognizers>
+                    </Image>
                 </Grid>
             </Grid>
         </ScrollView>

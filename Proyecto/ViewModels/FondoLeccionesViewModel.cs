@@ -62,7 +62,7 @@ namespace Proyecto.ViewModels
                 case "4":
                     Sources.Add("leccion2_punto1.png");
                     Sources.Add("mujerDosPuntoDos.png");
-                    PopUpView2 = new Profes("10", false);
+                    PopUpView2 = new Profes("15", false);
                     ((ProfesViewModel)PopUpView2.BindingContext).InitializeFields(_popUp: ((ProfesViewModel)PopUpView2.BindingContext), sources: Sources, alturas: Heights, actividad: 3, opcion: "16");
                     await PopupNavigation.Instance.PushAsync(PopUpView2);
                     break;
@@ -70,14 +70,14 @@ namespace Proyecto.ViewModels
                 case "5":
                     Sources.Add("punto1ahorro.png");
                     Sources.Add("munecos1.png");
-                    PopUpView2 = new Profes("10", false);
+                    PopUpView2 = new Profes("20", false);
                     ((ProfesViewModel)PopUpView2.BindingContext).InitializeFields(_popUp: ((ProfesViewModel)PopUpView2.BindingContext), sources: Sources, alturas: Heights, actividad: 3, opcion: "21");
                     await PopupNavigation.Instance.PushAsync(PopUpView2);
                     break;
                 case "6":
                     Sources.Add("punto6ahorro.png");
                     Sources.Add("munecos6.png");
-                    PopUpView2 = new Profes("10", false);
+                    PopUpView2 = new Profes("25", false);
                     ((ProfesViewModel)PopUpView2.BindingContext).InitializeFields(_popUp: ((ProfesViewModel)PopUpView2.BindingContext), sources: Sources, alturas: Heights, actividad: 3, opcion: "26");
                     await PopupNavigation.Instance.PushAsync(PopUpView2);
                     break;

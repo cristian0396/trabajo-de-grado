@@ -77,7 +77,6 @@ namespace Proyecto.Actividades
             paleta5.PositionX = (CapaDeJuego.ContentSize.Width / 2.0f) - (CapaDeJuego.ContentSize.Width / 4.0f);
             paleta5.PositionY = (CapaDeJuego.ContentSize.Height / 2.0f) + (CapaDeJuego.ContentSize.Height / 9.4f);
             CapaDeJuego.AddChild(paleta5);
-
             
             paleta6 = new CCSprite("p1.png"); //tercera ficha izquierda más arriba
             paleta6.Scale = 0.4f;
@@ -114,8 +113,7 @@ namespace Proyecto.Actividades
             touchListener.OnTouchesMoved = HandleTouchesMoved;
             touchListener.OnTouchesBegan = HandleTouchesBegan;
             CapaDeJuego.AddEventListener(touchListener);
-        }
-        
+        }        
         private void HandleTouchesBegan(List<CCTouch> arg1, CCEvent arg2)
         {
             if (hasGameEnded)
@@ -139,7 +137,6 @@ namespace Proyecto.Actividades
             var locationOnScreen = touches[0].Location;
             paleta.HandleInput(locationOnScreen);        
         }
-
         private void Activity(float frameTimeInSeconds)
         { //función que controla toda la actividad en el juego, se ejecuta por medio de Schedule()
             if (hasGameEnded == false)
@@ -148,7 +145,6 @@ namespace Proyecto.Actividades
                 PiezaVsPieza(paleta); //manejar las colisiones del juego
             }
         }
-
         private void ubicarPieza(string dir, float x, float y)
         { //función que le entra las coordenadas en que la ficha estatica creada debe ubicarse
             CCSprite nuevaPieza = new CCSprite(dir);
@@ -158,7 +154,6 @@ namespace Proyecto.Actividades
             nuevaPieza.PositionY = y;
             CapaDeJuego.AddChild(nuevaPieza);
         }
-
         private void EscogerNuevaFicha()
         {
             switch (ControlPaletas)
@@ -180,7 +175,6 @@ namespace Proyecto.Actividades
                     break;                    
             }
         }
-
         private void Checkear(float x, float y)
         {
             correct = new CCSprite("check.png");
@@ -190,8 +184,6 @@ namespace Proyecto.Actividades
             correct.PositionY = y;
             CapaDeJuego.AddChild(correct);
         }
-               
-
         private void EndGame()
         {
             hasGameEnded = true;
@@ -210,7 +202,6 @@ namespace Proyecto.Actividades
             endGameLabel.PositionY = hudLayer.ContentSize.Height / 2.0f;
             hudLayer.Children.Add(endGameLabel);
         }
-
         private void GanarPuntos(string sourceEffect)
         {
             CCAudioEngine.SharedEngine.PlayEffect(sourceEffect);

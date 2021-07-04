@@ -14,7 +14,7 @@ namespace Proyecto.ViewModels
         public ICommand Leccion1Command { get; set; }
         public ICommand Leccion2Command { get; set; }
         public ICommand BotonAtrasCommand { get; set; }
-        public ICommand juegoCommand { get; set; }        
+        public ICommand JuegoCommand { get; set; }        
 
         public PresupuestoViewModel()
         {            
@@ -26,7 +26,7 @@ namespace Proyecto.ViewModels
             Leccion1Command = new Command(async () => await IrALeccion1(), () => true);
             Leccion2Command = new Command(async () => await IrALeccion2(), () => true);
             BotonAtrasCommand = new Command(async () => await IrAInicio(), () => true);
-            juegoCommand = new Command(async () => await IrAJuego(), () => true);
+            JuegoCommand = new Command(async () => await IrAJuego(), () => true);
         }
         public async Task IrALeccion1() //Función que se activa al hacer click en la imagen de la primer lección
         {

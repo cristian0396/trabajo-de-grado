@@ -586,10 +586,22 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\fondoahorrotres.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Content\Images\bolita.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Content\Images\plataforma.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Content\Images\bouncingBg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Content\Images\naveEspacial.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties TriggeredFromHotReload="False" XamarinHotReloadUnhandledDeviceExceptionProyectoAndroidHideInfoBar="True" />
+      <UserProperties XamarinHotReloadUnhandledDeviceExceptionProyectoAndroidHideInfoBar="True" TriggeredFromHotReload="False" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>

@@ -13,6 +13,7 @@ namespace Proyecto.ViewModels
         public ICommand BotonAtrasCommand { get; set; }
         public ICommand Leccion1Command { get; set; }
         public ICommand Leccion2Command { get; set; }
+        public ICommand JuegoCommand { get; set; }
 
         public PlanGastosViewModel()
         {
@@ -24,12 +25,12 @@ namespace Proyecto.ViewModels
             Leccion1Command = new Command(async () => await IrALeccion1("fondoPlanGastos.png"), () => true);
             Leccion2Command = new Command(async () => await IrALeccion2("fondolecciondos.png"), () => true);
             BotonAtrasCommand = new Command(async () => await IrAInicio(), () => true);
+            JuegoCommand = new Command(async () => await IrAJuego(), () => true);
         }
         public async Task IrALeccion1(string sourceImage) //Función que se activa al hacer click en la imagen de la primer lección
         {
             await Shell.Current.GoToAsync($"{nameof(FondoLecciones)}?SourceImg={sourceImage}");
         }
-
         public async Task IrALeccion2(string sourceImage) //Función que se activa al hacer click en la imagen de la primer lección
         {
             await Shell.Current.GoToAsync($"{nameof(FondoLecciones)}?SourceImg={sourceImage}");
@@ -37,6 +38,10 @@ namespace Proyecto.ViewModels
         public async Task IrAInicio() //Función que se activa al dar click en el boton de atrás
         {
             await Shell.Current.GoToAsync("../.."); //Con esto se logra retroceder al inicio, se realizan dos retrocesos
+        }
+        public async Task IrAJuego()
+        {
+            await Shell.Current.GoToAsync("JuegoBouncingBall");
         }
     }
 }
