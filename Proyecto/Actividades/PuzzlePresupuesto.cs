@@ -25,7 +25,7 @@ namespace Proyecto.Actividades
             ControlPaletas = 0;
             var contentSearchPaths = new List<string>() { "Images", "Sounds" };
             gameView.ContentManager.SearchPaths = contentSearchPaths;
-            CCAudioEngine.SharedEngine.PlayBackgroundMusic("Ambiente");            
+            CCAudioEngine.SharedEngine.PlayBackgroundMusic("Ambiente", true);            
             InicializarCapas();            
             CrearFondo();
             CrearPaletas();
@@ -186,6 +186,7 @@ namespace Proyecto.Actividades
         }
         private void EndGame()
         {
+            CCAudioEngine.SharedEngine.StopBackgroundMusic();
             hasGameEnded = true;
             var drawNode = new CCDrawNode();
             drawNode.DrawRect(

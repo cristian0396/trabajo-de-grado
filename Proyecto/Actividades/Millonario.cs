@@ -30,7 +30,7 @@ namespace Proyecto.Actividades
             GameView = gameView;
             var contentSearchPaths = new List<string>() { "Images", "Sounds" };
             gameView.ContentManager.SearchPaths = contentSearchPaths;
-            CCAudioEngine.SharedEngine.PlayBackgroundMusic("millonario");            
+            CCAudioEngine.SharedEngine.PlayBackgroundMusic("millonario", true);            
             randoms = new int[10];
             randoms = CrearRandoms();
             InicializarPreguntasYRespuestas();
@@ -675,6 +675,7 @@ namespace Proyecto.Actividades
         }
         private void EndGame()
         {
+            CCAudioEngine.SharedEngine.StopBackgroundMusic();
             hasGameEnded = true;
 
             // dim the background:

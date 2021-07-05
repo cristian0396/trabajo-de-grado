@@ -3,7 +3,7 @@ using Proyecto.Actividades.Entidades;
 using System;
 using System.Collections.Generic;
 using System.Text;
-
+// musica de fondo por: https://patrickdearteaga.com
 namespace Proyecto.Actividades
 {
     public class BouncingBall : CCScene
@@ -11,17 +11,21 @@ namespace Proyecto.Actividades
         CCSprite paddle, ball, martian;        
         CCLayer CapaDeFondo, CapaDeJuego, hudLayer;
         CCGameView GameView;
-        int score = 0, lives = 3;
-        float velocidadX, velocidadY = 400;
+        int score = 0, lives = 3, level = 0;
+        float velocidadX, velocidadY = 200;
         const float gravedad = 140;
+        float minXVelocity = -200;
+        float maxXVelocity = 200;
         bool hasGameEnded, martianFlag;
         ScoreText scoreText;
         LivesText livesLabel;
+        CCLabel levelLabel;
         public BouncingBall(CCGameView gameView) : base(gameView)
         {
             GameView = gameView;
             var contentSearchPaths = new List<string>() { "Images", "Sounds" };
             gameView.ContentManager.SearchPaths = contentSearchPaths;
+            CCAudioEngine.SharedEngine.PlayBackgroundMusic("fondoBouncingBall", true);
             InicializarCapas();
             CrearFondo();
             CreateHud();
@@ -29,6 +33,7 @@ namespace Proyecto.Actividades
             CreateTouchListener();
             IniciarPaleta();
             IniciarBola();
+            SubirNivel();
             Schedule(Activity);
         }
 
@@ -126,22 +131,40 @@ namespace Proyecto.Actividades
                 }
             }
         }
+        private void SubirNivel()
+        {
+            levelLabel = new CCLabel("Nivel: " + level, "Arial", 20, CCLabelFormat.SystemFont);
+            levelLabel.Color = CCColor3B.White;
+            levelLabel.PositionX = hudLayer.ContentSize.Width / 2.0f;
+            levelLabel.PositionY = hudLayer.ContentSize.Height / 2.0f;
+            hudLayer.Children.Add(levelLabel);
+            level += 1;
+            minXVelocity -= 100;
+            maxXVelocity += 100;
+            velocidadY += 100;
+        }
         private void VerificarColisiones()
         {
             bool ballOverlapsPaddle = ball.BoundingBoxTransformedToParent.IntersectsRect(paddle.BoundingBoxTransformedToParent);
             bool isMovignDownward = velocidadY < 0;
             if (ballOverlapsPaddle && isMovignDownward)
             {
+                CCAudioEngine.SharedEngine.PlayEffect("boing");
                 velocidadY *= -1;
-                const float minXVelocity = -300;
-                const float maxXVelocity = 300;
                 velocidadX = CCRandom.GetRandomFloat(minXVelocity, maxXVelocity);
                 score += 1;
                 scoreText.Score = score;
-                if (score % 5 == 0 && !martianFlag)
+                if (score % 5 == 0)
                 {
-                    CrearMarciano();
-                    martianFlag = true;
+                    SubirNivel();
+                    if (!martianFlag)
+                    {
+                        CrearMarciano();
+                        martianFlag = true;
+                    }                    
+                } else
+                {
+                    levelLabel.Visible = false;
                 }
             }
         }
@@ -212,6 +235,7 @@ namespace Proyecto.Actividades
         }
         private void EndGame()
         {
+            CCAudioEngine.SharedEngine.StopBackgroundMusic();
             hasGameEnded = true;
             var drawNode = new CCDrawNode();
             drawNode.DrawRect(
