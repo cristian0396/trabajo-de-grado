@@ -67,8 +67,8 @@ namespace Proyecto.ViewModels
                     Heights.Add(200);
                     Heights.Add(170);
                     Heights.Add(180);
-                    message = "Estos gastos generalmente no cambian" +
-                        " es decir, se mantienen porque cubren las necesidades más basicas de cada persona.";
+                    message = "Los gastos fijos no cambian," +
+                        " es decir, se mantienen porque cubren las necesidades basicas de cada persona.";
                     ((PopUpViewModel)PopUpView.BindingContext).InitializeFields(_popUp: ((PopUpViewModel)PopUpView.BindingContext), rotacion: _rotacion, escala: _escala, source: _source, alturas: Heights, opcion: "4", gridColumn: _gridColumn, message: message);
                     await PopupNavigation.Instance.PushAsync(PopUpView);
                     break;
@@ -76,7 +76,7 @@ namespace Proyecto.ViewModels
                     Heights.Add(248);
                     Heights.Add(170);
                     Heights.Add(180);
-                    message = "Estos gastos son todos aquellos que pueden diferir en cada mes" +
+                    message = "Los gastos variables son aquellos que pueden diferir en cada mes" +
                         " según la actividad de la persona.";
                     ((PopUpViewModel)PopUpView.BindingContext).InitializeFields(_popUp: ((PopUpViewModel)PopUpView.BindingContext), rotacion: _rotacion, escala: _escala, source: _source, alturas: Heights, opcion: "5", gridColumn: _gridColumn, message: message);
                     await PopupNavigation.Instance.PushAsync(PopUpView);
@@ -93,7 +93,7 @@ namespace Proyecto.ViewModels
                 case "6":
                     Heights.Add(320);
                     Heights.Add(180);
-                    message = "Este es el Total de gastos," +
+                    message = "El total de gastos," +
                         " se calcula sumando todos los gastos, tanto gastos fijos como variables, se debe tener en cuenta cualquier salida de plata.";
                     ((PopUpViewModel)PopUpView.BindingContext).InitializeFields(_popUp: ((PopUpViewModel)PopUpView.BindingContext), rotacion: 90, escala: _escala, source: "flecha1.png", alturas: Heights, gridColumn: 1, message: message, width: 60);
                     await PopupNavigation.Instance.PushAsync(PopUpView);

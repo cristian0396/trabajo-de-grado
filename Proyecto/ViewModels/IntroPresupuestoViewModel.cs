@@ -57,14 +57,8 @@ namespace Proyecto.ViewModels
                     {
                         DirImagen = "importantPresu.png",
                         Titulo = "Importancia",
-                        Contenido = "Para la toma de decisiones, por ejemplo, la puesta en marcha de un negocio o el inicio de un proyecto; permite identificar, determinar y gestionar los recursos que se emplearan para el cumplimiento de metas planeadas, de forma que sea óptimo y eficiente.",
-                        CarouselItem = new RecorridoItemPage()
-                    },
-                    new IntroduccionModel()
-                    {
-                        DirImagen = "IdeaPresu.png",
-                        Titulo = "Ejemplo",
-                        Contenido = "A continuación, un ejemplo de un presupuesto inicial, donde hay un pequeño margen para el ahorro y por otro lado se describen ingresos y gastos, lo que es el ideal en todo presupuesto. ",
+                        Contenido = "* Para la toma de decisiones, por ejemplo, la puesta en marcha de un negocio o el inicio de un proyecto.\n" +
+                        "\n* Permite identificar y administrar los recursos que se emplearan para el cumplimiento de metas planeadas, de una forma rapida y mejor!.",
                         CarouselItem = new RecorridoItemPage()
                     },
                     new IntroduccionModel()
@@ -72,7 +66,6 @@ namespace Proyecto.ViewModels
                         DirImagen = "PresupuestoInicial.PNG",
                         CarouselItem = new RecorridoItemPage()
                     }
-
                 };
             }
             else if (IDModulo == "2")
@@ -83,21 +76,16 @@ namespace Proyecto.ViewModels
                     {
                         DirImagen = "ejemplo.png",
                         Titulo = "Gastos",
-                        Contenido = "Es la utilización o consumo de un bien o servicio a cambio de una contraprestación, se suele realizar mediante una cantidad saliente de dinero. También se denomina egreso.",
+                        Contenido = "Es el pago en plata por un bien o un servicio que se requiera.",
                         CarouselItem = new RecorridoItemPage()
                     },
                     new IntroduccionModel()
                     {
                         DirImagen = "money.png",
                         Titulo = "Importancia",
-                        Contenido = "Es importante conocer los gastos mensuales ya que permite obtener información relevante sobre la rentabilidad y el desempeño de las actividades personales. Además, ayuda también en la planificación  y en la toma de decisiones sobre inversiones futuras.",
-                        CarouselItem = new RecorridoItemPage()
-                    },
-                    new IntroduccionModel()
-                    {
-                        DirImagen = "financeMedal.png",
-                        Titulo = "Ejemplo",
-                        Contenido = "A continuación, se mostrará un ejemplo real de los gastos generales de un colombiano promedio según el Dane en el 2015",
+                        Contenido = "* Permiten obtener información relevante sobre la rentabilidad y el desempeño de las actividades personales.\n" +
+                        "\n * Ayuda en la planificación y en la toma de decisiones sobre inversiones futuras.\n" +
+                        "\n * Para determinar si de verdad fueron necesarios los gastos que se hicieron. ",
                         CarouselItem = new RecorridoItemPage()
                     },
                     new IntroduccionModel()
@@ -115,21 +103,16 @@ namespace Proyecto.ViewModels
                     {
                         DirImagen = "moneydef.png",
                         Titulo = "Ahorro",
-                        Contenido = "Ahorrar es una forma inteligente de guardar dinero (lograr un patrimonio) y alcanzar tus metas. Todos podemos hacerlo, sin importar si ganamos mucho o poco, cualquier aporte sirve al momento de ahorrar",
+                        Contenido = "Es una forma inteligente de guardar dinero y alcanzar tus metas. Todos podemos hacerlo, sin importar si ganamos mucho o poco, cualquier aporte sirve al momento de ahorrar.",
                         CarouselItem = new RecorridoItemPage()
                     },
                     new IntroduccionModel()
                     {
                         DirImagen = "safeIn.png",
                         Titulo = "Importancia",
-                        Contenido = "Es importante ahorrar en el presente para afrontar las necesidades o imprevistos de un futuro financiero incierto, estar preparados para cualquier emergencia o gastos inesperados, el ahorro también puede invertirse para poder cumplir tus metas a futuro. ",
-                        CarouselItem = new RecorridoItemPage()
-                    },
-                    new IntroduccionModel()
-                    {
-                        DirImagen = "bankBuilding.png",
-                        Titulo = "Ejemplos",
-                        Contenido = "A continuación, encontrarás un ejemplo de ahorro personal orientado a obtener un bien que dependiendo de cada persona puede ser por lujo o por necesidad.",
+                        Contenido = "* Puedes invertirlo para poder cumplir tus metas a futuro.\n " +
+                        "\n * Para afrontar las necesidades o imprevistos de un futuro financiero.\n " +
+                        "\n * Para estar preparados para cualquier emergencia o gastos inesperados.  ",
                         CarouselItem = new RecorridoItemPage()
                     },
                     new IntroduccionModel()
@@ -154,7 +137,7 @@ namespace Proyecto.ViewModels
             {
                 case "1":
                     Heights = new List<int>() { 135, 220 };
-                    message = "Este es el Total Ingresos, aquí encontraras todos los ingresos recibidos" + " y se calcula sumando todos los aportes en este caso: tu sueldo y el aporte familiar.";
+                    message = "Este es el total ingresos, aquí encontraras todos los ingresos recibidos" + " y se calcula sumando todos los aportes en este caso: tu sueldo y el aporte familiar.";
                     ((PopUpViewModel)PopUpView.BindingContext).InitializeFields(_popUp: ((PopUpViewModel)PopUpView.BindingContext), rotacion: 90, escala: 1, source: "flecha1.png", alturas: Heights, opcion: "3", gridColumn: 1, message: message);
                     break;
                 case "2":
