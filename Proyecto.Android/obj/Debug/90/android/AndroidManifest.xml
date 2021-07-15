@@ -7,10 +7,10 @@
     -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.companyname.proyecto">
   <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="28" />
-  <uses-permission android:name="android.permission.INTERNET" />
   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-  <application android:label="Proyecto.Android" android:name="android.app.Application" android:allowBackup="true" android:icon="@drawable/iconoapp" android:debuggable="true" android:extractNativeLibs="true">
+  <uses-permission android:name="android.permission.INTERNET" />
+  <application android:label="Proyecto.Android" android:usesCleartextTraffic="true" android:name="android.app.Application" android:allowBackup="true" android:icon="@drawable/iconoapp" android:debuggable="true" android:extractNativeLibs="true">
     <activity android:configChanges="orientation|screenSize" android:icon="@drawable/iconoapp" android:label="Edufinanzas" android:theme="@style/MainTheme" android:name="crc643cfe60957d7363fd.MainActivity" />
     <activity android:configChanges="screenSize" android:label="Edufinanzas" android:noHistory="true" android:theme="@style/SplashTheme" android:name="crc643cfe60957d7363fd.SplashActivity">
       <intent-filter>

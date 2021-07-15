@@ -14,7 +14,7 @@ namespace Proyecto.Configuracion
         #region Initialize
         public ConfiguracionRest()
         {
-            NameSpaceRest = "frontMoviles.Services.ApiRest.";
+            NameSpaceRest = "Proyecto.Servicios.";
             InitializeVerbsConfiguration();
 
         }

@@ -20,16 +20,16 @@
                     <Label  Text="Iniciar Sesión" FontSize="25" Margin="25,25,0,0" TextColor="White"/>
                 </StackLayout>
                 <StackLayout  Grid.Row="1" >
-                    <Entry Text="Usuario o Correo" Margin="30,130,30,30" FontSize="20" />
+                    <Entry Text="{Binding User.Value}" Placeholder="Ingrese Usuario" Margin="30,130,30,30" FontSize="20" />
                 </StackLayout>
                 <StackLayout  Grid.Row="2"  >
-                    <Entry Text="Contraseña" FontSize="20" Margin="30,20,30,30" />
+                    <Entry  Text="{Binding Password.Value}" Placeholder="Ingrese su contraseña" IsPassword="True" FontSize="20" Margin="30,20,30,30" />
                 </StackLayout>
                 <StackLayout Padding="30" Grid.Row="3" >
                     <Label Text="Olvide mi contraseña" FontSize="14" Margin="5,0,0,0"/>
                 </StackLayout>
                 <StackLayout  Padding="30" Grid.Row="4" >
-                    <Button Text="Entrar" BackgroundColor="#1F618D" TextColor="White"/>
+                    <Button Command="{Binding btnIngresar}"  Text="Entrar" BackgroundColor="#1F618D" TextColor="White"/>
                 </StackLayout>
             </Grid>
         </ScrollView>

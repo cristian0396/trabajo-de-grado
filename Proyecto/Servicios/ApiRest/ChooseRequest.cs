@@ -26,20 +26,23 @@ namespace Proyecto.Servicios.ApiRest
         {
             var diccionario = ConfigurationRest.VerbsConfiguration;
             string nombreClase;
-            if (diccionario.TryGetValue(verb.ToUpper(), out nombreClase))
+            if (diccionario.TryGetValue(verb?.ToUpper(), out nombreClase))
             {
                 Type tipoClase = Type.GetType(nombreClase);
                 Type[] typeArgs = { typeof(T) };
-                var genericClass = tipoClase.MakeGenericType(typeArgs);
-                EstrategiaEnvio = (Request<T>)Activator.CreateInstance(genericClass, url, verb.ToUpper());
+                var genericClass = tipoClase?.MakeGenericType(typeArgs);
+                if (genericClass != null)
+                {
+                    EstrategiaEnvio = (Request<T>)Activator.CreateInstance(genericClass, url, verb?.ToUpper());
+                }                
             }
         }
 
         public async Task<ApiResponse> EjecutarEstrategia(T objecto, ParametersRequest parametersRequest = null)
         {
             parametersRequest = parametersRequest ?? new ParametersRequest();
-            await EstrategiaEnvio.ContruirURL(parametersRequest);
-            var response = await EstrategiaEnvio.SendRequest(objecto);
+            await EstrategiaEnvio?.ContruirURL(parametersRequest);
+            var response = await EstrategiaEnvio?.SendRequest(objecto);
             return response;
         }
         #endregion Métodos

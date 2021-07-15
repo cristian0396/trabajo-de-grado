@@ -44,10 +44,10 @@ G:\EduFinanzas\trabajo-de-grado\Proyecto\bin\Debug\netstandard2.0\Proyecto.deps.
 G:\EduFinanzas\trabajo-de-grado\Proyecto\bin\Debug\netstandard2.0\Proyecto.dll
 G:\EduFinanzas\trabajo-de-grado\Proyecto\bin\Debug\netstandard2.0\ref\Proyecto.dll
 G:\EduFinanzas\trabajo-de-grado\Proyecto\bin\Debug\netstandard2.0\Proyecto.pdb
-G:\EduFinanzas\trabajo-de-grado\Proyecto\obj\Debug\netstandard2.0\Proyecto.csprojAssemblyReference.cache
 G:\EduFinanzas\trabajo-de-grado\Proyecto\obj\Debug\netstandard2.0\App.xaml.g.cs
 G:\EduFinanzas\trabajo-de-grado\Proyecto\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
 G:\EduFinanzas\trabajo-de-grado\Proyecto\obj\Debug\netstandard2.0\Vistas\ActividadGastos1.xaml.g.cs
+G:\EduFinanzas\trabajo-de-grado\Proyecto\obj\Debug\netstandard2.0\Vistas\ActividadGastos2.xaml.g.cs
 G:\EduFinanzas\trabajo-de-grado\Proyecto\obj\Debug\netstandard2.0\Vistas\ActividadP1.xaml.g.cs
 G:\EduFinanzas\trabajo-de-grado\Proyecto\obj\Debug\netstandard2.0\Vistas\ActividadP2.xaml.g.cs
 G:\EduFinanzas\trabajo-de-grado\Proyecto\obj\Debug\netstandard2.0\Vistas\Ahorro.xaml.g.cs
@@ -73,4 +73,4 @@ G:\EduFinanzas\trabajo-de-grado\Proyecto\obj\Debug\netstandard2.0\XamlC.stamp
 G:\EduFinanzas\trabajo-de-grado\Proyecto\obj\Debug\netstandard2.0\Proyecto.dll
 G:\EduFinanzas\trabajo-de-grado\Proyecto\obj\Debug\netstandard2.0\ref\Proyecto.dll
 G:\EduFinanzas\trabajo-de-grado\Proyecto\obj\Debug\netstandard2.0\Proyecto.pdb
-G:\EduFinanzas\trabajo-de-grado\Proyecto\obj\Debug\netstandard2.0\Vistas\ActividadGastos2.xaml.g.cs
+G:\EduFinanzas\trabajo-de-grado\Proyecto\obj\Debug\netstandard2.0\Proyecto.csprojAssemblyReference.cache
