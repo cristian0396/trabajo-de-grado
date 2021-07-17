@@ -22,6 +22,7 @@ namespace Proyecto.ViewModels
         public PopUp PopUp { get; set; }
         public ChooseRequest<User> GetUser { get; set; }
         public ICommand btnIngresar { get; set; }
+        public ICommand RegistrarCommand { get; set; }
         public LoginViewModel()
         {
             PopUp = new PopUp();
@@ -39,6 +40,7 @@ namespace Proyecto.ViewModels
         public void InicializarComandos()
         {
             btnIngresar = new Command(async () => await ConsultarUsuario(), () => true);
+            RegistrarCommand = new Command(IrAlRegistro);
         }        
         public void InitializeFields()
         {
@@ -48,7 +50,10 @@ namespace Proyecto.ViewModels
             User.Validations.Add(new RequiredRule<string> { ValidationMessage = "El correo es Obligatorio" });
             Password.Validations.Add(new RequiredRule<string> { ValidationMessage = "La contraseña es Obligatoria" });
         }
-
+        public void IrAlRegistro()
+        {
+            Application.Current.MainPage = new Registro();
+        }
         public async Task ConsultarUsuario()
         {
             try
@@ -62,18 +67,20 @@ namespace Proyecto.ViewModels
                 ApiResponse response = await GetUser.EjecutarEstrategia(usuario);
                 if (response.IsSuccess)
                 {
-                    //await NavigationService.PushPage(new Inicio());
                     Application.Current.MainPage = new MainPage();
                 }
                 else
                 {
-                    //((MessageViewModel)PopUp.BindingContext).Message = "Error al acceder";
-                    //await PopupNavigation.Instance.PushAsync(PopUp);
+                    ((MessageViewModel)PopUp.BindingContext).Titulo = "Algo ocurrio...";
+                    ((MessageViewModel)PopUp.BindingContext).Message = "Revisa si el usuario y la contraseña son los correctos.";
+                    await PopupNavigation.Instance.PushAsync(PopUp);
                 }
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
+                ((MessageViewModel)PopUp.BindingContext).Titulo = "Algo ocurrio...";
+                ((MessageViewModel)PopUp.BindingContext).Message = "Ups algo salio mal de nuestra parte, vuelve luego por favor";
+                await PopupNavigation.Instance.PushAsync(PopUp);
             }
         }
     }
