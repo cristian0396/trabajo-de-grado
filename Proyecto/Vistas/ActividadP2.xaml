@@ -4,7 +4,8 @@
              xmlns:behaviors="clr-namespace:Behaviors;assembly=Behaviors"
              xmlns:local="clr-namespace:Proyecto.Converters"
              x:Class="Proyecto.Vistas.ActividadP2"             
-             Shell.TabBarIsVisible="False">
+             Shell.TabBarIsVisible="False"
+             Shell.ForegroundColor="Transparent">
     <ContentPage.Resources>
         <ResourceDictionary>
             <local:BackgroundConverter x:Key="BackgroundConverter"/>

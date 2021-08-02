@@ -33,8 +33,8 @@ namespace Proyecto
         public App()
         {
             InitializeComponent();
-            MainPage = new Login();
-            //MainPage = new MainPage();
+            //MainPage = new Login();
+            MainPage = new MainPage();
         }
 
         protected override void OnStart()

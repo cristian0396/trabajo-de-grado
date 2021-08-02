@@ -605,10 +605,15 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\leccion2_punto6.png" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Content\Images\fondosopa.jpg" />
+    <AndroidAsset Include="Content\Images\sopados.png" />
+    <AndroidAsset Include="Content\Images\sopauno.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties TriggeredFromHotReload="False" XamarinHotReloadUnhandledDeviceExceptionProyectoAndroidHideInfoBar="True" />
+      <UserProperties XamarinHotReloadUnhandledDeviceExceptionProyectoAndroidHideInfoBar="True" TriggeredFromHotReload="False" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>

@@ -6,7 +6,7 @@
              mc:Ignorable="d"
              xmlns:local="clr-namespace:Proyecto.Vistas"
              x:Class="Proyecto.MainPage">
-    <!--Aqui se indica que el header del menu Hamburguesa esta alojado en el contenView llamado MenuHeader--> 
+    <!--Aqui se indica que el header del menu Hamburguesa esta alojado en el contentView llamado MenuHeader--> 
     <Shell.FlyoutHeader>
         <local:MenuHeader/>
     </Shell.FlyoutHeader>
@@ -17,5 +17,5 @@
         <ShellContent Title="Configuración " Icon="administracion.png" IsTabStop="True" ContentTemplate="{DataTemplate local:Inicio}"/>
         <ShellContent Title="Ayuda " Icon="pregunta.png" IsTabStop="True" ContentTemplate="{DataTemplate local:Inicio}"/>
     </FlyoutItem>    
-    <ShellContent Title="Cerrar Sesión " Icon="leave.png" IsTabStop="True" ContentTemplate="{DataTemplate local:Inicio}"/>
+    <ShellContent Title="Cerrar Sesión " Icon="leave.png" IsTabStop="True" ContentTemplate="{DataTemplate local:Login}"/>
 </Shell>

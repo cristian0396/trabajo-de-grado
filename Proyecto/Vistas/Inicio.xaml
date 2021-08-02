@@ -4,11 +4,11 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:xamanimation="clr-namespace:Xamanimation;assembly=Xamanimation"
-             mc:Ignorable="d"
              Title="Inicio"
-             x:Class="Proyecto.Vistas.Inicio">
+             x:Class="Proyecto.Vistas.Inicio"
+             Shell.ForegroundColor="Transparent">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Opción" IconImageSource="limpiar.ico"/>         <!--Opción que aparece en la parte superior derecha de la app-->
+        <ToolbarItem Text="Opción" IconImageSource="limpiar.ico" />         <!--Opción que aparece en la parte superior derecha de la app-->
     </ContentPage.ToolbarItems>
     
     <!--Diccionario que contiene animaciones con la libreria Xamanimation, pero no sirve por ahora con el shell-->
@@ -22,7 +22,7 @@
         </ResourceDictionary>
     </Page.Resources>
     
-    <ScrollView>
+    <ScrollView >
         <Grid RowSpacing="0"> 
             <Grid.RowDefinitions>
                 <RowDefinition Height="180"/>

@@ -12,8 +12,8 @@ namespace Proyecto.Actividades
         CCLayer CapaDeFondo, CapaDeJuego, hudLayer;
         CCGameView GameView;
         int score = 0, lives = 3, level = 0;
-        float velocidadX, velocidadY = 200;
-        const float gravedad = 140;
+        float velocityX, velocityY = 200;
+        const float gravity = 140;
         float minXVelocity = -200;
         float maxXVelocity = 200;
         bool hasGameEnded, martianFlag;
@@ -26,18 +26,19 @@ namespace Proyecto.Actividades
             var contentSearchPaths = new List<string>() { "Images", "Sounds" };
             gameView.ContentManager.SearchPaths = contentSearchPaths;
             CCAudioEngine.SharedEngine.PlayBackgroundMusic("fondoBouncingBall", true);
-            InicializarCapas();
-            CrearFondo();
+
+            InitializeLayers();
+            CreateBackground();
             CreateHud();
             CreateLivesLabel();
             CreateTouchListener();
-            IniciarPaleta();
-            IniciarBola();
-            SubirNivel();
+            InitializePaddle();
+            InitializeBall();
+            LevelUp();
             Schedule(Activity);
         }
 
-        private void InicializarCapas()
+        private void InitializeLayers()
         {
             CapaDeFondo = new CCLayer();
             this.AddLayer(CapaDeFondo);
@@ -48,7 +49,7 @@ namespace Proyecto.Actividades
             hudLayer = new CCLayer();
             this.AddLayer(hudLayer);
         }
-        private void CrearFondo()
+        private void CreateBackground()
         {
             var background = new CCSprite("bouncingBg.png");
             background.AnchorPoint = new CCPoint(0, 0);
@@ -56,7 +57,7 @@ namespace Proyecto.Actividades
             background.ContentSize = new CCSize(App.Width, App.Height);
             CapaDeFondo.AddChild(background);
         }
-        private void IniciarPaleta()
+        private void InitializePaddle()
         {
             paddle = new CCSprite("plataforma.png");
             paddle.Scale = 0.3f;
@@ -65,7 +66,7 @@ namespace Proyecto.Actividades
             paddle.PositionY = 100;
             CapaDeJuego.AddChild(paddle);
         }
-        private void IniciarBola()
+        private void InitializeBall()
         {
             ball = new CCSprite("bolita.png");
             ball.Scale = 0.1f;
@@ -113,7 +114,7 @@ namespace Proyecto.Actividades
                 GameView.Director.ReplaceScene(newScene);
             }
         }
-        private void VerificarPelotaAlsuelo()
+        private void CheckBallVsFloorCollision()
         {
             // falló el usuario, la pelota cae en el suelo
             if (ball.PositionY < 0)
@@ -131,7 +132,7 @@ namespace Proyecto.Actividades
                 }
             }
         }
-        private void SubirNivel()
+        private void LevelUp()
         {
             levelLabel = new CCLabel("Nivel: " + level, "Arial", 20, CCLabelFormat.SystemFont);
             levelLabel.Color = CCColor3B.White;
@@ -141,25 +142,25 @@ namespace Proyecto.Actividades
             level += 1;
             minXVelocity -= 100;
             maxXVelocity += 100;
-            velocidadY += 100;
+            velocityY += 100;
         }
-        private void VerificarColisiones()
+        private void CheckGeneralCollisions()
         {
             bool ballOverlapsPaddle = ball.BoundingBoxTransformedToParent.IntersectsRect(paddle.BoundingBoxTransformedToParent);
-            bool isMovignDownward = velocidadY < 0;
+            bool isMovignDownward = velocityY < 0;
             if (ballOverlapsPaddle && isMovignDownward)
             {
                 CCAudioEngine.SharedEngine.PlayEffect("boing");
-                velocidadY *= -1;
-                velocidadX = CCRandom.GetRandomFloat(minXVelocity, maxXVelocity);
+                velocityY *= -1;
+                velocityX = CCRandom.GetRandomFloat(minXVelocity, maxXVelocity);
                 score += 1;
                 scoreText.Score = score;
                 if (score % 5 == 0)
                 {
-                    SubirNivel();
+                    LevelUp();
                     if (!martianFlag)
                     {
-                        CrearMarciano();
+                        CreateMartian();
                         martianFlag = true;
                     }                    
                 } else
@@ -168,31 +169,31 @@ namespace Proyecto.Actividades
                 }
             }
         }
-        private void VerificarLimitesLaterales()
+        private void CheckLateralBounds()
         {
             float ballRight = ball.BoundingBoxTransformedToParent.MaxX;
             float ballLeft = ball.BoundingBoxTransformedToParent.MinX;
             float screenRight = CapaDeJuego.ContentSize.Width;
             float screenLeft = 0;
 
-            bool shouldReflectXVelocity = (ballRight > screenRight && velocidadX > 0) || (ballLeft < screenLeft && velocidadX < 0);
+            bool shouldReflectXVelocity = (ballRight > screenRight && velocityX > 0) || (ballLeft < screenLeft && velocityX < 0);
 
             if (shouldReflectXVelocity)
             {
-                velocidadX *= -1;
+                velocityX *= -1;
             }
         }
-        private void VerificarLimiteSuperior()
+        private void CheckTopBound()
         {
             float ballTop = ball.BoundingBoxTransformedToParent.MaxY;
             float screenTop = CapaDeJuego.ContentSize.Height;
 
-            if (ballTop > screenTop && velocidadY > 0)
+            if (ballTop > screenTop && velocityY > 0)
             {
-                velocidadY *= -1;
+                velocityY *= -1;
             }
         }        
-        private void CrearMarciano()
+        private void CreateMartian()
         {
             float posY = CCRandom.GetRandomFloat(CapaDeJuego.ContentSize.Height / 2.0f, CapaDeJuego.ContentSize.Height - 20);
             float posX = CCRandom.GetRandomFloat(20, CapaDeJuego.ContentSize.Width-20);
@@ -203,7 +204,7 @@ namespace Proyecto.Actividades
             martian.PositionY = posY;
             CapaDeJuego.AddChild(martian);            
         }
-        private void VerificarColisionConMarciano()
+        private void CheckBallvsMartianCollision()
         {
             bool ballOverlapsMartian = ball.BoundingBoxTransformedToParent.IntersectsRect(martian.BoundingBoxTransformedToParent);
             if (ballOverlapsMartian)
@@ -215,21 +216,21 @@ namespace Proyecto.Actividades
             }            
         }
         private void Activity(float frameTimeInSeconds)
-        { //función que controla toda la actividad en el juego, se ejecuta por medio de Schedule()
+        { //function that controls all the activities in the game, it runs through Schedule()
             if (hasGameEnded == false)
-            {               
-                //movimiento de la pelota
-                velocidadY += frameTimeInSeconds * -gravedad;
-                ball.PositionX += velocidadX * frameTimeInSeconds;
-                ball.PositionY += velocidadY * frameTimeInSeconds;
+            {
+                //movement of the ball
+                velocityY += frameTimeInSeconds * -gravity;
+                ball.PositionX += velocityX * frameTimeInSeconds;
+                ball.PositionY += velocityY * frameTimeInSeconds;
 
-                VerificarPelotaAlsuelo();
-                VerificarColisiones();
-                VerificarLimitesLaterales();
-                VerificarLimiteSuperior();
+                CheckBallVsFloorCollision();
+                CheckGeneralCollisions();
+                CheckLateralBounds();
+                CheckTopBound();
                 if (martianFlag)
                 {
-                    VerificarColisionConMarciano();
+                    CheckBallvsMartianCollision();
                 }
             }
         }

@@ -7,7 +7,7 @@
              Title="Registrarse"
              x:Class="Proyecto.Vistas.Registro">
     <ContentPage.Content>
-        <ScrollView BackgroundColor="Black">
+        <ScrollView BackgroundColor="#7F7878">
             <Grid RowSpacing="0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="50"/>

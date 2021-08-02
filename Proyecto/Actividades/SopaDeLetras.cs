@@ -10,6 +10,7 @@ namespace Proyecto.Actividades
     {
         CCLayer CapaDeFondo, CapaDeJuego, hudLayer;
         CCGameView GameView;
+        CCDrawNode node;
         int score = 0;
         bool hasGameEnded;
         ScoreText scoreText;
@@ -18,10 +19,12 @@ namespace Proyecto.Actividades
             GameView = gameView;
             var contentSearchPaths = new List<string>() { "Images", "Sounds" };
             gameView.ContentManager.SearchPaths = contentSearchPaths;
+            node = new CCDrawNode();
             //CCAudioEngine.SharedEngine.PlayBackgroundMusic("fondoBouncingBall", true);
             InicializarCapas();
             CrearFondo();
             CreateHud();
+            CrearSopa();
             CreateTouchListener();
             //Schedule(Activity);
         }
@@ -39,7 +42,7 @@ namespace Proyecto.Actividades
         }
         private void CrearFondo()
         {
-            var background = new CCSprite("bouncingBg.png");
+            var background = new CCSprite("fondosopa.jpg");
             background.AnchorPoint = new CCPoint(0, 0);
             background.IsAntialiased = false;
             background.ContentSize = new CCSize(App.Width, App.Height);
@@ -53,15 +56,27 @@ namespace Proyecto.Actividades
             scoreText.Score = 0;
             hudLayer.AddChild(scoreText);
         }
+        private void CrearSopa()
+        {
+            var sopa = new CCSprite("sopauno.png");
+            sopa.IsAntialiased = false;
+            sopa.Scale = 0.7f;
+            sopa.PositionX = (CapaDeJuego.ContentSize.Width / 2.0f); 
+            sopa.PositionY = (CapaDeJuego.ContentSize.Height / 2.0f);
+            CapaDeJuego.AddChild(sopa);
+        }
         private void CreateTouchListener()
         { //función que crea un evento para cuando el usuario toque la pantalla
-            var touchListener = new CCEventListenerTouchAllAtOnce();
-            touchListener.OnTouchesMoved = HandleTouchesMoved;
-            touchListener.OnTouchesBegan = HandleTouchesBegan;
+            var touchListener = new CCEventListenerTouchAllAtOnce
+            {
+                OnTouchesMoved = HandleTouchesMoved,
+                OnTouchesBegan = HandleTouchesBegan
+            };
             CapaDeJuego.AddEventListener(touchListener);
         }
         private void DrawParticle(CCPoint point)
         {
+            /*
             var explosion = new CCParticleExplosion(CCPoint.Zero)
             {
                 TotalParticles = 10,
@@ -69,23 +84,28 @@ namespace Proyecto.Actividades
                 EndColor = new CCColor4F(CCColor3B.Black),
                 Position = new CCPoint(point.X / App.Density, App.Height - point.Y / App.Density)
             };
-            CapaDeJuego.AddChild(explosion);
+            */
+            var position = new CCPoint(point.X / App.Density, App.Height - point.Y / App.Density);
+            node.Color = CCColor3B.Red;
+            node.Opacity = 1;
+            node.DrawRect(new CCRect(position.X - 30, position.Y + 16, 30, 16));            
+            CapaDeJuego.AddChild(node);
         }
         private void HandleTouchesMoved(System.Collections.Generic.List<CCTouch> touches, CCEvent touchEvent)
         {
-            if (touches.Count > 0)
-            {
-                var locationOnScreen = touches[0].Location;
-                DrawParticle(locationOnScreen);
-            }
+            var locationOnScreen = touches[0].LocationOnScreen;
+            DrawParticle(locationOnScreen);            
         }
         private void HandleTouchesBegan(List<CCTouch> arg1, CCEvent arg2)
-        {
+        {   /*
             if (hasGameEnded)
             {
                 var newScene = new SopaDeLetras(GameView);
                 GameView.Director.ReplaceScene(newScene);
             }
+            */
+            var locationOnScreen = arg1[0].LocationOnScreen;
+            DrawParticle(locationOnScreen);
         }
         private void Activity(float frameTimeInSeconds)
         { //función que controla toda la actividad en el juego, se ejecuta por medio de Schedule()

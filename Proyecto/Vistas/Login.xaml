@@ -3,11 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d"
              Title="Iniciar Sesión"
-             x:Class="Proyecto.Vistas.Login">
+             x:Class="Proyecto.Vistas.Login"
+             Shell.FlyoutBehavior="Disabled"
+             Shell.NavBarIsVisible="False">
     <ContentPage.Content>
-        <ScrollView BackgroundColor="Black">
+        <ScrollView BackgroundColor="#7F7878">
             <Grid RowSpacing="0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="50"/>
