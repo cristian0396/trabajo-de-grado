@@ -23,18 +23,19 @@
                     <Grid.RowDefinitions>
                         <RowDefinition Height="40" />
                         <RowDefinition Height="100"/>
+                        <RowDefinition Height="40"/>
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <Label Grid.Row="0" Grid.Column="0" Text="Lección 1" FontSize="18"  Margin="25,0,0,0"/>
-                    <Image Grid.Row="1" Grid.Column="0" Source="leccion1_gastos.png">
+                    <Label Grid.Row="0" Grid.Column="0" Text="Lección 1: Gastos y prioridades" FontSize="20"  Margin="10,0,-150,0" FontAttributes="Bold"/>
+                    <Image Grid.Row="1" Grid.Column="0" Source="leccion1_gastos.png"  Margin="-10,20,25,-10">
                         <Image.GestureRecognizers >
                             <TapGestureRecognizer Command="{Binding Leccion1Command}" />
                         </Image.GestureRecognizers>
                     </Image>
-                    <ProgressBar Grid.Row="1" Grid.Column="1" Progress="0.4" ScaleY="1" ProgressColor="#77D371" Margin="15,0,0,0" />
+                    <ProgressBar Grid.Row="1" Grid.Column="1" Progress="0.4" ScaleY="1" ProgressColor="#77D371" Margin="-20,25,0,0" />
                 </Grid>
                 <!-- Segunda lección -->
                 <!-- Codigo que denota la segunda lección y los demás items presentados en la vista-->
@@ -48,13 +49,13 @@
                         <ColumnDefinition/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <Label Grid.Row="0" Grid.Column="0" Text="Lección 2" FontSize="18" Margin="25,0,0,0"/>
-                    <Image Grid.Row="1" Grid.Column="0" Source="books.png">
+                    <Label Grid.Row="0" Grid.Column="0" Text="Lección 2: Flujo de caja" FontSize="20" Margin="10,0,-100,0" FontAttributes="Bold"/>
+                    <Image Grid.Row="1" Grid.Column="0" Source="books.png" Margin="-10,20,25,-10">
                         <Image.GestureRecognizers >
                             <TapGestureRecognizer Command="{Binding Leccion2Command}" />
                         </Image.GestureRecognizers>
                     </Image>
-                    <ProgressBar Grid.Row="1" Grid.Column="1" Progress="0" ScaleY="1" ProgressColor="#566573" Margin="15,0,0,0" />
+                    <ProgressBar Grid.Row="1" Grid.Column="1" Progress="0" ScaleY="1" ProgressColor="#566573" Margin="-20,25,0,0" />
                     <Image Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Source="smiling.png" Scale="0.5" >
                         <Image.GestureRecognizers >
                             <TapGestureRecognizer Command="{Binding JuegoCommand}" />

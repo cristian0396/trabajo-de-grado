@@ -69,7 +69,6 @@ namespace Proyecto.Actividades.Entidades
 
 			if (GameCoefficients.ShowCollisionAreas)
 			{
-				CreateDebugGraphic();
 			}
 
 			CreateCollision();

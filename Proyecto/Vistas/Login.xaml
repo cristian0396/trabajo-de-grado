@@ -41,7 +41,7 @@
                     </Label>
                 </StackLayout>
                 <StackLayout Padding="30" Grid.Row="5">
-                    <Button Command="{Binding btnIngresar}" Text="Entrar" BackgroundColor="#1F618D" TextColor="White"/>
+                    <Button Command="{Binding btnIngresar}" Text="Entrar" BackgroundColor="#E7305E" TextColor="White" CornerRadius="25" FontAttributes="Bold"/>
                 </StackLayout>
                 <StackLayout Grid.Row="6" Padding="20" >
                     <Label HorizontalOptions="Center" VerticalOptions="CenterAndExpand">

@@ -41,7 +41,7 @@
                 </Grid.ColumnDefinitions>
                 <!--barras en la parte superior del progreso-->
                 <Label Grid.Row="0" Grid.Column="0" Text="Esta semana:" FontSize="22" Margin="10,10,0,15"/>
-                <ProgressBar Grid.Row="1" Grid.Column="0" Progress="0.6" ScaleY="4" ProgressColor="#77D371" Margin="15,0,0,0" />
+                <ProgressBar Grid.Row="1" Grid.Column="0" Progress="0.6" ScaleY="4" ProgressColor="#77D371" Margin="15,0,0,0" CornerRadius ="6"/>
                 <Label Grid.Row="1" Grid.Column="1" Text="Presupuesto" FontSize="16" Margin="40,5,0,0" />
 
                 <ProgressBar Grid.Row="2" Grid.Column="0" Progress="0.3" ScaleY="4" ProgressColor="#FFC45C" Margin="15,0,0,0"/>
@@ -65,7 +65,7 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>                
                 <!--Presupuesto-->
-                <Image Grid.Row="0" Grid.Column="0" x:Name="imgPresupuesto" Source="ingreGastos.png"> 
+                <Image Grid.Row="0" Grid.Column="0" x:Name="imgPresupuesto" Source="ingreGastos.png" > 
                     <!--Animaciones que no sirven por ahora-->
                     <Image.Triggers>
                         <EventTrigger Event="Clicked">
@@ -77,7 +77,7 @@
                         <TapGestureRecognizer Command="{Binding PresupuestoCommand}" />
                     </Image.GestureRecognizers>
                 </Image>
-                <Label Grid.Row="1" Grid.Column="0" Text="Modulo 1: Presupuesto"/>
+                <Label Grid.Row="1" Grid.Column="0" Text="Modulo 1: Presupuesto" FontAttributes="Bold"/>
                 <ProgressBar Grid.Row="2" Grid.Column="0" Progress="1" ScaleY="2"  ProgressColor="#77D371" />
                 
                 <!--Plan de Gastos-->
@@ -87,7 +87,7 @@
                         <TapGestureRecognizer Command="{Binding PlanGCommand}"/>
                     </Image.GestureRecognizers>
                 </Image>
-                <Label Grid.Row="1" Grid.Column="1" Text="Modulo 2: Plan de gastos"/>
+                <Label Grid.Row="1" Grid.Column="1" Text="Modulo 2: Plan de gastos" FontAttributes="Bold"/>
                 <ProgressBar Grid.Row="2" Grid.Column="1" Progress="1" ScaleY="2"  ProgressColor="#77D371"/>
                 
                 <!--Ahorro-->
@@ -97,12 +97,12 @@
                         <TapGestureRecognizer Command="{Binding AhorroCommand}"/>
                     </Image.GestureRecognizers>
                 </Image>
-                <Label Grid.Row="4" Grid.Column="0" Text="Modulo 3: Ahorro" />
+                <Label Grid.Row="4" Grid.Column="0" Text="Modulo 3: Ahorro" FontAttributes="Bold"/>
                 <ProgressBar Grid.Row="5" Grid.Column="0" Progress="0.5" ScaleY="2"  ProgressColor="#77D371" />
                 
                 <!--Modulo NO DEFINIDO-->
                 <Image Grid.Row="3" Grid.Column="1" Source="meta.png" Margin="15,20,30,0"/>
-                <Label Grid.Row="4" Grid.Column="1" Text="Modulo 4:"/>
+                <Label Grid.Row="4" Grid.Column="1" Text="Modulo 4: trabajos futuros"/>
                 <ProgressBar Grid.Row="5" Grid.Column="1" Progress="0" ScaleY="2"  ProgressColor="#77D371" />
             </Grid>
         </Grid>

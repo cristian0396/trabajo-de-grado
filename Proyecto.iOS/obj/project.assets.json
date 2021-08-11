@@ -6355,27 +6355,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\alejo\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Users\\crist\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\EduFinanzas\\trabajo-de-grado\\Proyecto.iOS\\Proyecto.iOS.csproj",
+      "projectUniqueName": "C:\\Users\\crist\\trabajo-de-grado\\Proyecto.iOS\\Proyecto.iOS.csproj",
       "projectName": "Proyecto.iOS",
-      "projectPath": "G:\\EduFinanzas\\trabajo-de-grado\\Proyecto.iOS\\Proyecto.iOS.csproj",
-      "packagesPath": "C:\\Users\\alejo\\.nuget\\packages\\",
-      "outputPath": "G:\\EduFinanzas\\trabajo-de-grado\\Proyecto.iOS\\obj\\",
+      "projectPath": "C:\\Users\\crist\\trabajo-de-grado\\Proyecto.iOS\\Proyecto.iOS.csproj",
+      "packagesPath": "C:\\Users\\crist\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\crist\\trabajo-de-grado\\Proyecto.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\alejo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\crist\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -6389,8 +6386,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "G:\\EduFinanzas\\trabajo-de-grado\\Proyecto\\Proyecto.csproj": {
-              "projectPath": "G:\\EduFinanzas\\trabajo-de-grado\\Proyecto\\Proyecto.csproj"
+            "C:\\Users\\crist\\trabajo-de-grado\\Proyecto\\Proyecto.csproj": {
+              "projectPath": "C:\\Users\\crist\\trabajo-de-grado\\Proyecto\\Proyecto.csproj"
             }
           }
         }

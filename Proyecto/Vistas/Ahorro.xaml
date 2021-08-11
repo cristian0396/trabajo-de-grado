@@ -22,23 +22,24 @@
                 <!-- Codigo de la primera lección-->
                 <Grid Grid.Row="0" ColumnSpacing="20" Padding="20" RowSpacing="0">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="40" />
+                        <RowDefinition Height="60" />
                         <RowDefinition Height="120"/>
+                        <RowDefinition Height="40" />
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <Label Grid.Row="0" Grid.Column="0" Text="Lección 1" FontSize="18" Margin="25,0,0,0"/>
-                    <Image Grid.Row="0" Grid.Column="1" Source="key.png" HorizontalOptions="End"/>
-                    <Image Grid.Row="1" Grid.Column="0" Source="meta.jpeg">
+                    <Label Grid.Row="0" Grid.Column="0" Text="Lección 1: Propósito, organización y constancia" FontSize="20" Margin="10,0,-120,0" FontAttributes="Bold"/>
+                    <Image Grid.Row="0" Grid.Column="1" Source="key.png" HorizontalOptions="End"  Margin="0,0,10,20"/>
+                    <Image Grid.Row="1" Grid.Column="0" Source="meta.jpeg" Margin="-10,20,25,-10">
                         <Image.GestureRecognizers >
                             <TapGestureRecognizer Command="{Binding Leccion1Command}" />
                         </Image.GestureRecognizers>
                     </Image>
-                    <ProgressBar Grid.Row="1" Grid.Column="1" Progress="0.6" ScaleY="1" ProgressColor="#77D371" Margin="15,0,0,0" />
-                </Grid>                
-                <Grid Grid.Row="1" ColumnSpacing="20" RowSpacing="10" Padding="14">
+                    <ProgressBar Grid.Row="1" Grid.Column="1" Progress="0.6" ScaleY="1" ProgressColor="#77D371" Margin="-20,25,0,0" />
+                </Grid>
+                <!--<Grid Grid.Row="1" ColumnSpacing="20" RowSpacing="10" Padding="14">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="20" />
                         <RowDefinition Height="120"/>
@@ -48,34 +49,34 @@
                         <ColumnDefinition/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <!-- Información estatica-->
+                     Información estatica
                     <Label Grid.Row="0" Grid.Column="0" Text="Objetivo" FontSize="18" Margin="25,0,0,0"/>
                     <Label Grid.Row="1" Grid.Column="0"
                            Text="Dentro de 6 meses 
                            tengo que poder viajar a los Paises bajos" FontSize="16" VerticalOptions="Center" Margin="15,0,0,0"/>
                     <ProgressBar Grid.Row="2" Grid.Column="0" Progress="0.3" ScaleY="1" ProgressColor="#77D371" Margin="15,0,0,0" />
                     <Image Grid.Row="1" Grid.Column="1" Source="travel.jpg"/>
-                </Grid>
+                </Grid>-->
                 <!-- Codigo de la segunda lección-->
-                <Grid Grid.Row="2" ColumnSpacing="20" Padding="14" RowSpacing="0">
+                <Grid Grid.Row="1" Padding="14" RowSpacing="0">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="40" />
                         <RowDefinition Height="120"/>
-                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="100" />
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <Label Grid.Row="0" Grid.Column="0" Text="Lección 2" FontSize="18" Margin="25,0,0,0"/>
-                    <Image Grid.Row="1" Grid.Column="0" Source="ahorro.jpeg">
+                    <Label Grid.Row="0" Grid.Column="0" Text="Lección 2: Necesidades y deseos" FontSize="20"  Margin="10,0,-120,0" FontAttributes="Bold"/>
+                    <Image Grid.Row="1" Grid.Column="0" Source="ahorro.jpeg" Margin="-10,20,25,-10">
                         <Image.GestureRecognizers >
                             <TapGestureRecognizer Command="{Binding Leccion2Command}" />
                         </Image.GestureRecognizers>
                     </Image>
-                    <ProgressBar Grid.Row="1" Grid.Column="1" Progress="0.1" ScaleY="1" ProgressColor="#77D371" Margin="15,0,0,0" />                    
-                    <Button Grid.Row="2" Grid.Column="0" Text="Actividad" Margin="0,20,0,0"/>
-                    <Button Grid.Row="2" Grid.Column="1" Text="Siguiente Nivel" Margin="0,20,0,0"/>
+                    <ProgressBar Grid.Row="1" Grid.Column="1" Progress="0.1" ScaleY="1" ProgressColor="#77D371" Margin="-20,25,0,0" />                    
+                    <Button Grid.Row="2" Grid.Column="0" Text="Actividad" Margin="0,50,0,0"/>
+                    <Button Grid.Row="2" Grid.Column="1" Text="Siguiente Nivel" Margin="0,50,0,0"/>
                 </Grid>
             </Grid>
         </ScrollView>

@@ -1,3 +1,9 @@
+OpenTK.GameViewBase, OpenTK-1.0;opentk_1_0.GameViewBase
+OpenTK.GameViewBase;opentk_1_0.GameViewBase
+opentk_1_0.GameViewBase;opentk_1_0.GameViewBase
+OpenTK.Platform.Android.AndroidGameView, OpenTK-1.0;opentk_1_0.platform.android.AndroidGameView
+OpenTK.Platform.Android.AndroidGameView;opentk_1_0.platform.android.AndroidGameView
+opentk_1_0.platform.android.AndroidGameView;opentk_1_0.platform.android.AndroidGameView
 Proyecto.Droid.MainActivity, Proyecto.Android;crc643cfe60957d7363fd.MainActivity
 Proyecto.Droid.MainActivity;crc643cfe60957d7363fd.MainActivity
 proyecto.droid.MainActivity;crc643cfe60957d7363fd.MainActivity
