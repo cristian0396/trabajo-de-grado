@@ -1,24 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\crist\\trabajo-de-grado\\Proyecto.iOS\\Proyecto.iOS.csproj": {}
+    "G:\\EduFinanzas\\trabajo-de-grado\\Proyecto.iOS\\Proyecto.iOS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\crist\\trabajo-de-grado\\Proyecto.iOS\\Proyecto.iOS.csproj": {
+    "G:\\EduFinanzas\\trabajo-de-grado\\Proyecto.iOS\\Proyecto.iOS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\crist\\trabajo-de-grado\\Proyecto.iOS\\Proyecto.iOS.csproj",
+        "projectUniqueName": "G:\\EduFinanzas\\trabajo-de-grado\\Proyecto.iOS\\Proyecto.iOS.csproj",
         "projectName": "Proyecto.iOS",
-        "projectPath": "C:\\Users\\crist\\trabajo-de-grado\\Proyecto.iOS\\Proyecto.iOS.csproj",
-        "packagesPath": "C:\\Users\\crist\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\crist\\trabajo-de-grado\\Proyecto.iOS\\obj\\",
+        "projectPath": "G:\\EduFinanzas\\trabajo-de-grado\\Proyecto.iOS\\Proyecto.iOS.csproj",
+        "packagesPath": "C:\\Users\\alejo\\.nuget\\packages\\",
+        "outputPath": "G:\\EduFinanzas\\trabajo-de-grado\\Proyecto.iOS\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\crist\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\alejo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -32,8 +34,8 @@
         "frameworks": {
           "xamarinios10": {
             "projectReferences": {
-              "C:\\Users\\crist\\trabajo-de-grado\\Proyecto\\Proyecto.csproj": {
-                "projectPath": "C:\\Users\\crist\\trabajo-de-grado\\Proyecto\\Proyecto.csproj"
+              "G:\\EduFinanzas\\trabajo-de-grado\\Proyecto\\Proyecto.csproj": {
+                "projectPath": "G:\\EduFinanzas\\trabajo-de-grado\\Proyecto\\Proyecto.csproj"
               }
             }
           }
@@ -89,20 +91,22 @@
         }
       }
     },
-    "C:\\Users\\crist\\trabajo-de-grado\\Proyecto\\Proyecto.csproj": {
+    "G:\\EduFinanzas\\trabajo-de-grado\\Proyecto\\Proyecto.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\crist\\trabajo-de-grado\\Proyecto\\Proyecto.csproj",
+        "projectUniqueName": "G:\\EduFinanzas\\trabajo-de-grado\\Proyecto\\Proyecto.csproj",
         "projectName": "Proyecto",
-        "projectPath": "C:\\Users\\crist\\trabajo-de-grado\\Proyecto\\Proyecto.csproj",
-        "packagesPath": "C:\\Users\\crist\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\crist\\trabajo-de-grado\\Proyecto\\obj\\",
+        "projectPath": "G:\\EduFinanzas\\trabajo-de-grado\\Proyecto\\Proyecto.csproj",
+        "packagesPath": "C:\\Users\\alejo\\.nuget\\packages\\",
+        "outputPath": "G:\\EduFinanzas\\trabajo-de-grado\\Proyecto\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\crist\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\alejo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -182,7 +186,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -58,7 +58,6 @@ public class MonoPackageManager_Resources {
 		"Xamarin.Forms.Platform.Android.dll",
 		"Xamarin.Forms.Platform.dll",
 		"Xamarin.Forms.Xaml.dll",
-		"OpenTK-1.0.dll",
 	};
 	public static String[] Dependencies = new String[]{
 	};
