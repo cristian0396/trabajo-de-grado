@@ -10,7 +10,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <local:ControladorMillonario Grid.Row="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+            <local:SopaDeLetrasView Grid.Row="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

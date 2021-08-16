@@ -7,7 +7,7 @@ namespace Proyecto.Configuracion
     public class EndPoints
     {
         //Here we put the enpoints created on NodeJS
-        public static readonly string URL_SERVIDOR = "http://192.168.1.56:3000";
+        public static readonly string URL_SERVIDOR = "http://192.168.1.11:3000";
         public static readonly string CONSULTAR_ALL_USERS = "/users/getUser";
         public static readonly string CONSULTAR_USER = "/users/login";
         public static readonly string CREAR_USER = "/users/create";

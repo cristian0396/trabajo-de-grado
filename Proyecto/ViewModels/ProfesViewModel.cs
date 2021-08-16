@@ -329,35 +329,35 @@ namespace Proyecto.ViewModels
                     Sources.Add("leccion2_punto2.png");
                     Sources.Add("mujer7.png");
                     PopUpView1 = new Profes("16", SwitchVoz);
-                    ((ProfesViewModel)PopUpView1.BindingContext).InitializeFields(_popUp: ((ProfesViewModel)PopUpView1.BindingContext), sources: Sources, alturas: Heights, actividad: 3, opcion: "17");
+                    ((ProfesViewModel)PopUpView1.BindingContext).InitializeFields(_popUp: ((ProfesViewModel)PopUpView1.BindingContext), sources: Sources, alturas: Heights, actividad: 4, opcion: "17");
                     await PopupNavigation.Instance.PushAsync(PopUpView1);
                     break;
                 case "17":
                     Sources.Add("leccion2_punto3.png");
                     Sources.Add("mujer8.png");
                     PopUpView1 = new Profes("17", SwitchVoz);
-                    ((ProfesViewModel)PopUpView1.BindingContext).InitializeFields(_popUp: ((ProfesViewModel)PopUpView1.BindingContext), sources: Sources, alturas: Heights, actividad: 3, opcion: "18");
+                    ((ProfesViewModel)PopUpView1.BindingContext).InitializeFields(_popUp: ((ProfesViewModel)PopUpView1.BindingContext), sources: Sources, alturas: Heights, actividad: 4, opcion: "18");
                     await PopupNavigation.Instance.PushAsync(PopUpView1);
                     break;
                 case "18":
                     Sources.Add("leccion2_punto4.png");
                     Sources.Add("mujer4.png");
                     PopUpView1 = new Profes("18", SwitchVoz);
-                    ((ProfesViewModel)PopUpView1.BindingContext).InitializeFields(_popUp: ((ProfesViewModel)PopUpView1.BindingContext), sources: Sources, alturas: Heights, actividad: 3, opcion: "19");
+                    ((ProfesViewModel)PopUpView1.BindingContext).InitializeFields(_popUp: ((ProfesViewModel)PopUpView1.BindingContext), sources: Sources, alturas: Heights, actividad: 4, opcion: "19");
                     await PopupNavigation.Instance.PushAsync(PopUpView1);
                     break;
                 case "19":
                     Sources.Add("leccion2_punto5.png");
                     Sources.Add("mujer5.png");
                     PopUpView1 = new Profes("19", SwitchVoz);
-                    ((ProfesViewModel)PopUpView1.BindingContext).InitializeFields(_popUp: ((ProfesViewModel)PopUpView1.BindingContext), sources: Sources, alturas: Heights, actividad: 3, opcion: "20");
+                    ((ProfesViewModel)PopUpView1.BindingContext).InitializeFields(_popUp: ((ProfesViewModel)PopUpView1.BindingContext), sources: Sources, alturas: Heights, actividad: 4, opcion: "20");
                     await PopupNavigation.Instance.PushAsync(PopUpView1);
                     break;
                 case "20":
                     Sources.Add("leccion2_punto6.png");
                     Sources.Add("mujer1.png");
                     PopUpView1 = new Profes("20", SwitchVoz);
-                    ((ProfesViewModel)PopUpView1.BindingContext).InitializeFields(_popUp: ((ProfesViewModel)PopUpView1.BindingContext), sources: Sources, alturas: Heights, actividad: 3, opcion: "21");
+                    ((ProfesViewModel)PopUpView1.BindingContext).InitializeFields(_popUp: ((ProfesViewModel)PopUpView1.BindingContext), sources: Sources, alturas: Heights, actividad: 4, opcion: "21");
                     await PopupNavigation.Instance.PushAsync(PopUpView1);
                     break;
                 case "21":

@@ -5,16 +5,13 @@ using Proyecto.Propagacion;
 using System.Threading.Tasks;
 using Proyecto.Vistas;
 using Xamarin.Forms;
-using Proyecto.Servicios.Navigation;
 
 namespace Proyecto.ViewModels
 {
     public class ViewModelBase : NotificationObjectModel
     {
-        public NavigationService NavigationService { get; set; }
         public ViewModelBase()
         {
-            NavigationService = App.NavigationService;
             RegistrarRutas();
         }
         public void RegistrarRutas()

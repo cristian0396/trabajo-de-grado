@@ -6,8 +6,8 @@
              mc:Ignorable="d"
              HeightRequest="170"
              x:Class="Proyecto.Vistas.MenuHeader">
-  <!-- ContentView que maneja el aspecto del FluoutHeader del menu Hamburguesa (Navbar)-->
-  <ContentView.Content>
+    <!-- ContentView que maneja el aspecto del FluoutHeader del menu Hamburguesa (Navbar)-->
+    <ContentView.Content>
         <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="10"/>
@@ -20,11 +20,13 @@
                 <RowDefinition Height="80"/>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <Image Aspect="AspectFill" Source="gradient.jpg" Grid.ColumnSpan="5" Grid.RowSpan="4" Opacity="0.6" /> <!--fondo del header-->
-            <Image Source="user.png" HeightRequest="80" WidthRequest="80" Grid.Column="1"  Grid.Row="1" HorizontalOptions="Start" VerticalOptions="End"/> <!--icono perfil-->
-            <StackLayout VerticalOptions="CenterAndExpand" Grid.Row="1" Margin="10,0,0,0" Grid.Column="2" Grid.ColumnSpan="3" Orientation="Vertical"> 
-                <Label HorizontalTextAlignment="Start" VerticalTextAlignment="Center" TextColor="White" Text="Brian O'Conner"/>
-                <Label  HorizontalTextAlignment="Start" VerticalTextAlignment="Center" TextColor="White" Text="oconner200@gmail.com"/>
+            <Image Aspect="AspectFill" Source="gradient.jpg" Grid.ColumnSpan="5" Grid.RowSpan="4" Opacity="0.6" />
+            <!--fondo del header-->
+            <Image Source="user.png" HeightRequest="80" WidthRequest="80" Grid.Column="1"  Grid.Row="1" HorizontalOptions="Start" VerticalOptions="End"/>
+            <!--icono perfil-->
+            <StackLayout VerticalOptions="CenterAndExpand" Grid.Row="1" Margin="10,0,0,0" Grid.Column="2" Grid.ColumnSpan="3" Orientation="Vertical">
+                <Label HorizontalTextAlignment="Start" VerticalTextAlignment="Center" TextColor="White" Text="{Binding Usuario}"/>
+                <Label  HorizontalTextAlignment="Start" VerticalTextAlignment="Center" TextColor="White" Text="{Binding Correo}"/>
             </StackLayout>
         </Grid>
     </ContentView.Content>

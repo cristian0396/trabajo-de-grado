@@ -1,4 +1,6 @@
-﻿using Proyecto.Configuracion;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using Proyecto.Configuracion;
 using Proyecto.Modelos;
 using Proyecto.Modelos.ModelosAux;
 using Proyecto.Servicios.ApiRest;
@@ -27,7 +29,7 @@ namespace Proyecto.ViewModels
         {
             PopUp = new PopUp();
             InitializeRequest();
-            InicializarComandos();            
+            InicializarComandos();
             InitializeFields();
         }
         public void InitializeRequest()
@@ -41,7 +43,7 @@ namespace Proyecto.ViewModels
         {
             btnIngresar = new Command(async () => await ConsultarUsuario(), () => true);
             RegistrarCommand = new Command(IrAlRegistro);
-        }        
+        }
         public void InitializeFields()
         {
             User = new ValidatableObject<string>();
@@ -62,11 +64,17 @@ namespace Proyecto.ViewModels
                 {
                     Usuario = User.Value,
                     Password = Password.Value
-
                 };
                 ApiResponse response = await GetUser.EjecutarEstrategia(usuario);
                 if (response.IsSuccess)
                 {
+                    JObject jsonObject = JObject.Parse(response.Response);
+                    App.CurrentUser = new User()
+                    {
+                        Id = (long)jsonObject["id"],
+                        Usuario = (string)jsonObject["usuario"],
+                        Correo = (string)jsonObject["correo"]
+                    };
                     Application.Current.MainPage = new MainPage();
                 }
                 else

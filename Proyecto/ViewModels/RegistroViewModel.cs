@@ -17,7 +17,7 @@ namespace Proyecto.ViewModels
 {
     public class RegistroViewModel : ViewModelBase
     {
-        public ValidatableObject<string> User { get; set; } 
+        public ValidatableObject<string> User { get; set; }
         public ValidatableObject<string> Password { get; set; }
         public ValidatableObject<string> Email { get; set; }
         public ChooseRequest<User> CreateUser { get; set; }

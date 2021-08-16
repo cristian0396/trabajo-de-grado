@@ -607,13 +607,22 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Content\Images\fondosopa.jpg" />
-    <AndroidAsset Include="Content\Images\sopados.png" />
     <AndroidAsset Include="Content\Images\sopauno.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Content\Images\palabrasdos.png" />
+    <AndroidAsset Include="Content\Images\palabrasuno.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Content\Sounds\SopaBg.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Content\Images\sopatres.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties XamarinHotReloadUnhandledDeviceExceptionProyectoAndroidHideInfoBar="True" TriggeredFromHotReload="False" />
+      <UserProperties TriggeredFromHotReload="False" XamarinHotReloadUnhandledDeviceExceptionProyectoAndroidHideInfoBar="True" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>

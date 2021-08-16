@@ -11,7 +11,7 @@ namespace Proyecto.Actividades
         SopaDeLetras _scene;
 
         public SopaDeLetrasView()
-        { 
+        {
             var sharpView = new CocosSharpView
             {
                 HorizontalOptions = LayoutOptions.FillAndExpand,
@@ -28,7 +28,7 @@ namespace Proyecto.Actividades
             if (ccGView != null)
             {
                 ccGView.DesignResolution = new CCSizeI(App.Width, App.Height); //utilizar el ancho y alto que retorna el dispositivo Android
-                _scene = new SopaDeLetras(ccGView); 
+                _scene = new SopaDeLetras(ccGView);
                 ccGView.RunWithScene(_scene); //ejecutar escena
             }
         }
