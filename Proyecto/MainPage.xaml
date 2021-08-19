@@ -14,7 +14,7 @@
     <FlyoutItem Title="MyTabApp" FlyoutDisplayOptions="AsMultipleItems">
         <ShellContent Title="Inicio" Route="Inicio" Icon="home.png" IsTabStop="True" ContentTemplate="{DataTemplate local:Inicio}"/>
         <ShellContent Title="Evaluaciones "  Icon="evaluacion.png" IsTabStop="True" ContentTemplate="{DataTemplate local:Inicio}"/>
-        <ShellContent Title="Configuración " Icon="administracion.png" IsTabStop="True" ContentTemplate="{DataTemplate local:Inicio}"/>
+        <ShellContent Title="Configuración " Icon="administracion.png" IsTabStop="True" ContentTemplate="{DataTemplate local:Configuracion}"/>
         <ShellContent Title="Ayuda " Icon="pregunta.png" IsTabStop="True" ContentTemplate="{DataTemplate local:Inicio}"/>
     </FlyoutItem>    
     <ShellContent Title="Cerrar Sesión " Icon="leave.png" IsTabStop="True" ContentTemplate="{DataTemplate local:Login}"/>

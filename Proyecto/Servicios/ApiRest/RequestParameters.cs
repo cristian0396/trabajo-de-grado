@@ -5,8 +5,9 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Reflection;
 using Proyecto.Modelos.ModelosAux;
+using Proyecto.Servicios.ApiRest;
 
-namespace Proyecto.Servicios.ApiRest
+namespace Proyecto.Servicios
 {
     public class RequestParameters<T> : Request<T>
     {
@@ -34,8 +35,6 @@ namespace Proyecto.Servicios.ApiRest
                 {
                     var verbHttp = (Verb == "GET") ? HttpMethod.Get : HttpMethod.Delete;
                     client.Timeout = TimeSpan.FromSeconds(50);
-                    Console.WriteLine(verbHttp);
-                    Console.WriteLine(UrlParameters);
                     HttpRequestMessage requestMessage = new HttpRequestMessage(verbHttp, UrlParameters);
                     requestMessage = HeaderService.AddHeaders(requestMessage);
                     HttpResponseMessage HttpResponse = client.SendAsync(requestMessage).Result;

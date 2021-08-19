@@ -18,7 +18,6 @@ namespace Proyecto
         public App()
         {
             InitializeComponent();
-            //MainPage = new Login();
             MainPage = new Login();
         }
 

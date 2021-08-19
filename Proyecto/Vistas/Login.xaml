@@ -31,7 +31,7 @@
                     <Label HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
                         <Label.FormattedText>
                             <FormattedString>
-                                <Span Text="Olvide mi contraseña" TextColor="CadetBlue" TextDecorations="Underline">
+                                <Span Text="Olvide mi contraseña" TextColor="DeepSkyBlue" TextDecorations="Underline">
                                     <Span.GestureRecognizers>
                                         <TapGestureRecognizer Command="{Binding RegistrarCommand}"/>
                                     </Span.GestureRecognizers>
@@ -48,7 +48,7 @@
                         <Label.FormattedText>
                             <FormattedString>
                                 <Span Text="¿No tienes una cuenta?  " TextColor="White" />
-                                <Span Text="Registrate!" TextColor="CadetBlue" TextDecorations="Underline">
+                                <Span Text="Registrate!" TextColor="DeepSkyBlue" TextDecorations="Underline">
                                     <Span.GestureRecognizers>
                                         <TapGestureRecognizer Command="{Binding RegistrarCommand}"/>
                                     </Span.GestureRecognizers>

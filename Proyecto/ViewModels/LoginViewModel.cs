@@ -23,6 +23,7 @@ namespace Proyecto.ViewModels
         public ValidatableObject<string> Password { get; set; }
         public PopUp PopUp { get; set; }
         public ChooseRequest<User> GetUser { get; set; }
+        public ChooseRequest<UserDetail> GetUserDetail { get; set; }
         public ICommand btnIngresar { get; set; }
         public ICommand RegistrarCommand { get; set; }
         public LoginViewModel()
@@ -35,9 +36,13 @@ namespace Proyecto.ViewModels
         public void InitializeRequest()
         {
             string urlBuscarUsuario = EndPoints.URL_SERVIDOR + EndPoints.CONSULTAR_USER;
+            string urlBuscarDetalleUsuario = EndPoints.URL_SERVIDOR + EndPoints.CONSULTAR_DETALLE_USUARIO;
 
             GetUser = new ChooseRequest<User>();
             GetUser.ElegirEstrategia("POST", urlBuscarUsuario);
+
+            GetUserDetail = new ChooseRequest<UserDetail>();
+            GetUserDetail.ElegirEstrategia("GET", urlBuscarDetalleUsuario);
         }
         public void InicializarComandos()
         {
@@ -65,6 +70,7 @@ namespace Proyecto.ViewModels
                     Usuario = User.Value,
                     Password = Password.Value
                 };
+                UserDetail detail = new UserDetail();
                 ApiResponse response = await GetUser.EjecutarEstrategia(usuario);
                 if (response.IsSuccess)
                 {
@@ -73,9 +79,21 @@ namespace Proyecto.ViewModels
                     {
                         Id = (long)jsonObject["id"],
                         Usuario = (string)jsonObject["usuario"],
-                        Correo = (string)jsonObject["correo"]
+                        Correo = (string)jsonObject["correo"],
+                        Password = (string)jsonObject["contrasena"]
                     };
-                    Application.Current.MainPage = new MainPage();
+                    var parametros = new ParametersRequest()
+                    {
+                        Parameters = new List<string>() { (string)jsonObject["id"] }
+                    };
+                    ApiResponse responseUserDetail = await GetUserDetail.EjecutarEstrategia(detail, parametros);
+                    if( responseUserDetail.Response == "[]")
+                    {
+                        Application.Current.MainPage = new Bienvenida();
+                    } else {
+                        Application.Current.MainPage = new MainPage();
+                    }
+                    
                 }
                 else
                 {

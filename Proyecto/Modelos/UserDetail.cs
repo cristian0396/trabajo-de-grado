@@ -18,7 +18,7 @@ namespace Proyecto.Modelos
         public string Edad { get; set; }
 
         [JsonProperty("idUsuario")]
-        public int IdUsuario { get; set; }
+        public long IdUsuario { get; set; }
 
         [JsonProperty("conocimientos")]
         public List<String> Conocimientos { get; set; }

@@ -30,14 +30,14 @@
                     <Entry Text="{Binding Password.Value}" FontSize="18" TextColor="White" IsPassword="True" PlaceholderColor="White" Placeholder="Contraseña"/>
                 </Frame>
                 <StackLayout Padding="30" Grid.Row="5" >
-                    <Button Text="Registrarse" Margin="0,50,0,0" BackgroundColor="#1F618D" TextColor="White" Command="{Binding RegistrarCommand}"/>
+                    <Button Text="Registrarse" Margin="0,50,0,0" BackgroundColor="#E7305E" TextColor="White" Command="{Binding RegistrarCommand}"/>
                 </StackLayout>
                 <StackLayout Grid.Row="6" Padding="20" >
                     <Label HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
                         <Label.FormattedText>
                             <FormattedString>
                                 <Span Text="¿Ya tienes una cuenta?  " TextColor="White" />
-                                <Span Text="Inicia sesión" TextColor="CadetBlue" TextDecorations="Underline">
+                                <Span Text="Inicia sesión" TextColor="DeepSkyBlue" TextDecorations="Underline">
                                     <Span.GestureRecognizers>
                                         <TapGestureRecognizer Command="{Binding LoginCommand}"/>
                                     </Span.GestureRecognizers>

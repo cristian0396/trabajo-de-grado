@@ -12,6 +12,7 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
@@ -19,7 +20,7 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <!-- Con esta porción de codigo se establece un fondo con degradado o gradiente-->
-            <yummy:PancakeView Grid.RowSpan="6" Grid.ColumnSpan="2" BackgroundGradientStartPoint="0,0" BackgroundGradientEndPoint="1,0">
+            <yummy:PancakeView Grid.RowSpan="7" Grid.ColumnSpan="2" BackgroundGradientStartPoint="0,0" BackgroundGradientEndPoint="1,0">
                 <yummy:PancakeView.BackgroundGradientStops>
                     <yummy:GradientStopCollection>
                         <yummy:GradientStop Color="#06349F" Offset="0" />
@@ -33,12 +34,15 @@
             <Label Grid.Row="0" Grid.Column="0" Text="Te damos la bienvenida!" FontSize="30" TextColor="White" Margin="20,0,0,0" HorizontalOptions="Center" VerticalOptions="Center"/>
             <Label Grid.Row="1" Grid.ColumnSpan="2" Text="Para nosotros es muy importante tu interacción con Edufinanzas, por favor responde si tienes o no conocimiento en los siguientes temas:" FontSize="18" TextColor="white" Margin="20,0,0,20" />
             <Frame Grid.Row="2" Grid.Column="0" Margin="20,0,20,0" IsClippedToBounds="true" Padding="0" BackgroundColor="Transparent" BorderColor="White">
-                <Entry Text="{Binding Edad}" FontSize="18" PlaceholderColor="White" Placeholder="Ingresa tu edad"/>
+                <Entry Text="{Binding Edad}" FontSize="18" PlaceholderColor="White" Placeholder="Ingresa tu edad" TextColor="White"/>
             </Frame>
-            <Picker Grid.Row="2" Grid.Column="1" Margin="0,0,20,0" Title="Presupuesto" ItemsSource="{Binding ListaPresupuesto}" ItemDisplayBinding="{Binding Nombre}" SelectedItem="{Binding Presupuesto}" TitleColor="White" TextColor="White"/>
-            <Picker Grid.Row="3" Grid.Column="0" Margin="20,0,20,0" Title="Ahorro" ItemsSource="{Binding ListaAhorro}" ItemDisplayBinding="{Binding Nombre}" SelectedItem="{Binding Ahorro}" TitleColor="White" TextColor="White"/>
-            <Picker Grid.Row="3" Grid.Column="1" Margin="0,0,20,0" Title="Gastos" ItemsSource="{Binding ListaGastos}" ItemDisplayBinding="{Binding Nombre}" SelectedItem="{Binding Gastos}" TitleColor="White" TextColor="White" />
-            <Button Grid.Row="4" Grid.ColumnSpan="2" BackgroundColor="White" CornerRadius="20" HeightRequest="40" Margin="0,60,0,0" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" Command="{Binding InfoCommand}" Text="Hecho" WidthRequest="245" TextColor="Black"/>
+            <Frame Grid.Row="2" Grid.Column="1" Margin="20,0,20,0" IsClippedToBounds="true" Padding="0" BackgroundColor="Transparent" BorderColor="White">
+                <Entry Text="{Binding NombreUsuario}" FontSize="18" PlaceholderColor="White" Placeholder="Nombre completo" TextColor="White"/>
+            </Frame>
+            <Picker Grid.Row="3" Grid.Column="0" Margin="20,0,20,0" Title="Presupuesto" ItemsSource="{Binding ListaPresupuesto}" ItemDisplayBinding="{Binding Nombre}" SelectedItem="{Binding Presupuesto}" TitleColor="White" TextColor="White"/>
+            <Picker Grid.Row="3" Grid.Column="1" Margin="0,0,20,0" Title="Ahorro" ItemsSource="{Binding ListaAhorro}" ItemDisplayBinding="{Binding Nombre}" SelectedItem="{Binding Ahorro}" TitleColor="White" TextColor="White"/>
+            <Picker Grid.Row="4" Grid.Column="0" Margin="20,0,20,0" Title="Gastos" ItemsSource="{Binding ListaGastos}" ItemDisplayBinding="{Binding Nombre}" SelectedItem="{Binding Gastos}" TitleColor="White" TextColor="White" />
+            <Button Grid.Row="5" Grid.ColumnSpan="2" BackgroundColor="WhiteSmoke" CornerRadius="20" HeightRequest="40" Margin="0,20,0,0" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" Command="{Binding InfoCommand}" Text="Hecho" WidthRequest="245" TextColor="Black"/>
         </Grid>
     </ContentPage.Content>
 </ContentPage>
