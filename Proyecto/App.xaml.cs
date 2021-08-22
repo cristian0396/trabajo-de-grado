@@ -13,6 +13,7 @@ namespace Proyecto
         public static int Height { get; set; } //Altura del dispositivo Android - se genera desde proyecto Android (usado en las actividades)
         public static int Density { get; set; } //Densidad del dispositivo Android - se genera desde proyecto Android (usado en las actividades)
         public static User CurrentUser { get; set; }
+        public static int llaves { get; set; } //llaves para acceder a los modulos
         #endregion        
 
         public App()

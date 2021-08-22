@@ -14,10 +14,14 @@ namespace Proyecto.ViewModels
         public ICommand Leccion1Command { get; set; }
         public ICommand Leccion2Command { get; set; }
         public ICommand BotonAtrasCommand { get; set; }
-        public ICommand JuegoCommand { get; set; }        
+        public ICommand JuegoCommand { get; set; }
+        public PopUp PopUp { get; set; }
 
+        private int x = new int();
+        public int llaves = new int();
         public PresupuestoViewModel()
-        {            
+        {
+            PopUp = new PopUp();
             InicializarComandos();
         }
 
@@ -32,12 +36,21 @@ namespace Proyecto.ViewModels
         {
             string sourceImage = "leccionfondo.png";
             await Shell.Current.GoToAsync($"{nameof(FondoLecciones)}?SourceImg={sourceImage}");
+            if (x != 5)
+            {
+                x = 5;
+            }
         }
 
         public async Task IrALeccion2() //Función que se activa al hacer click en la imagen de la segunda lección
         {
             string sourceImage = "fondo01.png";
             await Shell.Current.GoToAsync($"{nameof(FondoLecciones)}?SourceImg={sourceImage}");
+            App.llaves += 1;
+            if (x == 5)
+            {
+                x += 5;
+            }
         }
 
         public async Task IrAInicio() //Función que se activa al dar click en el boton de atrás
@@ -47,7 +60,16 @@ namespace Proyecto.ViewModels
          
         public async Task IrAJuego() //Función que se activa al hacer click en la imagen emoji
         {
-            await Shell.Current.GoToAsync("JuegoFruit");
+            if (x == 10)
+            {
+                await Shell.Current.GoToAsync("JuegoFruit");
+            }
+            else
+            {
+                ((MessageViewModel)PopUp.BindingContext).Titulo = "Aviso";
+                ((MessageViewModel)PopUp.BindingContext).Message = "Aún no has terminado todas las lecciones del modulo";
+                await PopupNavigation.Instance.PushAsync(PopUp);
+            }
         }
     }
 }

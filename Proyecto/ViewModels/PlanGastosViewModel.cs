@@ -1,4 +1,5 @@
 ﻿using Proyecto.Vistas;
+using Rg.Plugins.Popup.Services;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -14,9 +15,12 @@ namespace Proyecto.ViewModels
         public ICommand Leccion1Command { get; set; }
         public ICommand Leccion2Command { get; set; }
         public ICommand JuegoCommand { get; set; }
+        public PopUp PopUp { get; set; }
 
+        private int x = new int();
         public PlanGastosViewModel()
         {
+            PopUp = new PopUp();
             InicializarComandos();
         }
 
@@ -30,10 +34,19 @@ namespace Proyecto.ViewModels
         public async Task IrALeccion1(string sourceImage) //Función que se activa al hacer click en la imagen de la primer lección
         {
             await Shell.Current.GoToAsync($"{nameof(FondoLecciones)}?SourceImg={sourceImage}");
+            if (x != 5)
+            {
+                x = 5;
+            }
         }
         public async Task IrALeccion2(string sourceImage) //Función que se activa al hacer click en la imagen de la primer lección
         {
             await Shell.Current.GoToAsync($"{nameof(FondoLecciones)}?SourceImg={sourceImage}");
+            App.llaves += 1;
+            if (x == 5)
+            {
+                x += 5;
+            }
         }
         public async Task IrAInicio() //Función que se activa al dar click en el boton de atrás
         {
@@ -41,7 +54,16 @@ namespace Proyecto.ViewModels
         }
         public async Task IrAJuego()
         {
-            await Shell.Current.GoToAsync("JuegoBouncingBall");
+            if (x == 10)
+            {
+                await Shell.Current.GoToAsync("JuegoBouncingBall");
+            }
+            else
+            {
+                ((MessageViewModel)PopUp.BindingContext).Titulo = "Aviso";
+                ((MessageViewModel)PopUp.BindingContext).Message = "Aún no has terminado todas las lecciones del modulo";
+                await PopupNavigation.Instance.PushAsync(PopUp);
+            }
         }
     }
 }
