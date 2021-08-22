@@ -110,3 +110,4 @@ C:\Users\crist\trabajo-de-grado\Proyecto\obj\Debug\netstandard2.0\Proyecto.pdb
 C:\Users\crist\trabajo-de-grado\Proyecto\obj\Debug\netstandard2.0\Proyecto.csproj.AssemblyReference.cache
 G:\EduFinanzas\trabajo-de-grado\Proyecto\obj\Debug\netstandard2.0\Vistas\Bienvenida.xaml.g.cs
 G:\EduFinanzas\trabajo-de-grado\Proyecto\obj\Debug\netstandard2.0\Vistas\Configuracion.xaml.g.cs
+G:\EduFinanzas\trabajo-de-grado\Proyecto\obj\Debug\netstandard2.0\Vistas\ActividadAhorro1.xaml.g.cs

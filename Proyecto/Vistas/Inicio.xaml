@@ -7,10 +7,6 @@
              Title="Inicio"
              x:Class="Proyecto.Vistas.Inicio"
              Shell.ForegroundColor="Transparent">
-    <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Opción" IconImageSource="limpiar.ico" />         <!--Opción que aparece en la parte superior derecha de la app-->
-    </ContentPage.ToolbarItems>
-    
     <!--Diccionario que contiene animaciones con la libreria Xamanimation, pero no sirve por ahora con el shell-->
     <Page.Resources>
         <ResourceDictionary>

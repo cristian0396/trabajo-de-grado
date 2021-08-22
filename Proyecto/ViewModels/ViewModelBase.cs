@@ -28,6 +28,7 @@ namespace Proyecto.ViewModels
             Routing.RegisterRoute(nameof(ActividadP2), typeof(ActividadP2));
             Routing.RegisterRoute(nameof(ActividadGastos1), typeof(ActividadGastos1));
             Routing.RegisterRoute(nameof(ActividadGastos2), typeof(ActividadGastos2));
+            Routing.RegisterRoute(nameof(ActividadAhorro1), typeof(ActividadAhorro1));
             //juegos
             Routing.RegisterRoute(nameof(JuegoFruit), typeof(JuegoFruit));
             Routing.RegisterRoute(nameof(JuegoBouncingBall), typeof(JuegoBouncingBall));

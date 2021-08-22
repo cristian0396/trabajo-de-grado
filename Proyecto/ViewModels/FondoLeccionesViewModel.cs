@@ -71,7 +71,7 @@ namespace Proyecto.ViewModels
                     Sources.Add("punto1ahorro.png");
                     Sources.Add("munecos1.png");
                     PopUpView2 = new Profes("21", false);
-                    ((ProfesViewModel)PopUpView2.BindingContext).InitializeFields(_popUp: ((ProfesViewModel)PopUpView2.BindingContext), sources: Sources, alturas: Heights, actividad: 3, opcion: "22");
+                    ((ProfesViewModel)PopUpView2.BindingContext).InitializeFields(_popUp: ((ProfesViewModel)PopUpView2.BindingContext), sources: Sources, alturas: Heights, actividad: 5, opcion: "22");
                     await PopupNavigation.Instance.PushAsync(PopUpView2);
                     break;
                 case "6":

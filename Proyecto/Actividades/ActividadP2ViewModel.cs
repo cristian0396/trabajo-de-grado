@@ -69,8 +69,8 @@ namespace Proyecto.Actividades
             PosicionActual = 0;
             TotalIngresos = 0;
             TotalGastos = 0;
-            TotalGastosFormat = 0.ToString("C");
-            TotalIngresosFormat = 0.ToString("C");
+            TotalGastosFormat = 0.ToString("C0");
+            TotalIngresosFormat = 0.ToString("C0");
             ActivarPicker = false;
             ListaTPresupuesto = new List<TPresupuesto>();
             ItemsList = new ObservableCollection<TPresupuesto>();
@@ -107,8 +107,8 @@ namespace Proyecto.Actividades
             TotalGastos = 0;
             TotalIngresos = 0;
             PosicionActual = 0;
-            TotalIngresosFormat = 0.ToString("C"); 
-            TotalGastosFormat = 0.ToString("C");
+            TotalIngresosFormat = 0.ToString("C0"); 
+            TotalGastosFormat = 0.ToString("C0");
         }
 
         public void EliminarItemSeleccionado()
@@ -118,12 +118,12 @@ namespace Proyecto.Actividades
                 if(itemSeleccionado.Ingresos != "")
                 {
                     TotalIngresos -= int.Parse(ItemSeleccionado.Ingresos, NumberStyles.Currency);
-                    TotalIngresosFormat = TotalIngresos.ToString("C");                    
+                    TotalIngresosFormat = TotalIngresos.ToString("C0");                    
                 }
                 else
                 {
                     TotalGastos -= int.Parse(ItemSeleccionado.Gastos, NumberStyles.Currency);
-                    TotalGastosFormat = TotalGastos.ToString("C");
+                    TotalGastosFormat = TotalGastos.ToString("C0");
                 }                
                 int indice = ItemsList.IndexOf(ItemSeleccionado);
                 ItemsList.RemoveAt(indice);
@@ -176,14 +176,14 @@ namespace Proyecto.Actividades
                 {
                     valorAnual = Convert.ToInt32(Valor) * 12;
                     TotalIngresos += valorAnual;
-                    TotalIngresosFormat = TotalIngresos.ToString("C");
+                    TotalIngresosFormat = TotalIngresos.ToString("C0");
                     temp.Ingresos = valorAnual.ToString("C");
                 }
                 else
                 {
-                    temp.Ingresos = Convert.ToInt32(Valor).ToString("C");
+                    temp.Ingresos = Convert.ToInt32(Valor).ToString("C0");
                     TotalIngresos += Convert.ToInt32(Valor);
-                    TotalIngresosFormat = Convert.ToInt32(TotalIngresos).ToString("C");
+                    TotalIngresosFormat = Convert.ToInt32(TotalIngresos).ToString("C0");
                 }                
             }
             else
@@ -192,15 +192,15 @@ namespace Proyecto.Actividades
                 {
                     valorAnual = Convert.ToInt32(Valor) * 12;
                     TotalGastos += valorAnual;
-                    TotalGastosFormat = TotalGastos.ToString("C");
-                    temp.Gastos = valorAnual.ToString("C");
+                    TotalGastosFormat = TotalGastos.ToString("C0");
+                    temp.Gastos = valorAnual.ToString("C0");
 
                 }
                 else
                 {
-                    temp.Gastos = Convert.ToInt32(Valor).ToString("C");
+                    temp.Gastos = Convert.ToInt32(Valor).ToString("C0");
                     TotalGastos += Convert.ToInt32(Valor);
-                    TotalGastosFormat = Convert.ToInt32(TotalGastos).ToString("C");
+                    TotalGastosFormat = Convert.ToInt32(TotalGastos).ToString("C0");
                 }                
             }
             ItemsList.Add(temp);        

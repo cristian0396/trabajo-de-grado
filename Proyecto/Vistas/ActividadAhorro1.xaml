@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Proyecto.Vistas.ActividadAhorro1"
+             xmlns:behaviors="clr-namespace:Behaviors;assembly=Behaviors"
+             xmlns:local="clr-namespace:Proyecto.Converters"
+             Shell.TabBarIsVisible="False"
+             Shell.ForegroundColor="Transparent">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="reporte.png"  Command="{Binding BotonSimuladorCommand}"/>        
+    </ContentPage.ToolbarItems>
+    <!-- modificar el comportamiento por defecto del boton de atrás-->
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior Command="{Binding BotonAtrasCommand}"/>
+    </Shell.BackButtonBehavior>
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid Padding="14" RowSpacing="12" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.ColumnSpan="2" Text="¿Para qué quieres ahorrar?" FontSize="16" VerticalOptions="Center" TextColor="Black"/>
+                <Picker Grid.Row="1" Grid.Column="0" Title="Objetivo" ItemsSource="{Binding ListaObjetivo}" ItemDisplayBinding="{Binding Descripcion}" SelectedItem="{Binding Objetivo}">
+                    <Picker.Behaviors>
+                        <behaviors:EventHandlerBehavior EventName="SelectedIndexChanged">
+                            <behaviors:InvokeCommandAction  Command="{Binding ItemSeleccionadoCommand}"/>
+                        </behaviors:EventHandlerBehavior>
+                    </Picker.Behaviors>
+                </Picker>
+                <Entry Text="{Binding Objetivo.Descripcion}" Placeholder="Otros..." Grid.Row="1" Grid.Column="1" IsVisible="{Binding ActivarInput}"/>
+                
+                <Label Grid.Row="2" Grid.ColumnSpan="2" Text="¿En cuánto tiempo planeas llegar a tu objetivo?" FontSize="16" VerticalOptions="Center" TextColor="Black"/>
+                <Entry Grid.Row="3" Grid.Column="0" Text="{Binding Tiempo}" Placeholder="Tiempo estimado"/>
+                <Picker Grid.Row="3" Grid.Column="1" Title="--Unidad de tiempo--" ItemsSource="{Binding ListaUnidad}" ItemDisplayBinding="{Binding Valor}" SelectedItem="{Binding UnidadTiempo}" />
+                
+                <Label Grid.Row="4" Grid.ColumnSpan="2" Text="Estima tus ingresos libres, ¿Cuánto ganas al mes? (si tienes salario ingresalo)" FontSize="16" VerticalOptions="Center" TextColor="Black"/>
+                <Entry Grid.Row="5" Grid.Column="0" Text="{Binding Ingresos}" Placeholder="Ingreso mensual"/>
+                
+                <Label Grid.Row="6" Grid.ColumnSpan="2" Text="¿De cuánto será tu porcentaje de ahorro? (10% recomendado)" FontSize="16" VerticalOptions="Center" TextColor="Black"/>
+                <Picker Grid.Row="7" Grid.Column="0" Title="--Porcentaje--" ItemsSource="{Binding ListaPorcentaje}" ItemDisplayBinding="{Binding Valor}" SelectedItem="{Binding Porcentaje}">
+                    <Picker.Behaviors>
+                        <behaviors:EventHandlerBehavior EventName="SelectedIndexChanged">
+                            <behaviors:InvokeCommandAction  Command="{Binding ItemSeleccionadoCommand2}"/>
+                        </behaviors:EventHandlerBehavior>
+                    </Picker.Behaviors>
+                </Picker>
+                <Entry Text="{Binding Porcentaje.Valor}" Placeholder="Otro valor" Grid.Row="7" Grid.Column="1" IsVisible="{Binding ActivarInput2}"/>
+
+                <Label Grid.Row="8" Grid.ColumnSpan="2" Text="Ingresa el valor aproximado para cumplir tu objetivo: " FontSize="16" VerticalOptions="Center" TextColor="Black"/>
+                <Entry Grid.Row="9" Grid.Column="0" Text="{Binding Costo}" Placeholder="valor monetario"/>
+
+                <!-- ListView #1 HEADER-->
+                <Frame Grid.Row="10" Grid.ColumnSpan="2" Padding="0" BackgroundColor="LightBlue" BorderColor="DarkSlateGray">
+                    <Grid Padding="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="80"/>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                            <ColumnDefinition Width="80"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" Text="Mes" FontSize="18" VerticalOptions="Center" HorizontalOptions="Center"/>
+                        <Label Grid.Column="1" Text="Cuota" FontSize="18" VerticalOptions="Center" HorizontalOptions="Center" />
+                        <Label Grid.Column="2" Text="Total" FontSize="18" VerticalOptions="Center" HorizontalOptions="Center" />
+                        <Label Grid.Column="3" Text="Fecha" FontSize="18" VerticalOptions="Center" HorizontalOptions="Center"/>
+                        
+                        <BoxView BackgroundColor="DarkSlateGray" WidthRequest="1" Grid.Column="0" HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand"/>
+                        <BoxView BackgroundColor="DarkSlateGray" WidthRequest="1" Grid.Column="1" HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand"/>
+                        <BoxView BackgroundColor="DarkSlateGray" WidthRequest="1" Grid.Column="2" HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand"/>
+                        <BoxView BackgroundColor="DarkSlateGray" WidthRequest="1" Grid.Column="3" HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand"/>
+                    </Grid>
+                </Frame>
+                <!-- Contenido de la Listview #1-->
+                <ListView x:Name="ListaPresupuesto" Grid.Row="11" ItemsSource="{Binding ItemsList}" SelectedItem="{Binding ItemSeleccionado, Mode=TwoWay}" Grid.ColumnSpan="2" SeparatorVisibility="None"  HasUnevenRows="False" >
+                    <ListView.ItemTemplate TextColor="Black">
+                        <DataTemplate >
+                            <ViewCell>
+                                <Grid Padding="0" RowSpacing="0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="80"/>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition Width="80"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Grid.Column="0" Text="{Binding Mes}" FontSize="15" VerticalOptions="Center" HorizontalOptions="Center" />
+                                    <Label Grid.Column="1" Text="{Binding CuotaFormat}" FontSize="15" VerticalOptions="Center" HorizontalOptions="Center" />
+                                    <Label Grid.Column="2" Text="{Binding TotalFormat}" FontSize="15" VerticalOptions="Center" HorizontalOptions="Center" />
+                                    <Label Grid.Column="3" Text="{Binding Fecha}" FontSize="15" VerticalOptions="Center" HorizontalOptions="Center"/>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

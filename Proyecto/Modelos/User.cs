@@ -18,7 +18,7 @@ namespace Proyecto.Modelos
         public string Password { get; set; }
 
         [JsonProperty("correo")]
-        public string Correo { get; set; }
+        private string correo;
 
         #endregion properties
 
@@ -33,6 +33,15 @@ namespace Proyecto.Modelos
             set
             {
                 usuario = value;
+                OnPropertyChanged();
+            }
+        }
+        public string Correo
+        {
+            get { return correo; }
+            set
+            {
+                correo = value;
                 OnPropertyChanged();
             }
         }

@@ -87,7 +87,7 @@
                                         <ColumnDefinition Width="80"/>
                                     </Grid.ColumnDefinitions>
 
-                                    <Label Grid.Column="0" Text="{Binding Descripcion}" FontSize="15" VerticalOptions="Center" HorizontalOptions="Start" />
+                                    <Label Grid.Column="0" Text="{Binding Descripcion}" FontSize="15" VerticalOptions="Center" HorizontalOptions="Center" />
                                     <Label Grid.Column="1" Text="{Binding Ingresos}" FontSize="15" VerticalOptions="Center" HorizontalOptions="Center" />
                                     <Label Grid.Column="2" Text="{Binding Gastos}" FontSize="15" VerticalOptions="Center" HorizontalOptions="Center" />
                                     <Label Grid.Column="3" Text="{Binding Fecha}" FontSize="15" VerticalOptions="Center" HorizontalOptions="Center"/>

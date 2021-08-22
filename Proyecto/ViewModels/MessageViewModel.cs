@@ -68,6 +68,7 @@ namespace Proyecto.ViewModels
             _popUp.TotalIngresos = totalIngresos;
             _popUp.TotalGastos = totalGastos;
             _popUp.Mensual = mensual;
+            _popUp.Image = image;
         }
         public async Task ActivarVentanaActividadP1(PopUp PopUpView)
         {
